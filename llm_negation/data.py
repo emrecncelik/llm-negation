@@ -1,6 +1,4 @@
-# def rreplace(text: str, old: str, new: str) -> str:
-#     parts = text.rsplit(old, 1)
-#     return new.join(parts)
+from nltk.corpus import wordnet as wn
 
 
 def get_determiner(word: str, vowels="aeiou") -> str:
@@ -10,20 +8,25 @@ def get_determiner(word: str, vowels="aeiou") -> str:
         return "a"
 
 
+def get_wordnet_prefix(word):
+    definition = wn.synsets(word)[0].definition()
+    return f"{get_determiner(word)} {word} is {definition}. "
+
+
 def prepare_data_neg(
     context_aff: str,
     context_neg: str,
     target_aff: str,
     target_neg: str,
-    prefix: str,
+    wordnet_prefix: str,
     determiner: bool,
 ) -> list[tuple[str, str, str, str]]:
     data = []
     context_aff = " ".join(context_aff.split()[:-1])
     context_neg = " ".join(context_neg.split()[:-1])
 
-    if prefix:
-        prefix = f"{prefix} "
+    if wordnet_prefix:
+        prefix = get_wordnet_prefix(target_aff)
 
     if determiner:
         aff_det = get_determiner(target_aff)
@@ -40,7 +43,7 @@ def prepare_data_neg(
     return data
 
 
-def prepare_dataset_neg(dataset, prefix: str = "", determiner: bool = True):
+def prepare_dataset_neg(dataset, wordnet_prefix: bool = False, determiner: bool = True):
     prepared_dataset = []
     for _, row in dataset.iterrows():
         data = prepare_data_neg(
@@ -48,7 +51,7 @@ def prepare_dataset_neg(dataset, prefix: str = "", determiner: bool = True):
             row["context_neg"],
             row["target_aff"],
             row["target_neg"],
-            prefix=prefix,
+            wordnet_prefix=wordnet_prefix,
             determiner=determiner,
         )
         prepared_dataset.extend(data)
