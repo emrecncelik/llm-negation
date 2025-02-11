@@ -27,6 +27,8 @@ def prepare_data_neg(
 
     if wordnet_prefix:
         prefix = get_wordnet_prefix(target_aff)
+    else:
+        prefix = ""
 
     if determiner:
         aff_det = get_determiner(target_aff)
