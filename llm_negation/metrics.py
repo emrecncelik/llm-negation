@@ -5,14 +5,12 @@ def topk_accuracy(predictions: pd.DataFrame, k: int = 1) -> float:
     filtered = predictions[
         (predictions["ctx_polarity"] == "aff") & (predictions["tgt_polarity"] == "aff")
     ][["target", "tokens"]]
-
-    k = 5
     hit = 0
     for i, row in filtered.iterrows():
         if row["target"] in row["tokens"][:k]:
             hit += 1
 
-    hit / len(filtered)
+    return hit / len(filtered)
 
 
 def ettinger_sensitivity(predictions: pd.DataFrame, polarity="aff") -> float:
