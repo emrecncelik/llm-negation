@@ -91,7 +91,7 @@ def mlm_distribution(
         # if target occurs in the context more than two times
         # scorer.cloze_distribution will fail
         contexts = [
-            f"{c} {placeholder}.".lower() for c in contexts
+            f"{c} {placeholder}." for c in contexts
         ]  # also adding period (signaling this is the last token of the sent. for MLM)
         return contexts, targets, ctx_polarity, tgt_polarity
 
