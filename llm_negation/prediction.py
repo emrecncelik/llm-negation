@@ -5,6 +5,23 @@ from minicons import scorer
 from torch.utils.data import DataLoader
 
 
+def cleanup_tokens(
+    scorer: Union[
+        scorer.MaskedLMScorer,
+        scorer.IncrementalLMScorer,
+        scorer.MambaScorer,
+        scorer.Seq2SeqScorer,
+    ],
+    tokens: list[list[str]],
+) -> list[list[str]]:
+    model_name = scorer.model.config._name_or_path.lower()
+    if "albert" in model_name:
+        tokens = [list(map(lambda x: x.replace("▁", "").strip(), t)) for t in tokens]
+    if "modernbert" in model_name or "roberta" in model_name:
+        tokens = [list(map(lambda x: x.replace("Ġ", "").strip(), t)) for t in tokens]
+    return tokens
+
+
 def next_word_distribution(
     dataloader: DataLoader,
     scorer: Union[scorer.IncrementalLMScorer, scorer.MambaScorer, scorer.Seq2SeqScorer],
@@ -44,6 +61,9 @@ def next_word_distribution(
         tokens = topk_preds.indices.detach().cpu().numpy()
         logprobs = topk_preds.values.detach().cpu().numpy()
         tokens = [scorer.tokenizer.convert_ids_to_tokens(t) for t in tokens]
+        tokens = cleanup_tokens(
+            scorer, tokens
+        )  # some models use special chars to denote preceding spaces, remove them
 
         predictions["context"].extend(contexts)
         predictions["target"].extend(targets)
@@ -104,6 +124,9 @@ def mlm_distribution(
         tokens = topk_preds.indices.detach().cpu().numpy()
         logprobs = topk_preds.values.detach().cpu().numpy()
         tokens = [scorer.tokenizer.convert_ids_to_tokens(t) for t in tokens]
+        tokens = cleanup_tokens(
+            scorer, tokens
+        )  # some models use special chars to denote preceding spaces, remove them
 
         predictions["context"].extend(contexts)
         predictions["target"].extend(targets)
