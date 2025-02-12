@@ -38,7 +38,7 @@ MODELS = {
         # "google/gemma-2-27b",
         "meta-llama/Llama-3.2-1B",
         "meta-llama/Llama-3.2-3B",
-        "meta-llama/Llama-3.1-8B",
+        # "meta-llama/Llama-3.1-8B",
         # "meta-llama/Llama-3.1-70B",
         # "meta-llama/Llama-3.1-405B",
         "EleutherAI/pythia-70m-deduped",
