@@ -15,8 +15,8 @@ from llm_negation.prediction import mlm_distribution, next_word_distribution
 
 DATA = [
     "data/NEG-136-SIMP.tsv",
-    "data/NEG-1500-SIMP-GEN.tsv",
-    "data/NEG-1500-SIMP-TEMP.tsv",
+    # "data/NEG-1500-SIMP-GEN.tsv",
+    # "data/NEG-1500-SIMP-TEMP.tsv",
 ]
 PREFIX = ""
 BATCH_SIZE = 8
