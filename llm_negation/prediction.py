@@ -17,7 +17,7 @@ def cleanup_tokens(
     model_name = scorer.model.config._name_or_path.lower()
     if "albert" in model_name:
         tokens = [list(map(lambda x: x.replace("▁", "").strip(), t)) for t in tokens]
-    if "modernbert" in model_name or "roberta" in model_name:
+    if any([m in model_name for m in ("modernbert", "roberta", "gpt2")]):
         tokens = [list(map(lambda x: x.replace("Ġ", "").strip(), t)) for t in tokens]
     return tokens
 
