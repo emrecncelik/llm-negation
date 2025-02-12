@@ -1,6 +1,14 @@
 # "ai21labs/AI21-Jamba-1.5-Mini",
 # "ai21labs/AI21-Jamba-1.5-Large",
 
+
+def get_model_type(model_name: str) -> str:
+    for model_type, model_list in MODELS.items():
+        if model_name in model_list:
+            return model_type
+    raise ValueError(f"Model {model_name} not found in config.MODELS.")
+
+
 MODELS = {
     "MLM": [
         "distilbert-base-uncased",
