@@ -30,7 +30,7 @@ if __name__ == "__main__":
         metrics[model_id] = {}
         for dataset_name in DATA:
             dataset_id = dataset_name.split("/")[-1].replace(".tsv", "")
-            metrics[model][dataset_id] = {}
+            metrics[model_id][dataset_id] = {}
             print(f"Running experiment for {model} model")
             dataset = pd.read_csv(dataset_name, sep="\t")
             dataset = prepare_dataset_neg(dataset, wordnet_prefix=False)
@@ -52,7 +52,7 @@ if __name__ == "__main__":
                 dataloader = DataLoader(dataset, batch_size=BATCH_SIZE, shuffle=False)
                 predictions = mlm_distribution(dataloader, scorer_)
             else:
-                raise ValueError(f"Model {model} not found in config.MODELS.")
+                raise ValueError(f"Model {model_id} not found in config.MODELS.")
 
             metrics[model_id][dataset_id]["top1"] = topk_accuracy(predictions, k=1)
             metrics[model_id][dataset_id]["top3"] = topk_accuracy(predictions, k=3)
