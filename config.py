@@ -1,3 +1,6 @@
+# "ai21labs/AI21-Jamba-1.5-Mini",
+# "ai21labs/AI21-Jamba-1.5-Large",
+
 MODELS = {
     "MLM": [
         "distilbert-base-uncased",
@@ -12,8 +15,49 @@ MODELS = {
         "answerdotai/ModernBERT-base",
         "answerdotai/ModernBERT-large",
     ],
-    "CLM": [],
-    "SEQ2SEQ": [],
+    "CLM": [
+        "openai-community/gpt2",
+        "openai-community/gpt2-medium",
+        # "openai-community/gpt2-large",
+        # "openai-community/gpt2-xl",
+        # recurrent gemma may require different configuration
+        "google/recurrentgemma-2b",
+        # "google/recurrentgemma-9b",
+        "google/gemma-2b",
+        # "google/gemma-7b",
+        "google/gemma-2-2b",
+        # "google/gemma-2-9b",
+        # "google/gemma-2-27b",
+        "meta-llama/Llama-3.2-1B",
+        "meta-llama/Llama-3.2-3B",
+        "meta-llama/Llama-3.1-8B",
+        # "meta-llama/Llama-3.1-70B",
+        # "meta-llama/Llama-3.1-405B",
+        "EleutherAI/pythia-70m-deduped",
+        "EleutherAI/pythia-160m-deduped",
+        "EleutherAI/pythia-410m-deduped",
+        "EleutherAI/pythia-1b-deduped",
+        "EleutherAI/pythia-1.4b-deduped",
+        # "EleutherAI/pythia-2.8b-deduped",
+        # "EleutherAI/pythia-6.9b-deduped",
+        # "EleutherAI/pythia-12b-deduped",
+    ],
+    "SEQ2SEQ": [
+        "google-t5/t5-small",
+        "google-t5/t5-base",
+        "google-t5/t5-large",
+        # flan may require different configuration
+        "google/flan-t5-small",
+        # "google/flan-t5-base",
+        # "google/flan-t5-large",
+        # "google/flan-t5-xl",
+        # "google/flan-t5-xxl",
+    ],
+    "MAMBA": [
+        # "state-spaces/mamba-130m-hf",
+        "state-spaces/mamba-790m-hf",
+        # "state-spaces/mamba-2.8b-hf",
+    ],
 }
 
 DATASETS = {
