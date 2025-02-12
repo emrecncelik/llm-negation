@@ -18,7 +18,8 @@ def prepare_data_neg(
     context_neg: str,
     target_aff: str,
     target_neg: str,
-    wordnet_prefix: str,
+    wordnet_prefix: bool,
+    prefix: str,
     determiner: bool,
 ) -> list[tuple[str, str, str, str]]:
     data = []
@@ -26,26 +27,36 @@ def prepare_data_neg(
     context_neg = " ".join(context_neg.split()[:-1])
 
     if wordnet_prefix:
-        prefix = get_wordnet_prefix(target_aff)
+        wn_prefix = get_wordnet_prefix(target_aff)
     else:
-        prefix = ""
+        wn_prefix = ""
 
     if determiner:
         aff_det = get_determiner(target_aff)
         neg_det = get_determiner(target_neg)
-        data.append((f"{prefix}{context_aff} {aff_det}", target_aff, "aff", "aff"))
-        data.append((f"{prefix}{context_aff} {neg_det}", target_neg, "aff", "neg"))
-        data.append((f"{prefix}{context_neg} {neg_det}", target_neg, "neg", "neg"))
-        data.append((f"{prefix}{context_neg} {aff_det}", target_aff, "neg", "aff"))
+        data.append(
+            (f"{wn_prefix}{prefix}{context_aff} {aff_det}", target_aff, "aff", "aff")
+        )
+        data.append(
+            (f"{wn_prefix}{prefix}{context_aff} {neg_det}", target_neg, "aff", "neg")
+        )
+        data.append(
+            (f"{wn_prefix}{prefix}{context_neg} {neg_det}", target_neg, "neg", "neg")
+        )
+        data.append(
+            (f"{wn_prefix}{prefix}{context_neg} {aff_det}", target_aff, "neg", "aff")
+        )
     else:
-        data.append((f"{prefix}{context_aff}", target_aff, "aff", "aff"))
-        data.append((f"{prefix}{context_aff}", target_neg, "aff", "neg"))
-        data.append((f"{prefix}{context_neg}", target_neg, "neg", "neg"))
-        data.append((f"{prefix}{context_neg}", target_aff, "neg", "aff"))
+        data.append((f"{wn_prefix}{prefix}{context_aff}", target_aff, "aff", "aff"))
+        data.append((f"{wn_prefix}{prefix}{context_aff}", target_neg, "aff", "neg"))
+        data.append((f"{wn_prefix}{prefix}{context_neg}", target_neg, "neg", "neg"))
+        data.append((f"{wn_prefix}{prefix}{context_neg}", target_aff, "neg", "aff"))
     return data
 
 
-def prepare_dataset_neg(dataset, wordnet_prefix: bool = False, determiner: bool = True):
+def prepare_dataset_neg(
+    dataset, wordnet_prefix: bool = False, prefix: str = "", determiner: bool = True
+):
     prepared_dataset = []
     for _, row in dataset.iterrows():
         data = prepare_data_neg(
@@ -54,6 +65,7 @@ def prepare_dataset_neg(dataset, wordnet_prefix: bool = False, determiner: bool 
             row["target_aff"],
             row["target_neg"],
             wordnet_prefix=wordnet_prefix,
+            prefix=prefix,
             determiner=determiner,
         )
         prepared_dataset.extend(data)
