@@ -46,7 +46,7 @@ def next_word_distribution(
     for batch in tqdm(dataloader):
         contexts, targets, ctx_polarity, tgt_polarity = batch_preprocess(batch)
         inputs = contexts
-        outputs = scorer.cloze_distribution(inputs)
+        outputs = scorer.next_word_distribution(inputs)
 
         target_indices = [
             scorer.tokenizer(target, add_special_tokens=False)["input_ids"][0]
