@@ -18,7 +18,10 @@ def cleanup_tokens(
     if any([m in model_name for m in ("gemma", "albert")]):
         tokens = [list(map(lambda x: x.replace("▁", "").strip(), t)) for t in tokens]
     if any(
-        [m in model_name for m in ("modernbert", "roberta", "gpt2", "llama", "pythia")]
+        [
+            m in model_name
+            for m in ("modernbert", "roberta", "gpt2", "llama", "pythia", "mamba")
+        ]
     ):
         tokens = [list(map(lambda x: x.replace("Ġ", "").strip(), t)) for t in tokens]
     return tokens
