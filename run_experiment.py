@@ -1,6 +1,7 @@
 import os
 import json
 import torch
+import argparse
 import pandas as pd
 from minicons import scorer
 from torch.utils.data import DataLoader
@@ -14,20 +15,42 @@ from llm_negation.metrics import (
 )
 from llm_negation.prediction import mlm_distribution, next_word_distribution
 
-DATA = [
-    "data/NEG-136-SIMP.tsv",
-    # "data/NEG-1500-SIMP-GEN.tsv",
-    # "data/NEG-1500-SIMP-TEMP.tsv",
-]
-PREFIX = ""
-WORDNET_PREFIX = ""
-BATCH_SIZE = 4
-DEVICE = "cuda"
-SKIP_IF_EXISTS = False
-PREDICTION_DIR = f"predictions/{WORDNET_PREFIX}"
-RESULTS_DIR = f"results/{WORDNET_PREFIX}"
+
+def parse_args():
+    parser = argparse.ArgumentParser(description="Run experiment")
+    parser.add_argument("--data", nargs="+", default=["data/NEG-136-SIMP.tsv"])
+    parser.add_argument(
+        "--prefix",
+        type=str,
+        default="",
+        help="Prefix to add to context (after WordNet prefix)",
+    )
+    parser.add_argument(
+        "--wordnet_prefix",
+        type=str,
+        default="",
+        help="WordNet prefix to add to context. Adds WN definition of aff and neg targets",
+    )
+    parser.add_argument("--batch_size", type=int, default=4)
+    parser.add_argument("--device", type=str, default="cuda")
+    parser.add_argument("--skip_if_exists", action="store_true")
+    parser.add_argument("--prediction_dir", type=str, default="predictions")
+    parser.add_argument("--results_dir", type=str, default="results")
+    return parser.parse_args()
+
 
 if __name__ == "__main__":
+    args = parse_args()
+
+    DATA = args.data
+    PREFIX = args.prefix
+    WORDNET_PREFIX = args.wordnet_prefix
+    BATCH_SIZE = args.batch_size
+    DEVICE = args.device
+    SKIP_IF_EXISTS = args.skip_if_exists
+    PREDICTION_DIR = f"{args.prediction_dir}/wn_{WORDNET_PREFIX}_p_{bool(PREFIX)}"
+    RESULTS_DIR = f"{args.results_dir}/wn_{WORDNET_PREFIX}_p_{bool(PREFIX)}"
+
     metrics = {}
     metrics_path = os.path.join(RESULTS_DIR, "metrics.json")
     metrics_temp_path = os.path.join(RESULTS_DIR, "metrics_temp.json")
