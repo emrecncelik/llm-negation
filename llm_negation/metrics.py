@@ -14,13 +14,23 @@ def topk_accuracy(predictions: pd.DataFrame, k: int = 1) -> float:
 
 
 def ettinger_sensitivity(predictions: pd.DataFrame, polarity="aff") -> float:
+    if polarity == "aff":
+        other = "neg"
+    elif polarity == "neg":
+        other = "aff"
+
     # get prediction for only aff contexts or only neg contexts
-    scores_array = predictions[predictions["ctx_polarity"] == polarity][
-        "target_logprob"
-    ].array
-    XX = scores_array[::2]  # appropriate predictions (eg. neg context neg target)
-    XY = scores_array[1::2]  # inappropriate predictions (eg. neg context aff target)
-    return (XX > XY).sum() / len(XX)
+    XX_scores = predictions[
+        (predictions["ctx_polarity"] == polarity)
+        & (predictions["tgt_polarity"] == polarity)
+    ]["target_logprob"].array
+
+    XY_scores = predictions[
+        (predictions["ctx_polarity"] == polarity)
+        & (predictions["tgt_polarity"] == other)
+    ]["target_logprob"].array
+
+    return (XX_scores > XY_scores).sum() / len(XX_scores)
 
 
 def shivagunde_sensitivity(predictions: pd.DataFrame) -> float:
