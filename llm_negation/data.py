@@ -18,7 +18,7 @@ def prepare_data_neg(
     context_neg: str,
     target_aff: str,
     target_neg: str,
-    wordnet_prefix: bool,
+    wordnet_prefix_word: str,
     prefix: str,
     determiner: bool,
 ) -> list[tuple[str, str, str, str]]:
@@ -26,8 +26,12 @@ def prepare_data_neg(
     context_aff = " ".join(context_aff.split()[:-1])
     context_neg = " ".join(context_neg.split()[:-1])
 
-    if wordnet_prefix:
-        wn_prefix = get_wordnet_prefix(target_aff)
+    if wordnet_prefix_word and isinstance(wordnet_prefix_word, str):
+        wn_prefix = get_wordnet_prefix(wordnet_prefix_word)
+    elif wordnet_prefix_word and isinstance(wordnet_prefix_word, tuple):
+        wn_prefix = get_wordnet_prefix(wordnet_prefix_word[0]) + get_wordnet_prefix(
+            wordnet_prefix_word[1]
+        )
     else:
         wn_prefix = ""
 
@@ -55,16 +59,26 @@ def prepare_data_neg(
 
 
 def prepare_dataset_neg(
-    dataset, wordnet_prefix: bool = False, prefix: str = "", determiner: bool = True
+    dataset, wordnet_prefix_word: str = "", prefix: str = "", determiner: bool = True
 ):
+    temp = wordnet_prefix_word
     prepared_dataset = []
     for _, row in dataset.iterrows():
+        if temp == "aff":
+            wordnet_prefix_word = row["target_aff"]
+        elif temp == "neg":
+            wordnet_prefix_word = row["target_neg"]
+        elif temp == "both":
+            wordnet_prefix_word = (row["target_aff"], row["target_neg"])
+        elif temp == "rboth":
+            wordnet_prefix_word = (row["target_neg"], row["target_aff"])
+
         data = prepare_data_neg(
             row["context_aff"],
             row["context_neg"],
             row["target_aff"],
             row["target_neg"],
-            wordnet_prefix=wordnet_prefix,
+            wordnet_prefix_word=wordnet_prefix_word,
             prefix=prefix,
             determiner=determiner,
         )
