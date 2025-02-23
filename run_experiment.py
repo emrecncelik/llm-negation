@@ -80,25 +80,27 @@ if __name__ == "__main__":
                 )
 
                 if model in MODELS["CLM"]:
-                    scorer_ = scorer.IncrementalLMScorer(model, DEVICE)
+                    scorer_ = scorer.IncrementalLMScorer(model, device=DEVICE)
                     dataloader = DataLoader(
                         dataset, batch_size=BATCH_SIZE, shuffle=False
                     )
                     predictions = next_word_distribution(dataloader, scorer_)
                 elif model in MODELS["MLM"]:
-                    scorer_ = scorer.MaskedLMScorer(model, DEVICE)
+                    scorer_ = scorer.MaskedLMScorer(model, device=DEVICE)
                     dataloader = DataLoader(
                         dataset, batch_size=BATCH_SIZE, shuffle=False
                     )
                     predictions = mlm_distribution(dataloader, scorer_)
                 elif model in MODELS["MAMBA"]:
-                    scorer_ = scorer.MambaScorer(model, DEVICE)
+                    scorer_ = scorer.MambaScorer(
+                        model, tokenizer="EleutherAI/gpt-neox-20b", device=DEVICE
+                    )  # all mamba models use the same tokenizer
                     dataloader = DataLoader(
                         dataset, batch_size=BATCH_SIZE, shuffle=False
                     )
                     predictions = next_word_distribution(dataloader, scorer_)
                 elif model in MODELS["SEQ2SEQ"]:
-                    scorer_ = scorer.Seq2SeqScorer(model, DEVICE)
+                    scorer_ = scorer.Seq2SeqScorer(model, device=DEVICE)
                     dataloader = DataLoader(
                         dataset, batch_size=BATCH_SIZE, shuffle=False
                     )
