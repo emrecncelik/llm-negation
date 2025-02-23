@@ -104,7 +104,7 @@ if __name__ == "__main__":
                     dataloader = DataLoader(
                         dataset, batch_size=BATCH_SIZE, shuffle=False
                     )
-                    predictions = next_word_distribution(dataloader, scorer_)
+                    predictions = mlm_distribution(dataloader, scorer_)
                 else:
                     raise ValueError(f"Model {model} not found in config.MODELS.")
 
