@@ -6,7 +6,7 @@ from torch.utils.data import DataLoader
 
 
 def cleanup_tokens(
-    scorer: Union[
+    sc: Union[
         scorer.MaskedLMScorer,
         scorer.IncrementalLMScorer,
         scorer.MambaScorer,
@@ -14,8 +14,11 @@ def cleanup_tokens(
     ],
     tokens: list[list[str]],
 ) -> list[list[str]]:
-    model_name = scorer.model.config._name_or_path.lower()
-    if any([m in model_name for m in ("gemma", "albert")]):
+    if not isinstance(sc, scorer.MambaScorer):
+        model_name = sc.model.config._name_or_path.lower()
+    else:
+        model_name = "mamba"
+    if any([m in model_name for m in ("gemma", "albert", "t5")]):
         tokens = [list(map(lambda x: x.replace("▁", "").strip(), t)) for t in tokens]
     if any(
         [
@@ -53,6 +56,15 @@ def next_word_distribution(
         inputs = contexts
         outputs = scorer.next_word_distribution(inputs)
 
+        # get first token of the targets,
+        # does not matter if target is single token
+        targets = [
+            scorer.tokenizer.decode(
+                scorer.tokenizer(target, add_special_tokens=False)["input_ids"][0]
+            )
+            for target in targets
+        ]
+
         target_indices = [
             scorer.tokenizer(target, add_special_tokens=False)["input_ids"][0]
             for target in targets
@@ -84,7 +96,7 @@ def next_word_distribution(
 
 def mlm_distribution(
     dataloader: DataLoader,
-    scorer: scorer.MaskedLMScorer,
+    scorer: Union[scorer.MaskedLMScorer, scorer.Seq2SeqScorer],
     topk: int = 300,
     placeholder: str = "token",  # this is dumb
 ) -> pd.DataFrame:
@@ -113,6 +125,15 @@ def mlm_distribution(
         contexts, targets, ctx_polarity, tgt_polarity = batch_preprocess(batch)
         inputs = [(c, placeholder) for c in contexts]
         outputs = scorer.cloze_distribution(inputs)
+
+        # get first token of the targets,
+        # does not matter if target is single token
+        targets = [
+            scorer.tokenizer.decode(
+                scorer.tokenizer(target, add_special_tokens=False)["input_ids"][0]
+            )
+            for target in targets
+        ]
 
         # Store target indices/scores beforehand
         # might not be present in top-k predictions
