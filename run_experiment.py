@@ -48,8 +48,8 @@ if __name__ == "__main__":
     BATCH_SIZE = args.batch_size
     DEVICE = args.device
     SKIP_IF_EXISTS = args.skip_if_exists
-    PREDICTION_DIR = f"{args.prediction_dir}/wn_{WORDNET_PREFIX}_p_{bool(PREFIX)}"
-    RESULTS_DIR = f"{args.results_dir}/wn_{WORDNET_PREFIX}_p_{bool(PREFIX)}"
+    PREDICTION_DIR = args.prediction_dir
+    RESULTS_DIR = args.results_dir
 
     metrics = {}
     metrics_path = os.path.join(RESULTS_DIR, "metrics.json")
