@@ -34,6 +34,7 @@ def parse_args():
     parser.add_argument("--batch_size", type=int, default=4)
     parser.add_argument("--device", type=str, default="cuda")
     parser.add_argument("--skip_if_exists", action="store_true")
+    parser.add_argument("--experiment_dir", type=str, default="experiment_1")
     parser.add_argument("--prediction_dir", type=str, default="predictions")
     parser.add_argument("--results_dir", type=str, default="results")
     return parser.parse_args()
@@ -48,8 +49,8 @@ if __name__ == "__main__":
     BATCH_SIZE = args.batch_size
     DEVICE = args.device
     SKIP_IF_EXISTS = args.skip_if_exists
-    PREDICTION_DIR = args.prediction_dir
-    RESULTS_DIR = args.results_dir
+    PREDICTION_DIR = os.path.join(args.experiment_dir, args.prediction_dir)
+    RESULTS_DIR = os.path.join(args.experiment_dir, args.results_dir)
 
     metrics = {}
     metrics_path = os.path.join(RESULTS_DIR, "metrics.json")
