@@ -58,12 +58,12 @@ def next_word_distribution(
 
         # get first token of the targets,
         # does not matter if target is single token
-        targets = [
-            scorer.tokenizer.decode(
-                scorer.tokenizer(target, add_special_tokens=False)["input_ids"][0]
-            )
-            for target in targets
-        ]
+        # targets = [
+        #     scorer.tokenizer.decode(
+        #         scorer.tokenizer(target, add_special_tokens=False)["input_ids"][0]
+        #     )
+        #     for target in targets
+        # ]
 
         target_indices = [
             scorer.tokenizer(target, add_special_tokens=False)["input_ids"][0]
@@ -128,12 +128,12 @@ def mlm_distribution(
 
         # get first token of the targets,
         # does not matter if target is single token
-        targets = [
-            scorer.tokenizer.decode(
-                scorer.tokenizer(target, add_special_tokens=False)["input_ids"][0]
-            )
-            for target in targets
-        ]
+        # targets = [
+        #     scorer.tokenizer.decode(
+        #         scorer.tokenizer(target, add_special_tokens=False)["input_ids"][0]
+        #     )
+        #     for target in targets
+        # ]
 
         # Store target indices/scores beforehand
         # might not be present in top-k predictions
