@@ -36,11 +36,11 @@ def cleanup_tokens(
 def conditional_score(
     dataloader: DataLoader,
     scorer: scorer.LMScorer,
-    reduction: str | callable = "mean",
+    reduction: callable = lambda x: x.mean(0).item(),  # default from minicons
 ):
     def batch_preprocess(batch):
-        contexts = batch[0]
-        targets = [t + "." for t in targets]  # end of sentence
+        contexts = list(batch[0])
+        targets = [t + "." for t in batch[1]]  # end of sentence
         ctx_polarity = batch[2]
         tgt_polarity = batch[3]
         return contexts, targets, ctx_polarity, tgt_polarity
@@ -55,6 +55,7 @@ def conditional_score(
 
     for batch in tqdm(dataloader):
         contexts, targets, ctx_polarity, tgt_polarity = batch_preprocess(batch)
+        print(contexts, targets)
         outputs = scorer.conditional_score(
             prefix=contexts, stimuli=targets, reduction=reduction
         )

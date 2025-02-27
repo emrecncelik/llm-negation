@@ -1,3 +1,10 @@
+from minicons import scorer
+from llm_negation.prediction import (
+    mlm_distribution,
+    next_word_distribution,
+    conditional_score,
+)
+
 # "ai21labs/AI21-Jamba-1.5-Mini",
 # "ai21labs/AI21-Jamba-1.5-Large",
 
@@ -9,18 +16,46 @@ def get_model_type(model_name: str) -> str:
     raise ValueError(f"Model {model_name} not found in config.MODELS.")
 
 
+SCORER_CONFIG = {
+    "CLM": {
+        "scorer_class": scorer.IncrementalLMScorer,
+        "distribution_func": next_word_distribution,
+        "conditional_func": conditional_score,
+        "extra_args": {},
+    },
+    "MLM": {
+        "scorer_class": scorer.MaskedLMScorer,
+        "distribution_func": mlm_distribution,
+        "conditional_func": conditional_score,
+        "extra_args": {},
+    },
+    "MAMBA": {
+        "scorer_class": scorer.MambaScorer,
+        "distribution_func": next_word_distribution,
+        "conditional_func": conditional_score,
+        "extra_args": {"tokenizer": "EleutherAI/gpt-neox-20b"},
+    },
+    "SEQ2SEQ": {
+        "scorer_class": scorer.Seq2SeqScorer,
+        "distribution_func": mlm_distribution,
+        "conditional_func": conditional_score,
+        "extra_args": {},
+    },
+}
+
+
 MODELS = {
     "MLM": [
         "distilbert-base-uncased",
-        "bert-base-uncased",
-        "bert-large-uncased",
-        "albert/albert-base-v2",
+        # "bert-base-uncased",
+        # "bert-large-uncased",
+        # "albert/albert-base-v2",
         # "albert/albert-large-v2",
         # "albert/albert-xlarge-v2",
         # "albert/albert-xxlarge-v2",
-        "FacebookAI/roberta-base",
+        # "FacebookAI/roberta-base",
         # "FacebookAI/roberta-large",
-        "answerdotai/ModernBERT-base",
+        # "answerdotai/ModernBERT-base",
         # "answerdotai/ModernBERT-large",
     ],
     "CLM": [

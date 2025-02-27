@@ -6,7 +6,7 @@ import pandas as pd
 from minicons import scorer
 from torch.utils.data import DataLoader
 
-from config import MODELS, DATASETS
+from config import MODELS, SCORER_CONFIG, DATASETS
 from llm_negation.data import prepare_dataset_neg
 from llm_negation.metrics import (
     ettinger_sensitivity,
@@ -30,6 +30,12 @@ def parse_args():
         type=str,
         default="",
         help="WordNet prefix to add to context. Adds WN definition of aff and neg targets",
+    )
+    parser.add_argument(
+        "--scoring_method",
+        type=str,
+        default="conditional",
+        choices=["conditional", "distribution"],
     )
     parser.add_argument("--batch_size", type=int, default=4)
     parser.add_argument("--device", type=str, default="cuda")
@@ -80,79 +86,85 @@ if __name__ == "__main__":
                     dataset, wordnet_prefix_word=WORDNET_PREFIX, prefix=PREFIX
                 )
 
-                if model in MODELS["CLM"]:
-                    scorer_ = scorer.IncrementalLMScorer(model, device=DEVICE)
-                    dataloader = DataLoader(
-                        dataset, batch_size=BATCH_SIZE, shuffle=False
-                    )
-                    predictions = next_word_distribution(dataloader, scorer_)
-                elif model in MODELS["MLM"]:
-                    scorer_ = scorer.MaskedLMScorer(model, device=DEVICE)
-                    dataloader = DataLoader(
-                        dataset, batch_size=BATCH_SIZE, shuffle=False
-                    )
-                    predictions = mlm_distribution(dataloader, scorer_)
-                elif model in MODELS["MAMBA"]:
-                    scorer_ = scorer.MambaScorer(
-                        model, tokenizer="EleutherAI/gpt-neox-20b", device=DEVICE
-                    )  # all mamba models use the same tokenizer
-                    dataloader = DataLoader(
-                        dataset, batch_size=BATCH_SIZE, shuffle=False
-                    )
-                    predictions = next_word_distribution(dataloader, scorer_)
-                elif model in MODELS["SEQ2SEQ"]:
-                    scorer_ = scorer.Seq2SeqScorer(model, device=DEVICE)
-                    dataloader = DataLoader(
-                        dataset, batch_size=BATCH_SIZE, shuffle=False
-                    )
-                    predictions = mlm_distribution(dataloader, scorer_)
-                else:
+                model_type = next(
+                    (type_ for type_, models in MODELS.items() if model in models), None
+                )
+                if model_type is None:
                     raise ValueError(f"Model {model} not found in config.MODELS.")
+
+                dataloader = DataLoader(dataset, batch_size=BATCH_SIZE, shuffle=False)
+
+                config = SCORER_CONFIG[model_type]
+
+                scorer_args = {"device": DEVICE, **config["extra_args"]}
+                scorer_ = config["scorer_class"](model, **scorer_args)
+
+                if args.scoring_method == "distribution":
+                    predictions = config["distribution_func"](dataloader, scorer_)
+
+                elif args.scoring_method == "conditional":
+                    predictions = config["conditional_func"](dataloader, scorer_)
+                else:
+                    raise ValueError(
+                        f"Scoring method {args.scoring_method} not found in SCORER_CONFIG."
+                    )
 
                 del scorer_
                 with torch.no_grad():
                     torch.cuda.empty_cache()
 
-                metrics[model_id][dataset_id]["top1"] = topk_accuracy(predictions, k=1)
-                metrics[model_id][dataset_id]["top3"] = topk_accuracy(predictions, k=3)
-                metrics[model_id][dataset_id]["top5"] = topk_accuracy(predictions, k=5)
+                if args.scoring_method == "distribution":
+                    metrics[model_id][dataset_id]["top1"] = topk_accuracy(
+                        predictions, k=1
+                    )
+                    metrics[model_id][dataset_id]["top3"] = topk_accuracy(
+                        predictions, k=3
+                    )
+                    metrics[model_id][dataset_id]["top5"] = topk_accuracy(
+                        predictions, k=5
+                    )
+                    metrics[model_id][dataset_id]["shivagunde"] = (
+                        shivagunde_sensitivity(predictions)
+                    )
+
                 metrics[model_id][dataset_id]["ettinger_aff"] = ettinger_sensitivity(
                     predictions, polarity="aff"
                 )
                 metrics[model_id][dataset_id]["ettinger_neg"] = ettinger_sensitivity(
                     predictions, polarity="neg"
                 )
-                metrics[model_id][dataset_id]["shivagunde"] = shivagunde_sensitivity(
-                    predictions
-                )
 
                 print(f"Model: {model_id}")
                 print(f"Dataset: {dataset_id}")
-                print(f"Top-1 accuracy: {metrics[model_id][dataset_id]['top1']}")
-                print(f"Top-3 accuracy: {metrics[model_id][dataset_id]['top3']}")
-                print(f"Top-5 accuracy: {metrics[model_id][dataset_id]['top5']}")
+                if args.scoring_method == "distribution":
+                    print(f"Top-1 accuracy: {metrics[model_id][dataset_id]['top1']}")
+                    print(f"Top-3 accuracy: {metrics[model_id][dataset_id]['top3']}")
+                    print(f"Top-5 accuracy: {metrics[model_id][dataset_id]['top5']}")
+                    print(
+                        f"Shivagunde sensitivity: {metrics[model_id][dataset_id]['shivagunde']}"
+                    )
+
                 print(
                     f"Ettinger sensitivity (aff): {metrics[model_id][dataset_id]['ettinger_aff']}"
                 )
                 print(
                     f"Ettinger sensitivity (neg): {metrics[model_id][dataset_id]['ettinger_neg']}"
                 )
-                print(
-                    f"Shivagunde sensitivity: {metrics[model_id][dataset_id]['shivagunde']}"
-                )
                 print("\n")
 
-                topk_predictions = predictions[["tokens", "logprobs"]]
-                predictions = predictions.drop(columns=["logprobs"])
-                predictions["tokens"] = predictions["tokens"].apply(lambda x: x[:5])
+                if args.scoring_method == "distribution":
+                    topk_predictions = predictions[["tokens", "logprobs"]]
+                    predictions = predictions.drop(columns=["logprobs"])
+                    predictions["tokens"] = predictions["tokens"].apply(lambda x: x[:5])
+
+                    topk_predictions.to_csv(
+                        os.path.join(prediction_dir, f"{model_id}_topk.tsv"),
+                        sep="\t",
+                        index=False,
+                    )
 
                 predictions.to_csv(
                     os.path.join(prediction_dir, f"{model_id}.tsv"),
-                    sep="\t",
-                    index=False,
-                )
-                topk_predictions.to_csv(
-                    os.path.join(prediction_dir, f"{model_id}_topk.tsv"),
                     sep="\t",
                     index=False,
                 )
