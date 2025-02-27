@@ -6,12 +6,7 @@ from torch.utils.data import DataLoader
 
 
 def cleanup_tokens(
-    sc: Union[
-        scorer.MaskedLMScorer,
-        scorer.IncrementalLMScorer,
-        scorer.MambaScorer,
-        scorer.Seq2SeqScorer,
-    ],
+    sc: scorer.LMScorer,
     tokens: list[list[str]],
 ) -> list[list[str]]:
     if not isinstance(sc, scorer.MambaScorer):
@@ -36,6 +31,41 @@ def cleanup_tokens(
     ):
         tokens = [list(map(lambda x: x.replace("Ġ", "").strip(), t)) for t in tokens]
     return tokens
+
+
+def conditional_score(
+    dataloader: DataLoader,
+    scorer: scorer.LMScorer,
+    reduction: str | callable = "mean",
+):
+    def batch_preprocess(batch):
+        contexts = batch[0]
+        targets = [t + "." for t in targets]  # end of sentence
+        ctx_polarity = batch[2]
+        tgt_polarity = batch[3]
+        return contexts, targets, ctx_polarity, tgt_polarity
+
+    predictions = {
+        "context": [],
+        "target": [],
+        "target_logprob": [],  # this is actually conditional & reduced logprobs
+        "ctx_polarity": [],
+        "tgt_polarity": [],
+    }
+
+    for batch in tqdm(dataloader):
+        contexts, targets, ctx_polarity, tgt_polarity = batch_preprocess(batch)
+        outputs = scorer.conditional_score(
+            prefix=contexts, stimuli=targets, reduction=reduction
+        )
+
+        predictions["context"].extend(contexts)
+        predictions["target"].extend(targets)
+        predictions["target_logprob"].extend(outputs)
+        predictions["ctx_polarity"].extend(ctx_polarity)
+        predictions["tgt_polarity"].extend(tgt_polarity)
+
+    return pd.DataFrame(predictions)
 
 
 def next_word_distribution(
