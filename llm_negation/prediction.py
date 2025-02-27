@@ -55,7 +55,6 @@ def conditional_score(
 
     for batch in tqdm(dataloader):
         contexts, targets, ctx_polarity, tgt_polarity = batch_preprocess(batch)
-        print(contexts, targets)
         outputs = scorer.conditional_score(
             prefix=contexts, stimuli=targets, reduction=reduction
         )
