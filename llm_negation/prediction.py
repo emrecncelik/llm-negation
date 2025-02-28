@@ -55,10 +55,11 @@ def conditional_score(
 
     for batch in tqdm(dataloader):
         contexts, targets, ctx_polarity, tgt_polarity = batch_preprocess(batch)
+        # inputs = [f"{c} {t}." for c, t in zip(contexts, targets)]
         outputs = scorer.conditional_score(
             prefix=contexts, stimuli=targets, reduction=reduction
         )
-
+        # outputs = scorer.sequence_score(inputs, reduction=reduction)
         predictions["context"].extend(contexts)
         predictions["target"].extend(targets)
         predictions["target_logprob"].extend(outputs)
@@ -91,26 +92,34 @@ def next_word_distribution(
     }
     for batch in tqdm(dataloader):
         contexts, targets, ctx_polarity, tgt_polarity = batch_preprocess(batch)
-        inputs = contexts
-        outputs = scorer.next_word_distribution(inputs)
+        outputs = scorer.next_word_distribution(contexts)
 
-        # get first token of the targets,
-        # does not matter if target is single token
-        # targets = [
-        #     scorer.tokenizer.decode(
-        #         scorer.tokenizer(target, add_special_tokens=False)["input_ids"][0]
-        #     )
-        #     for target in targets
-        # ]
-
-        target_indices = [
+        # get token ids for both versions with and without leading space
+        target_indices_no_space = [
             scorer.tokenizer(target, add_special_tokens=False)["input_ids"][0]
             for target in targets
         ]
-        target_logprobs = [
-            outputs[idx][i].detach().cpu().numpy()
-            for idx, i in enumerate(target_indices)
+        target_indices_with_space = [
+            scorer.tokenizer(" " + target, add_special_tokens=False)["input_ids"][0]
+            for target in targets
         ]
+
+        # get log probabilities for both versions
+        target_logprobs = []
+        target_indices_used = []
+        for idx, (no_space_id, with_space_id) in enumerate(
+            zip(target_indices_no_space, target_indices_with_space)
+        ):
+            no_space_logprob = outputs[idx][no_space_id].detach().cpu().numpy()
+            with_space_logprob = outputs[idx][with_space_id].detach().cpu().numpy()
+
+            # choose the token with higher probability
+            if with_space_logprob > no_space_logprob:
+                target_logprobs.append(with_space_logprob)
+                target_indices_used.append(with_space_id)
+            else:
+                target_logprobs.append(no_space_logprob)
+                target_indices_used.append(no_space_id)
 
         topk_preds = outputs.topk(topk)
         tokens = topk_preds.indices.detach().cpu().numpy()
@@ -164,25 +173,32 @@ def mlm_distribution(
         inputs = [(c, placeholder) for c in contexts]
         outputs = scorer.cloze_distribution(inputs)
 
-        # get first token of the targets,
-        # does not matter if target is single token
-        # targets = [
-        #     scorer.tokenizer.decode(
-        #         scorer.tokenizer(target, add_special_tokens=False)["input_ids"][0]
-        #     )
-        #     for target in targets
-        # ]
-
-        # Store target indices/scores beforehand
-        # might not be present in top-k predictions
-        target_indices = [
+        # get token ids for both versions with and without leading space
+        target_indices_no_space = [
             scorer.tokenizer(target, add_special_tokens=False)["input_ids"][0]
             for target in targets
         ]
-        target_logprobs = [
-            outputs[idx][i].detach().cpu().numpy()
-            for idx, i in enumerate(target_indices)
+        target_indices_with_space = [
+            scorer.tokenizer(" " + target, add_special_tokens=False)["input_ids"][0]
+            for target in targets
         ]
+
+        # get log probabilities for both versions
+        target_logprobs = []
+        target_indices_used = []
+        for idx, (no_space_id, with_space_id) in enumerate(
+            zip(target_indices_no_space, target_indices_with_space)
+        ):
+            no_space_logprob = outputs[idx][no_space_id].detach().cpu().numpy()
+            with_space_logprob = outputs[idx][with_space_id].detach().cpu().numpy()
+
+            # choose the token with higher probability
+            if with_space_logprob > no_space_logprob:
+                target_logprobs.append(with_space_logprob)
+                target_indices_used.append(with_space_id)
+            else:
+                target_logprobs.append(no_space_logprob)
+                target_indices_used.append(no_space_id)
 
         topk_preds = outputs.topk(topk)
         tokens = topk_preds.indices.detach().cpu().numpy()
