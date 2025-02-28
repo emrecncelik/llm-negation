@@ -43,6 +43,12 @@ def conditional_score(
         targets = [t + "." for t in batch[1]]  # end of sentence
         ctx_polarity = batch[2]
         tgt_polarity = batch[3]
+
+        if scorer.tokenizer.chat_template is not None:
+            messages = [{{"role": "user", "content": c}} for c in contexts]
+            contexts = scorer.tokenizer.apply_chat_template(
+                messages, tokenize=False, add_generation_prompt=True
+            )
         return contexts, targets, ctx_polarity, tgt_polarity
 
     predictions = {
