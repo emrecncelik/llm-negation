@@ -17,6 +17,12 @@ def get_model_type(model_name: str) -> str:
 
 
 SCORER_CONFIG = {
+    "ICLM": {
+        "scorer_class": scorer.IncrementalLMScorer,
+        "distribution_func": next_word_distribution,
+        "conditional_func": conditional_score,
+        "extra_args": {},
+    },
     "CLM": {
         "scorer_class": scorer.IncrementalLMScorer,
         "distribution_func": next_word_distribution,
