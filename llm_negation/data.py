@@ -23,28 +23,32 @@ def prepare_prompt(
 
 
 def prepare_data_neg(
-    prompt_format: str,
     context_aff: str,
     context_neg: str,
     target_aff: str,
     target_neg: str,
     determiner: bool,
+    prompt_format: str,
 ) -> list[tuple[str, str, str, str]]:
-    data = []
     context_aff = " ".join(context_aff.split()[:-1])
     context_neg = " ".join(context_neg.split()[:-1])
 
-    if determiner:
-        data.append(prepare_prompt(prompt_format, context_aff, target_aff, True), target_aff, "aff", "aff")
-        data.append(prepare_prompt(prompt_format, context_aff, target_neg, True), target_neg, "aff", "neg")
-        data.append(prepare_prompt(prompt_format, context_neg, target_neg, True), target_neg, "neg", "neg")
-        data.append(prepare_prompt(prompt_format, context_neg, target_aff, True), target_aff, "neg", "aff")
-    else:
-        data.append(prepare_prompt(prompt_format, context_aff, target_aff, False), target_aff, "aff", "aff")
-        data.append(prepare_prompt(prompt_format, context_aff, target_neg, False), target_neg, "aff", "neg")
-        data.append(prepare_prompt(prompt_format, context_neg, target_neg, False), target_neg, "neg", "neg")
-        data.append(prepare_prompt(prompt_format, context_neg, target_aff, False), target_aff, "neg", "aff")
-    return data
+    combinations = [
+        (context_aff, target_aff, "aff", "aff"),
+        (context_aff, target_neg, "aff", "neg"),
+        (context_neg, target_neg, "neg", "neg"),
+        (context_neg, target_aff, "neg", "aff"),
+    ]
+
+    return [
+        (
+            prepare_prompt(prompt_format, context, target, determiner),
+            target,
+            ctx_polarity,
+            tgt_polarity,
+        )
+        for context, target, ctx_polarity, tgt_polarity in combinations
+    ]
 
 
 def prepare_dataset_neg(
@@ -52,17 +56,8 @@ def prepare_dataset_neg(
     prompt_format: str = "{context} {determiner}",
     determiner: bool = True,
 ):
-    temp = wordnet_prefix_word
     prepared_dataset = []
     for _, row in dataset.iterrows():
-        if temp == "aff":
-            wordnet_prefix_word = row["target_aff"]
-        elif temp == "neg":
-            wordnet_prefix_word = row["target_neg"]
-        elif temp == "both":
-            wordnet_prefix_word = (row["target_aff"], row["target_neg"])
-        elif temp == "rboth":
-            wordnet_prefix_word = (row["target_neg"], row["target_aff"])
 
         data = prepare_data_neg(
             row["context_aff"],
@@ -70,6 +65,7 @@ def prepare_dataset_neg(
             row["target_aff"],
             row["target_neg"],
             determiner=determiner,
+            prompt_format=prompt_format,
         )
         prepared_dataset.extend(data)
 
