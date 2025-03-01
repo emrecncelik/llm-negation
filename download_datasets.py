@@ -72,3 +72,11 @@ if __name__ == "__main__":
         download_file(dataset["url"], dataset["filename"], args.data_dir)
         if dataset["format"]:
             format_negation(os.path.join(args.data_dir, dataset["filename"]))
+
+    negnat = pd.read_csv(os.path.join(args.data_dir, "NEG-136-NAT.tsv"), sep="\t")
+    negnat[negnat["licensing"] == "Y"].to_csv(
+        os.path.join(args.data_dir, "NEG-136-NAT-NT.tsv"), sep="\t", index=False
+    )
+    negnat[negnat["licensing"] == "N"].to_csv(
+        os.path.join(args.data_dir, "NEG-136-NAT-LN.tsv"), sep="\t", index=False
+    )
