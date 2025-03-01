@@ -45,7 +45,7 @@ def conditional_score(
         tgt_polarity = batch[3]
 
         if scorer.tokenizer.chat_template is not None:
-            messages = [{{"role": "user", "content": c}} for c in contexts]
+            messages = [[{"role": "user", "content": c}] for c in contexts]
             contexts = scorer.tokenizer.apply_chat_template(
                 messages, tokenize=False, add_generation_prompt=True
             )
@@ -87,7 +87,7 @@ def next_word_distribution(
         tgt_polarity = batch[3]
 
         if scorer.tokenizer.chat_template is not None:
-            messages = [{{"role": "user", "content": c}} for c in contexts]
+            messages = [[{"role": "user", "content": c}] for c in contexts]
             contexts = scorer.tokenizer.apply_chat_template(
                 messages, tokenize=False, add_generation_prompt=True
             )
