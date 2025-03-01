@@ -17,7 +17,7 @@ class ExperimentConfig:
     config: str
     save_config: str
     dataset_paths: list[str]
-    model_type: list[str] = ["MLM"]
+    model_type: list[str]
     prompt_format: str = "{context} {determiner}"
     scoring_method: str = "distribution"
     batch_size: int = 4
