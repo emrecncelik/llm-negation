@@ -14,11 +14,12 @@ from llm_negation.metrics import calculate_metrics
 
 @dataclass
 class ExperimentConfig:
+    config: str
+    save_config: str
     dataset_paths: list[str]
-    model_types: list[str]
-    wordnet_prefix: str = ""
-    prefix: str = ""
-    suffix: str = ""
+    model_type: list[str] = ["MLM"]
+    prompt_format: str = "{context} {determiner}"
+    scoring_method: str = "distribution"
     batch_size: int = 4
     topk: int = 30
     device: str = "cuda" if torch.cuda.is_available() else "cpu"
@@ -29,9 +30,12 @@ class ExperimentConfig:
     @classmethod
     def from_args(cls, args):
         return cls(
+            config=args.config,
+            save_config=args.save_config,
             dataset_paths=args.data,
-            model_types=args.model_type,
+            model_type=args.model_type,
             prompt_format=args.prompt_format,
+            scoring_method=args.scoring_method,
             batch_size=args.batch_size,
             topk=args.topk,
             device=args.device,
@@ -76,8 +80,8 @@ def parse_args():
         default="experiment_config.yaml",
         help="Save parsed arguments to YAML config file",
     )
-    parser.add_argument("--data", nargs="+", required=True, help="Dataset path(s)")
-    parser.add_argument("--model_type", nargs="+", required=True, help="Model type(s)")
+    parser.add_argument("--data", nargs="+", help="Dataset path(s)")
+    parser.add_argument("--model_type", nargs="+", help="Model type(s)")
     parser.add_argument("--prompt_format", type=str, default="{context} {determiner}")
     parser.add_argument("--scoring_method", type=str, default="distribution")
     parser.add_argument("--batch_size", type=int, default=4, help="Batch size")
@@ -97,22 +101,22 @@ def parse_args():
 
 
 def run_experiment(config: ExperimentConfig):
-    args = parse_args()
-
-    DATA = args.data
-    MODEL_TYPES = args.model_type
-    PROMPT_FORMAT = args.prompt_format
-    SCORING_METHOD = args.scoring_method
-    BATCH_SIZE = args.batch_size
-    DEVICE = args.device
-    SKIP_IF_EXISTS = args.skip_if_exists
-    EXPERIMENT_DIR = args.experiment_dir
-    PREDICTION_DIR = os.path.join(EXPERIMENT_DIR, args.prediction_dir)
-    SAVE_CONFIG_PATH = os.path.join(EXPERIMENT_DIR, args.save_config)
+    DATA = config.data
+    MODEL_TYPES = config.model_type
+    PROMPT_FORMAT = config.prompt_format
+    SCORING_METHOD = config.scoring_method
+    BATCH_SIZE = config.batch_size
+    DEVICE = config.device
+    SKIP_IF_EXISTS = config.skip_if_exists
+    EXPERIMENT_DIR = config.experiment_dir
+    PREDICTION_DIR = os.path.join(EXPERIMENT_DIR, config.prediction_dir)
+    SAVE_CONFIG_PATH = os.path.join(EXPERIMENT_DIR, config.save_config)
 
     os.makedirs(EXPERIMENT_DIR, exist_ok=True)
     os.makedirs(PREDICTION_DIR, exist_ok=True)
-    config.to_yaml(SAVE_CONFIG_PATH)
+
+    if config.save_config:
+        config.to_yaml(SAVE_CONFIG_PATH)
 
     metrics = {}
     metrics_path = os.path.join(EXPERIMENT_DIR, "metrics.json")
@@ -189,7 +193,7 @@ def run_experiment(config: ExperimentConfig):
                     predictions, metrics, model_id, dataset_id, show=True
                 )
 
-                if args.scoring_method == "distribution":
+                if SCORING_METHOD == "distribution":
                     topk_predictions = predictions[["tokens", "logprobs"]]
                     predictions = predictions.drop(columns=["logprobs"])
                     predictions["tokens"] = predictions["tokens"].apply(lambda x: x[:5])
@@ -219,6 +223,11 @@ def run_experiment(config: ExperimentConfig):
 
 def main():
     args = parse_args()
+    if args.config:
+        config = ExperimentConfig.from_yaml(args.config)
+    else:
+        config = ExperimentConfig.from_args(args)
+
     config = ExperimentConfig.from_args(args)
     run_experiment(config)
 
