@@ -47,8 +47,9 @@ def topk_accuracy(predictions: pd.DataFrame, k: int = 1) -> float:
         (predictions["ctx_polarity"] == "aff") & (predictions["tgt_polarity"] == "aff")
     ][["target", "tokens"]]
     hit = 0
+
     for i, row in filtered.iterrows():
-        if row["target"] in row["tokens"][:k]:
+        if row["target"].lower() in list(map(lambda x: x.lower(), row["tokens"][:k])):
             hit += 1
 
     return hit / len(filtered)

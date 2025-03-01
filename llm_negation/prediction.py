@@ -5,6 +5,57 @@ from minicons import scorer
 from torch.utils.data import DataLoader
 
 
+def best_scored_token_variation(targets, outputs, scorer: scorer.LMScorer):
+    target_indices = []
+    for target in targets:
+        target_variations = [
+            (target, "no_space"),
+            (" " + target, "with_space"),
+            (target.capitalize(), "no_space_cap"),
+            (" " + target.capitalize(), "with_space_cap"),
+        ]
+
+        variation_indices = []
+        for text, variation_type in target_variations:
+            try:
+                token_id = scorer.tokenizer(text, add_special_tokens=False)[
+                    "input_ids"
+                ][0]
+                variation_indices.append((token_id, variation_type))
+            except IndexError:
+                variation_indices.append((None, variation_type))
+
+        target_indices.append(variation_indices)
+
+    target_logprobs = []
+    for idx, variations in enumerate(target_indices):
+        best_logprob = float("-inf")
+        best_id = None
+
+        # check each variation
+        for token_id, variation_type in variations:
+            if token_id is None:
+                continue
+
+            logprob = outputs[idx][token_id].detach().cpu().numpy()
+
+            if logprob > best_logprob:
+                best_logprob = logprob
+                best_id = token_id
+
+        if best_id is not None:
+            target_logprobs.append(best_logprob)
+        else:
+            # fallback if none of the variations worked
+            fallback_id = scorer.tokenizer(targets[idx], add_special_tokens=False)[
+                "input_ids"
+            ][0]
+            fallback_logprob = outputs[idx][fallback_id].detach().cpu().numpy()
+            target_logprobs.append(fallback_logprob)
+
+    return target_logprobs
+
+
 def cleanup_tokens(
     sc: scorer.LMScorer,
     tokens: list[list[str]],
@@ -106,32 +157,7 @@ def next_word_distribution(
         contexts, targets, ctx_polarity, tgt_polarity = batch_preprocess(batch)
         outputs = scorer.next_word_distribution(contexts)
 
-        # get token ids for both versions with and without leading space
-        target_indices_no_space = [
-            scorer.tokenizer(target, add_special_tokens=False)["input_ids"][0]
-            for target in targets
-        ]
-        target_indices_with_space = [
-            scorer.tokenizer(" " + target, add_special_tokens=False)["input_ids"][0]
-            for target in targets
-        ]
-
-        # get log probabilities for both versions
-        target_logprobs = []
-        target_indices_used = []
-        for idx, (no_space_id, with_space_id) in enumerate(
-            zip(target_indices_no_space, target_indices_with_space)
-        ):
-            no_space_logprob = outputs[idx][no_space_id].detach().cpu().numpy()
-            with_space_logprob = outputs[idx][with_space_id].detach().cpu().numpy()
-
-            # choose the token with higher probability
-            if with_space_logprob > no_space_logprob:
-                target_logprobs.append(with_space_logprob)
-                target_indices_used.append(with_space_id)
-            else:
-                target_logprobs.append(no_space_logprob)
-                target_indices_used.append(no_space_id)
+        target_logprobs = best_scored_token_variation(targets, outputs, scorer)
 
         topk_preds = outputs.topk(topk)
         tokens = topk_preds.indices.detach().cpu().numpy()
@@ -185,32 +211,7 @@ def mlm_distribution(
         inputs = [(c, placeholder) for c in contexts]
         outputs = scorer.cloze_distribution(inputs)
 
-        # get token ids for both versions with and without leading space
-        target_indices_no_space = [
-            scorer.tokenizer(target, add_special_tokens=False)["input_ids"][0]
-            for target in targets
-        ]
-        target_indices_with_space = [
-            scorer.tokenizer(" " + target, add_special_tokens=False)["input_ids"][0]
-            for target in targets
-        ]
-
-        # get log probabilities for both versions
-        target_logprobs = []
-        target_indices_used = []
-        for idx, (no_space_id, with_space_id) in enumerate(
-            zip(target_indices_no_space, target_indices_with_space)
-        ):
-            no_space_logprob = outputs[idx][no_space_id].detach().cpu().numpy()
-            with_space_logprob = outputs[idx][with_space_id].detach().cpu().numpy()
-
-            # choose the token with higher probability
-            if with_space_logprob > no_space_logprob:
-                target_logprobs.append(with_space_logprob)
-                target_indices_used.append(with_space_id)
-            else:
-                target_logprobs.append(no_space_logprob)
-                target_indices_used.append(no_space_id)
+        target_logprobs = best_scored_token_variation(targets, outputs, scorer)
 
         topk_preds = outputs.topk(topk)
         tokens = topk_preds.indices.detach().cpu().numpy()
