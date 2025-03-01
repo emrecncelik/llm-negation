@@ -1,0 +1,16 @@
+batch_size: 1
+config: configs/experiment_clm_nat_cloze.yaml
+data:
+- data/NEG-136-NAT-NT.tsv
+- data/NEG-136-NAT-LN.tsv
+device: cuda
+experiment_dir: experiment_clm_nat_cloze
+model_type:
+- CLM
+- MAMBA
+prediction_dir: predictions
+prompt_format: '{context}' # removed determiner
+save_config: experiment_clm_nat_cloze.yaml
+scoring_method: distribution
+skip_if_exists: true
+topk: 30
