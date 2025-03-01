@@ -30,8 +30,9 @@ def prepare_data_neg(
     determiner: bool,
     prompt_format: str,
 ) -> list[tuple[str, str, str, str]]:
-    context_aff = " ".join(context_aff.split()[:-1])
-    context_neg = " ".join(context_neg.split()[:-1])
+    if not determiner:
+        context_aff = " ".join(context_aff.split()[:-1])
+        context_neg = " ".join(context_neg.split()[:-1])
 
     combinations = [
         (context_aff, target_aff, "aff", "aff"),
