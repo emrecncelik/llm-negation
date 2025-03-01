@@ -124,6 +124,7 @@ def run_experiment(config: ExperimentConfig):
     for model_type in MODEL_TYPES:
         for model in MODELS[model_type]:
             model_id = model.replace("/", "_")
+            metrics[model_id] = {}
 
             for dataset_name in DATA:
                 ##################################
@@ -187,6 +188,7 @@ def run_experiment(config: ExperimentConfig):
                 #######################################
                 print(f"Model: {model_id}")
                 print(f"Dataset: {dataset_id}")
+
                 metrics[model_id][dataset_id] = {}
                 metrics = calculate_metrics(
                     predictions, metrics, model_id, dataset_id, show=True
