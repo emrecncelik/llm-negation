@@ -1,0 +1,16 @@
+batch_size: 1
+config: experiment_clm_cloze.yaml
+data:
+- data/NEG-136-SIMP.tsv
+- data/NEG-1500-SIMP-GEN.tsv
+- data/NEG-1500-SIMP-TEMP.tsv
+device: cuda
+experiment_dir: experiment_clm_cloze
+model_type:
+- CLM
+prediction_dir: predictions
+prompt_format: '{context} {determiner}'
+save_config: experiment_clm_cloze.yaml
+scoring_method: distribution
+skip_if_exists: true
+topk: 30
