@@ -15,8 +15,10 @@ from llm_negation.metrics import calculate_metrics
 @dataclass
 class ExperimentConfig:
     dataset_paths: list[str]
+    model_types: list[str]
     wordnet_prefix: str = ""
     prefix: str = ""
+    suffix: str = ""
     batch_size: int = 4
     topk: int = 30
     device: str = "cuda" if torch.cuda.is_available() else "cpu"
@@ -28,8 +30,10 @@ class ExperimentConfig:
     def from_args(cls, args):
         return cls(
             dataset_paths=args.data,
+            model_types=args.model_type,
             wordnet_prefix=args.wordnet_prefix,
             prefix=args.prefix,
+            suffix=args.suffix,
             batch_size=args.batch_size,
             topk=args.topk,
             device=args.device,
@@ -75,8 +79,12 @@ def parse_args():
         help="Save parsed arguments to YAML config file",
     )
     parser.add_argument("--data", nargs="+", required=True, help="Dataset path(s)")
+    parser.add_argument("--model_type", nargs="+", required=True, help="Model type(s)")
     parser.add_argument(
         "--prefix", type=str, default="", help="Prefix to add to context"
+    )
+    parser.add_argument(
+        "--suffix", type=str, default="", help="Suffix to add to context"
     )
     parser.add_argument(
         "--wordnet_prefix", type=str, default="", help="WordNet prefix type"
@@ -102,7 +110,9 @@ def run_experiment(config: ExperimentConfig):
     args = parse_args()
 
     DATA = args.data
+    MODEL_TYPES = args.model_type
     PREFIX = args.prefix
+    SUFFIX = args.suffix
     WORDNET_PREFIX = args.wordnet_prefix
     SCORING_METHOD = args.scoring_method
     BATCH_SIZE = args.batch_size
@@ -119,7 +129,7 @@ def run_experiment(config: ExperimentConfig):
     metrics = {}
     metrics_path = os.path.join(EXPERIMENT_DIR, "metrics.json")
 
-    for model_type in MODELS.keys():
+    for model_type in MODEL_TYPES:
         for model in MODELS[model_type]:
             model_id = model.replace("/", "_")
             metrics[model_id] = {}
@@ -132,6 +142,13 @@ def run_experiment(config: ExperimentConfig):
                 metrics[model_id][dataset_id] = {}
 
                 dataset_prediction_dir = os.path.join(PREDICTION_DIR, dataset_id)
+                predictions_path = os.path.join(
+                    dataset_prediction_dir, f"{model_id}.tsv"
+                )
+                topk_predictions_path = os.path.join(
+                    dataset_prediction_dir, f"{model_id}_topk.tsv"
+                )
+
                 os.makedirs(dataset_prediction_dir, exist_ok=True)
                 if SKIP_IF_EXISTS and os.path.exists(
                     os.path.join(dataset_prediction_dir, f"{model_id}.tsv")
@@ -141,7 +158,10 @@ def run_experiment(config: ExperimentConfig):
                 print(f"Running experiment for {model_id} model")
                 dataset = pd.read_csv(dataset_name, sep="\t")
                 dataset = prepare_dataset_neg(
-                    dataset, wordnet_prefix_word=WORDNET_PREFIX, prefix=PREFIX
+                    dataset,
+                    wordnet_prefix_word=WORDNET_PREFIX,
+                    prefix=PREFIX,
+                    suffix=SUFFIX,
                 )
 
                 ######################################
@@ -189,16 +209,10 @@ def run_experiment(config: ExperimentConfig):
                     predictions["tokens"] = predictions["tokens"].apply(lambda x: x[:5])
 
                     topk_predictions.to_csv(
-                        os.path.join(dataset_prediction_dir, f"{model_id}_topk.tsv"),
-                        sep="\t",
-                        index=False,
+                        topk_predictions_path, sep="\t", index=False
                     )
 
-                predictions.to_csv(
-                    os.path.join(dataset_prediction_dir, f"{model_id}.tsv"),
-                    sep="\t",
-                    index=False,
-                )
+                predictions.to_csv(predictions_path, sep="\t", index=False)
 
                 ##################################
                 ########## SAVE METRICS ##########
@@ -206,7 +220,7 @@ def run_experiment(config: ExperimentConfig):
                 if os.path.exists(metrics_path):
                     with open(metrics_path, "r") as f:
                         existing_metrics = json.load(f)
-                    existing_metrics.update(metrics)
+                        existing_metrics.update(metrics)
                     with open(metrics_path, "w") as f:
                         json.dump(existing_metrics, f, indent=4)
                 else:
@@ -218,7 +232,6 @@ def run_experiment(config: ExperimentConfig):
 
 
 def main():
-    """Main function to run experiments"""
     args = parse_args()
     config = ExperimentConfig.from_args(args)
     run_experiment(config)
