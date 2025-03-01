@@ -1,6 +1,47 @@
 import pandas as pd
 
 
+def calculate_metrics(
+    predictions: pd.DataFrame,
+    metrics: dict,
+    model_id: str,
+    dataset_id: str,
+    show: bool = False,
+) -> dict:
+    if "tokens" in predictions.columns:
+        metrics[model_id][dataset_id]["top1"] = topk_accuracy(predictions, k=1)
+        metrics[model_id][dataset_id]["top3"] = topk_accuracy(predictions, k=3)
+        metrics[model_id][dataset_id]["top5"] = topk_accuracy(predictions, k=5)
+        metrics[model_id][dataset_id]["shivagunde"] = shivagunde_sensitivity(
+            predictions
+        )
+
+    metrics[model_id][dataset_id]["ettinger_aff"] = ettinger_sensitivity(
+        predictions, polarity="aff"
+    )
+    metrics[model_id][dataset_id]["ettinger_neg"] = ettinger_sensitivity(
+        predictions, polarity="neg"
+    )
+
+    if show:
+        if "tokens" in predictions.columns:
+            print(f"Top-1 accuracy: {metrics[model_id][dataset_id]['top1']}")
+            print(f"Top-3 accuracy: {metrics[model_id][dataset_id]['top3']}")
+            print(f"Top-5 accuracy: {metrics[model_id][dataset_id]['top5']}")
+            print(
+                f"Shivagunde sensitivity: {metrics[model_id][dataset_id]['shivagunde']}"
+            )
+        print(
+            f"Ettinger sensitivity (aff): {metrics[model_id][dataset_id]['ettinger_aff']}"
+        )
+        print(
+            f"Ettinger sensitivity (neg): {metrics[model_id][dataset_id]['ettinger_neg']}"
+        )
+        print("\n")
+
+    return metrics
+
+
 def topk_accuracy(predictions: pd.DataFrame, k: int = 1) -> float:
     filtered = predictions[
         (predictions["ctx_polarity"] == "aff") & (predictions["tgt_polarity"] == "aff")
