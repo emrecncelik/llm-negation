@@ -125,6 +125,9 @@ def run_experiment(config: ExperimentConfig):
             metrics[model_id] = {}
 
             for dataset_name in DATA:
+                ##################################
+                ########## LOAD DATASET ##########
+                ##################################
                 dataset_id = dataset_name.split("/")[-1].replace(".tsv", "")
                 metrics[model_id][dataset_id] = {}
 
@@ -141,6 +144,9 @@ def run_experiment(config: ExperimentConfig):
                     dataset, wordnet_prefix_word=WORDNET_PREFIX, prefix=PREFIX
                 )
 
+                ######################################
+                ########## MAKE PREDICTIONS ##########
+                ######################################
                 model_type = next(
                     (type_ for type_, models in MODELS.items() if model in models), None
                 )
@@ -168,6 +174,9 @@ def run_experiment(config: ExperimentConfig):
                 with torch.no_grad():
                     torch.cuda.empty_cache()
 
+                #######################################
+                ########## CALCULATE METRICS ##########
+                #######################################
                 print(f"Model: {model_id}")
                 print(f"Dataset: {dataset_id}")
                 metrics = calculate_metrics(
@@ -191,6 +200,9 @@ def run_experiment(config: ExperimentConfig):
                     index=False,
                 )
 
+                ##################################
+                ########## SAVE METRICS ##########
+                ##################################
                 if os.path.exists(metrics_path):
                     with open(metrics_path, "r") as f:
                         existing_metrics = json.load(f)
