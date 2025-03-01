@@ -16,7 +16,7 @@ from llm_negation.metrics import calculate_metrics
 class ExperimentConfig:
     config: str
     save_config: str
-    dataset_paths: list[str]
+    data: list[str]
     model_type: list[str]
     prompt_format: str = "{context} {determiner}"
     scoring_method: str = "distribution"
@@ -32,7 +32,7 @@ class ExperimentConfig:
         return cls(
             config=args.config,
             save_config=args.save_config,
-            dataset_paths=args.data,
+            data=args.data,
             model_type=args.model_type,
             prompt_format=args.prompt_format,
             scoring_method=args.scoring_method,
@@ -124,14 +124,12 @@ def run_experiment(config: ExperimentConfig):
     for model_type in MODEL_TYPES:
         for model in MODELS[model_type]:
             model_id = model.replace("/", "_")
-            metrics[model_id] = {}
 
             for dataset_name in DATA:
                 ##################################
                 ########## LOAD DATASET ##########
                 ##################################
                 dataset_id = dataset_name.split("/")[-1].replace(".tsv", "")
-                metrics[model_id][dataset_id] = {}
 
                 dataset_prediction_dir = os.path.join(PREDICTION_DIR, dataset_id)
                 predictions_path = os.path.join(
@@ -189,6 +187,8 @@ def run_experiment(config: ExperimentConfig):
                 #######################################
                 print(f"Model: {model_id}")
                 print(f"Dataset: {dataset_id}")
+                metrics[model_id] = {}
+                metrics[model_id][dataset_id] = {}
                 metrics = calculate_metrics(
                     predictions, metrics, model_id, dataset_id, show=True
                 )
@@ -228,7 +228,6 @@ def main():
     else:
         config = ExperimentConfig.from_args(args)
 
-    config = ExperimentConfig.from_args(args)
     run_experiment(config)
 
 
