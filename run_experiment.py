@@ -187,7 +187,6 @@ def run_experiment(config: ExperimentConfig):
                 #######################################
                 print(f"Model: {model_id}")
                 print(f"Dataset: {dataset_id}")
-                metrics[model_id] = {}
                 metrics[model_id][dataset_id] = {}
                 metrics = calculate_metrics(
                     predictions, metrics, model_id, dataset_id, show=True
@@ -216,9 +215,6 @@ def run_experiment(config: ExperimentConfig):
                 else:
                     with open(metrics_path, "w") as f:
                         json.dump(metrics, f, indent=4)
-
-    with open(metrics_path, "w") as f:
-        json.dump(metrics, f, indent=4)
 
 
 def main():
