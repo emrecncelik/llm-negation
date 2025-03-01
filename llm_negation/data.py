@@ -8,90 +8,48 @@ def get_determiner(word: str, vowels="aeiou") -> str:
         return "a"
 
 
-def get_wordnet_prefix(word):
-    definition = wn.synsets(word)[0].definition()
-    return f"{get_determiner(word)} {word} is {definition}. "
+def prepare_prompt(
+    prompt_format: str,
+    context: str,
+    target: str,
+    determiner: bool,
+) -> str:
+    if determiner:
+        return prompt_format.format(
+            context=context, target=target, determiner=get_determiner(target)
+        )
+    else:
+        return prompt_format.format(context=context, target=target)
 
 
 def prepare_data_neg(
+    prompt_format: str,
     context_aff: str,
     context_neg: str,
     target_aff: str,
     target_neg: str,
-    wordnet_prefix_word: str,
-    prefix: str,
-    suffix: str,
     determiner: bool,
 ) -> list[tuple[str, str, str, str]]:
     data = []
     context_aff = " ".join(context_aff.split()[:-1])
     context_neg = " ".join(context_neg.split()[:-1])
 
-    if wordnet_prefix_word and isinstance(wordnet_prefix_word, str):
-        wn_prefix = get_wordnet_prefix(wordnet_prefix_word)
-    elif wordnet_prefix_word and isinstance(wordnet_prefix_word, tuple):
-        wn_prefix = get_wordnet_prefix(wordnet_prefix_word[0]) + get_wordnet_prefix(
-            wordnet_prefix_word[1]
-        )
-    else:
-        wn_prefix = ""
-
     if determiner:
-        aff_det = get_determiner(target_aff)
-        neg_det = get_determiner(target_neg)
-        data.append(
-            (
-                f"{wn_prefix}{prefix}{context_aff} {aff_det}{suffix}",
-                target_aff,
-                "aff",
-                "aff",
-            )
-        )
-        data.append(
-            (
-                f"{wn_prefix}{prefix}{context_aff} {neg_det}{suffix}",
-                target_neg,
-                "aff",
-                "neg",
-            )
-        )
-        data.append(
-            (
-                f"{wn_prefix}{prefix}{context_neg} {neg_det}{suffix}",
-                target_neg,
-                "neg",
-                "neg",
-            )
-        )
-        data.append(
-            (
-                f"{wn_prefix}{prefix}{context_neg} {aff_det}{suffix}",
-                target_aff,
-                "neg",
-                "aff",
-            )
-        )
+        data.append(prepare_prompt(prompt_format, context_aff, target_aff, True), target_aff, "aff", "aff")
+        data.append(prepare_prompt(prompt_format, context_aff, target_neg, True), target_neg, "aff", "neg")
+        data.append(prepare_prompt(prompt_format, context_neg, target_neg, True), target_neg, "neg", "neg")
+        data.append(prepare_prompt(prompt_format, context_neg, target_aff, True), target_aff, "neg", "aff")
     else:
-        data.append(
-            (f"{wn_prefix}{prefix}{context_aff}{suffix}", target_aff, "aff", "aff")
-        )
-        data.append(
-            (f"{wn_prefix}{prefix}{context_aff}{suffix}", target_neg, "aff", "neg")
-        )
-        data.append(
-            (f"{wn_prefix}{prefix}{context_neg}{suffix}", target_neg, "neg", "neg")
-        )
-        data.append(
-            (f"{wn_prefix}{prefix}{context_neg}{suffix}", target_aff, "neg", "aff")
-        )
+        data.append(prepare_prompt(prompt_format, context_aff, target_aff, False), target_aff, "aff", "aff")
+        data.append(prepare_prompt(prompt_format, context_aff, target_neg, False), target_neg, "aff", "neg")
+        data.append(prepare_prompt(prompt_format, context_neg, target_neg, False), target_neg, "neg", "neg")
+        data.append(prepare_prompt(prompt_format, context_neg, target_aff, False), target_aff, "neg", "aff")
     return data
 
 
 def prepare_dataset_neg(
     dataset,
-    wordnet_prefix_word: str = "",
-    prefix: str = "",
-    suffix: str = "",
+    prompt_format: str = "{context} {determiner}",
     determiner: bool = True,
 ):
     temp = wordnet_prefix_word
@@ -111,9 +69,6 @@ def prepare_dataset_neg(
             row["context_neg"],
             row["target_aff"],
             row["target_neg"],
-            wordnet_prefix_word=wordnet_prefix_word,
-            prefix=prefix,
-            suffix=suffix,
             determiner=determiner,
         )
         prepared_dataset.extend(data)

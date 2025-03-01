@@ -31,9 +31,7 @@ class ExperimentConfig:
         return cls(
             dataset_paths=args.data,
             model_types=args.model_type,
-            wordnet_prefix=args.wordnet_prefix,
-            prefix=args.prefix,
-            suffix=args.suffix,
+            prompt_format=args.prompt_format,
             batch_size=args.batch_size,
             topk=args.topk,
             device=args.device,
@@ -80,15 +78,7 @@ def parse_args():
     )
     parser.add_argument("--data", nargs="+", required=True, help="Dataset path(s)")
     parser.add_argument("--model_type", nargs="+", required=True, help="Model type(s)")
-    parser.add_argument(
-        "--prefix", type=str, default="", help="Prefix to add to context"
-    )
-    parser.add_argument(
-        "--suffix", type=str, default="", help="Suffix to add to context"
-    )
-    parser.add_argument(
-        "--wordnet_prefix", type=str, default="", help="WordNet prefix type"
-    )
+    parser.add_argument("--prompt_format", type=str, default="{context} {determiner}")
     parser.add_argument("--scoring_method", type=str, default="distribution")
     parser.add_argument("--batch_size", type=int, default=4, help="Batch size")
     parser.add_argument(
@@ -111,9 +101,7 @@ def run_experiment(config: ExperimentConfig):
 
     DATA = args.data
     MODEL_TYPES = args.model_type
-    PREFIX = args.prefix
-    SUFFIX = args.suffix
-    WORDNET_PREFIX = args.wordnet_prefix
+    PROMPT_FORMAT = args.prompt_format
     SCORING_METHOD = args.scoring_method
     BATCH_SIZE = args.batch_size
     DEVICE = args.device
@@ -159,9 +147,7 @@ def run_experiment(config: ExperimentConfig):
                 dataset = pd.read_csv(dataset_name, sep="\t")
                 dataset = prepare_dataset_neg(
                     dataset,
-                    wordnet_prefix_word=WORDNET_PREFIX,
-                    prefix=PREFIX,
-                    suffix=SUFFIX,
+                    prompt_format=PROMPT_FORMAT,
                 )
 
                 ######################################
