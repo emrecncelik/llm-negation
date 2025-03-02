@@ -5,6 +5,15 @@ from minicons import scorer
 from torch.utils.data import DataLoader
 
 
+def apply_chat_template(contexts: list[str], scorer: scorer.LMScorer, model_type: str):
+    if scorer.tokenizer.chat_template is not None and model_type == "ICLM":
+        messages = [[{"role": "user", "content": c}] for c in contexts]
+        contexts = scorer.tokenizer.apply_chat_template(
+            messages, tokenize=False, add_generation_prompt=True
+        )
+    return contexts
+
+
 def cleanup_tokens(
     sc: scorer.LMScorer,
     tokens: list[list[str]],
@@ -57,6 +66,7 @@ def get_variation_logprobs(target, tokenizer, logprobs):
 def conditional_score(
     dataloader: DataLoader,
     scorer: scorer.LMScorer,
+    model_type: str,
     reduction: callable = lambda x: x.mean(0).item(),  # default from minicons
 ):
     def batch_preprocess(batch):
@@ -65,11 +75,7 @@ def conditional_score(
         ctx_polarity = batch[2]
         tgt_polarity = batch[3]
 
-        if scorer.tokenizer.chat_template is not None:
-            messages = [[{"role": "user", "content": c}] for c in contexts]
-            contexts = scorer.tokenizer.apply_chat_template(
-                messages, tokenize=False, add_generation_prompt=True
-            )
+        contexts = apply_chat_template(contexts, scorer, model_type)
         return contexts, targets, ctx_polarity, tgt_polarity
 
     predictions = {
@@ -99,6 +105,7 @@ def conditional_score(
 def next_word_distribution(
     dataloader: DataLoader,
     scorer: Union[scorer.IncrementalLMScorer, scorer.MambaScorer, scorer.Seq2SeqScorer],
+    model_type: str,
     topk: int = 300,
 ) -> pd.DataFrame:
     def batch_preprocess(batch):
@@ -107,11 +114,7 @@ def next_word_distribution(
         ctx_polarity = batch[2]
         tgt_polarity = batch[3]
 
-        if scorer.tokenizer.chat_template is not None:
-            messages = [[{"role": "user", "content": c}] for c in contexts]
-            contexts = scorer.tokenizer.apply_chat_template(
-                messages, tokenize=False, add_generation_prompt=True
-            )
+        contexts = apply_chat_template(contexts, scorer, model_type)
         return contexts, targets, ctx_polarity, tgt_polarity
 
     predictions = {
@@ -161,9 +164,13 @@ def next_word_distribution(
 def mlm_distribution(
     dataloader: DataLoader,
     scorer: Union[scorer.MaskedLMScorer, scorer.Seq2SeqScorer],
+    model_type: str,
     topk: int = 300,
     placeholder: str = "token",  # this is dumb
 ) -> pd.DataFrame:
+    if model_type not in ["SEQ2SEQ", "MLM"]:
+        raise ValueError(f"Model type {model_type} not supported for mlm_distribution.")
+
     def batch_preprocess(batch):
         contexts = batch[0]
         targets = batch[1]

@@ -175,11 +175,13 @@ def run_experiment(config: ExperimentConfig):
                 dataloader = DataLoader(dataset, batch_size=BATCH_SIZE, shuffle=False)
                 if SCORING_METHOD == "distribution":
                     predictions = scorer_config["distribution_func"](
-                        dataloader, scorer_
+                        dataloder=dataloader, scorer=scorer_, model_type=model_type
                     )
 
                 elif SCORING_METHOD == "conditional":
-                    predictions = scorer_config["conditional_func"](dataloader, scorer_)
+                    predictions = scorer_config["conditional_func"](
+                        dataloder=dataloader, scorer=scorer_, model_type=model_type
+                    )
                 else:
                     raise ValueError(
                         f"Scoring method {SCORING_METHOD} not found in SCORER_CONFIG."
