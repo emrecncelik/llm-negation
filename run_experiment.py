@@ -151,6 +151,7 @@ def run_experiment(config: ExperimentConfig):
                 dataset = prepare_dataset_neg(
                     dataset,
                     prompt_format=PROMPT_FORMAT,
+                    determiner="determiner" in PROMPT_FORMAT,
                 )
 
                 ######################################
