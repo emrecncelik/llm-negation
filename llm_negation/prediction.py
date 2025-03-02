@@ -35,16 +35,15 @@ def cleanup_tokens(
 
 def get_variation_logprobs(target, tokenizer, logprobs):
     idx = 0
-    if "roberta" in tokenizer.name_or_path:
-        idx = 1
-
     variations = [
         target,
         f" {target}",
         f"{target.capitalize()}",
         f" {target.capitalize()}",
     ]
-    ids = [id_[idx] for id_ in tokenizer(variations).input_ids]
+    ids = [
+        id_[idx] for id_ in tokenizer(variations, add_special_tokens=False).input_ids
+    ]
     variation_logprobs = logprobs[ids]
     best_variation_logprob, best_variation_id = (
         variation_logprobs.max(),
