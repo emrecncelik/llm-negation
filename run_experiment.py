@@ -4,9 +4,10 @@ import yaml
 import torch
 import argparse
 import pandas as pd
+from time import time
+from datetime import timedelta
 from dataclasses import dataclass, asdict
 from torch.utils.data import DataLoader
-
 from config import MODELS, SCORER_CONFIG
 from llm_negation.data import prepare_dataset_neg
 from llm_negation.metrics import calculate_metrics
@@ -121,8 +122,12 @@ def run_experiment(config: ExperimentConfig):
     metrics = {}
     metrics_path = os.path.join(EXPERIMENT_DIR, "metrics.json")
 
+    model_count = 0
+    total_model_count = sum([len(MODELS[t]) for t in MODEL_TYPES])
+
     for model_type in MODEL_TYPES:
         for model in MODELS[model_type]:
+            model_count += 1
             model_id = model.replace("/", "_")
             metrics[model_id] = {}
 
@@ -189,6 +194,7 @@ def run_experiment(config: ExperimentConfig):
                 #######################################
                 print(f"Model: {model_id}")
                 print(f"Dataset: {dataset_id}")
+                print(f"Progress: {model_count}/{total_model_count}")
 
                 metrics[model_id][dataset_id] = {}
                 metrics = calculate_metrics(
@@ -227,7 +233,11 @@ def main():
     else:
         config = ExperimentConfig.from_args(args)
 
+    start_time = time()
     run_experiment(config)
+    elapsed_time = time() - start_time
+    time_delta = timedelta(seconds=elapsed_time)
+    print(f"Experiment finished in {time_delta}")
 
 
 if __name__ == "__main__":
