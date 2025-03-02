@@ -33,6 +33,28 @@ def cleanup_tokens(
     return tokens
 
 
+def get_variation_logprobs(target, tokenizer, logprobs):
+    idx = 0
+    if "roberta" in tokenizer.name_or_path:
+        idx = 1
+
+    variations = [
+        target,
+        f" {target}",
+        f"{target.capitalize()}",
+        f" {target.capitalize()}",
+    ]
+    ids = [id_[idx] for id_ in tokenizer(variations).input_ids]
+    variation_logprobs = logprobs[ids]
+    best_variation_logprob, best_variation_id = (
+        variation_logprobs.max(),
+        variation_logprobs.argmax(),
+    )
+    return best_variation_logprob, tokenizer.convert_ids_to_tokens(
+        ids[best_variation_id]
+    )
+
+
 def conditional_score(
     dataloader: DataLoader,
     scorer: scorer.LMScorer,
@@ -97,6 +119,7 @@ def next_word_distribution(
         "context": [],
         "target": [],
         "target_logprob": [],
+        "best_target_variation": [],
         "logprobs": [],
         "tokens": [],
         "ctx_polarity": [],
@@ -105,18 +128,17 @@ def next_word_distribution(
     for batch in tqdm(dataloader):
         contexts, targets, ctx_polarity, tgt_polarity = batch_preprocess(batch)
         outputs = scorer.next_word_distribution(contexts)
-
-        target_indices = [
-            scorer.tokenizer(target, add_special_tokens=False)["input_ids"][0]
-            for target in targets
-        ]
-
-        target_logprobs = [
-            outputs[idx][i].detach().cpu().numpy()
-            for idx, i in enumerate(target_indices)
-        ]
-
         topk_preds = outputs.topk(topk)
+
+        target_logprobs = []
+        variation_used = []
+        for target, logprobs in zip(targets, outputs.detach().cpu().numpy()):
+            best_variation_logprob, best_variation = get_variation_logprobs(
+                target, scorer.tokenizer, logprobs
+            )
+            target_logprobs.append(best_variation_logprob)
+            variation_used.append(best_variation)
+
         tokens = topk_preds.indices.detach().cpu().numpy()
         logprobs = topk_preds.values.detach().cpu().numpy()
         tokens = [scorer.tokenizer.convert_ids_to_tokens(t) for t in tokens]
@@ -127,6 +149,7 @@ def next_word_distribution(
         predictions["context"].extend(contexts)
         predictions["target"].extend(targets)
         predictions["target_logprob"].extend(target_logprobs)
+        predictions["best_target_variation"].extend(variation_used)
         predictions["tokens"].extend(tokens)
         predictions["logprobs"].extend(logprobs)
         predictions["ctx_polarity"].extend(ctx_polarity)
@@ -158,6 +181,7 @@ def mlm_distribution(
         "context": [],
         "target": [],
         "target_logprob": [],
+        "best_target_variation": [],
         "logprobs": [],
         "tokens": [],
         "ctx_polarity": [],
@@ -167,18 +191,17 @@ def mlm_distribution(
         contexts, targets, ctx_polarity, tgt_polarity = batch_preprocess(batch)
         inputs = [(c, placeholder) for c in contexts]
         outputs = scorer.cloze_distribution(inputs)
-
-        target_indices = [
-            scorer.tokenizer(target, add_special_tokens=False)["input_ids"][0]
-            for target in targets
-        ]
-
-        target_logprobs = [
-            outputs[idx][i].detach().cpu().numpy()
-            for idx, i in enumerate(target_indices)
-        ]
-
         topk_preds = outputs.topk(topk)
+
+        target_logprobs = []
+        variation_used = []
+        for target, logprobs in zip(targets, outputs.detach().cpu().numpy()):
+            best_variation_logprob, best_variation = get_variation_logprobs(
+                target, scorer.tokenizer, logprobs
+            )
+            target_logprobs.append(best_variation_logprob)
+            variation_used.append(best_variation)
+
         tokens = topk_preds.indices.detach().cpu().numpy()
         logprobs = topk_preds.values.detach().cpu().numpy()
         tokens = [scorer.tokenizer.convert_ids_to_tokens(t) for t in tokens]
@@ -189,6 +212,7 @@ def mlm_distribution(
         predictions["context"].extend(contexts)
         predictions["target"].extend(targets)
         predictions["target_logprob"].extend(target_logprobs)
+        predictions["best_target_variation"].extend(variation_used)
         predictions["tokens"].extend(tokens)
         predictions["logprobs"].extend(logprobs)
         predictions["ctx_polarity"].extend(ctx_polarity)
