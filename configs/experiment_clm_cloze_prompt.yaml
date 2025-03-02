@@ -1,0 +1,18 @@
+batch_size: 1
+config: configs/experiment_clm_cloze_prompt.yaml
+data:
+- data/NEG-136-SIMP.tsv
+- data/NEG-1500-SIMP-GEN.tsv
+- data/NEG-1500-SIMP-TEMP.tsv
+device: cuda
+experiment_dir: experiments/experiment_clm_cloze_prompt
+model_type:
+- CLM
+- MAMBA
+- ICLM
+prediction_dir: predictions
+prompt_format: The goal is to complete the given sentence with one English word. Avoid punctuation or a new line or space. {context} {determiner} ___. The answer is: {determiner}'
+save_config: experiment_clm_cloze_prompt.yaml
+scoring_method: distribution
+skip_if_exists: true
+topk: 30
