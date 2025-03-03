@@ -170,7 +170,9 @@ def run_experiment(config: ExperimentConfig):
 
                 scorer_config = SCORER_CONFIG[model_type]
                 scorer_args = {"device": DEVICE, **scorer_config["extra_args"]}
-                scorer_ = scorer_config["scorer_class"](model, **scorer_args)
+                scorer_ = scorer_config["scorer_class"](
+                    model, trust_remote_code=True, **scorer_args
+                )
 
                 dataloader = DataLoader(dataset, batch_size=BATCH_SIZE, shuffle=False)
                 if SCORING_METHOD == "distribution":
