@@ -220,9 +220,9 @@ def run_experiment(config: ExperimentConfig):
                 if os.path.exists(metrics_path):
                     with open(metrics_path, "r") as f:
                         existing_metrics = json.load(f)
-                        existing_metrics.update(metrics)
+                        metrics.update(existing_metrics)
                     with open(metrics_path, "w") as f:
-                        json.dump(existing_metrics, f, indent=4)
+                        json.dump(metrics, f, indent=4)
                 else:
                     with open(metrics_path, "w") as f:
                         json.dump(metrics, f, indent=4)
