@@ -11,6 +11,6 @@ model_type:
 prediction_dir: predictions
 prompt_format: '{context}' # removed determiner
 save_config: experiment_clm_nat_conditional.yaml
-scoring_method: distribution
+scoring_method: conditional
 skip_if_exists: true
 topk: 30

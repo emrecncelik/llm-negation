@@ -1,15 +1,15 @@
 batch_size: 1
-config: configs/nat/experiment_iclm_nat_cloze_prompt.yaml
+config: configs/nat/experiment_iclm_nat_conditional.yaml
 data:
 - data/NEG-136-NAT-NT.tsv
 - data/NEG-136-NAT-LN.tsv
 device: cuda
-experiment_dir: experiments/experiment_iclm_nat_cloze_prompt
+experiment_dir: experiments/experiment_iclm_nat_conditional
 model_type:
 - ICLM
 prediction_dir: predictions
 prompt_format: "{context}"
-save_config: experiment_iclm_nat_cloze_prompt.yaml
-scoring_method: distribution
+save_config: experiment_iclm_nat_conditional.yaml
+scoring_method: conditional
 skip_if_exists: true
 topk: 30
