@@ -8,7 +8,6 @@ experiment_dir: experiments/experiment_clm_nat_cloze_prompt
 model_type:
 - CLM
 - MAMBA
-- ICLM
 prediction_dir: predictions
 prompt_format: 'Complete the following sentence with one word: "{context} ___."\nAnswer:' # removed determiner
 save_config: experiment_clm_nat_cloze_prompt.yaml
