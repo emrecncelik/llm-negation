@@ -18,30 +18,12 @@ def apply_chat_template(contexts: list[str], scorer: scorer.LMScorer, model_type
 
 
 def cleanup_tokens(
-    sc: scorer.LMScorer,
     tokens: list[list[str]],
 ) -> list[list[str]]:
-    if not isinstance(sc, scorer.MambaScorer):
-        model_name = sc.model.config._name_or_path.lower()
-    else:
-        model_name = "mamba"
-    if any([m in model_name for m in ("gemma", "albert", "t5")]):
-        tokens = [list(map(lambda x: x.replace("▁", "").strip(), t)) for t in tokens]
-    if any(
-        [
-            m in model_name
-            for m in (
-                "modernbert",
-                "roberta",
-                "gpt2",
-                "llama",
-                "pythia",
-                "mamba",
-                "qwen",
-            )
-        ]
-    ):
-        tokens = [list(map(lambda x: x.replace("Ġ", "").strip(), t)) for t in tokens]
+    tokens = [
+        list(map(lambda x: x.replace("Ġ", "").replace("▁", "").strip(), t))
+        for t in tokens
+    ]
     return tokens
 
 
@@ -147,7 +129,7 @@ def next_word_distribution(
         logprobs = topk_preds.values.detach().cpu().numpy()
         tokens = [scorer.tokenizer.convert_ids_to_tokens(t) for t in tokens]
         tokens = cleanup_tokens(
-            scorer, tokens
+            tokens
         )  # some models use special chars to denote preceding spaces, remove them
 
         predictions["context"].extend(contexts)
@@ -214,7 +196,7 @@ def mlm_distribution(
         logprobs = topk_preds.values.detach().cpu().numpy()
         tokens = [scorer.tokenizer.convert_ids_to_tokens(t) for t in tokens]
         tokens = cleanup_tokens(
-            scorer, tokens
+            tokens
         )  # some models use special chars to denote preceding spaces, remove them
 
         predictions["context"].extend(contexts)
