@@ -78,7 +78,6 @@ def conditional_score(
         ctx_polarity = batch[2]
         tgt_polarity = batch[3]
 
-        contexts = apply_chat_template(contexts, scorer, model_type)
         return contexts, targets, ctx_polarity, tgt_polarity
 
     predictions = {
