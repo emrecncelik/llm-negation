@@ -7,6 +7,7 @@ device: cuda
 experiment_dir: experiments/experiment_mlm_nat
 model_type:
 - MLM
+- SEQ2SEQ
 prediction_dir: predictions
 prompt_format: '{context}' # removed determiner
 save_config: experiment_mlm_nat.yaml
