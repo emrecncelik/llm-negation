@@ -7,7 +7,10 @@ from torch.utils.data import DataLoader
 
 def apply_chat_template(contexts: list[str], scorer: scorer.LMScorer, model_type: str):
     if scorer.tokenizer.chat_template is not None and model_type == "ICLM":
-        messages = [[{"role": "user", "content": c}] for c in contexts]
+        messages = [
+            [{"role": "system", "content": ""}, {"role": "user", "content": c}]
+            for c in contexts
+        ]
         contexts = scorer.tokenizer.apply_chat_template(
             messages, tokenize=False, add_generation_prompt=True
         )
