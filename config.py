@@ -84,6 +84,9 @@ MODELS = {
         # "Qwen/Qwen2.5-32B-Instruct",
         # "Qwen/Qwen2.5-72B-Instruct",
         "deepseek-ai/DeepSeek-V2-Lite-Chat",
+        "allenai/OLMo-2-1124-7B-SFT",
+        "allenai/OLMo-2-1124-7B-DPO",
+        "allenai/OLMo-2-1124-7B-Instruct",
     ],
     "CLM": [
         "openai-community/gpt2",
@@ -117,6 +120,7 @@ MODELS = {
         "EleutherAI/pythia-6.9b-deduped",
         # "EleutherAI/pythia-12b-deduped",
         "deepseek-ai/DeepSeek-V2-Lite",
+        "allenai/OLMo-2-1124-7B",
     ],
     "SEQ2SEQ": [
         "google-t5/t5-small",
