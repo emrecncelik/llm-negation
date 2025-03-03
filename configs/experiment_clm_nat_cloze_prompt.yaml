@@ -10,8 +10,8 @@ model_type:
 - MAMBA
 - ICLM
 prediction_dir: predictions
-prompt_format: 'The goal is to complete the given sentence with one English word. Avoid punctuation or a new line or space. {context} ___. The answer is:' # removed determiner
+prompt_format: 'Complete the following sentence with one word: "{context} ___."\nAnswer:' # removed determiner
 save_config: experiment_clm_nat_cloze_prompt.yaml
 scoring_method: distribution
-skip_if_exists: true
+skip_if_exists: false
 topk: 30

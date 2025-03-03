@@ -9,10 +9,9 @@ experiment_dir: experiments/experiment_clm_conditional
 model_type:
 - CLM
 - MAMBA
-- ICLM
 prediction_dir: predictions
 prompt_format: '{context} {determiner}'
 save_config: experiment_clm_conditional.yaml
 scoring_method: conditional
-skip_if_exists: true
+skip_if_exists: false
 topk: 30
