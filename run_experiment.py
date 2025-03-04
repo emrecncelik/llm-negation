@@ -89,10 +89,11 @@ def parse_args():
 
 
 def run_experiment(config: ExperimentConfig):
+    config.prediction_dir = os.path.join(config.experiment_dir, config.prediction_dir)
+
     os.makedirs(config.experiment_dir, exist_ok=True)
     os.makedirs(config.prediction_dir, exist_ok=True)
-    
-    config.to_yaml("config.yaml")
+    config.to_yaml(os.path.join(config.experiment_dir, "config.yaml"))
 
     metrics = {}
     metrics_path = os.path.join(config.experiment_dir, "metrics.json")
@@ -151,7 +152,7 @@ def run_experiment(config: ExperimentConfig):
                 else:
                     raise ValueError(f"Model type {model_type} not found in config.MODELS.")
 
-                scorer_args = {"device": config.device, **model_config["scorer_args"]}
+                scorer_args = {"device": config.device, **model_config.scorer_args}
                 sc = scorer_class(model_config.ckpt, trust_remote_code=True, **scorer_args)
 
                 if config.scoring_method == "distribution":
@@ -197,9 +198,18 @@ def run_experiment(config: ExperimentConfig):
                 if os.path.exists(metrics_path):
                     with open(metrics_path, "r") as f:
                         existing_metrics = json.load(f)
-                        metrics.update(existing_metrics)
+                    
+                    combined_metrics = existing_metrics.copy()
+                    
+                    for model_id, model_metrics in metrics.items():
+                        if model_id not in combined_metrics:
+                            combined_metrics[model_id] = {}
+                        
+                        for dataset_id, dataset_metrics in model_metrics.items():
+                            combined_metrics[model_id][dataset_id] = dataset_metrics
+                    
                     with open(metrics_path, "w") as f:
-                        json.dump(metrics, f, indent=4)
+                        json.dump(combined_metrics, f, indent=4)
                 else:
                     with open(metrics_path, "w") as f:
                         json.dump(metrics, f, indent=4)
