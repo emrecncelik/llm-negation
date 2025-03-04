@@ -36,9 +36,12 @@ def format_negation(file_dir: str) -> None:
     Returns:
         None
     """
+    max_len = 1500
+    if "TEMP" in file_dir:
+        max_len = 1540
     dataset = pd.read_csv(file_dir, header=None)
-    positive = dataset[0][[i for i in range(0, 1500, 2)]]
-    negative = dataset[0][[i for i in range(1, 1500, 2)]]
+    positive = dataset[0][[i for i in range(0, max_len, 2)]]
+    negative = dataset[0][[i for i in range(1, max_len, 2)]]
 
     dataset["context_aff"] = positive.reset_index(drop=True)
     dataset["context_neg"] = negative.reset_index(drop=True)
