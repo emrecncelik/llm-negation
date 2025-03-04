@@ -1,0 +1,12 @@
+config: configs/iclm_cloze_simp.yaml
+data_path:
+- data/NEG-136-NAT-NT.tsv
+- data/NEG-136-NAT-LN.tsv
+model_type:
+- ICLM
+prompt_template: 'Complete the sentence below with only one word.\nSentence: "{context} ___."'
+assistant_message_template: 'Completed sentence: {context}'
+scoring_method: "distribution"
+experiment_dir: "experiments/iclm_cloze_simp"
+batch_size: 1
+skip_if_exists: true

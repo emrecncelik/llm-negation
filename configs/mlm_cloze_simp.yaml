@@ -1,0 +1,13 @@
+config: configs/mlm_cloze_simp.yaml
+data_path:
+- data/NEG-136-SIMP.tsv
+- data/NEG-1500-SIMP-TEMP.tsv
+- data/NEG-1500-SIMP-GEN.tsv
+model_type:
+- MLM
+- SEQ2SEQ
+prompt_template: '{context} {determiner} {target}.'
+scoring_method: "distribution"
+experiment_dir: "experiments/mlm_cloze_simp"
+batch_size: 8
+skip_if_exists: true

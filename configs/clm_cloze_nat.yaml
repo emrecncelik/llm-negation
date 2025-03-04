@@ -1,0 +1,12 @@
+config: configs/clm_cloze_nat.yaml
+data_path:
+- data/NEG-136-NAT-NT.tsv
+- data/NEG-136-NAT-LN.tsv
+model_type:
+- CLM
+- MAMBA
+prompt_template: '{context}'
+scoring_method: "distribution"
+experiment_dir: "experiments/clm_cloze_nat"
+batch_size: 1
+skip_if_exists: true
