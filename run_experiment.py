@@ -146,9 +146,10 @@ def run_experiment(config: ExperimentConfig):
                 )
 
                 os.makedirs(dataset_prediction_dir, exist_ok=True)
-                if SKIP_IF_EXISTS and os.path.exists(
-                    os.path.join(dataset_prediction_dir, f"{model_id}.tsv")
-                ):
+                if SKIP_IF_EXISTS and os.path.exists(predictions_path):
+                    print(
+                        f"Skipping experiment for {model_id} model and {dataset_id} dataset"
+                    )
                     continue
 
                 print(f"Running experiment for {model_id} model")
