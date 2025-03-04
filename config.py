@@ -1,10 +1,13 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from llm_negation.prediction import (
     mlm_distribution,
     next_word_distribution,
     sequence_score,
 )
 
+
+def get_model_by_type(model_type: list[str]):
+    return [model for model in MODELS if model.type in model_type]
 
 @dataclass
 class ModelConfig:
@@ -13,8 +16,7 @@ class ModelConfig:
     type: str
     distribution_function: callable
     sequence_score_function: callable
-    scorer_args: dict = {}
-
+    scorer_args: dict = field(default_factory=dict)
 
 MODELS = [
     # MLM models
