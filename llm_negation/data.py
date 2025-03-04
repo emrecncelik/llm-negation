@@ -1,4 +1,4 @@
-from nltk.corpus import wordnet as wn
+import pandas as pd
 
 
 def get_determiner(word: str, vowels="aeiou") -> str:
@@ -8,29 +8,56 @@ def get_determiner(word: str, vowels="aeiou") -> str:
         return "a"
 
 
+def apply_chat_template(
+    tokenizer,
+    user_message: str,
+    assistant_message: str,
+):
+    messages = [
+        {"role": "user", "content": user_message},
+        {"role": "assistant", "content": assistant_message},
+    ]
+    messages = tokenizer.apply_chat_template(
+        messages, tokenize=False, continue_final_message=True
+    )
+    return messages
+
+
 def prepare_prompt(
-    prompt_format: str,
+    tokenizer,
     context: str,
     target: str,
-    determiner: bool,
+    prompt_template: str,
+    assistant_message_template: str,
 ) -> str:
-    if determiner:
-        return prompt_format.format(
+    if assistant_message_template:
+        user_message = prompt_template.format(
+            context=context,
+            target=target,
+            determiner=get_determiner(target),
+        )
+        assistant_message = assistant_message_template.format(
             context=context, target=target, determiner=get_determiner(target)
         )
+        prompt = apply_chat_template(tokenizer, user_message, assistant_message)
     else:
-        return prompt_format.format(context=context, target=target)
+        prompt = prompt_template.format(
+            context=context, target=target, determiner=get_determiner(target)
+        )
+
+    return prompt
 
 
-def prepare_data_neg(
+def prepare_negation_data(
+    tokenizer,
     context_aff: str,
     context_neg: str,
     target_aff: str,
     target_neg: str,
-    determiner: bool,
-    prompt_format: str,
+    prompt_template: str,
+    assistant_message_template: str,
 ) -> list[tuple[str, str, str, str]]:
-    if determiner:
+    if "{determiner}" in prompt_template:
         context_aff = " ".join(context_aff.split()[:-1])
         context_neg = " ".join(context_neg.split()[:-1])
 
@@ -43,7 +70,13 @@ def prepare_data_neg(
 
     return [
         (
-            prepare_prompt(prompt_format, context, target, determiner),
+            prepare_prompt(
+                tokenizer=tokenizer,
+                context=context,
+                target=target,
+                prompt_template=prompt_template,
+                assistant_message_template=assistant_message_template,
+            ),
             target,
             ctx_polarity,
             tgt_polarity,
@@ -52,21 +85,22 @@ def prepare_data_neg(
     ]
 
 
-def prepare_dataset_neg(
-    dataset,
-    prompt_format: str = "{context} {determiner}",
-    determiner: bool = True,
+def prepare_negation_dataset(
+    tokenizer,
+    dataset: pd.DataFrame,
+    prompt_template: str,
+    assistant_message_template: str,
 ):
     prepared_dataset = []
     for _, row in dataset.iterrows():
-
-        data = prepare_data_neg(
-            row["context_aff"],
-            row["context_neg"],
-            row["target_aff"],
-            row["target_neg"],
-            determiner=determiner,
-            prompt_format=prompt_format,
+        data = prepare_negation_data(
+            tokenizer=tokenizer,
+            context_aff=row["context_aff"],
+            context_neg=row["context_neg"],
+            target_aff=row["target_aff"],
+            target_neg=row["target_neg"],
+            prompt_template=prompt_template,
+            assistant_message_template=assistant_message_template,
         )
         prepared_dataset.extend(data)
 

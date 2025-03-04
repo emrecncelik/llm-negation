@@ -5,15 +5,6 @@ from minicons import scorer
 from torch.utils.data import DataLoader
 
 
-def apply_chat_template(contexts: list[str], scorer: scorer.LMScorer, model_type: str):
-    if scorer.tokenizer.chat_template is not None and model_type == "ICLM":
-        messages = [[{"role": "user", "content": c}] for c in contexts]
-        contexts = scorer.tokenizer.apply_chat_template(
-            messages, tokenize=False, add_generation_prompt=True
-        )
-    return contexts
-
-
 def cleanup_tokens(
     tokens: list[list[str]],
 ) -> list[list[str]]:
@@ -45,15 +36,18 @@ def get_variation_logprobs(target, tokenizer, logprobs):
     )
 
 
-def conditional_score(
+def sequence_score(
     dataloader: DataLoader,
     scorer: scorer.LMScorer,
     model_type: str,
     reduction: callable = lambda x: x.mean(0).item(),  # default from minicons
 ):
+    if model_type not in ["ICLM", "CLM", "MAMBA", "MLM"]:
+        raise ValueError(f"Model type {model_type} not supported for sequence_score.")
+
     def batch_preprocess(batch):
-        contexts = list(batch[0])
-        targets = [t + "." for t in batch[1]]  # end of sentence
+        contexts = batch[0]
+        targets = batch[1]
         ctx_polarity = batch[2]
         tgt_polarity = batch[3]
 
@@ -69,11 +63,7 @@ def conditional_score(
 
     for batch in tqdm(dataloader):
         contexts, targets, ctx_polarity, tgt_polarity = batch_preprocess(batch)
-        # inputs = [f"{c} {t}." for c, t in zip(contexts, targets)]
-        outputs = scorer.conditional_score(
-            prefix=contexts, stimuli=targets, reduction=reduction
-        )
-        # outputs = scorer.sequence_score(inputs, reduction=reduction)
+        outputs = scorer.sequence_score(list(contexts), reduction=reduction)
         predictions["context"].extend(contexts)
         predictions["target"].extend(targets)
         predictions["target_logprob"].extend(outputs)
@@ -85,17 +75,20 @@ def conditional_score(
 
 def next_word_distribution(
     dataloader: DataLoader,
-    scorer: Union[scorer.IncrementalLMScorer, scorer.MambaScorer, scorer.Seq2SeqScorer],
+    scorer: Union[scorer.IncrementalLMScorer, scorer.MambaScorer],
     model_type: str,
     topk: int = 300,
 ) -> pd.DataFrame:
+    if model_type not in ["ICLM", "CLM", "MAMBA"]:
+        raise ValueError(
+            f"Model type {model_type} not supported for next_word_distribution."
+        )
+
     def batch_preprocess(batch):
         contexts = batch[0]
         targets = batch[1]
         ctx_polarity = batch[2]
         tgt_polarity = batch[3]
-
-        contexts = apply_chat_template(contexts, scorer, model_type)
         return contexts, targets, ctx_polarity, tgt_polarity
 
     predictions = {
@@ -110,7 +103,7 @@ def next_word_distribution(
     }
     for batch in tqdm(dataloader):
         contexts, targets, ctx_polarity, tgt_polarity = batch_preprocess(batch)
-        outputs = scorer.next_word_distribution(contexts)
+        outputs = scorer.next_word_distribution(list(contexts))
         topk_preds = outputs.topk(topk)
 
         target_logprobs = []
@@ -147,7 +140,6 @@ def mlm_distribution(
     scorer: Union[scorer.MaskedLMScorer, scorer.Seq2SeqScorer],
     model_type: str,
     topk: int = 300,
-    placeholder: str = "token",  # this is dumb
 ) -> pd.DataFrame:
     if model_type not in ["SEQ2SEQ", "MLM"]:
         raise ValueError(f"Model type {model_type} not supported for mlm_distribution.")
@@ -157,11 +149,6 @@ def mlm_distribution(
         targets = batch[1]
         ctx_polarity = batch[2]
         tgt_polarity = batch[3]
-        # if target occurs in the context more than two times
-        # scorer.cloze_distribution will fail
-        contexts = [
-            f"{c} {placeholder}." for c in contexts
-        ]  # also adding period (signaling this is the last token of the sent. for MLM)
         return contexts, targets, ctx_polarity, tgt_polarity
 
     predictions = {
@@ -176,8 +163,7 @@ def mlm_distribution(
     }
     for batch in tqdm(dataloader):
         contexts, targets, ctx_polarity, tgt_polarity = batch_preprocess(batch)
-        inputs = [(c, placeholder) for c in contexts]
-        outputs = scorer.cloze_distribution(inputs)
+        outputs = scorer.cloze_distribution(list(zip(contexts, targets)))
         topk_preds = outputs.topk(topk)
 
         target_logprobs = []
