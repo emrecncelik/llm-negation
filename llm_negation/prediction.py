@@ -145,7 +145,7 @@ def mlm_distribution(
         raise ValueError(f"Model type {model_type} not supported for mlm_distribution.")
 
     def batch_preprocess(batch):
-        contexts = batch[0]
+        contexts = [" ".join(c.split()[:-1]) + " token." for c in batch[0]]
         targets = batch[1]
         ctx_polarity = batch[2]
         tgt_polarity = batch[3]
@@ -163,7 +163,9 @@ def mlm_distribution(
     }
     for batch in tqdm(dataloader):
         contexts, targets, ctx_polarity, tgt_polarity = batch_preprocess(batch)
-        outputs = scorer.cloze_distribution(list(zip(contexts, targets)))
+        outputs = scorer.cloze_distribution(
+            list(zip(contexts, ["token"] * len(contexts)))
+        )
         topk_preds = outputs.topk(topk)
 
         target_logprobs = []
