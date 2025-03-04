@@ -11,8 +11,8 @@ def get_model_by_type(model_type: list[str]):
 
 @dataclass
 class ModelConfig:
-    id: str
     ckpt: str
+    id: str
     type: str
     distribution_function: callable
     sequence_score_function: callable
