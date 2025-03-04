@@ -6,20 +6,21 @@ import argparse
 import pandas as pd
 from time import time
 from datetime import timedelta
+from minicons import scorer
 from dataclasses import dataclass, asdict
 from torch.utils.data import DataLoader
-from config import MODELS, SCORER_CONFIG
-from llm_negation.data import prepare_dataset_neg
+from transformers import AutoTokenizer
+from config import MODELS, get_model_by_type
+from llm_negation.data import prepare_negation_dataset
 from llm_negation.metrics import calculate_metrics
-
 
 @dataclass
 class ExperimentConfig:
     config: str
-    save_config: str
-    data: list[str]
+    data_path: list[str]
     model_type: list[str]
-    prompt_format: str = "{context} {determiner}"
+    prompt_template: str = "{context} {determiner}"
+    assistant_message_template: str = None
     scoring_method: str = "distribution"
     batch_size: int = 4
     topk: int = 30
@@ -32,10 +33,10 @@ class ExperimentConfig:
     def from_args(cls, args):
         return cls(
             config=args.config,
-            save_config=args.save_config,
-            data=args.data,
+            data_path=args.data_path,
             model_type=args.model_type,
-            prompt_format=args.prompt_format,
+            prompt_template=args.prompt_template,
+            assistant_message_template=args.assistant_message_template,
             scoring_method=args.scoring_method,
             batch_size=args.batch_size,
             topk=args.topk,
@@ -49,11 +50,9 @@ class ExperimentConfig:
     def from_yaml(cls, yaml_path: str):
         if not os.path.exists(yaml_path):
             raise FileNotFoundError(f"Config file not found: {yaml_path}")
-
         try:
             with open(yaml_path, "r") as f:
                 config_dict = yaml.safe_load(f)
-
             return cls(**config_dict)
 
         except yaml.YAMLError:
@@ -62,7 +61,6 @@ class ExperimentConfig:
     def to_yaml(self, yaml_path: str):
         os.makedirs(os.path.dirname(os.path.abspath(yaml_path)), exist_ok=True)
         config_dict = asdict(self)
-
         try:
             with open(yaml_path, "w") as f:
                 yaml.dump(config_dict, f, default_flow_style=False)
@@ -75,26 +73,15 @@ class ExperimentConfig:
 def parse_args():
     parser = argparse.ArgumentParser(description="Run negation experiment")
     parser.add_argument("--config", type=str, help="Path to YAML config file")
-    parser.add_argument(
-        "--save_config",
-        type=str,
-        default="experiment_config.yaml",
-        help="Save parsed arguments to YAML config file",
-    )
-    parser.add_argument("--data", nargs="+", help="Dataset path(s)")
+    parser.add_argument("--data_path", nargs="+", help="Dataset path(s)")
     parser.add_argument("--model_type", nargs="+", help="Model type(s)")
-    parser.add_argument("--prompt_format", type=str, default="{context} {determiner}")
-    parser.add_argument("--scoring_method", type=str, default="distribution")
+    parser.add_argument("--prompt_template", type=str, default="{context} {determiner}")
+    parser.add_argument("--assistant_message_template", type=str, default=None)
+    parser.add_argument("--scoring_method", type=str, default="distribution", choices=["distribution", "sequence_score"])
     parser.add_argument("--batch_size", type=int, default=4, help="Batch size")
-    parser.add_argument(
-        "--topk", type=int, default=30, help="Number of top predictions to keep"
-    )
-    parser.add_argument(
-        "--device", type=str, default="cuda" if torch.cuda.is_available() else "cpu"
-    )
-    parser.add_argument(
-        "--skip_if_exists", action="store_true", help="Skip if results exist"
-    )
+    parser.add_argument("--topk", type=int, default=30, help="Number of top predictions to keep")
+    parser.add_argument("--device", type=str, default="cuda" if torch.cuda.is_available() else "cpu")
+    parser.add_argument("--skip_if_exists", action="store_true", help="Skip if results exist")
     parser.add_argument("--experiment_dir", type=str, default="experiments")
     parser.add_argument("--prediction_dir", type=str, default="predictions")
 
@@ -102,118 +89,105 @@ def parse_args():
 
 
 def run_experiment(config: ExperimentConfig):
-    DATA = config.data
-    MODEL_TYPES = config.model_type
-    PROMPT_FORMAT = config.prompt_format
-    SCORING_METHOD = config.scoring_method
-    BATCH_SIZE = config.batch_size
-    DEVICE = config.device
-    SKIP_IF_EXISTS = config.skip_if_exists
-    EXPERIMENT_DIR = config.experiment_dir
-    PREDICTION_DIR = os.path.join(EXPERIMENT_DIR, config.prediction_dir)
-    SAVE_CONFIG_PATH = os.path.join(EXPERIMENT_DIR, config.save_config)
-
-    os.makedirs(EXPERIMENT_DIR, exist_ok=True)
-    os.makedirs(PREDICTION_DIR, exist_ok=True)
-
-    if config.save_config:
-        config.to_yaml(SAVE_CONFIG_PATH)
+    os.makedirs(config.experiment_dir, exist_ok=True)
+    os.makedirs(config.prediction_dir, exist_ok=True)
+    
+    config.to_yaml("config.yaml")
 
     metrics = {}
-    metrics_path = os.path.join(EXPERIMENT_DIR, "metrics.json")
+    metrics_path = os.path.join(config.experiment_dir, "metrics.json")
 
-    model_count = 0
-    total_model_count = sum([len(MODELS[t]) for t in MODEL_TYPES])
+    for model_type in config.model_type:
+        for model_config in get_model_by_type(model_type):
+            metrics[model_config.id] = {}
 
-    for model_type in MODEL_TYPES:
-        for model in MODELS[model_type]:
-            model_count += 1
-            model_id = model.replace("/", "_")
-            metrics[model_id] = {}
-
-            for dataset_name in DATA:
+            for dataset_name in config.data_path:
                 ##################################
                 ########## LOAD DATASET ##########
                 ##################################
                 dataset_id = dataset_name.split("/")[-1].replace(".tsv", "")
 
-                dataset_prediction_dir = os.path.join(PREDICTION_DIR, dataset_id)
+                # Setup directories and paths for predictions
+                dataset_prediction_dir = os.path.join(config.prediction_dir, dataset_id)
                 predictions_path = os.path.join(
-                    dataset_prediction_dir, f"{model_id}.tsv"
+                    dataset_prediction_dir, f"{model_config.id}.tsv"
                 )
                 topk_predictions_path = os.path.join(
-                    dataset_prediction_dir, f"{model_id}_topk.tsv"
+                    dataset_prediction_dir, f"{model_config.id}_topk.tsv"
                 )
 
                 os.makedirs(dataset_prediction_dir, exist_ok=True)
-                if SKIP_IF_EXISTS and os.path.exists(predictions_path):
+                if config.skip_if_exists and os.path.exists(predictions_path):
                     print(
-                        f"Skipping experiment for {model_id} model and {dataset_id} dataset"
+                        f"Skipping experiment for {model_config.id} model and {dataset_id} dataset"
                     )
                     continue
 
-                print(f"Running experiment for {model_id} model")
+                print(f"Running experiment for {model_config.id} model")
+                
+                if model_type == "MAMBA":
+                    tokenizer = AutoTokenizer.from_pretrained(model_config.scorer_args["tokenizer"])
+                else:
+                    tokenizer = AutoTokenizer.from_pretrained(model_config.ckpt)
+
                 dataset = pd.read_csv(dataset_name, sep="\t")
-                dataset = prepare_dataset_neg(
-                    dataset,
-                    prompt_format=PROMPT_FORMAT,
-                    determiner="determiner" in PROMPT_FORMAT,
+                dataset = prepare_negation_dataset(
+                    tokenizer=tokenizer,
+                    dataset=dataset,
+                    prompt_template=config.prompt_template,
+                    assistant_message_template=config.assistant_message_template,
                 )
+                dataloader = DataLoader(dataset, batch_size=config.batch_size, shuffle=False)
 
                 ######################################
                 ########## MAKE PREDICTIONS ##########
                 ######################################
-                model_type = next(
-                    (type_ for type_, models in MODELS.items() if model in models), None
-                )
-                if model_type is None:
-                    raise ValueError(f"Model {model} not found in config.MODELS.")
+                if model_type in ["MAMBA", "ICLM", "CLM"]:
+                    scorer_class = scorer.IncrementalLMScorer
+                elif model_type == "MLM":
+                    scorer_class = scorer.MaskedLMScorer
+                elif model_type == "SEQ2SEQ":
+                    scorer_class = scorer.Seq2SeqScorer
+                else:
+                    raise ValueError(f"Model type {model_type} not found in config.MODELS.")
 
-                scorer_config = SCORER_CONFIG[model_type]
-                scorer_args = {"device": DEVICE, **scorer_config["extra_args"]}
-                scorer_ = scorer_config["scorer_class"](
-                    model, trust_remote_code=True, **scorer_args
-                )
+                scorer_args = {"device": config.device, **model_config["scorer_args"]}
+                sc = scorer_class(model_config.ckpt, trust_remote_code=True, **scorer_args)
 
-                dataloader = DataLoader(dataset, batch_size=BATCH_SIZE, shuffle=False)
-                if SCORING_METHOD == "distribution":
-                    predictions = scorer_config["distribution_func"](
-                        dataloader=dataloader, scorer=scorer_, model_type=model_type
+                if config.scoring_method == "distribution":
+                    predictions = model_config.distribution_function(
+                        dataloader=dataloader, scorer=sc, model_type=model_type, topk=config.topk
                     )
 
-                elif SCORING_METHOD == "conditional":
-                    predictions = scorer_config["conditional_func"](
-                        dataloader=dataloader, scorer=scorer_, model_type=model_type
+                elif config.scoring_method == "sequence_score":
+                    predictions = model_config.sequence_score_function(
+                        dataloader=dataloader, scorer=sc, model_type=model_type
                     )
                 else:
                     raise ValueError(
-                        f"Scoring method {SCORING_METHOD} not found in SCORER_CONFIG."
+                        f"Scoring method {config.scoring_method} not found."
                     )
 
-                del scorer_
+                del sc
                 with torch.no_grad():
                     torch.cuda.empty_cache()
 
                 #######################################
                 ########## CALCULATE METRICS ##########
                 #######################################
-                print(f"Model: {model_id}")
+                print(f"Model: {model_config.id}")
                 print(f"Dataset: {dataset_id}")
-                print(f"Progress: {model_count}/{total_model_count}")
 
-                metrics[model_id][dataset_id] = {}
+                metrics[model_config.id][dataset_id] = {}
                 metrics = calculate_metrics(
-                    predictions, metrics, model_id, dataset_id, show=True
+                    predictions, metrics, model_config.id, dataset_id, show=True
                 )
 
-                if SCORING_METHOD == "distribution":
+                if config.scoring_method == "distribution":
                     topk_predictions = predictions[["tokens", "logprobs"]]
                     predictions = predictions.drop(columns=["logprobs"])
                     predictions["tokens"] = predictions["tokens"].apply(lambda x: x[:5])
-
-                    topk_predictions.to_csv(
-                        topk_predictions_path, sep="\t", index=False
-                    )
+                    topk_predictions.to_csv(topk_predictions_path, sep="\t", index=False)
 
                 predictions.to_csv(predictions_path, sep="\t", index=False)
 
