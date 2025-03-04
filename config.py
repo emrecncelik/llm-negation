@@ -31,7 +31,7 @@ MODELS = [
     ModelConfig("FacebookAI/roberta-large", "RoBERTa_large", "MLM", mlm_distribution, sequence_score),
     ModelConfig("answerdotai/ModernBERT-base", "ModernBERT_base", "MLM", mlm_distribution, sequence_score),
     ModelConfig("answerdotai/ModernBERT-large", "ModernBERT_large", "MLM", mlm_distribution, sequence_score),
-    ModelConfig("chandar-lab/NeoBERT", "NeoBERT", "MLM", mlm_distribution, sequence_score),
+    # ModelConfig("chandar-lab/NeoBERT", "NeoBERT", "MLM", mlm_distribution, sequence_score),
 
     # ICLM models
     ModelConfig("google/recurrentgemma-2b-it", "rGemma_2B_it", "ICLM", next_word_distribution, sequence_score),
