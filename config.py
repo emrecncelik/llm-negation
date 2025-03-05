@@ -7,7 +7,10 @@ from llm_negation.prediction import (
 
 
 def get_model_by_type(model_type: list[str]):
+    if isinstance(model_type, str):
+        model_type = [model_type]
     return [model for model in MODELS if model.type in model_type]
+
 
 @dataclass
 class ModelConfig:
