@@ -145,7 +145,7 @@ def run_experiment(config: ExperimentConfig):
                 ######################################
                 if model_type in ["ICLM", "CLM"]:
                     scorer_class = scorer.IncrementalLMScorer
-                if model_type == "MAMBA":
+                elif model_type == "MAMBA":
                     scorer_class = scorer.MambaScorer
                 elif model_type == "MLM":
                     scorer_class = scorer.MaskedLMScorer
