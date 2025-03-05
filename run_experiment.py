@@ -143,8 +143,10 @@ def run_experiment(config: ExperimentConfig):
                 ######################################
                 ########## MAKE PREDICTIONS ##########
                 ######################################
-                if model_type in ["MAMBA", "ICLM", "CLM"]:
+                if model_type in ["ICLM", "CLM"]:
                     scorer_class = scorer.IncrementalLMScorer
+                if model_type == "MAMBA":
+                    scorer_class = scorer.MambaScorer
                 elif model_type == "MLM":
                     scorer_class = scorer.MaskedLMScorer
                 elif model_type == "SEQ2SEQ":
