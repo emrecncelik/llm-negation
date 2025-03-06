@@ -1,0 +1,73 @@
+context	target	target_logprob	best_target_variation	tokens	ctx_polarity	tgt_polarity
+A trout is a token.	fish	-1.8360882	▁fish	['trout', 'fish', 'salmon', 'mussel', 'sturgeon']	aff	aff
+A trout is a token.	tool	-12.241371	▁tool	['trout', 'fish', 'salmon', 'mussel', 'sturgeon']	aff	neg
+A trout is not a token.	tool	-11.891489	▁tool	['trout', 'fish', 'salmon', 'catfish', 'mussel']	neg	neg
+A trout is not a token.	fish	-2.7177696	▁fish	['trout', 'fish', 'salmon', 'catfish', 'mussel']	neg	aff
+A salmon is a token.	fish	-1.4933395	▁fish	['salmon', 'fish', 'trout', 'catfish', 'sturgeon']	aff	aff
+A salmon is a token.	flower	-7.3863907	▁flower	['salmon', 'fish', 'trout', 'catfish', 'sturgeon']	aff	neg
+A salmon is not a token.	flower	-8.035624	▁flower	['salmon', 'trout', 'fish', 'catfish', 'sturgeon']	neg	neg
+A salmon is not a token.	fish	-2.8634872	▁fish	['salmon', 'trout', 'fish', 'catfish', 'sturgeon']	neg	aff
+An ant is an token.	insect	-0.51288795	▁insect	['insect', 'organism', 'animal', 'amphibian', 'idiot']	aff	aff
+An ant is a token.	vegetable	-4.3615656	▁vegetable	['grasshopper', 'bee', 'worker', 'creature', 'mammal']	aff	neg
+An ant is not a token.	vegetable	-5.466263	▁vegetable	['grasshopper', 'mosquito', 'bee', 'hornet', 'mammal']	neg	neg
+An ant is not an token.	insect	-0.87833595	▁insect	['insect', 'organism', 'elephant', 'animal', 'atom']	neg	aff
+A bee is an token.	insect	-0.13308334	▁insect	['insect', 'organism', 'amphibian', 'animal', 'insects']	aff	aff
+A bee is a token.	building	-9.741634	▁building	['bee', 'mosquito', 'worm', 'insect', 'creature']	aff	neg
+A bee is not a token.	building	-11.024986	▁building	['mosquito', 'bee', 'bird', 'butterfly', 'skunk']	neg	neg
+A bee is not an token.	insect	-0.7537422	▁insect	['insect', 'aeroplane', 'animal', 'airplane', 'organism']	neg	aff
+A robin is a token.	bird	-0.8951845	▁bird	['bird', 'robin', 'warbler', 'woodpecker', 'seagull']	aff	aff
+A robin is a token.	tree	-8.089526	▁tree	['bird', 'robin', 'warbler', 'woodpecker', 'seagull']	aff	neg
+A robin is not a token.	tree	-8.05133	▁tree	['robin', 'bird', 'woodpecker', 'pigeon', 'sparrow']	neg	neg
+A robin is not a token.	bird	-1.7519503	▁bird	['robin', 'bird', 'woodpecker', 'pigeon', 'sparrow']	neg	aff
+A sparrow is a token.	bird	-0.798584	▁bird	['bird', 'sparrow', 'parrot', 'pigeon', 'magpie']	aff	aff
+A sparrow is a token.	vehicle	-10.266813	▁vehicle	['bird', 'sparrow', 'parrot', 'pigeon', 'magpie']	aff	neg
+A sparrow is not a token.	vehicle	-10.530399	▁vehicle	['bird', 'sparrow', 'feather', 'thing', 'crow']	neg	neg
+A sparrow is not a token.	bird	-0.8197222	▁bird	['bird', 'sparrow', 'feather', 'thing', 'crow']	neg	aff
+An oak is a token.	tree	-0.9503012	▁tree	['tree', 'conifer', 'hickory', 'deciduous', 'willow']	aff	aff
+An oak is a token.	vehicle	-11.757309	▁vehicle	['tree', 'conifer', 'hickory', 'deciduous', 'willow']	aff	neg
+An oak is not a token.	vehicle	-13.438561	▁vehicle	['tree', 'hickory', 'maple', 'birch', 'walnut']	neg	neg
+An oak is not a token.	tree	-1.5826225	▁tree	['tree', 'hickory', 'maple', 'birch', 'walnut']	neg	aff
+A pine is a token.	tree	-1.0952473	▁tree	['tree', 'conifer', 'pine', 'redwood', 'twig']	aff	aff
+A pine is a token.	tool	-10.554899	▁tool	['tree', 'conifer', 'pine', 'redwood', 'twig']	aff	neg
+A pine is not a token.	tool	-10.514294	▁tool	['tree', 'pine', 'redwood', 'conifer', 'hickory']	neg	neg
+A pine is not a token.	tree	-1.2358961	▁tree	['tree', 'pine', 'redwood', 'conifer', 'hickory']	neg	aff
+A rose is a token.	flower	-4.820694	▁flower	['rose', 'roses', 'flower', 'strawberry', 'grape']	aff	aff
+A rose is an token.	insect	-5.3169556	▁insect	['orchid', 'enigma', 'antidote', 'angel', 'epitaph']	aff	neg
+A rose is not an token.	insect	-5.53677	▁insect	['orchid', 'angelina', 'obelisk', 'epitaph', 'emerald']	neg	neg
+A rose is not a token.	flower	-2.8759508	▁flower	['flower', 'strawberry', 'poison', 'dahlia', 'bullet']	neg	aff
+A daisy is a token.	flower	-2.8172455	▁flower	['daisy', 'flower', 'sunflower', 'butterfly', 'strawberry']	aff	aff
+A daisy is a token.	bird	-8.053242	▁bird	['daisy', 'flower', 'sunflower', 'butterfly', 'strawberry']	aff	neg
+A daisy is not a token.	bird	-5.886591	▁bird	['daisy', 'sunflower', 'flower', 'thistle', 'strawberry']	neg	neg
+A daisy is not a token.	flower	-3.511693	▁flower	['daisy', 'sunflower', 'flower', 'thistle', 'strawberry']	neg	aff
+A carrot is a token.	vegetable	-1.8985748	▁vegetable	['carrot', 'vegetable', 'potato', 'pumpkin', 'cucumber']	aff	aff
+A carrot is a token.	fish	-8.979742	▁fish	['carrot', 'vegetable', 'potato', 'pumpkin', 'cucumber']	aff	neg
+A carrot is not a token.	fish	-7.9987526	▁fish	['carrot', 'potato', 'vegetable', 'cucumber', 'banana']	neg	neg
+A carrot is not a token.	vegetable	-3.126089	▁vegetable	['carrot', 'potato', 'vegetable', 'cucumber', 'banana']	neg	aff
+A pea is a token.	vegetable	-2.23392	▁vegetable	['bean', 'vegetable', 'carrot', 'pumpkin', 'flower']	aff	aff
+A pea is a token.	building	-11.593819	▁building	['bean', 'vegetable', 'carrot', 'pumpkin', 'flower']	aff	neg
+A pea is not a token.	building	-12.2753525	▁building	['carrot', 'bean', 'pear', 'pebble', 'coconut']	neg	neg
+A pea is not a token.	vegetable	-4.902296	▁vegetable	['carrot', 'bean', 'pear', 'pebble', 'coconut']	neg	aff
+A hammer is a token.	tool	-2.9640217	▁tool	['hammer', 'tool', 'mallet', 'wrench', 'nail']	aff	aff
+A hammer is an token.	insect	-7.7301435	▁insect	['instrument', 'implement', 'axe', 'object', 'artifact']	aff	neg
+A hammer is not an token.	insect	-6.725177	▁insect	['axe', 'instrument', 'object', 'arrow', 'atom']	neg	neg
+A hammer is not a token.	tool	-5.4238834	▁tool	['nail', 'hammer', 'wrench', 'mallet', 'knife']	neg	aff
+A saw is a token.	tool	-2.5347939	▁tool	['knife', 'tool', 'blade', 'saw', 'razor']	aff	aff
+A saw is a token.	vegetable	-9.846621	▁vegetable	['knife', 'tool', 'blade', 'saw', 'razor']	aff	neg
+A saw is not a token.	vegetable	-9.1488	▁vegetable	['knife', 'shovel', 'flashlight', 'razor', 'hammer']	neg	neg
+A saw is not a token.	tool	-4.156147	▁tool	['knife', 'shovel', 'flashlight', 'razor', 'hammer']	neg	aff
+A car is a token.	vehicle	-1.5424509	▁vehicle	['vehicle', 'car', 'machine', 'spaceship', 'thing']	aff	aff
+A car is a token.	tree	-6.924657	▁tree	['vehicle', 'car', 'machine', 'spaceship', 'thing']	aff	neg
+A car is not a token.	tree	-6.5857735	▁tree	['spaceship', 'vehicle', 'bike', 'bicycle', 'motorcycle']	neg	neg
+A car is not a token.	vehicle	-2.746953	▁vehicle	['spaceship', 'vehicle', 'bike', 'bicycle', 'motorcycle']	neg	aff
+A truck is a token.	vehicle	-3.3281155	▁vehicle	['truck', 'vehicle', 'tractor', 'jeep', 'thing']	aff	aff
+A truck is a token.	flower	-10.603445	▁flower	['truck', 'vehicle', 'tractor', 'jeep', 'thing']	aff	neg
+A truck is not a token.	flower	-8.225437	▁flower	['truck', 'car', 'vehicle', 'bike', 'motorcycle']	neg	neg
+A truck is not a token.	vehicle	-2.8415794	▁vehicle	['truck', 'car', 'vehicle', 'bike', 'motorcycle']	neg	aff
+A hotel is a token.	building	-3.5073528	▁building	['hotel', 'motel', 'hostel', 'building', 'restaurant']	aff	aff
+A hotel is a token.	fish	-11.149365	▁fish	['hotel', 'motel', 'hostel', 'building', 'restaurant']	aff	neg
+A hotel is not a token.	fish	-12.212864	▁fish	['restaurant', 'motel', 'hotel', 'hostel', 'residence']	neg	neg
+A hotel is not a token.	building	-5.8312817	▁building	['restaurant', 'motel', 'hotel', 'hostel', 'residence']	neg	aff
+A house is a token.	building	-4.550107	▁building	['house', 'mansion', 'palace', 'thing', 'building']	aff	aff
+A house is a token.	bird	-7.8877497	▁bird	['house', 'mansion', 'palace', 'thing', 'building']	aff	neg
+A house is not a token.	bird	-8.1972065	▁bird	['mosque', 'mansion', 'building', 'house', 'skyscraper']	neg	neg
+A house is not a token.	building	-3.9899445	▁building	['mosque', 'mansion', 'building', 'house', 'skyscraper']	neg	aff

@@ -1,0 +1,73 @@
+context	target	target_logprob	best_target_variation	tokens	ctx_polarity	tgt_polarity
+A trout is a token.	fish	-1.9776316	Ġfish	['trout', 'fish', 'rainbow', 'fly', 'salmon']	aff	aff
+A trout is a token.	tool	-11.059736	Ġtool	['trout', 'fish', 'rainbow', 'fly', 'salmon']	aff	neg
+A trout is not a token.	tool	-9.316935	Ġtool	['fish', 'trout', 'frog', 'duck', 'salmon']	neg	neg
+A trout is not a token.	fish	-1.1302567	Ġfish	['fish', 'trout', 'frog', 'duck', 'salmon']	neg	aff
+A salmon is a token.	fish	-2.5787907	Ġfish	['salmon', 'fish', 'whale', 'trout', 'predator']	aff	aff
+A salmon is a token.	flower	-9.306292	Ġflower	['salmon', 'fish', 'whale', 'trout', 'predator']	aff	neg
+A salmon is not a token.	flower	-7.7004147	Ġflower	['fish', 'whale', 'dolphin', 'bird', 'salmon']	neg	neg
+A salmon is not a token.	fish	-1.7696056	Ġfish	['fish', 'whale', 'dolphin', 'bird', 'salmon']	neg	aff
+An ant is an token.	insect	-3.579813	Ġinsect	['ant', 'insect', 'animal', 'elephant', 'apple']	aff	aff
+An ant is a token.	vegetable	-6.2769537	Ġvegetable	['tree', 'bird', 'spider', 'beetle', 'frog']	aff	neg
+An ant is not a token.	vegetable	-4.968275	Ġvegetable	['bug', 'tree', 'bird', 'snake', 'mouse']	neg	neg
+An ant is not an token.	insect	-1.4848194	Ġinsect	['animal', 'ant', 'insect', 'elephant', 'eagle']	neg	aff
+A bee is an token.	insect	-0.81593704	Ġinsect	['insect', 'ant', 'animal', 'apple', 'egg']	aff	aff
+A bee is a token.	building	-10.64929	Ġbuilding	['bee', 'hive', 'butterfly', 'fly', 'bird']	aff	neg
+A bee is not a token.	building	-8.751249	Ġbuilding	['butterfly', 'bird', 'fly', 'bee', 'plant']	neg	neg
+A bee is not an token.	insect	-1.5716019	Ġinsect	['ant', 'insect', 'animal', 'elephant', 'apple']	neg	aff
+A robin is a token.	bird	-1.8238363	Ġbird	['rob', 'bird', 'robber', 'thief', 'Robin']	aff	aff
+A robin is a token.	tree	-7.9704084	Ġtree	['rob', 'bird', 'robber', 'thief', 'Robin']	aff	neg
+A robin is not a token.	tree	-6.1093674	Ġtree	['robber', 'bird', 'rabbit', 'chicken', 'thief']	neg	neg
+A robin is not a token.	bird	-2.0652695	Ġbird	['robber', 'bird', 'rabbit', 'chicken', 'thief']	neg	aff
+A sparrow is a token.	bird	-1.5544176	Ġbird	['bird', 'spider', 'fly', 'hawk', 'mouse']	aff	aff
+A sparrow is a token.	vehicle	-10.845825	Ġvehicle	['bird', 'spider', 'fly', 'hawk', 'mouse']	aff	neg
+A sparrow is not a token.	vehicle	-10.823071	Ġvehicle	['bird', 'butterfly', 'mouse', 'duck', 'spider']	neg	neg
+A sparrow is not a token.	bird	-1.6079721	Ġbird	['bird', 'butterfly', 'mouse', 'duck', 'spider']	neg	aff
+An oak is a token.	tree	-0.32362366	Ġtree	['tree', 'forest', 'pine', 'oak', 'thorn']	aff	aff
+An oak is a token.	vehicle	-10.05121	Ġvehicle	['tree', 'forest', 'pine', 'oak', 'thorn']	aff	neg
+An oak is not a token.	vehicle	-8.89364	Ġvehicle	['tree', 'pine', 'forest', 'plant', 'snake']	neg	neg
+An oak is not a token.	tree	-0.30386162	Ġtree	['tree', 'pine', 'forest', 'plant', 'snake']	neg	aff
+A pine is a token.	tree	-1.1257915	Ġtree	['pine', 'tree', 'forest', 'wood', 'mushroom']	aff	aff
+A pine is a token.	tool	-9.191578	Ġtool	['pine', 'tree', 'forest', 'wood', 'mushroom']	aff	neg
+A pine is not a token.	tool	-8.69797	Ġtool	['tree', 'pine', 'forest', 'mountain', 'plant']	neg	neg
+A pine is not a token.	tree	-0.4487896	Ġtree	['tree', 'pine', 'forest', 'mountain', 'plant']	neg	aff
+A rose is a token.	flower	-2.8678017	Ġflower	['rose', 'flower', 'thorn', 'tree', 'garden']	aff	aff
+A rose is an token.	insect	-5.3560076	Ġinsect	['apple', 'onion', 'angel', 'umbrella', 'illusion']	aff	neg
+A rose is not an token.	insect	-4.1170483	Ġinsect	['apple', 'onion', 'umbrella', 'angel', 'elephant']	neg	neg
+A rose is not a token.	flower	-2.2737932	Ġflower	['tree', 'flower', 'rose', 'plant', 'thorn']	neg	aff
+A daisy is a token.	flower	-1.33002	Ġflower	['flower', 'Daisy', 'weed', 'rose', 'butterfly']	aff	aff
+A daisy is a token.	bird	-4.2038965	Ġbird	['flower', 'Daisy', 'weed', 'rose', 'butterfly']	aff	neg
+A daisy is not a token.	bird	-4.0336905	Ġbird	['flower', 'rose', 'weed', 'plant', 'tree']	neg	neg
+A daisy is not a token.	flower	-0.78527164	Ġflower	['flower', 'rose', 'weed', 'plant', 'tree']	neg	aff
+A carrot is a token.	vegetable	-2.8070288	Ġvegetable	['carrot', 'vegetable', 'tree', 'pumpkin', 'lemon']	aff	aff
+A carrot is a token.	fish	-6.619397	Ġfish	['carrot', 'vegetable', 'tree', 'pumpkin', 'lemon']	aff	neg
+A carrot is not a token.	fish	-6.374116	Ġfish	['vegetable', 'tree', 'potato', 'banana', 'carrot']	neg	neg
+A carrot is not a token.	vegetable	-2.6106806	Ġvegetable	['vegetable', 'tree', 'potato', 'banana', 'carrot']	neg	aff
+A pea is a token.	vegetable	-4.2527237	Ġvegetable	['peach', 'flower', 'tree', 'pear', 'banana']	aff	aff
+A pea is a token.	building	-11.329727	Ġbuilding	['peach', 'flower', 'tree', 'pear', 'banana']	aff	neg
+A pea is not a token.	building	-11.524197	Ġbuilding	['flower', 'tree', 'peach', 'plant', 'vegetable']	neg	neg
+A pea is not a token.	vegetable	-3.5119839	Ġvegetable	['flower', 'tree', 'peach', 'plant', 'vegetable']	neg	aff
+A hammer is a token.	tool	-4.0748396	Ġtool	['hammer', 'nail', 'gun', 'sword', 'tool']	aff	aff
+A hammer is an token.	insect	-5.8762197	Ġinsect	['object', 'arrow', 'umbrella', 'instrument', 'axe']	aff	neg
+A hammer is not an token.	insect	-5.897558	Ġinsect	['axe', 'umbrella', 'object', 'arrow', 'ax']	neg	neg
+A hammer is not a token.	tool	-3.9556265	Ġtool	['sword', 'nail', 'gun', 'knife', 'rifle']	neg	aff
+A saw is a token.	tool	-4.463975	Ġtool	['saw', 'sight', 'see', 'tool', 'gun']	aff	aff
+A saw is a token.	vegetable	-10.590308	Ġvegetable	['saw', 'sight', 'see', 'tool', 'gun']	aff	neg
+A saw is not a token.	vegetable	-8.698667	Ġvegetable	['gun', 'sword', 'weapon', 'saw', 'knife']	neg	neg
+A saw is not a token.	tool	-3.5389738	Ġtool	['gun', 'sword', 'weapon', 'saw', 'knife']	neg	aff
+A car is a token.	vehicle	-3.5918055	Ġvehicle	['car', 'vehicle', 'machine', 'house', 'boat']	aff	aff
+A car is a token.	tree	-7.1560144	Ġtree	['car', 'vehicle', 'machine', 'house', 'boat']	aff	neg
+A car is not a token.	tree	-5.6003065	Ġtree	['car', 'house', 'person', 'motorcycle', 'bicycle']	neg	neg
+A car is not a token.	vehicle	-3.6585636	Ġvehicle	['car', 'house', 'person', 'motorcycle', 'bicycle']	neg	aff
+A truck is a token.	vehicle	-4.152179	Ġvehicle	['truck', 'car', 'vehicle', 'tank', 'tractor']	aff	aff
+A truck is a token.	flower	-9.938128	Ġflower	['truck', 'car', 'vehicle', 'tank', 'tractor']	aff	neg
+A truck is not a token.	flower	-8.946471	Ġflower	['car', 'vehicle', 'motorcycle', 'tank', 'truck']	neg	neg
+A truck is not a token.	vehicle	-3.4301739	Ġvehicle	['car', 'vehicle', 'motorcycle', 'tank', 'truck']	neg	aff
+A hotel is a token.	building	-3.7913885	Ġbuilding	['hotel', 'building', 'city', 'house', 'motel']	aff	aff
+A hotel is a token.	fish	-9.676657	Ġfish	['hotel', 'building', 'city', 'house', 'motel']	aff	neg
+A hotel is not a token.	fish	-10.2	Ġfish	['restaurant', 'house', 'home', 'toilet', 'city']	neg	neg
+A hotel is not a token.	building	-4.8969097	Ġbuilding	['restaurant', 'house', 'home', 'toilet', 'city']	neg	aff
+A house is a token.	building	-3.8643475	Ġbuilding	['house', 'home', 'building', 'village', 'city']	aff	aff
+A house is a token.	bird	-7.2450056	Ġbird	['house', 'home', 'building', 'village', 'city']	aff	neg
+A house is not a token.	bird	-6.7316065	Ġbird	['car', 'church', 'house', 'tree', 'village']	neg	neg
+A house is not a token.	building	-4.5567417	Ġbuilding	['car', 'church', 'house', 'tree', 'village']	neg	aff

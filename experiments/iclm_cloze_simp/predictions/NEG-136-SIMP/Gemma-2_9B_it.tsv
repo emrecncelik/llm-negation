@@ -1,0 +1,289 @@
+context	target	target_logprob	best_target_variation	tokens	ctx_polarity	tgt_polarity
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A trout is a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A trout is a"	fish	-10.938101	▁fish	['**', '', 'fish', '\\', '*']	aff	aff
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A trout is a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A trout is a"	tool	-25.037962	▁tool	['**', '', 'fish', '\\', '*']	aff	neg
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A trout is not a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A trout is not a"	tool	-21.806787	▁tool	['**', '', 'mammal', '\\', '$\\']	neg	neg
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A trout is not a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A trout is not a"	fish	-14.52667	▁fish	['**', '', 'mammal', '\\', '$\\']	neg	aff
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A salmon is a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A salmon is a"	fish	-10.4477415	▁fish	['**', '', 'fish', '\\', '*']	aff	aff
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A salmon is a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A salmon is a"	flower	-23.944065	▁flower	['**', '', 'fish', '\\', '*']	aff	neg
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A salmon is not a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A salmon is not a"	flower	-18.56796	▁flower	['**', '', 'mammal', '\\', '**']	neg	neg
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A salmon is not a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A salmon is not a"	fish	-14.653705	▁fish	['**', '', 'mammal', '\\', '**']	neg	aff
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""An ant is an ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: An ant is an"	insect	-10.539494	▁insect	['**', '', 'insect', '\\', '__']	aff	aff
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""An ant is a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: An ant is a"	vegetable	-23.799335	▁vegetable	['**', '', '\\', '*', '__']	aff	neg
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""An ant is not a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: An ant is not a"	vegetable	-17.872005	▁vegetable	['**', '', 'mammal', '\\', '__']	neg	neg
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""An ant is not an ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: An ant is not an"	insect	-10.8530245	▁insect	['**', '', 'insect', '\\', '__']	neg	aff
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A bee is an ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A bee is an"	insect	-10.534553	▁insect	['**', '', 'insect', '__', '\\']	aff	aff
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A bee is a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A bee is a"	building	-20.993084	▁building	['**', '', '\\', '__', '*']	aff	neg
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A bee is not a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A bee is not a"	building	-18.73069	▁building	['**', '', '**', 'bird', 'butterfly']	neg	neg
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A bee is not an ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A bee is not an"	insect	-12.747147	▁insect	['**', '', '__', '***', '\\']	neg	aff
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A robin is a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A robin is a"	bird	-9.601699	▁bird	['**', '', 'bird', '*', '\\']	aff	aff
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A robin is a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A robin is a"	tree	-21.613932	▁tree	['**', '', 'bird', '*', '\\']	aff	neg
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A robin is not a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A robin is not a"	tree	-17.67442	▁tree	['**', '', 'mammal', '__', '']	neg	neg
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A robin is not a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A robin is not a"	bird	-15.060899	▁bird	['**', '', 'mammal', '__', '']	neg	aff
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A sparrow is a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A sparrow is a"	bird	-9.923313	▁bird	['**', '', 'bird', '*', '\\']	aff	aff
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A sparrow is a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A sparrow is a"	vehicle	-23.565388	▁vehicle	['**', '', 'bird', '*', '\\']	aff	neg
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A sparrow is not a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A sparrow is not a"	vehicle	-19.824306	▁vehicle	['**', '', '__', '**', '***']	neg	neg
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A sparrow is not a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A sparrow is not a"	bird	-13.995453	▁bird	['**', '', '__', '**', '***']	neg	aff
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""An oak is a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: An oak is a"	tree	-10.478211	▁tree	['**', '', 'tree', '*', '\\']	aff	aff
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""An oak is a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: An oak is a"	vehicle	-23.81947	▁vehicle	['**', '', 'tree', '*', '\\']	aff	neg
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""An oak is not a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: An oak is not a"	vehicle	-21.62202	▁vehicle	['**', '', '**', '\\', '***']	neg	neg
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""An oak is not a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: An oak is not a"	tree	-12.789978	▁tree	['**', '', '**', '\\', '***']	neg	aff
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A pine is a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A pine is a"	tree	-9.93878	▁tree	['**', '', 'tree', '*', '\\']	aff	aff
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A pine is a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A pine is a"	tool	-22.276854	▁tool	['**', '', 'tree', '*', '\\']	aff	neg
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A pine is not a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A pine is not a"	tool	-21.065813	▁tool	['**', '', '**', '***', '\\']	neg	neg
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A pine is not a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A pine is not a"	tree	-13.778484	▁tree	['**', '', '**', '***', '\\']	neg	aff
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A rose is a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A rose is a"	flower	-10.530285	▁flower	['**', '', 'flower', '\\', '*']	aff	aff
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A rose is an ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A rose is an"	insect	-20.594961	▁insect	['**', '', '\\', '***', '__']	aff	neg
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A rose is not an ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A rose is not an"	insect	-18.388315	▁insect	['**', '', '\\', '__', '***']	neg	neg
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A rose is not a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A rose is not a"	flower	-13.43436	▁flower	['**', '', '**', '\\', '']	neg	aff
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A daisy is a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A daisy is a"	flower	-9.536414	▁flower	['**', '', 'flower', '_', '\\']	aff	aff
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A daisy is a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A daisy is a"	bird	-23.04827	▁bird	['**', '', 'flower', '_', '\\']	aff	neg
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A daisy is not a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A daisy is not a"	bird	-21.018084	▁bird	['**', '', '**', '', 'rose']	neg	neg
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A daisy is not a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A daisy is not a"	flower	-14.320608	▁flower	['**', '', '**', '', 'rose']	neg	aff
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A carrot is a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A carrot is a"	vegetable	-10.739986	▁vegetable	['**', '', '\\', 'vegetable', '__']	aff	aff
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A carrot is a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A carrot is a"	fish	-24.643394	▁fish	['**', '', '\\', 'vegetable', '__']	aff	neg
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A carrot is not a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A carrot is not a"	fish	-19.302002	▁fish	['**', '', 'fruit', '', '__']	neg	neg
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A carrot is not a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A carrot is not a"	vegetable	-13.2789135	▁vegetable	['**', '', 'fruit', '', '__']	neg	aff
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A pea is a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A pea is a"	vegetable	-13.351132	▁vegetable	['**', '', 'legume', '\\', '*']	aff	aff
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A pea is a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A pea is a"	building	-23.10954	▁building	['**', '', 'legume', '\\', '*']	aff	neg
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A pea is not a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A pea is not a"	building	-19.754139	▁building	['**', '', 'fruit', '**', '\\']	neg	neg
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A pea is not a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A pea is not a"	vegetable	-12.873317	▁vegetable	['**', '', 'fruit', '**', '\\']	neg	aff
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A hammer is a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A hammer is a"	tool	-8.33872	▁tool	['**', '', 'tool', '*', '\\']	aff	aff
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A hammer is an ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A hammer is an"	insect	-21.917223	▁insect	['**', '', '__', 'tool', '\\']	aff	neg
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A hammer is not an ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A hammer is not an"	insect	-19.619415	▁insect	['**', '', '__', '\\', '***']	neg	neg
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A hammer is not a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A hammer is not a"	tool	-12.414741	▁tool	['**', '', 'screwdriver', '__', 'tool']	neg	aff
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A saw is a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A saw is a"	tool	-8.581524	▁tool	['**', '', 'tool', '*', '__']	aff	aff
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A saw is a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A saw is a"	vegetable	-26.692104	▁vegetable	['**', '', 'tool', '*', '__']	aff	neg
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A saw is not a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A saw is not a"	vegetable	-18.930103	▁vegetable	['**', '', 'hammer', '__', 'tool']	neg	neg
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A saw is not a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A saw is not a"	tool	-11.643479	▁tool	['**', '', 'hammer', '__', 'tool']	neg	aff
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A car is a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A car is a"	vehicle	-9.780985	▁vehicle	['**', '', 'vehicle', '*', '\\']	aff	aff
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A car is a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A car is a"	tree	-26.340519	▁tree	['**', '', 'vehicle', '*', '\\']	aff	neg
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A car is not a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A car is not a"	tree	-16.17987	▁tree	['**', '', '__', '\\', 'bicycle']	neg	neg
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A car is not a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A car is not a"	vehicle	-17.760277	▁vehicle	['**', '', '__', '\\', 'bicycle']	neg	aff
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A truck is a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A truck is a"	vehicle	-8.212713	▁vehicle	['**', '', 'vehicle', '*', '\\']	aff	aff
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A truck is a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A truck is a"	flower	-26.290363	▁flower	['**', '', 'vehicle', '*', '\\']	aff	neg
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A truck is not a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A truck is not a"	flower	-17.01666	▁flower	['**', '', '__', 'car', '***']	neg	neg
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A truck is not a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A truck is not a"	vehicle	-15.817526	▁vehicle	['**', '', '__', 'car', '***']	neg	aff
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A hotel is a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A hotel is a"	building	-14.492987	▁building	['**', '', '__', '\\', '_']	aff	aff
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A hotel is a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A hotel is a"	fish	-24.786835	▁fish	['**', '', '__', '\\', '_']	aff	neg
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A hotel is not a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A hotel is not a"	fish	-20.478786	▁fish	['**', '', '__', '\\', '$\\']	neg	neg
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A hotel is not a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A hotel is not a"	building	-17.390488	▁building	['**', '', '__', '\\', '$\\']	neg	aff
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A house is a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A house is a"	building	-14.638769	▁building	['**', '', '__', 'dwelling', '*']	aff	aff
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A house is a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A house is a"	bird	-26.416258	▁bird	['**', '', '__', 'dwelling', '*']	aff	neg
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A house is not a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A house is not a"	bird	-18.247757	▁bird	['**', '', 'car', '__', '\\']	neg	neg
+"<bos><start_of_turn>user
+Complete the sentence below with only one category word.\nSentence: ""A house is not a ___.""<end_of_turn>
+<start_of_turn>model
+Completed sentence: A house is not a"	building	-14.129843	▁building	['**', '', 'car', '__', '\\']	neg	aff

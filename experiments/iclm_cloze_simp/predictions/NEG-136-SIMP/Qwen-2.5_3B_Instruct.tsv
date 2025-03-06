@@ -1,0 +1,433 @@
+context	target	target_logprob	best_target_variation	tokens	ctx_polarity	tgt_polarity
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A trout is a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A trout is a"	fish	-0.0010566711	Ġfish	['fish', '**', 'é±¼', 'freshwater', 'fish']	aff	aff
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A trout is a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A trout is a"	tool	-33.495293	Ġtool	['fish', '**', 'é±¼', 'freshwater', 'fish']	aff	neg
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A trout is not a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A trout is not a"	tool	-25.872755	Ġtool	['mamm', 'cat', 'bird', 'dog', 'snake']	neg	neg
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A trout is not a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A trout is not a"	fish	-9.650314	Ġfish	['mamm', 'cat', 'bird', 'dog', 'snake']	neg	aff
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A salmon is a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A salmon is a"	fish	-0.009613037	Ġfish	['fish', '**', 'seafood', 'creature', 'é±¼']	aff	aff
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A salmon is a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A salmon is a"	flower	-28.761518	Fl	['fish', '**', 'seafood', 'creature', 'é±¼']	aff	neg
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A salmon is not a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A salmon is not a"	flower	-10.075312	Ġflower	['rept', 'cat', 'mamm', 'bird', 'plant']	neg	neg
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A salmon is not a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A salmon is not a"	fish	-12.121908	Ġfish	['rept', 'cat', 'mamm', 'bird', 'plant']	neg	aff
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""An ant is an ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: An ant is an"	insect	-0.0032081604	Ġinsect	['insect', 'organism', '**', 'animal', '_']	aff	aff
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""An ant is a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: An ant is a"	vegetable	-21.339727	Ġvegetable	['insect', 'creature', 'æĺĨèĻ«', 'pest', '**']	aff	neg
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""An ant is not a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: An ant is not a"	vegetable	-11.942535	Ġvegetable	['car', 'cat', 'tiger', 'turtle', 'house']	neg	neg
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""An ant is not an ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: An ant is not an"	insect	-11.361816	Ġinsect	['elephant', 'airplane', 'animal', 'apple', 'oak']	neg	aff
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A bee is an ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A bee is an"	insect	-0.00017929077	Ġinsect	['insect', 'organism', '**', 'animal', 'æĺĨèĻ«']	aff	aff
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A bee is a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A bee is a"	building	-30.064754	Ġbuilding	['insect', 'æĺĨèĻ«', 'creature', 'pest', 'bug']	aff	neg
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A bee is not a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A bee is not a"	building	-8.969011	Ġbuilding	['plant', 'machine', 'dog', 'tree', 'dinosaur']	neg	neg
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A bee is not an ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A bee is not an"	insect	-4.977457	Ġinsect	['animal', 'in', 'apple', 'elephant', 'inh']	neg	aff
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A robin is a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A robin is a"	bird	-5.722046e-05	Ġbird	['bird', 'é¸Ł', 'bird', '**', 'Bird']	aff	aff
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A robin is a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A robin is a"	tree	-31.842352	Ġtree	['bird', 'é¸Ł', 'bird', '**', 'Bird']	aff	neg
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A robin is not a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A robin is not a"	tree	-5.4205017	Ġtree	['shark', 'vehicle', 'cat', '**', 'dog']	neg	neg
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A robin is not a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A robin is not a"	bird	-9.521873	Ġbird	['shark', 'vehicle', 'cat', '**', 'dog']	neg	aff
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A sparrow is a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A sparrow is a"	bird	-5.722046e-05	Ġbird	['bird', 'bird', 'é¸Ł', 'creature', '**']	aff	aff
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A sparrow is a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A sparrow is a"	vehicle	-27.606705	Ġvehicle	['bird', 'bird', 'é¸Ł', 'creature', '**']	aff	neg
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A sparrow is not a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A sparrow is not a"	vehicle	-8.601074	Ġvehicle	['tiger', 'elephant', 'turtle', 'whale', 'dinosaur']	neg	neg
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A sparrow is not a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A sparrow is not a"	bird	-10.460778	Ġbird	['tiger', 'elephant', 'turtle', 'whale', 'dinosaur']	neg	aff
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""An oak is a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: An oak is a"	tree	-1.5258789e-05	Ġtree	['tree', 'æłĳ', 'Tree', '**', 'tree']	aff	aff
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""An oak is a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: An oak is a"	vehicle	-30.519045	Ġvehicle	['tree', 'æłĳ', 'Tree', '**', 'tree']	aff	neg
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""An oak is not a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: An oak is not a"	vehicle	-14.475061	Ġvehicle	['banana', '**', 'fish', 'vegetable', 'tomato']	neg	neg
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""An oak is not a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: An oak is not a"	tree	-9.437183	Ġtree	['banana', '**', 'fish', 'vegetable', 'tomato']	neg	aff
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A pine is a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A pine is a"	tree	-0.00031661987	Ġtree	['tree', '**', 'æłĳ', 'plant', 'Tree']	aff	aff
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A pine is a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A pine is a"	tool	-34.907696	Ġtool	['tree', '**', 'æłĳ', 'plant', 'Tree']	aff	neg
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A pine is not a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A pine is not a"	tool	-16.269405	Ġtool	['fruit', '**', 'banana', 'animal', 'vegetable']	neg	neg
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A pine is not a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A pine is not a"	tree	-6.996956	Ġtree	['fruit', '**', 'banana', 'animal', 'vegetable']	neg	aff
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A rose is a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A rose is a"	flower	-4.9591064e-05	Ġflower	['flower', 'èĬ±', 'blossom', 'flower', 'floral']	aff	aff
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A rose is an ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A rose is an"	insect	-12.356616	Ġinsect	['flower', 'èĬ±', '**', 'object', 'adorn']	aff	neg
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A rose is not an ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A rose is not an"	insect	-4.364292	Ġinsect	['ox', 'onion', 'elephant', 'orange', '**']	neg	neg
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A rose is not a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A rose is not a"	flower	-20.035736	Ġflower	['triangle', 'square', 'car', 'rectangle', 'bicycle']	neg	aff
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A daisy is a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A daisy is a"	flower	-0.00019836426	Ġflower	['flower', 'plant', 'flower', 'floral', 'flora']	aff	aff
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A daisy is a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A daisy is a"	bird	-25.044872	Ġbird	['flower', 'plant', 'flower', 'floral', 'flora']	aff	neg
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A daisy is not a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A daisy is not a"	bird	-8.759968	Ġbird	['meal', 'cat', 'elephant', 'jag', 'tiger']	neg	neg
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A daisy is not a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A daisy is not a"	flower	-11.976387	Ġflower	['meal', 'cat', 'elephant', 'jag', 'tiger']	neg	aff
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A carrot is a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A carrot is a"	vegetable	-0.0024108887	Ġvegetable	['vegetable', 'veg', 'food', '**', 'Vegetable']	aff	aff
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A carrot is a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A carrot is a"	fish	-32.089233	Ġfish	['vegetable', 'veg', 'food', '**', 'Vegetable']	aff	neg
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A carrot is not a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A carrot is not a"	fish	-3.7981796	Ġfish	['cat', 'dog', 'fish', 'drink', 'tree']	neg	neg
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A carrot is not a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A carrot is not a"	vegetable	-10.303139	Ġvegetable	['cat', 'dog', 'fish', 'drink', 'tree']	neg	aff
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A pea is a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A pea is a"	vegetable	-1.3487606	Ġvegetable	['food', 'vegetable', '**', 'fruit', 'seed']	aff	aff
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A pea is a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A pea is a"	building	-24.28703	Ġbuilding	['food', 'vegetable', '**', 'fruit', 'seed']	aff	neg
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A pea is not a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A pea is not a"	building	-11.903603	Ġbuilding	['steak', '___', 'car', 'house', '__']	neg	neg
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A pea is not a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A pea is not a"	vegetable	-7.783596	Ġvegetable	['steak', '___', 'car', 'house', '__']	neg	aff
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A hammer is a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A hammer is a"	tool	-6.866455e-05	Ġtool	['tool', 'å·¥åħ·', 'tool', 'Tool', 'toolkit']	aff	aff
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A hammer is an ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A hammer is an"	insect	-11.769989	ĠIn	['instrument', 'tool', '**', 'object', 'implement']	aff	neg
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A hammer is not an ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A hammer is not an"	insect	-8.218372	Ġinsect	['apple', 'emotion', 'er', 'edible', 'ebook']	neg	neg
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A hammer is not a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A hammer is not a"	tool	-14.7790575	Ġtool	['book', 'flower', 'vegetable', 'pen', 'fruit']	neg	aff
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A saw is a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A saw is a"	tool	-3.8146973e-05	Ġtool	['tool', 'tool', 'å·¥åħ·', '**', 'Tool']	aff	aff
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A saw is a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A saw is a"	vegetable	-30.254717	Ġvegetable	['tool', 'tool', 'å·¥åħ·', '**', 'Tool']	aff	neg
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A saw is not a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A saw is not a"	vegetable	-5.225956	Ġvegetable	['book', 'fruit', 'flower', 'pen', '**']	neg	neg
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A saw is not a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A saw is not a"	tool	-15.335266	Ġtool	['book', 'fruit', 'flower', 'pen', '**']	neg	aff
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A car is a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A car is a"	vehicle	-0.00015258789	Ġvehicle	['vehicle', 'transportation', 'machine', 'äº¤éĢļå·¥åħ·', 'transport']	aff	aff
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A car is a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A car is a"	tree	-33.301865	Ġtree	['vehicle', 'transportation', 'machine', 'äº¤éĢļå·¥åħ·', 'transport']	aff	neg
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A car is not a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A car is not a"	tree	-3.2022724	Ġtree	['plant', 'house', 'bicycle', 'vegetable', 'tree']	neg	neg
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A car is not a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A car is not a"	vehicle	-14.969668	Ġvehicle	['plant', 'house', 'bicycle', 'vegetable', 'tree']	neg	aff
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A truck is a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A truck is a"	vehicle	-0.001045227	Ġvehicle	['vehicle', 'transportation', 'transport', 'vehicle', '**']	aff	aff
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A truck is a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A truck is a"	flower	-39.374695	Ġflower	['vehicle', 'transportation', 'transport', 'vehicle', '**']	aff	neg
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A truck is not a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A truck is not a"	flower	-5.6528435	Ġflower	['bird', 'bicycle', 'person', 'plant', 'house']	neg	neg
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A truck is not a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A truck is not a"	vehicle	-8.822432	Ġvehicle	['bird', 'bicycle', 'person', 'plant', 'house']	neg	aff
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A hotel is a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A hotel is a"	building	-7.167412	Ġbuilding	['lodging', 'place', 'establishment', '**', 'venue']	aff	aff
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A hotel is a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A hotel is a"	fish	-34.977226	Ġfish	['lodging', 'place', 'establishment', '**', 'venue']	aff	neg
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A hotel is not a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A hotel is not a"	fish	-8.844637	Ġfish	['residence', 'restaurant', 'vegetable', '**', 'place']	neg	neg
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A hotel is not a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A hotel is not a"	building	-6.5435524	Ġbuilding	['residence', 'restaurant', 'vegetable', '**', 'place']	neg	aff
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A house is a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A house is a"	building	-1.964035	Ġbuilding	['structure', 'dwelling', 'building', 'residence', 'domicile']	aff	aff
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A house is a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A house is a"	bird	-26.392313	Ġbird	['structure', 'dwelling', 'building', 'residence', 'domicile']	aff	neg
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A house is not a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A house is not a"	bird	-7.739957	Ġbird	['tree', 'car', 'restaurant', 'meal', 'food']	neg	neg
+"<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Complete the sentence below with only one category word.\nSentence: ""A house is not a ___.""<|im_end|>
+<|im_start|>assistant
+Completed sentence: A house is not a"	building	-5.554386	Ġbuilding	['tree', 'car', 'restaurant', 'meal', 'food']	neg	aff

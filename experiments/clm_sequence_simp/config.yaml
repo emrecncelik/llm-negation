@@ -1,0 +1,17 @@
+assistant_message_template: null
+batch_size: 1
+config: configs/clm_sequence_simp.yaml
+data_path:
+- data/NEG-136-SIMP.tsv
+- data/NEG-1500-SIMP-TEMP.tsv
+- data/NEG-1500-SIMP-GEN.tsv
+device: cuda
+experiment_dir: experiments/clm_sequence_simp
+model_type:
+- CLM
+- MAMBA
+prediction_dir: experiments/clm_sequence_simp/predictions
+prompt_template: '{context} {determiner} {target}.'
+scoring_method: sequence_score
+skip_if_exists: true
+topk: 30
