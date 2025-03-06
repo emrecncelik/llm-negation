@@ -5,7 +5,7 @@ data_path:
 model_type:
 - CLM
 prompt_template: "{context} {target}."
-scoring_method: "sequence"
+scoring_method: "sequence_score"
 experiment_dir: "experiments/clm_code_sequence_nat"
 batch_size: 1
 skip_if_exists: true
