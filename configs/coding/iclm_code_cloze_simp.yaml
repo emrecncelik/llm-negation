@@ -1,0 +1,13 @@
+config: configs/iclm_code_cloze_simp.yaml
+data_path:
+- data/NEG-136-SIMP.tsv
+- data/NEG-1500-SIMP-TEMP.tsv
+- data/NEG-1500-SIMP-GEN.tsv
+model_type:
+- ICLM
+prompt_template: 'Complete the sentence below with only one category word.\nSentence: "{context} {determiner} ___."'
+assistant_message_template: 'Completed sentence: {context} {determiner}'
+scoring_method: "distribution"
+experiment_dir: "experiments/iclm_code_cloze_simp"
+batch_size: 1
+skip_if_exists: true

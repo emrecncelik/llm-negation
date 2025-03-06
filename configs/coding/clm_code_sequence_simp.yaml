@@ -1,0 +1,12 @@
+config: configs/clm_code_sequence_simp.yaml
+data_path:
+- data/NEG-136-SIMP.tsv
+- data/NEG-1500-SIMP-TEMP.tsv
+- data/NEG-1500-SIMP-GEN.tsv
+model_type:
+- CLM
+prompt_template: "{context} {determiner} {target}."
+scoring_method: "sequence"
+experiment_dir: "experiments/clm_code_sequence_simp"
+batch_size: 1
+skip_if_exists: true

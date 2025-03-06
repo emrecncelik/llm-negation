@@ -34,9 +34,17 @@ MODELS = [
     ModelConfig("FacebookAI/roberta-large", "RoBERTa_large", "MLM", mlm_distribution, sequence_score),
     ModelConfig("answerdotai/ModernBERT-base", "ModernBERT_base", "MLM", mlm_distribution, sequence_score),
     ModelConfig("answerdotai/ModernBERT-large", "ModernBERT_large", "MLM", mlm_distribution, sequence_score),
-    # ModelConfig("chandar-lab/NeoBERT", "NeoBERT", "MLM", mlm_distribution, sequence_score),
+    ModelConfig("chandar-lab/NeoBERT", "NeoBERT", "MLM", mlm_distribution, sequence_score),
 
     # ICLM models
+    ## Coding
+    ModelConfig("meta-llama/CodeLlama-7b-Instruct-hf", "CodeLlama_7b_Instruct", "ICLM", next_word_distribution, sequence_score),
+    ModelConfig("Qwen/Qwen2.5-Coder-0.5B-Instruct", "Qwen2.5_Coder_0.5B_Instruct", "ICLM", next_word_distribution, sequence_score),
+    ModelConfig("Qwen/Qwen2.5-Coder-1.5B-Instruct", "Qwen2.5_Coder_1.5B_Instruct", "ICLM", next_word_distribution, sequence_score),
+    ModelConfig("Qwen/Qwen2.5-Coder-3B-Instruct", "Qwen2.5_Coder_3B_Instruct", "ICLM", next_word_distribution, sequence_score),
+    ModelConfig("Qwen/Qwen2.5-Coder-7B-Instruct", "Qwen2.5_Coder_7B_Instruct", "ICLM", next_word_distribution, sequence_score),
+    
+    ## General purpose
     ModelConfig("google/recurrentgemma-2b-it", "rGemma_2B_it", "ICLM", next_word_distribution, sequence_score),
     ModelConfig("google/recurrentgemma-9b-it", "rGemma_9B_it", "ICLM", next_word_distribution, sequence_score),
     ModelConfig("google/gemma-2b-it", "Gemma_2B_it", "ICLM", next_word_distribution, sequence_score),
@@ -55,6 +63,14 @@ MODELS = [
     ModelConfig("allenai/OLMo-2-1124-7B-Instruct", "OLMo-2_1124_7B_Instruct", "ICLM", next_word_distribution, sequence_score),
     
     # CLM models
+    ## Coding
+    ModelConfig("meta-llama/CodeLlama-7b-hf", "CodeLlama_7b_hf", "CLM", next_word_distribution, sequence_score),
+    ModelConfig("Qwen/Qwen2.5-Coder-0.5B", "Qwen2.5_Coder_0.5B", "CLM", next_word_distribution, sequence_score),
+    ModelConfig("Qwen/Qwen2.5-Coder-1.5B", "Qwen2.5_Coder_1.5B", "CLM", next_word_distribution, sequence_score),
+    ModelConfig("Qwen/Qwen2.5-Coder-3B", "Qwen2.5_Coder_3B", "CLM", next_word_distribution, sequence_score),
+    ModelConfig("Qwen/Qwen2.5-Coder-7B", "Qwen2.5_Coder_7B", "CLM", next_word_distribution, sequence_score),
+
+    ## General purpose 
     ModelConfig("openai-community/gpt2", "GPT2", "CLM", next_word_distribution, sequence_score),
     ModelConfig("openai-community/gpt2-medium", "GPT2_medium", "CLM", next_word_distribution, sequence_score),
     ModelConfig("openai-community/gpt2-large", "GPT2_large", "CLM", next_word_distribution, sequence_score),
