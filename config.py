@@ -35,14 +35,20 @@ MODELS = [
     ModelConfig("answerdotai/ModernBERT-base", "ModernBERT_base", "MLM", mlm_distribution, sequence_score),
     ModelConfig("answerdotai/ModernBERT-large", "ModernBERT_large", "MLM", mlm_distribution, sequence_score),
     ModelConfig("chandar-lab/NeoBERT", "NeoBERT", "MLM", mlm_distribution, sequence_score),
-
+    
+    # SEQ2SEQ models
+    ModelConfig("google-t5/t5-small", "T5_small", "SEQ2SEQ", mlm_distribution, sequence_score),
+    ModelConfig("google-t5/t5-base", "T5_base", "SEQ2SEQ", mlm_distribution, sequence_score),
+    ModelConfig("google-t5/t5-large", "T5_large", "SEQ2SEQ", mlm_distribution, sequence_score),
+    ModelConfig("google-t5/t5-3b", "T5_3B", "SEQ2SEQ", mlm_distribution, sequence_score),
+    
     # ICLM models
     ## Coding
-    ModelConfig("meta-llama/CodeLlama-7b-Instruct-hf", "CodeLlama_7b_Instruct", "ICLM", next_word_distribution, sequence_score),
-    ModelConfig("Qwen/Qwen2.5-Coder-0.5B-Instruct", "Qwen2.5_Coder_0.5B_Instruct", "ICLM", next_word_distribution, sequence_score),
-    ModelConfig("Qwen/Qwen2.5-Coder-1.5B-Instruct", "Qwen2.5_Coder_1.5B_Instruct", "ICLM", next_word_distribution, sequence_score),
-    ModelConfig("Qwen/Qwen2.5-Coder-3B-Instruct", "Qwen2.5_Coder_3B_Instruct", "ICLM", next_word_distribution, sequence_score),
-    ModelConfig("Qwen/Qwen2.5-Coder-7B-Instruct", "Qwen2.5_Coder_7B_Instruct", "ICLM", next_word_distribution, sequence_score),
+    # ModelConfig("meta-llama/CodeLlama-7b-Instruct-hf", "CodeLlama_7b_Instruct", "ICLM", next_word_distribution, sequence_score),
+    # ModelConfig("Qwen/Qwen2.5-Coder-0.5B-Instruct", "Qwen2.5_Coder_0.5B_Instruct", "ICLM", next_word_distribution, sequence_score),
+    # ModelConfig("Qwen/Qwen2.5-Coder-1.5B-Instruct", "Qwen2.5_Coder_1.5B_Instruct", "ICLM", next_word_distribution, sequence_score),
+    # ModelConfig("Qwen/Qwen2.5-Coder-3B-Instruct", "Qwen2.5_Coder_3B_Instruct", "ICLM", next_word_distribution, sequence_score),
+    # ModelConfig("Qwen/Qwen2.5-Coder-7B-Instruct", "Qwen2.5_Coder_7B_Instruct", "ICLM", next_word_distribution, sequence_score),
     
     ## General purpose
     ModelConfig("google/recurrentgemma-2b-it", "rGemma_2B_it", "ICLM", next_word_distribution, sequence_score),
@@ -64,11 +70,11 @@ MODELS = [
     
     # CLM models
     ## Coding
-    ModelConfig("meta-llama/CodeLlama-7b-hf", "CodeLlama_7b_hf", "CLM", next_word_distribution, sequence_score),
-    ModelConfig("Qwen/Qwen2.5-Coder-0.5B", "Qwen2.5_Coder_0.5B", "CLM", next_word_distribution, sequence_score),
-    ModelConfig("Qwen/Qwen2.5-Coder-1.5B", "Qwen2.5_Coder_1.5B", "CLM", next_word_distribution, sequence_score),
-    ModelConfig("Qwen/Qwen2.5-Coder-3B", "Qwen2.5_Coder_3B", "CLM", next_word_distribution, sequence_score),
-    ModelConfig("Qwen/Qwen2.5-Coder-7B", "Qwen2.5_Coder_7B", "CLM", next_word_distribution, sequence_score),
+    # ModelConfig("meta-llama/CodeLlama-7b-hf", "CodeLlama_7b_hf", "CLM", next_word_distribution, sequence_score),
+    # ModelConfig("Qwen/Qwen2.5-Coder-0.5B", "Qwen2.5_Coder_0.5B", "CLM", next_word_distribution, sequence_score),
+    # ModelConfig("Qwen/Qwen2.5-Coder-1.5B", "Qwen2.5_Coder_1.5B", "CLM", next_word_distribution, sequence_score),
+    # ModelConfig("Qwen/Qwen2.5-Coder-3B", "Qwen2.5_Coder_3B", "CLM", next_word_distribution, sequence_score),
+    # ModelConfig("Qwen/Qwen2.5-Coder-7B", "Qwen2.5_Coder_7B", "CLM", next_word_distribution, sequence_score),
 
     ## General purpose 
     ModelConfig("openai-community/gpt2", "GPT2", "CLM", next_word_distribution, sequence_score),
@@ -96,12 +102,6 @@ MODELS = [
     ModelConfig("EleutherAI/pythia-2.8b-deduped", "Pythia_2.8B_deduped", "CLM", next_word_distribution, sequence_score),
     ModelConfig("EleutherAI/pythia-6.9b-deduped", "Pythia_6.9B_deduped", "CLM", next_word_distribution, sequence_score),
     ModelConfig("allenai/OLMo-2-1124-7B", "OLMo-2_1124_7B", "CLM", next_word_distribution, sequence_score),
-    
-    # SEQ2SEQ models
-    ModelConfig("google-t5/t5-small", "T5_small", "SEQ2SEQ", mlm_distribution, sequence_score),
-    ModelConfig("google-t5/t5-base", "T5_base", "SEQ2SEQ", mlm_distribution, sequence_score),
-    ModelConfig("google-t5/t5-large", "T5_large", "SEQ2SEQ", mlm_distribution, sequence_score),
-    ModelConfig("google-t5/t5-3b", "T5_3B", "SEQ2SEQ", mlm_distribution, sequence_score),
     
     # MAMBA models
     ModelConfig("state-spaces/mamba-130m", "Mamba_130M", "MAMBA", next_word_distribution, sequence_score, scorer_args={"tokenizer": "EleutherAI/gpt-neox-20b"}),
