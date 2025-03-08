@@ -5,7 +5,7 @@ data_path:
 model_type:
 - CLM
 - MAMBA
-prompt_template: 'Complete the sentence below with only one category word.\nSentence: "{context} ___." Completed sentence: {context}'
+prompt_template: 'Complete the sentence below with only one word.\nSentence: "{context} ___." Completed sentence: {context}'
 scoring_method: "distribution"
 experiment_dir: "experiments/clm_cloze_prompt_nat"
 batch_size: 1
