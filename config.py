@@ -57,9 +57,15 @@ MODELS = [
     ModelConfig("google/gemma-7b-it", "Gemma_7B_it", "ICLM", next_word_distribution, sequence_score),
     ModelConfig("google/gemma-2-2b-it", "Gemma-2_2B_it", "ICLM", next_word_distribution, sequence_score),
     ModelConfig("google/gemma-2-9b-it", "Gemma-2_9B_it", "ICLM", next_word_distribution, sequence_score),
+    ModelConfig("meta-llama/Llama-2-7b-chat-hf", "Llama-2_7B_chat", "ICLM", next_word_distribution, sequence_score), # English only
+    ModelConfig("meta-llama/Meta-Llama-3-8B-Instruct", "Meta-Llama-3_8B_Instruct", "ICLM", next_word_distribution, sequence_score),
     ModelConfig("meta-llama/Llama-3.2-1B-Instruct", "Llama-3.2_1B_Instruct", "ICLM", next_word_distribution, sequence_score),
     ModelConfig("meta-llama/Llama-3.2-3B-Instruct", "Llama-3.2_3B_Instruct", "ICLM", next_word_distribution, sequence_score),
     ModelConfig("meta-llama/Llama-3.1-8B-Instruct", "Llama-3.1_8B_Instruct", "ICLM", next_word_distribution, sequence_score),
+    ModelConfig("Qwen/Qwen1.5-0.5B-Chat", "Qwen-1.5_0.5B_Chat", "ICLM", next_word_distribution, sequence_score),
+    ModelConfig("Qwen/Qwen1.5-1.8B-Chat", "Qwen-1.5_1.8B_Chat", "ICLM", next_word_distribution, sequence_score),
+    ModelConfig("Qwen/Qwen1.5-4B-Chat", "Qwen-1.5_4B_Chat", "ICLM", next_word_distribution, sequence_score),
+    ModelConfig("Qwen/Qwen1.5-7B-Chat", "Qwen-1.5_7B_Chat", "ICLM", next_word_distribution, sequence_score),
     ModelConfig("Qwen/Qwen2.5-0.5B-Instruct", "Qwen-2.5_0.5B_Instruct", "ICLM", next_word_distribution, sequence_score),
     ModelConfig("Qwen/Qwen2.5-1.5B-Instruct", "Qwen-2.5_1.5B_Instruct", "ICLM", next_word_distribution, sequence_score),
     ModelConfig("Qwen/Qwen2.5-3B-Instruct", "Qwen-2.5_3B_Instruct", "ICLM", next_word_distribution, sequence_score),
@@ -87,9 +93,15 @@ MODELS = [
     ModelConfig("google/gemma-7b", "Gemma_7B", "CLM", next_word_distribution, sequence_score),
     ModelConfig("google/gemma-2-2b", "Gemma-2_2B", "CLM", next_word_distribution, sequence_score),
     ModelConfig("google/gemma-2-9b", "Gemma-2_9B", "CLM", next_word_distribution, sequence_score),
-    ModelConfig("meta-llama/Llama-3.2-1B", "Llama-3.2_1B", "CLM", next_word_distribution, sequence_score),
-    ModelConfig("meta-llama/Llama-3.2-3B", "Llama-3.2_3B", "CLM", next_word_distribution, sequence_score),
-    ModelConfig("meta-llama/Llama-3.1-8B", "Llama-3.1_8B", "CLM", next_word_distribution, sequence_score),
+    ModelConfig("meta-llama/Llama-2-7b-hf", "Llama-2_7B", "CLM", next_word_distribution, sequence_score), # English only
+    ModelConfig("meta-llama/Meta-Llama-3-8B", "Meta-Llama-3_8B", "CLM", next_word_distribution, sequence_score), # English only
+    ModelConfig("meta-llama/Llama-3.2-1B", "Llama-3.2_1B", "CLM", next_word_distribution, sequence_score), # Multilingual
+    ModelConfig("meta-llama/Llama-3.2-3B", "Llama-3.2_3B", "CLM", next_word_distribution, sequence_score), # Multilingual
+    ModelConfig("meta-llama/Llama-3.1-8B", "Llama-3.1_8B", "CLM", next_word_distribution, sequence_score), # Multilingual
+    ModelConfig("Qwen/Qwen1.5-0.5B", "Qwen-1.5_0.5B", "CLM", next_word_distribution, sequence_score),
+    ModelConfig("Qwen/Qwen1.5-1.5B", "Qwen-1.5_1.5B", "CLM", next_word_distribution, sequence_score),
+    ModelConfig("Qwen/Qwen1.5-4B", "Qwen-1.5_4B", "CLM", next_word_distribution, sequence_score),
+    ModelConfig("Qwen/Qwen1.5-7B", "Qwen-1.5_7B", "CLM", next_word_distribution, sequence_score),
     ModelConfig("Qwen/Qwen2.5-0.5B", "Qwen-2.5_0.5B", "CLM", next_word_distribution, sequence_score),
     ModelConfig("Qwen/Qwen2.5-1.5B", "Qwen-2.5_1.5B", "CLM", next_word_distribution, sequence_score),
     ModelConfig("Qwen/Qwen2.5-3B", "Qwen-2.5_3B", "CLM", next_word_distribution, sequence_score),
