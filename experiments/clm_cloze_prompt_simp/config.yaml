@@ -1,0 +1,18 @@
+assistant_message_template: null
+batch_size: 1
+config: configs/clm_cloze_prompt_simp.yaml
+data_path:
+- data/NEG-136-SIMP.tsv
+- data/NEG-1500-SIMP-TEMP.tsv
+- data/NEG-1500-SIMP-GEN.tsv
+device: cuda
+experiment_dir: experiments/clm_cloze_prompt_simp
+model_type:
+- CLM
+- MAMBA
+prediction_dir: experiments/clm_cloze_prompt_simp/predictions
+prompt_template: 'Complete the sentence below with only one category word.\nSentence:
+  "{context} {determiner} ___." Completed sentence: {context} {determiner}'
+scoring_method: distribution
+skip_if_exists: true
+topk: 30

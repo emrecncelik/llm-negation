@@ -1,0 +1,73 @@
+context	target	target_logprob	best_target_variation	tokens	ctx_polarity	tgt_polarity
+"Complete the sentence below with only one category word.\nSentence: ""A trout is a ___."" Completed sentence: A trout is a"	fish	-1.5473137	▁fish	['fish', '\\', '___', 'freshwater', '__']	aff	aff
+"Complete the sentence below with only one category word.\nSentence: ""A trout is a ___."" Completed sentence: A trout is a"	tool	-15.00724	▁tool	['fish', '\\', '___', 'freshwater', '__']	aff	neg
+"Complete the sentence below with only one category word.\nSentence: ""A trout is not a ___."" Completed sentence: A trout is not a"	tool	-13.821566	▁tool	['fish', '\\', '___', '__', '\\']	neg	neg
+"Complete the sentence below with only one category word.\nSentence: ""A trout is not a ___."" Completed sentence: A trout is not a"	fish	-1.6166592	▁fish	['fish', '\\', '___', '__', '\\']	neg	aff
+"Complete the sentence below with only one category word.\nSentence: ""A salmon is a ___."" Completed sentence: A salmon is a"	fish	-1.3479557	▁fish	['fish', '\\', '___', '__', '____']	aff	aff
+"Complete the sentence below with only one category word.\nSentence: ""A salmon is a ___."" Completed sentence: A salmon is a"	flower	-15.458641	▁flower	['fish', '\\', '___', '__', '____']	aff	neg
+"Complete the sentence below with only one category word.\nSentence: ""A salmon is not a ___."" Completed sentence: A salmon is not a"	flower	-11.559536	▁flower	['fish', '\\', '___', '__', '\\']	neg	neg
+"Complete the sentence below with only one category word.\nSentence: ""A salmon is not a ___."" Completed sentence: A salmon is not a"	fish	-1.5944881	▁fish	['fish', '\\', '___', '__', '\\']	neg	aff
+"Complete the sentence below with only one category word.\nSentence: ""An ant is an ___."" Completed sentence: An ant is an"	insect	-1.7041321	▁insect	['insect', '\\', 'invertebrate', '___', '__']	aff	aff
+"Complete the sentence below with only one category word.\nSentence: ""An ant is a ___."" Completed sentence: An ant is a"	vegetable	-12.07106	▁vegetable	['\\', '__', '___', '', '_']	aff	neg
+"Complete the sentence below with only one category word.\nSentence: ""An ant is not a ___."" Completed sentence: An ant is not a"	vegetable	-6.8461075	▁vegetable	['\\', 'mammal', '__', '___', '\\']	neg	neg
+"Complete the sentence below with only one category word.\nSentence: ""An ant is not an ___."" Completed sentence: An ant is not an"	insect	-1.5821857	▁insect	['insect', '\\', '___', 'animal', 'invertebrate']	neg	aff
+"Complete the sentence below with only one category word.\nSentence: ""A bee is an ___."" Completed sentence: A bee is an"	insect	-1.4851398	▁insect	['insect', '___', '\\', '__', '']	aff	aff
+"Complete the sentence below with only one category word.\nSentence: ""A bee is a ___."" Completed sentence: A bee is a"	building	-12.534823	▁building	['__', '\\', '___', '_', '']	aff	neg
+"Complete the sentence below with only one category word.\nSentence: ""A bee is not a ___."" Completed sentence: A bee is not a"	building	-10.380428	▁building	['__', '\\', '___', '_', '\\']	neg	neg
+"Complete the sentence below with only one category word.\nSentence: ""A bee is not an ___."" Completed sentence: A bee is not an"	insect	-1.593113	▁insect	['insect', '\\', '___', '__', 'animal']	neg	aff
+"Complete the sentence below with only one category word.\nSentence: ""A robin is a ___."" Completed sentence: A robin is a"	bird	-1.4609623	▁bird	['bird', '\\', '___', '__', '____']	aff	aff
+"Complete the sentence below with only one category word.\nSentence: ""A robin is a ___."" Completed sentence: A robin is a"	tree	-10.486753	▁tree	['bird', '\\', '___', '__', '____']	aff	neg
+"Complete the sentence below with only one category word.\nSentence: ""A robin is not a ___."" Completed sentence: A robin is not a"	tree	-8.10376	▁tree	['bird', '\\', '___', '__', '']	neg	neg
+"Complete the sentence below with only one category word.\nSentence: ""A robin is not a ___."" Completed sentence: A robin is not a"	bird	-1.4509964	▁bird	['bird', '\\', '___', '__', '']	neg	aff
+"Complete the sentence below with only one category word.\nSentence: ""A sparrow is a ___."" Completed sentence: A sparrow is a"	bird	-1.4442883	▁bird	['bird', '\\', '___', '__', 'small']	aff	aff
+"Complete the sentence below with only one category word.\nSentence: ""A sparrow is a ___."" Completed sentence: A sparrow is a"	vehicle	-13.654969	▁vehicle	['bird', '\\', '___', '__', 'small']	aff	neg
+"Complete the sentence below with only one category word.\nSentence: ""A sparrow is not a ___."" Completed sentence: A sparrow is not a"	vehicle	-11.000011	▁vehicle	['bird', '\\', '__', '___', '']	neg	neg
+"Complete the sentence below with only one category word.\nSentence: ""A sparrow is not a ___."" Completed sentence: A sparrow is not a"	bird	-1.4830284	▁bird	['bird', '\\', '__', '___', '']	neg	aff
+"Complete the sentence below with only one category word.\nSentence: ""An oak is a ___."" Completed sentence: An oak is a"	tree	-1.8186798	▁tree	['tree', 'deciduous', '\\', '___', '__']	aff	aff
+"Complete the sentence below with only one category word.\nSentence: ""An oak is a ___."" Completed sentence: An oak is a"	vehicle	-13.480694	▁vehicle	['tree', 'deciduous', '\\', '___', '__']	aff	neg
+"Complete the sentence below with only one category word.\nSentence: ""An oak is not a ___."" Completed sentence: An oak is not a"	vehicle	-11.568714	▁vehicle	['tree', 'deciduous', '\\', '___', '__']	neg	neg
+"Complete the sentence below with only one category word.\nSentence: ""An oak is not a ___."" Completed sentence: An oak is not a"	tree	-1.6495037	▁tree	['tree', 'deciduous', '\\', '___', '__']	neg	aff
+"Complete the sentence below with only one category word.\nSentence: ""A pine is a ___."" Completed sentence: A pine is a"	tree	-2.7531815	▁tree	['con', 'tree', '\\', '___', 'cone']	aff	aff
+"Complete the sentence below with only one category word.\nSentence: ""A pine is a ___."" Completed sentence: A pine is a"	tool	-13.407873	▁tool	['con', 'tree', '\\', '___', 'cone']	aff	neg
+"Complete the sentence below with only one category word.\nSentence: ""A pine is not a ___."" Completed sentence: A pine is not a"	tool	-12.006756	▁tool	['con', 'tree', '\\', '___', '__']	neg	neg
+"Complete the sentence below with only one category word.\nSentence: ""A pine is not a ___."" Completed sentence: A pine is not a"	tree	-2.4581203	▁tree	['con', 'tree', '\\', '___', '__']	neg	aff
+"Complete the sentence below with only one category word.\nSentence: ""A rose is a ___."" Completed sentence: A rose is a"	flower	-1.4461575	▁flower	['flower', '\\', '__', 'beautiful', '\\']	aff	aff
+"Complete the sentence below with only one category word.\nSentence: ""A rose is an ___."" Completed sentence: A rose is an"	insect	-7.2468815	▁insect	['\\', '___', 'example', '__', '\\']	aff	neg
+"Complete the sentence below with only one category word.\nSentence: ""A rose is not an ___."" Completed sentence: A rose is not an"	insect	-5.382717	▁insect	['\\', '__', '___', '', '\\']	neg	neg
+"Complete the sentence below with only one category word.\nSentence: ""A rose is not a ___."" Completed sentence: A rose is not a"	flower	-1.4271545	▁flower	['flower', '__', '\\', '\\', 'rose']	neg	aff
+"Complete the sentence below with only one category word.\nSentence: ""A daisy is a ___."" Completed sentence: A daisy is a"	flower	-1.67416	▁flower	['flower', '\\', '___', '__', '____']	aff	aff
+"Complete the sentence below with only one category word.\nSentence: ""A daisy is a ___."" Completed sentence: A daisy is a"	bird	-12.270247	▁bird	['flower', '\\', '___', '__', '____']	aff	neg
+"Complete the sentence below with only one category word.\nSentence: ""A daisy is not a ___."" Completed sentence: A daisy is not a"	bird	-9.425592	▁bird	['flower', '\\', '__', '___', '\\']	neg	neg
+"Complete the sentence below with only one category word.\nSentence: ""A daisy is not a ___."" Completed sentence: A daisy is not a"	flower	-1.6432152	▁flower	['flower', '\\', '__', '___', '\\']	neg	aff
+"Complete the sentence below with only one category word.\nSentence: ""A carrot is a ___."" Completed sentence: A carrot is a"	vegetable	-1.1277275	▁vegetable	['vegetable', 'root', '\\', '\\', '__']	aff	aff
+"Complete the sentence below with only one category word.\nSentence: ""A carrot is a ___."" Completed sentence: A carrot is a"	fish	-16.402897	▁fish	['vegetable', 'root', '\\', '\\', '__']	aff	neg
+"Complete the sentence below with only one category word.\nSentence: ""A carrot is not a ___."" Completed sentence: A carrot is not a"	fish	-11.2135315	▁fish	['vegetable', '\\', 'fruit', '\\', '__']	neg	neg
+"Complete the sentence below with only one category word.\nSentence: ""A carrot is not a ___."" Completed sentence: A carrot is not a"	vegetable	-0.8409767	▁vegetable	['vegetable', '\\', 'fruit', '\\', '__']	neg	aff
+"Complete the sentence below with only one category word.\nSentence: ""A pea is a ___."" Completed sentence: A pea is a"	vegetable	-2.0842724	▁vegetable	['legume', 'vegetable', '\\', '___', 'seed']	aff	aff
+"Complete the sentence below with only one category word.\nSentence: ""A pea is a ___."" Completed sentence: A pea is a"	building	-14.992677	▁building	['legume', 'vegetable', '\\', '___', 'seed']	aff	neg
+"Complete the sentence below with only one category word.\nSentence: ""A pea is not a ___."" Completed sentence: A pea is not a"	building	-12.654092	▁building	['vegetable', 'legume', 'fruit', '\\', 'seed']	neg	neg
+"Complete the sentence below with only one category word.\nSentence: ""A pea is not a ___."" Completed sentence: A pea is not a"	vegetable	-1.5665836	▁vegetable	['vegetable', 'legume', 'fruit', '\\', 'seed']	neg	aff
+"Complete the sentence below with only one category word.\nSentence: ""A hammer is a ___."" Completed sentence: A hammer is a"	tool	-1.0110931	▁tool	['tool', '\\', '___', '__', '____']	aff	aff
+"Complete the sentence below with only one category word.\nSentence: ""A hammer is an ___."" Completed sentence: A hammer is an"	insect	-9.478806	▁insect	['___', '\\', '__', '____', '\\']	aff	neg
+"Complete the sentence below with only one category word.\nSentence: ""A hammer is not an ___."" Completed sentence: A hammer is not an"	insect	-7.4226303	▁insect	['___', '\\', '__', '____', '']	neg	neg
+"Complete the sentence below with only one category word.\nSentence: ""A hammer is not a ___."" Completed sentence: A hammer is not a"	tool	-1.2767429	▁tool	['tool', '\\', '__', '___', '\\']	neg	aff
+"Complete the sentence below with only one category word.\nSentence: ""A saw is a ___."" Completed sentence: A saw is a"	tool	-1.2190418	▁tool	['tool', '\\', 'cutting', 'hand', '___']	aff	aff
+"Complete the sentence below with only one category word.\nSentence: ""A saw is a ___."" Completed sentence: A saw is a"	vegetable	-14.153109	▁vegetable	['tool', '\\', 'cutting', 'hand', '___']	aff	neg
+"Complete the sentence below with only one category word.\nSentence: ""A saw is not a ___."" Completed sentence: A saw is not a"	vegetable	-8.818548	▁vegetable	['tool', '\\', '___', '__', '\\']	neg	neg
+"Complete the sentence below with only one category word.\nSentence: ""A saw is not a ___."" Completed sentence: A saw is not a"	tool	-1.5825863	▁tool	['tool', '\\', '___', '__', '\\']	neg	aff
+"Complete the sentence below with only one category word.\nSentence: ""A car is a ___."" Completed sentence: A car is a"	vehicle	-2.0822716	▁vehicle	['vehicle', '\\', '___', '__', '\\']	aff	aff
+"Complete the sentence below with only one category word.\nSentence: ""A car is a ___."" Completed sentence: A car is a"	tree	-14.248929	▁tree	['vehicle', '\\', '___', '__', '\\']	aff	neg
+"Complete the sentence below with only one category word.\nSentence: ""A car is not a ___."" Completed sentence: A car is not a"	tree	-9.273632	▁tree	['___', '\\', 'vehicle', '__', '\\']	neg	neg
+"Complete the sentence below with only one category word.\nSentence: ""A car is not a ___."" Completed sentence: A car is not a"	vehicle	-2.4130135	▁vehicle	['___', '\\', 'vehicle', '__', '\\']	neg	aff
+"Complete the sentence below with only one category word.\nSentence: ""A truck is a ___."" Completed sentence: A truck is a"	vehicle	-1.7381592	▁vehicle	['vehicle', '\\', '___', '__', '\\']	aff	aff
+"Complete the sentence below with only one category word.\nSentence: ""A truck is a ___."" Completed sentence: A truck is a"	flower	-18.58823	▁flower	['vehicle', '\\', '___', '__', '\\']	aff	neg
+"Complete the sentence below with only one category word.\nSentence: ""A truck is not a ___."" Completed sentence: A truck is not a"	flower	-12.064753	▁flower	['vehicle', '\\', '___', '__', '\\']	neg	neg
+"Complete the sentence below with only one category word.\nSentence: ""A truck is not a ___."" Completed sentence: A truck is not a"	vehicle	-1.9188957	▁vehicle	['vehicle', '\\', '___', '__', '\\']	neg	aff
+"Complete the sentence below with only one category word.\nSentence: ""A hotel is a ___."" Completed sentence: A hotel is a"	building	-3.2005653	▁building	['place', '\\', '___', 'business', 'lodging']	aff	aff
+"Complete the sentence below with only one category word.\nSentence: ""A hotel is a ___."" Completed sentence: A hotel is a"	fish	-15.375822	▁fish	['place', '\\', '___', 'business', 'lodging']	aff	neg
+"Complete the sentence below with only one category word.\nSentence: ""A hotel is not a ___."" Completed sentence: A hotel is not a"	fish	-11.513256	▁fish	['___', '\\', '__', 'place', '\\']	neg	neg
+"Complete the sentence below with only one category word.\nSentence: ""A hotel is not a ___."" Completed sentence: A hotel is not a"	building	-4.1262035	▁building	['___', '\\', '__', 'place', '\\']	neg	aff
+"Complete the sentence below with only one category word.\nSentence: ""A house is a ___."" Completed sentence: A house is a"	building	-2.2241287	▁building	['building', 'structure', 'dwelling', '\\', 'shelter']	aff	aff
+"Complete the sentence below with only one category word.\nSentence: ""A house is a ___."" Completed sentence: A house is a"	bird	-11.745739	▁bird	['building', 'structure', 'dwelling', '\\', 'shelter']	aff	neg
+"Complete the sentence below with only one category word.\nSentence: ""A house is not a ___."" Completed sentence: A house is not a"	bird	-10.274364	▁bird	['home', '___', '__', '\\', '\\']	neg	neg
+"Complete the sentence below with only one category word.\nSentence: ""A house is not a ___."" Completed sentence: A house is not a"	building	-4.560997	▁building	['home', '___', '__', '\\', '\\']	neg	aff
