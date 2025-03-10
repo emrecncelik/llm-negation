@@ -35,6 +35,10 @@ MODELS = [
     ModelConfig("answerdotai/ModernBERT-base", "ModernBERT_base", "MLM", mlm_distribution, sequence_score),
     ModelConfig("answerdotai/ModernBERT-large", "ModernBERT_large", "MLM", mlm_distribution, sequence_score),
     ModelConfig("chandar-lab/NeoBERT", "NeoBERT", "MLM", mlm_distribution, sequence_score),
+    ModelConfig("EuroBERT/EuroBERT-210m", "EuroBERT_210M", "MLM", mlm_distribution, sequence_score),
+    ModelConfig("EuroBERT/EuroBERT-610m", "EuroBERT_610M", "MLM", mlm_distribution, sequence_score),
+    ModelConfig("EuroBERT/EuroBERT-2.1B", "EuroBERT_2.1B", "MLM", mlm_distribution, sequence_score),
+
     
     # SEQ2SEQ models
     ModelConfig("google-t5/t5-small", "T5_small", "SEQ2SEQ", mlm_distribution, sequence_score),
