@@ -1,0 +1,73 @@
+context	target	target_logprob	best_target_variation	tokens	ctx_polarity	tgt_polarity
+A trout is a	fish	-1.5687065	Ġfish	['fish', 'freshwater', 'type', 'kind', 'cold']	aff	aff
+A trout is a	tool	-11.036228	Ġtool	['fish', 'freshwater', 'type', 'kind', 'cold']	aff	neg
+A trout is not a	tool	-11.334541	Ġtool	['fish', 'salmon', 'trout', 'true', 'cat']	neg	neg
+A trout is not a	fish	-0.50390244	Ġfish	['fish', 'salmon', 'trout', 'true', 'cat']	neg	aff
+A salmon is a	fish	-0.8156338	Ġfish	['fish', 'type', 'kind', 'large', 'beautiful']	aff	aff
+A salmon is a	flower	-9.139776	Ġflower	['fish', 'type', 'kind', 'large', 'beautiful']	aff	neg
+A salmon is not a	flower	-6.8953676	Ġflower	['fish', 'gold', 'bird', 'type', 'good']	neg	neg
+A salmon is not a	fish	-0.47522068	Ġfish	['fish', 'gold', 'bird', 'type', 'good']	neg	aff
+An ant is an	insect	-0.5320015	Ġinsect	['insect', 'animal', 'amazing', 'interesting', 'ant']	aff	aff
+An ant is a	vegetable	-9.621522	Ġvegetable	['small', 'tiny', 'kind', 'very', 'social']	aff	neg
+An ant is not a	vegetable	-6.499407	Ġvegetable	['human', 'bird', 'person', 'mamm', 'good']	neg	neg
+An ant is not an	insect	-0.34608078	Ġinsect	['insect', 'animal', 'ant', 'elephant', 'example']	neg	aff
+A bee is an	insect	-1.0436745	Ġinsect	['animal', 'insect', 'important', 'interesting', 'amazing']	aff	aff
+A bee is a	building	-9.727207	Ġbuilding	['bee', 'small', 'kind', 'poll', 'very']	aff	neg
+A bee is not a	building	-9.789127	Ġbuilding	['bird', 'fly', 'bee', 'mamm', 'flying']	neg	neg
+A bee is not an	insect	-1.0051079	Ġinsect	['animal', 'insect', 'ant', 'airplane', 'example']	neg	aff
+A robin is a	bird	-0.9041548	Ġbird	['bird', 'kind', 'type', 'small', 'song']	aff	aff
+A robin is a	tree	-8.118481	Ġtree	['bird', 'kind', 'type', 'small', 'song']	aff	neg
+A robin is not a	tree	-5.656889	Ġtree	['bird', 'type', 'kind', '______', 'song']	neg	neg
+A robin is not a	bird	-1.1718044	Ġbird	['bird', 'type', 'kind', '______', 'song']	neg	aff
+A sparrow is a	bird	-0.82756233	Ġbird	['bird', 'small', 'little', 'tiny', 'very']	aff	aff
+A sparrow is a	vehicle	-10.008596	Ġvehicle	['bird', 'small', 'little', 'tiny', 'very']	aff	neg
+A sparrow is not a	vehicle	-9.683849	Ġvehicle	['bird', 'small', 'good', 'pigeon', 'fly']	neg	neg
+A sparrow is not a	bird	-0.5986719	Ġbird	['bird', 'small', 'good', 'pigeon', 'fly']	neg	aff
+An oak is a	tree	-0.9601908	Ġtree	['tree', 'kind', 'type', 'decid', 'large']	aff	aff
+An oak is a	vehicle	-9.867824	Ġvehicle	['tree', 'kind', 'type', 'decid', 'large']	aff	neg
+An oak is not a	vehicle	-9.474375	Ġvehicle	['tree', 'fruit', 'nut', 'good', '______']	neg	neg
+An oak is not a	tree	-0.89746475	Ġtree	['tree', 'fruit', 'nut', 'good', '______']	neg	aff
+A pine is a	tree	-1.2247782	Ġtree	['tree', 'con', 'kind', 'type', '______']	aff	aff
+A pine is a	tool	-10.802517	Ġtool	['tree', 'con', 'kind', 'type', '______']	aff	neg
+A pine is not a	tool	-10.432989	Ġtool	['tree', 'fruit', 'kind', '______', 'type']	neg	neg
+A pine is not a	tree	-0.9585695	Ġtree	['tree', 'fruit', 'kind', '______', 'type']	neg	aff
+A rose is a	flower	-0.7918911	Ġflower	['flower', 'ï¼Ī', 'ï¼Ī', 'rose', '______']	aff	aff
+A rose is an	insect	-8.8489895	Ġinsect	['annual', 'example', '______', 'ï¼Ī', 'artificial']	aff	neg
+A rose is not an	insect	-5.880954	Ġinsect	['apple', 'exception', 'animal', 'ordinary', 'artificial']	neg	neg
+A rose is not a	flower	-0.9829855	Ġflower	['flower', 'rose', 'very', 'good', 'vegetable']	neg	aff
+A daisy is a	flower	-1.386034	Ġflower	['flower', 'plant', 'kind', 'common', 'beautiful']	aff	aff
+A daisy is a	bird	-11.777482	Ġbird	['flower', 'plant', 'kind', 'common', 'beautiful']	aff	neg
+A daisy is not a	bird	-8.209988	Ġbird	['flower', 'plant', 'rose', 'd', '______']	neg	neg
+A daisy is not a	flower	-0.6578274	Ġflower	['flower', 'plant', 'rose', 'd', '______']	neg	aff
+A carrot is a	vegetable	-3.1372623	Ġvegetable	['long', 'type', 'vegetable', 'root', 'kind']	aff	aff
+A carrot is a	fish	-12.613216	Ġfish	['long', 'type', 'vegetable', 'root', 'kind']	aff	neg
+A carrot is not a	fish	-4.29897	Ġfish	['vegetable', 'fruit', 'carrot', 'good', 'car']	neg	neg
+A carrot is not a	vegetable	-0.897295	Ġvegetable	['vegetable', 'fruit', 'carrot', 'good', 'car']	neg	aff
+A pea is a	vegetable	-4.5329	Ġvegetable	['small', 'pea', 'type', 'kind', 'seed']	aff	aff
+A pea is a	building	-8.350484	Ġbuilding	['small', 'pea', 'type', 'kind', 'seed']	aff	neg
+A pea is not a	building	-9.452419	Ġbuilding	['pea', 'bean', 'fruit', 'nut', 'good']	neg	neg
+A pea is not a	vegetable	-3.2605934	Ġvegetable	['pea', 'bean', 'fruit', 'nut', 'good']	neg	aff
+A hammer is a	tool	-0.8633318	Ġtool	['tool', 'very', 'simple', 'device', '______']	aff	aff
+A hammer is an	insect	-8.783686	ĠIn	['implement', 'instrument', 'essential', 'everyday', 'excellent']	aff	neg
+A hammer is not an	insect	-5.947815	Ġinsect	['instrument', 'ideal', 'everyday', 'efficient', 'effective']	neg	neg
+A hammer is not a	tool	-2.031331	Ġtool	['nail', 'tool', 'good', 'very', 'hammer']	neg	aff
+A saw is a	tool	-0.83568954	Ġtool	['tool', 'very', 'kind', 'cutting', '______']	aff	aff
+A saw is a	vegetable	-12.76429	Ġvegetable	['tool', 'very', 'kind', 'cutting', '______']	aff	neg
+A saw is not a	vegetable	-6.852475	Ġvegetable	['______', 'good', 'tool', 'toy', 'knife']	neg	neg
+A saw is not a	tool	-2.7653265	Ġtool	['______', 'good', 'tool', 'toy', 'knife']	neg	aff
+A car is a	vehicle	-2.1644955	Ġvehicle	['machine', 'vehicle', 'four', 'very', '______']	aff	aff
+A car is a	tree	-8.123722	Ġtree	['machine', 'vehicle', 'four', 'very', '______']	aff	neg
+A car is not a	tree	-5.7100134	Ġtree	['plane', 'bird', 'good', 'machine', 'car']	neg	neg
+A car is not a	vehicle	-5.010318	Ġvehicle	['plane', 'bird', 'good', 'machine', 'car']	neg	aff
+A truck is a	vehicle	-1.2272034	Ġvehicle	['vehicle', 'large', 'heavy', 'car', 'special']	aff	aff
+A truck is a	flower	-11.886248	Ġflower	['vehicle', 'large', 'heavy', 'car', 'special']	aff	neg
+A truck is not a	flower	-9.082186	Ġflower	['car', 'plane', 'train', 'good', 'bus']	neg	neg
+A truck is not a	vehicle	-4.3845654	Ġvehicle	['car', 'plane', 'train', 'good', 'bus']	neg	aff
+A hotel is a	building	-2.670658	Ġbuilding	['place', 'building', 'business', 'very', 'large']	aff	aff
+A hotel is a	fish	-12.012888	Ġfish	['place', 'building', 'business', 'very', 'large']	aff	neg
+A hotel is not a	fish	-8.979753	Ġfish	['home', 'place', 'good', 'house', 'safe']	neg	neg
+A hotel is not a	building	-5.945159	Ġbuilding	['home', 'place', 'good', 'house', 'safe']	neg	aff
+A house is a	building	-2.1480427	Ġbuilding	['place', 'building', 'big', 'good', 'very']	aff	aff
+A house is a	bird	-8.931194	Ġbird	['place', 'building', 'big', 'good', 'very']	aff	neg
+A house is not a	bird	-6.568222	Ġbird	['home', 'house', 'building', 'proper', 'place']	neg	neg
+A house is not a	building	-4.6447544	Ġbuilding	['home', 'house', 'building', 'proper', 'place']	neg	aff
