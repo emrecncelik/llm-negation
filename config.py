@@ -118,6 +118,7 @@ MODELS = [
     # MAMBA models
     ModelConfig("state-spaces/mamba-130m", "Mamba_130M", "MAMBA", next_word_distribution, sequence_score, scorer_args={"tokenizer": "EleutherAI/gpt-neox-20b"}),
     ModelConfig("state-spaces/mamba-790m", "Mamba_790M", "MAMBA", next_word_distribution, sequence_score, scorer_args={"tokenizer": "EleutherAI/gpt-neox-20b"}),
+    ModelConfig("state-spaces/mamba-1.4b", "Mamba_1.4B", "MAMBA", next_word_distribution, sequence_score, scorer_args={"tokenizer": "EleutherAI/gpt-neox-20b"}),
     ModelConfig("state-spaces/mamba-2.8b", "Mamba_2.8B", "MAMBA", next_word_distribution, sequence_score, scorer_args={"tokenizer": "EleutherAI/gpt-neox-20b"}),
     ModelConfig("state-spaces/mamba2-130m", "Mamba2_130M", "MAMBA", next_word_distribution, sequence_score, scorer_args={"tokenizer": "EleutherAI/gpt-neox-20b"}),
     ModelConfig("state-spaces/mamba2-780m", "Mamba2_780M", "MAMBA", next_word_distribution, sequence_score, scorer_args={"tokenizer": "EleutherAI/gpt-neox-20b"}),
