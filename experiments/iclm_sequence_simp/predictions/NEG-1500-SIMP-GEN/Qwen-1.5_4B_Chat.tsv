@@ -1,0 +1,3001 @@
+context	target	target_logprob	ctx_polarity	tgt_polarity
+A cat is an animal.	animal	-3.513678789138794	aff	aff
+A cat is a machine.	machine	-4.7747368812561035	aff	neg
+A cat is not a machine.	machine	-4.061840534210205	neg	neg
+A cat is not an animal.	animal	-3.6582908630371094	neg	aff
+A computer is a machine.	machine	-5.111537933349609	aff	aff
+A computer is a person.	person	-5.92780065536499	aff	neg
+A computer is not a person.	person	-4.628090858459473	neg	neg
+A computer is not a machine.	machine	-4.239886283874512	neg	aff
+A book is a text.	text	-5.737020969390869	aff	aff
+A book is a person.	person	-5.747674465179443	aff	neg
+A book is not a person.	person	-4.879127502441406	neg	neg
+A book is not a text.	text	-4.754958629608154	neg	aff
+A dog is an animal.	animal	-4.407018184661865	aff	aff
+A dog is a plant.	plant	-5.5865797996521	aff	neg
+A dog is not a plant.	plant	-4.187896728515625	neg	neg
+A dog is not an animal.	animal	-3.8696751594543457	neg	aff
+A monkey is an animal.	animal	-4.568267345428467	aff	aff
+A monkey is a toy.	toy	-5.50481653213501	aff	neg
+A monkey is not a toy.	toy	-5.031868934631348	neg	neg
+A monkey is not an animal.	animal	-4.696217060089111	neg	aff
+A rabbit is an animal.	animal	-4.725005626678467	aff	aff
+A rabbit is a plant.	plant	-4.895796298980713	aff	neg
+A rabbit is not a plant.	plant	-4.191259860992432	neg	neg
+A rabbit is not an animal.	animal	-4.719769477844238	neg	aff
+A human is a mammal.	mammal	-5.469298362731934	aff	aff
+A human is a device.	device	-7.005223751068115	aff	neg
+A human is not a device.	device	-5.775565147399902	neg	neg
+A human is not a mammal.	mammal	-4.477899074554443	neg	aff
+A laptop is a device.	device	-5.875649929046631	aff	aff
+A laptop is a toy.	toy	-6.752437591552734	aff	neg
+A laptop is not a toy.	toy	-5.780879020690918	neg	neg
+A laptop is not a device.	device	-4.948662757873535	neg	aff
+An earphone is a device.	device	-4.874269008636475	aff	aff
+An earphone is a toy.	toy	-5.3853607177734375	aff	neg
+An earphone is not a toy.	toy	-4.0644330978393555	neg	neg
+An earphone is not a device.	device	-4.966508865356445	neg	aff
+A book is a creation.	creation	-6.450418949127197	aff	aff
+A book is an utensil.	utensil	-6.160977363586426	aff	neg
+A book is not an utensil.	utensil	-5.535009384155273	neg	neg
+A book is not a creation.	creation	-5.630059719085693	neg	aff
+A house is a building.	building	-4.546621322631836	aff	aff
+A house is a plant.	plant	-6.107161998748779	aff	neg
+A house is not a plant.	plant	-4.617917537689209	neg	neg
+A house is not a building.	building	-3.891904354095459	neg	aff
+A school is a building.	building	-5.150897979736328	aff	aff
+A school is a toy.	toy	-6.115725517272949	aff	neg
+A school is not a toy.	toy	-5.212152481079102	neg	neg
+A school is not a building.	building	-4.364949703216553	neg	aff
+A phone is a device.	device	-4.993403911590576	aff	aff
+A phone is a rock.	rock	-6.929122447967529	aff	neg
+A phone is not a rock.	rock	-5.7224440574646	neg	neg
+A phone is not a device.	device	-4.135436534881592	neg	aff
+A fork is an utensil.	utensil	-6.7053422927856445	aff	aff
+A fork is a knife.	knife	-6.733249187469482	aff	neg
+A fork is not a knife.	knife	-6.01811408996582	neg	neg
+A fork is not an utensil.	utensil	-6.108724594116211	neg	aff
+A knife is a tool.	tool	-5.088658332824707	aff	aff
+A knife is a fruit.	fruit	-5.714898586273193	aff	neg
+A knife is not a fruit.	fruit	-4.427762031555176	neg	neg
+A knife is not a tool.	tool	-4.298614501953125	neg	aff
+A boat is a vehicle.	vehicle	-6.188681125640869	aff	aff
+A boat is a mammal.	mammal	-5.97386360168457	aff	neg
+A boat is not a mammal.	mammal	-4.961037635803223	neg	neg
+A boat is not a vehicle.	vehicle	-4.537540912628174	neg	aff
+A grape is a fruit.	fruit	-5.365983009338379	aff	aff
+A grape is a vegetable.	vegetable	-6.383103847503662	aff	neg
+A grape is not a vegetable.	vegetable	-5.262671947479248	neg	neg
+A grape is not a fruit.	fruit	-4.720180034637451	neg	aff
+A pigeon is a bird.	bird	-6.016754150390625	aff	aff
+A pigeon is a plant.	plant	-6.989232063293457	aff	neg
+A pigeon is not a plant.	plant	-5.775758743286133	neg	neg
+A pigeon is not a bird.	bird	-5.400651454925537	neg	aff
+A spoon is an utensil.	utensil	-5.410225868225098	aff	aff
+A spoon is a reptile.	reptile	-5.351343154907227	aff	neg
+A spoon is not a reptile.	reptile	-4.646060943603516	neg	neg
+A spoon is not an utensil.	utensil	-5.020619869232178	neg	aff
+A person is a mammal.	mammal	-5.122405052185059	aff	aff
+A person is a reptile.	reptile	-5.838809490203857	aff	neg
+A person is not a reptile.	reptile	-4.949099063873291	neg	neg
+A person is not a mammal.	mammal	-4.3629608154296875	neg	aff
+A fig is a tree.	tree	-6.263057708740234	aff	aff
+A fig is a mineral.	mineral	-8.164406776428223	aff	neg
+A fig is not a mineral.	mineral	-6.661823272705078	neg	neg
+A fig is not a tree.	tree	-5.515040874481201	neg	aff
+A rock is a mineral.	mineral	-5.698861598968506	aff	aff
+A rock is a vegetable.	vegetable	-6.708858013153076	aff	neg
+A rock is not a vegetable.	vegetable	-5.4276862144470215	neg	neg
+A rock is not a mineral.	mineral	-4.778618335723877	neg	aff
+A book is a publication.	publication	-5.131423473358154	aff	aff
+A book is a mammal.	mammal	-5.414081573486328	aff	neg
+A book is not a mammal.	mammal	-4.923663139343262	neg	neg
+A book is not a publication.	publication	-4.46024227142334	neg	aff
+A bee is an insect.	insect	-5.049093723297119	aff	aff
+A bee is a mammal.	mammal	-4.800136089324951	aff	neg
+A bee is not a mammal.	mammal	-3.860534906387329	neg	neg
+A bee is not an insect.	insect	-4.353953838348389	neg	aff
+A cat is a mammal.	mammal	-3.4689223766326904	aff	aff
+A cat is a reptile.	reptile	-4.140351295471191	aff	neg
+A cat is not a reptile.	reptile	-4.001061916351318	neg	neg
+A cat is not a mammal.	mammal	-3.4161698818206787	neg	aff
+A snake is a reptile.	reptile	-4.823263168334961	aff	aff
+A snake is a mammal.	mammal	-5.085766792297363	aff	neg
+A snake is not a mammal.	mammal	-4.425074577331543	neg	neg
+A snake is not a reptile.	reptile	-4.440831661224365	neg	aff
+A donkey is an animal.	animal	-5.731225490570068	aff	aff
+A donkey is a person.	person	-6.459345817565918	aff	neg
+A donkey is not a person.	person	-5.318263530731201	neg	neg
+A donkey is not an animal.	animal	-5.141740322113037	neg	aff
+A squirrel is an animal.	animal	-6.5636773109436035	aff	aff
+A squirrel is a mineral.	mineral	-7.631051063537598	aff	neg
+A squirrel is not a mineral.	mineral	-6.410416603088379	neg	neg
+A squirrel is not an animal.	animal	-5.598662853240967	neg	aff
+A cobra is a reptile.	reptile	-5.5485100746154785	aff	aff
+A cobra is a mineral.	mineral	-7.2507524490356445	aff	neg
+A cobra is not a mineral.	mineral	-6.308267116546631	neg	neg
+A cobra is not a reptile.	reptile	-5.25191593170166	neg	aff
+A turtle is a reptile.	reptile	-4.45706033706665	aff	aff
+A turtle is a bird.	bird	-6.135524272918701	aff	neg
+A turtle is not a bird.	bird	-5.441566467285156	neg	neg
+A turtle is not a reptile.	reptile	-4.493449687957764	neg	aff
+A bird is an animal.	animal	-5.991948127746582	aff	aff
+A bird is a mineral.	mineral	-7.82354736328125	aff	neg
+A bird is not a mineral.	mineral	-6.537055969238281	neg	neg
+A bird is not an animal.	animal	-5.114251613616943	neg	aff
+A car is a vehicle.	vehicle	-5.234130382537842	aff	aff
+A car is a bush.	bush	-6.489192485809326	aff	neg
+A car is not a bush.	bush	-5.457630157470703	neg	neg
+A car is not a vehicle.	vehicle	-4.0841522216796875	neg	aff
+A rose is a flower.	flower	-4.438626766204834	aff	aff
+A rose is a weed.	weed	-4.8949761390686035	aff	neg
+A rose is not a weed.	weed	-4.685815811157227	neg	neg
+A rose is not a flower.	flower	-4.257488250732422	neg	aff
+A lily is a flower.	flower	-5.831962585449219	aff	aff
+A lily is a tree.	tree	-6.471693992614746	aff	neg
+A lily is not a tree.	tree	-5.639517784118652	neg	neg
+A lily is not a flower.	flower	-5.479363918304443	neg	aff
+A daisy is a flower.	flower	-5.2888946533203125	aff	aff
+A daisy is a tree.	tree	-6.414473533630371	aff	neg
+A daisy is not a tree.	tree	-5.647522926330566	neg	neg
+A daisy is not a flower.	flower	-5.033786296844482	neg	aff
+A tulip is a flower.	flower	-4.678458213806152	aff	aff
+A tulip is a tree.	tree	-5.084291458129883	aff	neg
+A tulip is not a tree.	tree	-4.394787788391113	neg	neg
+A tulip is not a flower.	flower	-4.38026237487793	neg	aff
+A snake is an animal.	animal	-5.569976329803467	aff	aff
+A snake is a toy.	toy	-6.857271671295166	aff	neg
+A snake is not a toy.	toy	-5.999850273132324	neg	neg
+A snake is not an animal.	animal	-4.721031188964844	neg	aff
+A crocodile is an animal.	animal	-5.081118583679199	aff	aff
+A crocodile is a mammal.	mammal	-5.002179145812988	aff	neg
+A crocodile is not a mammal.	mammal	-4.510416030883789	neg	neg
+A crocodile is not an animal.	animal	-4.644382476806641	neg	aff
+A mice is a rodent.	rodent	-5.090588569641113	aff	aff
+A mice is a toy.	toy	-6.186513423919678	aff	neg
+A mice is not a toy.	toy	-5.711090087890625	neg	neg
+A mice is not a rodent.	rodent	-4.573419570922852	neg	aff
+A horse is an animal.	animal	-4.573039531707764	aff	aff
+A horse is a person.	person	-5.483153820037842	aff	neg
+A horse is not a person.	person	-4.02762508392334	neg	neg
+A horse is not an animal.	animal	-3.8467583656311035	neg	aff
+A mouse is an animal.	animal	-4.498961925506592	aff	aff
+A mouse is a toy.	toy	-5.424311637878418	aff	neg
+A mouse is not a toy.	toy	-5.09796667098999	neg	neg
+A mouse is not an animal.	animal	-4.186740398406982	neg	aff
+A salmon is a fish.	fish	-5.6287336349487305	aff	aff
+A salmon is a fruit.	fruit	-6.648855686187744	aff	neg
+A salmon is not a fruit.	fruit	-5.717314720153809	neg	neg
+A salmon is not a fish.	fish	-4.975856781005859	neg	aff
+A carrot is a vegetable.	vegetable	-4.241466045379639	aff	aff
+A carrot is a mineral.	mineral	-6.395640850067139	aff	neg
+A carrot is not a mineral.	mineral	-5.473273277282715	neg	neg
+A carrot is not a vegetable.	vegetable	-3.868889570236206	neg	aff
+A table is a furniture.	furniture	-6.780091762542725	aff	aff
+A table is a toy.	toy	-6.9562602043151855	aff	neg
+A table is not a toy.	toy	-6.0629072189331055	neg	neg
+A table is not a furniture.	furniture	-5.947030544281006	neg	aff
+A rabbit is a mammal.	mammal	-3.996272563934326	aff	aff
+A rabbit is a bird.	bird	-5.5405731201171875	aff	neg
+A rabbit is not a bird.	bird	-4.7623291015625	neg	neg
+A rabbit is not a mammal.	mammal	-3.97649884223938	neg	aff
+A dog is a mammal.	mammal	-4.182999610900879	aff	aff
+A dog is a fish.	fish	-5.8520426750183105	aff	neg
+A dog is not a fish.	fish	-4.420680046081543	neg	neg
+A dog is not a mammal.	mammal	-3.5681655406951904	neg	aff
+A deer is an animal.	animal	-4.494670867919922	aff	aff
+A deer is a plant.	plant	-4.771378993988037	aff	neg
+A deer is not a plant.	plant	-4.687532424926758	neg	neg
+A deer is not an animal.	animal	-4.303789138793945	neg	aff
+A whale is a mammal.	mammal	-4.86316442489624	aff	aff
+A whale is a reptile.	reptile	-6.117660045623779	aff	neg
+A whale is not a reptile.	reptile	-5.354763507843018	neg	neg
+A whale is not a mammal.	mammal	-4.583734512329102	neg	aff
+A desk is a furniture.	furniture	-5.459073543548584	aff	aff
+A desk is a toy.	toy	-6.895895481109619	aff	neg
+A desk is not a toy.	toy	-5.324006080627441	neg	neg
+A desk is not a furniture.	furniture	-4.505866050720215	neg	aff
+A bicycle is a vehicle.	vehicle	-5.456099987030029	aff	aff
+A bicycle is a toy.	toy	-6.0650177001953125	aff	neg
+A bicycle is not a toy.	toy	-4.8575286865234375	neg	neg
+A bicycle is not a vehicle.	vehicle	-3.8471813201904297	neg	aff
+A bat is a mammal.	mammal	-4.399370193481445	aff	aff
+A bat is a reptile.	reptile	-5.4178466796875	aff	neg
+A bat is not a reptile.	reptile	-4.899444580078125	neg	neg
+A bat is not a mammal.	mammal	-3.76171612739563	neg	aff
+A cloud is a gas.	gas	-6.272216320037842	aff	aff
+A cloud is a liquid.	liquid	-7.468789100646973	aff	neg
+A cloud is not a liquid.	liquid	-6.515501976013184	neg	neg
+A cloud is not a gas.	gas	-5.883815288543701	neg	aff
+An Apple is a fruit.	fruit	-4.079370498657227	aff	aff
+An Apple is a vegetable.	vegetable	-5.34559965133667	aff	neg
+An Apple is not a vegetable.	vegetable	-4.738857269287109	neg	neg
+An Apple is not a fruit.	fruit	-4.204418182373047	neg	aff
+A toy is a plaything.	plaything	-4.5562849044799805	aff	aff
+A toy is a food.	food	-6.522823333740234	aff	neg
+A toy is not a food.	food	-5.56488037109375	neg	neg
+A toy is not a plaything.	plaything	-4.692093849182129	neg	aff
+A human is a mammal.	mammal	-5.469298362731934	aff	aff
+A human is a fish.	fish	-7.051887512207031	aff	neg
+A human is not a fish.	fish	-5.772543907165527	neg	neg
+A human is not a mammal.	mammal	-4.477899074554443	neg	aff
+A hummingbird is a bird.	bird	-6.546281337738037	aff	aff
+A hummingbird is a mammal.	mammal	-6.063723087310791	aff	neg
+A hummingbird is not a mammal.	mammal	-5.460705280303955	neg	neg
+A hummingbird is not a bird.	bird	-5.7927327156066895	neg	aff
+A cauliflower is a vegetable.	vegetable	-5.535146713256836	aff	aff
+A cauliflower is a fruit.	fruit	-6.2633891105651855	aff	neg
+A cauliflower is not a fruit.	fruit	-5.716950416564941	neg	neg
+A cauliflower is not a vegetable.	vegetable	-5.293996810913086	neg	aff
+A turnip is a vegetable.	vegetable	-5.393237590789795	aff	aff
+A turnip is a mineral.	mineral	-6.875882625579834	aff	neg
+A turnip is not a mineral.	mineral	-6.324738025665283	neg	neg
+A turnip is not a vegetable.	vegetable	-5.250399112701416	neg	aff
+A yam is a vegetable.	vegetable	-5.4532880783081055	aff	aff
+A yam is a grain.	grain	-6.178109645843506	aff	neg
+A yam is not a grain.	grain	-5.763777256011963	neg	neg
+A yam is not a vegetable.	vegetable	-5.132936954498291	neg	aff
+A truck is a vehicle.	vehicle	-4.8182244300842285	aff	aff
+A truck is a toy.	toy	-5.498889446258545	aff	neg
+A truck is not a toy.	toy	-4.7315473556518555	neg	neg
+A truck is not a vehicle.	vehicle	-3.7919530868530273	neg	aff
+A lamp is a light.	light	-4.866057395935059	aff	aff
+A lamp is a clock.	clock	-6.100976467132568	aff	neg
+A lamp is not a clock.	clock	-5.120765686035156	neg	neg
+A lamp is not a light.	light	-4.271625518798828	neg	aff
+A cycle is a vehicle.	vehicle	-6.700788974761963	aff	aff
+A cycle is a toy.	toy	-7.240486145019531	aff	neg
+A cycle is not a toy.	toy	-6.712733745574951	neg	neg
+A cycle is not a vehicle.	vehicle	-6.050745010375977	neg	aff
+A crow is a bird.	bird	-5.616785526275635	aff	aff
+A crow is a vehicle.	vehicle	-7.288201808929443	aff	neg
+A crow is not a vehicle.	vehicle	-6.128557205200195	neg	neg
+A crow is not a bird.	bird	-5.060483455657959	neg	aff
+A pencil is a tool.	tool	-4.748354911804199	aff	aff
+A pencil is a tree.	tree	-5.4764533042907715	aff	neg
+A pencil is not a tree.	tree	-4.1648149490356445	neg	neg
+A pencil is not a tool.	tool	-4.274076461791992	neg	aff
+A snowflake is a crystal.	crystal	-5.501452445983887	aff	aff
+A snowflake is a liquid.	liquid	-5.4217529296875	aff	neg
+A snowflake is not a liquid.	liquid	-5.145089149475098	neg	neg
+A snowflake is not a crystal.	crystal	-4.965861797332764	neg	aff
+A pearl is a gem.	gem	-5.47735595703125	aff	aff
+A pearl is a fruit.	fruit	-6.491620063781738	aff	neg
+A pearl is not a fruit.	fruit	-5.370645046234131	neg	neg
+A pearl is not a gem.	gem	-4.703394889831543	neg	aff
+A fish is an animal.	animal	-4.884462833404541	aff	aff
+A fish is a human.	human	-5.653707981109619	aff	neg
+A fish is not a human.	human	-4.918429374694824	neg	neg
+A fish is not an animal.	animal	-4.575334548950195	neg	aff
+A mountain is a landform.	landform	-4.957854270935059	aff	aff
+A mountain is a building.	building	-6.617718696594238	aff	neg
+A mountain is not a building.	building	-5.750698089599609	neg	neg
+A mountain is not a landform.	landform	-4.791596412658691	neg	aff
+A university is a school.	school	-6.597341060638428	aff	aff
+A university is a person.	person	-6.6703057289123535	aff	neg
+A university is not a person.	person	-5.788121223449707	neg	neg
+A university is not a school.	school	-5.306536674499512	neg	aff
+A train is a vehicle.	vehicle	-6.160258769989014	aff	aff
+A train is a plant.	plant	-6.869121074676514	aff	neg
+A train is not a plant.	plant	-5.870339870452881	neg	neg
+A train is not a vehicle.	vehicle	-4.788902282714844	neg	aff
+A duck is a bird.	bird	-4.952693462371826	aff	aff
+A duck is a fish.	fish	-5.820687294006348	aff	neg
+A duck is not a fish.	fish	-5.186213970184326	neg	neg
+A duck is not a bird.	bird	-4.561910152435303	neg	aff
+A horse is a mammal.	mammal	-4.606236934661865	aff	aff
+A horse is an insect.	insect	-5.677034378051758	aff	neg
+A horse is not an insect.	insect	-4.643984794616699	neg	neg
+A horse is not a mammal.	mammal	-3.9868147373199463	neg	aff
+A bird is a vertebrate.	vertebrate	-6.002299785614014	aff	aff
+A bird is an invertebrate.	invertebrate	-5.213470458984375	aff	neg
+A bird is not an invertebrate.	invertebrate	-4.860459327697754	neg	neg
+A bird is not a vertebrate.	vertebrate	-5.4317097663879395	neg	aff
+A person is a human.	human	-5.23371696472168	aff	aff
+A person is a machine.	machine	-5.86636209487915	aff	neg
+A person is not a machine.	machine	-4.792090892791748	neg	neg
+A person is not a human.	human	-4.541665077209473	neg	aff
+A building is a structure.	structure	-4.070594310760498	aff	aff
+A building is a plant.	plant	-6.276713848114014	aff	neg
+A building is not a plant.	plant	-4.367478370666504	neg	neg
+A building is not a structure.	structure	-3.555058240890503	neg	aff
+A tool is an instrument.	instrument	-5.610969066619873	aff	aff
+A tool is a toy.	toy	-6.641883850097656	aff	neg
+A tool is not a toy.	toy	-5.575095176696777	neg	neg
+A tool is not an instrument.	instrument	-5.189758777618408	neg	aff
+A vegetable is a plant.	plant	-4.586118221282959	aff	aff
+A vegetable is an animal.	animal	-5.0512824058532715	aff	neg
+A vegetable is not an animal.	animal	-4.100313186645508	neg	neg
+A vegetable is not a plant.	plant	-4.1778669357299805	neg	aff
+A banana is a fruit.	fruit	-4.669987678527832	aff	aff
+A banana is a vegetable.	vegetable	-5.311276435852051	aff	neg
+A banana is not a vegetable.	vegetable	-4.157153129577637	neg	neg
+A banana is not a fruit.	fruit	-4.030145645141602	neg	aff
+A jackfruit is a fruit.	fruit	-4.872902870178223	aff	aff
+A jackfruit is a rock.	rock	-6.984134197235107	aff	neg
+A jackfruit is not a rock.	rock	-6.71099328994751	neg	neg
+A jackfruit is not a fruit.	fruit	-4.6220502853393555	neg	aff
+A chicken is a bird.	bird	-4.6333441734313965	aff	aff
+A chicken is a mammal.	mammal	-4.611541748046875	aff	neg
+A chicken is not a mammal.	mammal	-4.050694465637207	neg	neg
+A chicken is not a bird.	bird	-4.655489921569824	neg	aff
+A robin is a bird.	bird	-5.559670448303223	aff	aff
+A robin is a mammal.	mammal	-5.551225662231445	aff	neg
+A robin is not a mammal.	mammal	-4.939902305603027	neg	neg
+A robin is not a bird.	bird	-5.117925643920898	neg	aff
+A tiger is an animal.	animal	-4.662040710449219	aff	aff
+A tiger is a machine.	machine	-5.443755626678467	aff	neg
+A tiger is not a machine.	machine	-5.126025199890137	neg	neg
+A tiger is not an animal.	animal	-4.4341044425964355	neg	aff
+A mammal is an animal.	animal	-4.662467002868652	aff	aff
+A mammal is a plant.	plant	-5.420899391174316	aff	neg
+A mammal is not a plant.	plant	-4.720454692840576	neg	neg
+A mammal is not an animal.	animal	-4.393195152282715	neg	aff
+A reptile is an animal.	animal	-5.329648971557617	aff	aff
+A reptile is a tool.	tool	-7.07550573348999	aff	neg
+A reptile is not a tool.	tool	-6.460930347442627	neg	neg
+A reptile is not an animal.	animal	-4.792407512664795	neg	aff
+A bison is a mammal.	mammal	-5.162152290344238	aff	aff
+A bison is a bird.	bird	-6.598543167114258	aff	neg
+A bison is not a bird.	bird	-5.697722434997559	neg	neg
+A bison is not a mammal.	mammal	-4.86636209487915	neg	aff
+A plane is a vehicle.	vehicle	-7.324437618255615	aff	aff
+A plane is a person.	person	-7.333167552947998	aff	neg
+A plane is not a person.	person	-5.92331075668335	neg	neg
+A plane is not a vehicle.	vehicle	-5.535882472991943	neg	aff
+A chair is a furniture.	furniture	-5.409237861633301	aff	aff
+A chair is a person.	person	-5.095008373260498	aff	neg
+A chair is not a person.	person	-4.233376502990723	neg	neg
+A chair is not a furniture.	furniture	-4.1580047607421875	neg	aff
+A ruler is a tool.	tool	-5.27169132232666	aff	aff
+A ruler is an animal.	animal	-7.0966081619262695	aff	neg
+A ruler is not an animal.	animal	-5.349816799163818	neg	neg
+A ruler is not a tool.	tool	-4.549003601074219	neg	aff
+A book is a literature.	literature	-6.083044528961182	aff	aff
+A book is a furniture.	furniture	-6.377514839172363	aff	neg
+A book is not a furniture.	furniture	-5.4478559494018555	neg	neg
+A book is not a literature.	literature	-5.249093532562256	neg	aff
+A pencil is a stationary.	stationary	-6.6751909255981445	aff	aff
+A pencil is a food.	food	-6.579708099365234	aff	neg
+A pencil is not a food.	food	-5.290899753570557	neg	neg
+A pencil is not a stationary.	stationary	-5.8888959884643555	neg	aff
+A phone is an instrument.	instrument	-5.617031574249268	aff	aff
+A phone is a valley.	valley	-7.114963054656982	aff	neg
+A phone is not a valley.	valley	-5.910939693450928	neg	neg
+A phone is not an instrument.	instrument	-4.731289386749268	neg	aff
+A mouse is a mammal.	mammal	-4.2752532958984375	aff	aff
+A mouse is a reptile.	reptile	-4.639138221740723	aff	neg
+A mouse is not a reptile.	reptile	-4.430197238922119	neg	neg
+A mouse is not a mammal.	mammal	-3.8998167514801025	neg	aff
+A creeper is a plant.	plant	-6.4852614402771	aff	aff
+A creeper is a fish.	fish	-8.076601028442383	aff	neg
+A creeper is not a fish.	fish	-6.9707841873168945	neg	neg
+A creeper is not a plant.	plant	-5.9782023429870605	neg	aff
+A teacher is a person.	person	-5.392164707183838	aff	aff
+A teacher is a thing.	thing	-7.064718723297119	aff	neg
+A teacher is not a thing.	thing	-5.364448547363281	neg	neg
+A teacher is not a person.	person	-4.543699264526367	neg	aff
+A doctor is a person.	person	-5.312231540679932	aff	aff
+A doctor is an animal.	animal	-6.1280107498168945	aff	neg
+A doctor is not an animal.	animal	-5.113626003265381	neg	neg
+A doctor is not a person.	person	-4.261438369750977	neg	aff
+A lizard is a reptile.	reptile	-4.12811803817749	aff	aff
+A lizard is a mammal.	mammal	-5.090102195739746	aff	neg
+A lizard is not a mammal.	mammal	-4.904758453369141	neg	neg
+A lizard is not a reptile.	reptile	-4.332267761230469	neg	aff
+A skyscraper is a building.	building	-4.315566062927246	aff	aff
+A skyscraper is a fish.	fish	-5.798182487487793	aff	neg
+A skyscraper is not a fish.	fish	-4.764252662658691	neg	neg
+A skyscraper is not a building.	building	-4.228741645812988	neg	aff
+A barn is a building.	building	-5.443450927734375	aff	aff
+A barn is a bird.	bird	-5.790080547332764	aff	neg
+A barn is not a bird.	bird	-5.015122890472412	neg	neg
+A barn is not a building.	building	-5.273185729980469	neg	aff
+A rock is a solid.	solid	-6.189567565917969	aff	aff
+A rock is a liquid.	liquid	-6.725646495819092	aff	neg
+A rock is not a liquid.	liquid	-5.177390098571777	neg	neg
+A rock is not a solid.	solid	-5.072354316711426	neg	aff
+A hammer is a tool.	tool	-5.298891544342041	aff	aff
+A hammer is a plant.	plant	-7.729616641998291	aff	neg
+A hammer is not a plant.	plant	-6.3062744140625	neg	neg
+A hammer is not a tool.	tool	-4.674200057983398	neg	aff
+A hotel is a building.	building	-6.651797771453857	aff	aff
+A hotel is a machine.	machine	-8.984611511230469	aff	neg
+A hotel is not a machine.	machine	-7.326249599456787	neg	neg
+A hotel is not a building.	building	-5.631094932556152	neg	aff
+A cactus is a plant.	plant	-4.7462663650512695	aff	aff
+A cactus is a fish.	fish	-6.573668479919434	aff	neg
+A cactus is not a fish.	fish	-5.4844465255737305	neg	neg
+A cactus is not a plant.	plant	-4.512149333953857	neg	aff
+A bush is a plant.	plant	-5.124454021453857	aff	aff
+A bush is a fish.	fish	-7.1432061195373535	aff	neg
+A bush is not a fish.	fish	-6.180417060852051	neg	neg
+A bush is not a plant.	plant	-5.029082775115967	neg	aff
+A herb is a plant.	plant	-5.140416622161865	aff	aff
+A herb is a fish.	fish	-7.837428569793701	aff	neg
+A herb is not a fish.	fish	-6.290124893188477	neg	neg
+A herb is not a plant.	plant	-4.67569637298584	neg	aff
+A vine is a plant.	plant	-6.661286354064941	aff	aff
+A vine is a fish.	fish	-8.684622764587402	aff	neg
+A vine is not a fish.	fish	-6.979793548583984	neg	neg
+A vine is not a plant.	plant	-6.076107025146484	neg	aff
+A lily is a plant.	plant	-5.971724510192871	aff	aff
+A lily is a person.	person	-6.799812316894531	aff	neg
+A lily is not a person.	person	-6.0872416496276855	neg	neg
+A lily is not a plant.	plant	-5.4260735511779785	neg	aff
+An airplane is a vehicle.	vehicle	-5.152188777923584	aff	aff
+An airplane is a drink.	drink	-6.9725341796875	aff	neg
+An airplane is not a drink.	drink	-5.387519359588623	neg	neg
+An airplane is not a vehicle.	vehicle	-4.025067329406738	neg	aff
+A phone is a gadget.	gadget	-6.1354241371154785	aff	aff
+A phone is a food.	food	-6.250767707824707	aff	neg
+A phone is not a food.	food	-5.192448616027832	neg	neg
+A phone is not a gadget.	gadget	-5.171545028686523	neg	aff
+A turtle is an animal.	animal	-5.600451946258545	aff	aff
+A turtle is a toy.	toy	-6.22601318359375	aff	neg
+A turtle is not a toy.	toy	-6.104126930236816	neg	neg
+A turtle is not an animal.	animal	-5.118199348449707	neg	aff
+A vegetable is a food.	food	-4.3216166496276855	aff	aff
+A vegetable is a drink.	drink	-5.846914291381836	aff	neg
+A vegetable is not a drink.	drink	-5.576428413391113	neg	neg
+A vegetable is not a food.	food	-3.756368637084961	neg	aff
+A lark is a bird.	bird	-5.279983043670654	aff	aff
+A lark is a mammal.	mammal	-5.262174606323242	aff	neg
+A lark is not a mammal.	mammal	-5.019454479217529	neg	neg
+A lark is not a bird.	bird	-5.031108379364014	neg	aff
+A thrush is a bird.	bird	-5.7809367179870605	aff	aff
+A thrush is a reptile.	reptile	-6.262731075286865	aff	neg
+A thrush is not a reptile.	reptile	-5.506846904754639	neg	neg
+A thrush is not a bird.	bird	-5.332968711853027	neg	aff
+A canary is a bird.	bird	-6.7246809005737305	aff	aff
+A canary is a mineral.	mineral	-7.838239669799805	aff	neg
+A canary is not a mineral.	mineral	-6.819678783416748	neg	neg
+A canary is not a bird.	bird	-5.597390651702881	neg	aff
+A human is an animal.	animal	-5.990142822265625	aff	aff
+A human is a mineral.	mineral	-7.37042236328125	aff	neg
+A human is not a mineral.	mineral	-5.871542930603027	neg	neg
+A human is not an animal.	animal	-4.801892280578613	neg	aff
+A chair is a seat.	seat	-4.532863140106201	aff	aff
+A chair is a mammal.	mammal	-5.1494951248168945	aff	neg
+A chair is not a mammal.	mammal	-4.0620198249816895	neg	neg
+A chair is not a seat.	seat	-4.2850847244262695	neg	aff
+A pine is a tree.	tree	-5.328464031219482	aff	aff
+A pine is a person.	person	-6.7797441482543945	aff	neg
+A pine is not a person.	person	-5.346469879150391	neg	neg
+A pine is not a tree.	tree	-5.07487678527832	neg	aff
+A potato is a vegetable.	vegetable	-3.3267877101898193	aff	aff
+A potato is a fruit.	fruit	-4.526008605957031	aff	neg
+A potato is not a fruit.	fruit	-4.060838222503662	neg	neg
+A potato is not a vegetable.	vegetable	-3.2104861736297607	neg	aff
+A pea is a vegetable.	vegetable	-5.565896034240723	aff	aff
+A pea is a fruit.	fruit	-5.945831298828125	aff	neg
+A pea is not a fruit.	fruit	-5.356625556945801	neg	neg
+A pea is not a vegetable.	vegetable	-5.031938076019287	neg	aff
+A frog is an amphibian.	amphibian	-4.968235969543457	aff	aff
+A frog is a reptile.	reptile	-4.883125305175781	aff	neg
+A frog is not a reptile.	reptile	-4.361579418182373	neg	neg
+A frog is not an amphibian.	amphibian	-4.720590114593506	neg	aff
+A diamond is a mineral.	mineral	-5.826915264129639	aff	aff
+A diamond is a toy.	toy	-7.086231231689453	aff	neg
+A diamond is not a toy.	toy	-5.680694580078125	neg	neg
+A diamond is not a mineral.	mineral	-4.748291015625	neg	aff
+A watch is a timepiece.	timepiece	-4.440946578979492	aff	aff
+A watch is a toy.	toy	-6.374801158905029	aff	neg
+A watch is not a toy.	toy	-5.384444236755371	neg	neg
+A watch is not a timepiece.	timepiece	-4.159503936767578	neg	aff
+A knife is an utensil.	utensil	-5.703821182250977	aff	aff
+A knife is a food.	food	-5.8503851890563965	aff	neg
+A knife is not a food.	food	-4.8224287033081055	neg	neg
+A knife is not an utensil.	utensil	-4.999547958374023	neg	aff
+A plate is a dish.	dish	-5.824867248535156	aff	aff
+A plate is a food.	food	-5.378870010375977	aff	neg
+A plate is not a food.	food	-4.834605693817139	neg	neg
+A plate is not a dish.	dish	-5.370269775390625	neg	aff
+A cup is a dish.	dish	-6.264352798461914	aff	aff
+A cup is a food.	food	-6.174236297607422	aff	neg
+A cup is not a food.	food	-5.365445613861084	neg	neg
+A cup is not a dish.	dish	-5.682400703430176	neg	aff
+A zebra is a mammal.	mammal	-4.74166202545166	aff	aff
+A zebra is a fish.	fish	-6.688654899597168	aff	neg
+A zebra is not a fish.	fish	-6.151862144470215	neg	neg
+A zebra is not a mammal.	mammal	-4.454790115356445	neg	aff
+A cheetah is a mammal.	mammal	-3.4175567626953125	aff	aff
+A cheetah is a reptile.	reptile	-3.862562656402588	aff	neg
+A cheetah is not a reptile.	reptile	-3.528000831604004	neg	neg
+A cheetah is not a mammal.	mammal	-3.359029769897461	neg	aff
+A diamond is a gem.	gem	-5.490262508392334	aff	aff
+A diamond is a place.	place	-7.121151924133301	aff	neg
+A diamond is not a place.	place	-5.4763383865356445	neg	neg
+A diamond is not a gem.	gem	-4.367527961730957	neg	aff
+A baseball is a sport.	sport	-7.902670383453369	aff	aff
+A baseball is a toy.	toy	-7.959374904632568	aff	neg
+A baseball is not a toy.	toy	-6.105738639831543	neg	neg
+A baseball is not a sport.	sport	-5.546727657318115	neg	aff
+A lamp is a lighting.	lighting	-5.763380527496338	aff	aff
+A lamp is a food.	food	-7.077365398406982	aff	neg
+A lamp is not a food.	food	-5.922669887542725	neg	neg
+A lamp is not a lighting.	lighting	-5.335785865783691	neg	aff
+A lizard is an animal.	animal	-5.965505123138428	aff	aff
+A lizard is a mineral.	mineral	-6.811895847320557	aff	neg
+A lizard is not a mineral.	mineral	-6.5082926750183105	neg	neg
+A lizard is not an animal.	animal	-5.705951690673828	neg	aff
+A computer is an electronics.	electronics	-6.3029866218566895	aff	aff
+A computer is a furniture.	furniture	-5.931336402893066	aff	neg
+A computer is not a furniture.	furniture	-5.241333484649658	neg	neg
+A computer is not an electronics.	electronics	-5.341830730438232	neg	aff
+A phone is an electronic.	electronic	-5.960825443267822	aff	aff
+A phone is a mineral.	mineral	-6.47519063949585	aff	neg
+A phone is not a mineral.	mineral	-5.498490810394287	neg	neg
+A phone is not an electronic.	electronic	-5.1176533699035645	neg	aff
+A spider is an invertebrate.	invertebrate	-3.778404951095581	aff	aff
+A spider is a vertebrate.	vertebrate	-4.934719085693359	aff	neg
+A spider is not a vertebrate.	vertebrate	-4.537545204162598	neg	neg
+A spider is not an invertebrate.	invertebrate	-3.9789843559265137	neg	aff
+A bus is a vehicle.	vehicle	-5.245282173156738	aff	aff
+A bus is a flower.	flower	-6.8481974601745605	aff	neg
+A bus is not a flower.	flower	-5.158369064331055	neg	neg
+A bus is not a vehicle.	vehicle	-3.9548168182373047	neg	aff
+A drill is a tool.	tool	-5.323128700256348	aff	aff
+A drill is a vegetable.	vegetable	-7.073034763336182	aff	neg
+A drill is not a vegetable.	vegetable	-5.5715789794921875	neg	neg
+A drill is not a tool.	tool	-4.365515232086182	neg	aff
+A fir is a tree.	tree	-5.595473766326904	aff	aff
+A fir is a tool.	tool	-6.683174133300781	aff	neg
+A fir is not a tool.	tool	-5.6970672607421875	neg	neg
+A fir is not a tree.	tree	-4.3756303787231445	neg	aff
+A city is a place.	place	-6.115208625793457	aff	aff
+A city is a thing.	thing	-6.979955196380615	aff	neg
+A city is not a thing.	thing	-5.215415000915527	neg	neg
+A city is not a place.	place	-4.726917266845703	neg	aff
+A church is a building.	building	-5.199803352355957	aff	aff
+A church is a toy.	toy	-7.709458827972412	aff	neg
+A church is not a toy.	toy	-6.345180511474609	neg	neg
+A church is not a building.	building	-4.462328910827637	neg	aff
+A mall is a building.	building	-5.444149971008301	aff	aff
+A mall is a person.	person	-6.060306549072266	aff	neg
+A mall is not a person.	person	-5.3907084465026855	neg	neg
+A mall is not a building.	building	-5.002904891967773	neg	aff
+A school is an institution.	institution	-5.727375030517578	aff	aff
+A school is a person.	person	-6.137371063232422	aff	neg
+A school is not a person.	person	-5.209998607635498	neg	neg
+A school is not an institution.	institution	-4.545291900634766	neg	aff
+A cat is a feline.	feline	-3.8071818351745605	aff	aff
+A cat is a canine.	canine	-5.25599479675293	aff	neg
+A cat is not a canine.	canine	-4.663820743560791	neg	neg
+A cat is not a feline.	feline	-4.020631790161133	neg	aff
+A dog is a canine.	canine	-5.503327369689941	aff	aff
+A dog is a feline.	feline	-5.268774032592773	aff	neg
+A dog is not a feline.	feline	-4.614272117614746	neg	neg
+A dog is not a canine.	canine	-4.853963375091553	neg	aff
+A crocodile is a reptile.	reptile	-4.845696926116943	aff	aff
+A crocodile is a fish.	fish	-5.870814323425293	aff	neg
+A crocodile is not a fish.	fish	-5.452656269073486	neg	neg
+A crocodile is not a reptile.	reptile	-4.8354010581970215	neg	aff
+A book is a writing.	writing	-5.753859996795654	aff	aff
+A book is an insect.	insect	-5.941123962402344	aff	neg
+A book is not an insect.	insect	-5.078586101531982	neg	neg
+A book is not a writing.	writing	-4.742035388946533	neg	aff
+A house is a structure.	structure	-4.570843696594238	aff	aff
+A house is a tool.	tool	-5.9141011238098145	aff	neg
+A house is not a tool.	tool	-5.258904933929443	neg	neg
+A house is not a structure.	structure	-3.9634177684783936	neg	aff
+A man is a mammal.	mammal	-5.742176055908203	aff	aff
+A man is a reptile.	reptile	-6.520244121551514	aff	neg
+A man is not a reptile.	reptile	-5.0904693603515625	neg	neg
+A man is not a mammal.	mammal	-4.713735103607178	neg	aff
+A woman is a mammal.	mammal	-5.442637920379639	aff	aff
+A woman is a reptile.	reptile	-6.6786346435546875	aff	neg
+A woman is not a reptile.	reptile	-5.420303821563721	neg	neg
+A woman is not a mammal.	mammal	-4.761229038238525	neg	aff
+An elephant is a mammal.	mammal	-3.4397037029266357	aff	aff
+An elephant is a reptile.	reptile	-4.226634502410889	aff	neg
+An elephant is not a reptile.	reptile	-3.5187244415283203	neg	neg
+An elephant is not a mammal.	mammal	-3.144885540008545	neg	aff
+A balloon is a toy.	toy	-5.615013122558594	aff	aff
+A balloon is a building.	building	-6.355544567108154	aff	neg
+A balloon is not a building.	building	-5.71966552734375	neg	neg
+A balloon is not a toy.	toy	-5.1628217697143555	neg	aff
+A restaurant is a building.	building	-4.993137359619141	aff	aff
+A restaurant is a fish.	fish	-7.2305588722229	aff	neg
+A restaurant is not a fish.	fish	-5.552384376525879	neg	neg
+A restaurant is not a building.	building	-4.400738716125488	neg	aff
+A whale is an animal.	animal	-5.571362495422363	aff	aff
+A whale is a plant.	plant	-6.629786968231201	aff	neg
+A whale is not a plant.	plant	-5.512666702270508	neg	neg
+A whale is not an animal.	animal	-4.7823944091796875	neg	aff
+A manager is a leader.	leader	-5.738245487213135	aff	aff
+A manager is a follower.	follower	-7.304817199707031	aff	neg
+A manager is not a follower.	follower	-6.075564861297607	neg	neg
+A manager is not a leader.	leader	-4.832085609436035	neg	aff
+A garden is a place.	place	-5.735103607177734	aff	aff
+A garden is a thing.	thing	-6.089393615722656	aff	neg
+A garden is not a thing.	thing	-5.079643726348877	neg	neg
+A garden is not a place.	place	-5.0022687911987305	neg	aff
+A book is a thing.	thing	-5.627442359924316	aff	aff
+A book is a food.	food	-6.955694675445557	aff	neg
+A book is not a food.	food	-5.855754852294922	neg	neg
+A book is not a thing.	thing	-4.491022109985352	neg	aff
+An ant is an insect.	insect	-3.674581289291382	aff	aff
+An ant is a mammal.	mammal	-4.270588397979736	aff	neg
+An ant is not a mammal.	mammal	-3.0769684314727783	neg	neg
+An ant is not an insect.	insect	-3.6792752742767334	neg	aff
+A saw is a tool.	tool	-4.815552711486816	aff	aff
+A saw is a weapon.	weapon	-6.1126580238342285	aff	neg
+A saw is not a weapon.	weapon	-5.08976936340332	neg	neg
+A saw is not a tool.	tool	-4.289707183837891	neg	aff
+A zebra is an animal.	animal	-5.157473564147949	aff	aff
+A zebra is a plant.	plant	-5.498279571533203	aff	neg
+A zebra is not a plant.	plant	-5.249773025512695	neg	neg
+A zebra is not an animal.	animal	-4.67291784286499	neg	aff
+A coin is a currency.	currency	-6.411412239074707	aff	aff
+A coin is a card.	card	-6.251097202301025	aff	neg
+A coin is not a card.	card	-5.1235151290893555	neg	neg
+A coin is not a currency.	currency	-4.7750091552734375	neg	aff
+A hawk is a bird.	bird	-6.332777500152588	aff	aff
+A hawk is a fish.	fish	-7.350672245025635	aff	neg
+A hawk is not a fish.	fish	-6.652074813842773	neg	neg
+A hawk is not a bird.	bird	-5.558579444885254	neg	aff
+A shark is a fish.	fish	-5.521587371826172	aff	aff
+A shark is a mammal.	mammal	-5.276690483093262	aff	neg
+A shark is not a mammal.	mammal	-4.855053901672363	neg	neg
+A shark is not a fish.	fish	-5.051219463348389	neg	aff
+A daffodil is a flower.	flower	-5.747544288635254	aff	aff
+A daffodil is a tool.	tool	-7.1141357421875	aff	neg
+A daffodil is not a tool.	tool	-6.7439093589782715	neg	neg
+A daffodil is not a flower.	flower	-5.4470391273498535	neg	aff
+A pansy is a flower.	flower	-4.026959419250488	aff	aff
+A pansy is a tool.	tool	-5.984622955322266	aff	neg
+A pansy is not a tool.	tool	-5.397807598114014	neg	neg
+A pansy is not a flower.	flower	-3.701591730117798	neg	aff
+An elephant is an animal.	animal	-3.7505478858947754	aff	aff
+An elephant is a toy.	toy	-5.806403636932373	aff	neg
+An elephant is not a toy.	toy	-4.54074239730835	neg	neg
+An elephant is not an animal.	animal	-3.6963706016540527	neg	aff
+A lion is a carnivore.	carnivore	-4.318797588348389	aff	aff
+A lion is a herbivore.	herbivore	-3.933077096939087	aff	neg
+A lion is not a herbivore.	herbivore	-4.165025234222412	neg	neg
+A lion is not a carnivore.	carnivore	-4.326964855194092	neg	aff
+A gazelle is an ungulate.	ungulate	-5.374864101409912	aff	aff
+A gazelle is a predator.	predator	-5.914244651794434	aff	neg
+A gazelle is not a predator.	predator	-5.409867286682129	neg	neg
+A gazelle is not an ungulate.	ungulate	-5.225224018096924	neg	aff
+A cow is a mammal.	mammal	-3.65204119682312	aff	aff
+A cow is a reptile.	reptile	-4.383177280426025	aff	neg
+A cow is not a reptile.	reptile	-4.154054641723633	neg	neg
+A cow is not a mammal.	mammal	-3.6485674381256104	neg	aff
+A cow is an animal.	animal	-4.1427531242370605	aff	aff
+A cow is a plant.	plant	-4.205982208251953	aff	neg
+A cow is not a plant.	plant	-3.8566091060638428	neg	neg
+A cow is not an animal.	animal	-3.5911049842834473	neg	aff
+A fish is a vertebrate.	vertebrate	-5.306820869445801	aff	aff
+A fish is an invertebrate.	invertebrate	-4.769197463989258	aff	neg
+A fish is not an invertebrate.	invertebrate	-4.832683563232422	neg	neg
+A fish is not a vertebrate.	vertebrate	-5.022747993469238	neg	aff
+A mosquito is an insect.	insect	-5.297158241271973	aff	aff
+A mosquito is a mammal.	mammal	-5.081002235412598	aff	neg
+A mosquito is not a mammal.	mammal	-4.753544807434082	neg	neg
+A mosquito is not an insect.	insect	-4.853607177734375	neg	aff
+A cathedral is a building.	building	-6.634463787078857	aff	aff
+A cathedral is a bird.	bird	-6.757066249847412	aff	neg
+A cathedral is not a bird.	bird	-6.684186935424805	neg	neg
+A cathedral is not a building.	building	-6.486230373382568	neg	aff
+A palace is a building.	building	-8.047707557678223	aff	aff
+A palace is a bird.	bird	-8.693803787231445	aff	neg
+A palace is not a bird.	bird	-7.1966071128845215	neg	neg
+A palace is not a building.	building	-7.477054595947266	neg	aff
+A snake is a creature.	creature	-6.391634941101074	aff	aff
+A snake is a building.	building	-6.465731143951416	aff	neg
+A snake is not a building.	building	-5.709297180175781	neg	neg
+A snake is not a creature.	creature	-5.230731964111328	neg	aff
+A human is a vertebrate.	vertebrate	-5.960631847381592	aff	aff
+A human is a plant.	plant	-6.528450012207031	aff	neg
+A human is not a plant.	plant	-5.223820686340332	neg	neg
+A human is not a vertebrate.	vertebrate	-5.081016540527344	neg	aff
+A rat is a mammal.	mammal	-4.807763576507568	aff	aff
+A rat is a bird.	bird	-6.156417369842529	aff	neg
+A rat is not a bird.	bird	-5.492642402648926	neg	neg
+A rat is not a mammal.	mammal	-4.312356948852539	neg	aff
+A fork is a tool.	tool	-6.257733345031738	aff	aff
+A fork is a vegetable.	vegetable	-6.699048042297363	aff	neg
+A fork is not a vegetable.	vegetable	-5.808596611022949	neg	neg
+A fork is not a tool.	tool	-5.6845903396606445	neg	aff
+A napkin is a cloth.	cloth	-6.582916259765625	aff	aff
+A napkin is a toy.	toy	-7.036832809448242	aff	neg
+A napkin is not a toy.	toy	-6.093317031860352	neg	neg
+A napkin is not a cloth.	cloth	-5.588488578796387	neg	aff
+An airplane is a machine.	machine	-5.9184393882751465	aff	aff
+An airplane is a bird.	bird	-4.894549369812012	aff	neg
+An airplane is not a bird.	bird	-3.7279958724975586	neg	neg
+An airplane is not a machine.	machine	-4.345561981201172	neg	aff
+A cucumber is a fruit.	fruit	-7.173786163330078	aff	aff
+A cucumber is a vegetable.	vegetable	-6.623140811920166	aff	neg
+A cucumber is not a vegetable.	vegetable	-5.877635955810547	neg	neg
+A cucumber is not a fruit.	fruit	-6.133966445922852	neg	aff
+A trout is a fish.	fish	-5.7369890213012695	aff	aff
+A trout is a plant.	plant	-6.816105842590332	aff	neg
+A trout is not a plant.	plant	-6.007335186004639	neg	neg
+A trout is not a fish.	fish	-5.131577968597412	neg	aff
+A rat is an animal.	animal	-5.320860385894775	aff	aff
+A rat is a person.	person	-6.24082612991333	aff	neg
+A rat is not a person.	person	-4.9132399559021	neg	neg
+A rat is not an animal.	animal	-4.704748153686523	neg	aff
+A chef is a cook.	cook	-4.934691905975342	aff	aff
+A chef is a musician.	musician	-6.147900581359863	aff	neg
+A chef is not a musician.	musician	-5.818202972412109	neg	neg
+A chef is not a cook.	cook	-4.976185321807861	neg	aff
+A doctor is a professional.	professional	-5.178694725036621	aff	aff
+A doctor is a toy.	toy	-6.890129089355469	aff	neg
+A doctor is not a toy.	toy	-5.728264808654785	neg	neg
+A doctor is not a professional.	professional	-4.366370677947998	neg	aff
+A lawyer is an attorney.	attorney	-5.069247722625732	aff	aff
+A lawyer is a plumber.	plumber	-6.923388957977295	aff	neg
+A lawyer is not a plumber.	plumber	-5.412410259246826	neg	neg
+A lawyer is not an attorney.	attorney	-4.283810615539551	neg	aff
+A teacher is an educator.	educator	-5.5236496925354	aff	aff
+A teacher is a cashier.	cashier	-7.148787975311279	aff	neg
+A teacher is not a cashier.	cashier	-6.203764915466309	neg	neg
+A teacher is not an educator.	educator	-4.857939720153809	neg	aff
+A textbook is a book.	book	-5.905943870544434	aff	aff
+A textbook is a flower.	flower	-7.283422946929932	aff	neg
+A textbook is not a flower.	flower	-6.260449409484863	neg	neg
+A textbook is not a book.	book	-5.176472187042236	neg	aff
+A lotus is a flower.	flower	-4.13565731048584	aff	aff
+A lotus is an insect.	insect	-5.022456169128418	aff	neg
+A lotus is not an insect.	insect	-4.64858865737915	neg	neg
+A lotus is not a flower.	flower	-4.167917251586914	neg	aff
+A frog is an animal.	animal	-5.557248115539551	aff	aff
+A frog is a toy.	toy	-6.376853942871094	aff	neg
+A frog is not a toy.	toy	-5.678095817565918	neg	neg
+A frog is not an animal.	animal	-4.910687446594238	neg	aff
+A petunia is a flower.	flower	-5.133020401000977	aff	aff
+A petunia is a person.	person	-5.984623432159424	aff	neg
+A petunia is not a person.	person	-5.190443992614746	neg	neg
+A petunia is not a flower.	flower	-4.71108341217041	neg	aff
+A kitchen is a room.	room	-5.642787933349609	aff	aff
+A kitchen is a house.	house	-5.755479335784912	aff	neg
+A kitchen is not a house.	house	-4.670767784118652	neg	neg
+A kitchen is not a room.	room	-4.788731575012207	neg	aff
+A sunflower is a flower.	flower	-5.376622200012207	aff	aff
+A sunflower is a fruit.	fruit	-5.816293239593506	aff	neg
+A sunflower is not a fruit.	fruit	-5.383973598480225	neg	neg
+A sunflower is not a flower.	flower	-4.910959243774414	neg	aff
+A blade is a tool.	tool	-5.491069316864014	aff	aff
+A blade is a building.	building	-6.044197082519531	aff	neg
+A blade is not a building.	building	-5.503499984741211	neg	neg
+A blade is not a tool.	tool	-5.224717140197754	neg	aff
+A celery is a vegetable.	vegetable	-6.699319362640381	aff	aff
+A celery is a legume.	legume	-6.809642314910889	aff	neg
+A celery is not a legume.	legume	-6.2117533683776855	neg	neg
+A celery is not a vegetable.	vegetable	-5.998465538024902	neg	aff
+A cherry is a fruit.	fruit	-4.521193981170654	aff	aff
+A cherry is a nut.	nut	-5.70797061920166	aff	neg
+A cherry is not a nut.	nut	-5.208579063415527	neg	neg
+A cherry is not a fruit.	fruit	-4.334540843963623	neg	aff
+A peach is a fruit.	fruit	-4.808483123779297	aff	aff
+A peach is a meat.	meat	-6.699134826660156	aff	neg
+A peach is not a meat.	meat	-6.0455641746521	neg	neg
+A peach is not a fruit.	fruit	-4.798280239105225	neg	aff
+A giraffe is a mammal.	mammal	-4.274813175201416	aff	aff
+A giraffe is a bird.	bird	-5.12117338180542	aff	neg
+A giraffe is not a bird.	bird	-4.699992656707764	neg	neg
+A giraffe is not a mammal.	mammal	-3.9253737926483154	neg	aff
+A leopard is a mammal.	mammal	-5.019097328186035	aff	aff
+A leopard is a reptile.	reptile	-5.321697235107422	aff	neg
+A leopard is not a reptile.	reptile	-5.226759910583496	neg	neg
+A leopard is not a mammal.	mammal	-4.932595252990723	neg	aff
+A penguin is a bird.	bird	-5.071191310882568	aff	aff
+A penguin is a number.	number	-6.4576520919799805	aff	neg
+A penguin is not a number.	number	-5.999754428863525	neg	neg
+A penguin is not a bird.	bird	-5.014457702636719	neg	aff
+An orange is a fruit.	fruit	-4.773418426513672	aff	aff
+An orange is a drink.	drink	-6.857676982879639	aff	neg
+An orange is not a drink.	drink	-5.668124198913574	neg	neg
+An orange is not a fruit.	fruit	-4.396320343017578	neg	aff
+A bike is a vehicle.	vehicle	-5.648468971252441	aff	aff
+A bike is a tree.	tree	-7.23595666885376	aff	neg
+A bike is not a tree.	tree	-5.4228315353393555	neg	neg
+A bike is not a vehicle.	vehicle	-4.5335540771484375	neg	aff
+A turkey is a bird.	bird	-5.616292953491211	aff	aff
+A turkey is an animal.	animal	-6.1623711585998535	aff	neg
+A turkey is not an animal.	animal	-5.1364054679870605	neg	neg
+A turkey is not a bird.	bird	-5.092695713043213	neg	aff
+A dolphin is a mammal.	mammal	-4.6407976150512695	aff	aff
+A dolphin is a reptile.	reptile	-5.4982404708862305	aff	neg
+A dolphin is not a reptile.	reptile	-4.940282821655273	neg	neg
+A dolphin is not a mammal.	mammal	-4.487130165100098	neg	aff
+A bluebird is a bird.	bird	-5.495128631591797	aff	aff
+A bluebird is a color.	color	-6.192546367645264	aff	neg
+A bluebird is not a color.	color	-5.505987167358398	neg	neg
+A bluebird is not a bird.	bird	-4.837749004364014	neg	aff
+A willow is a tree.	tree	-6.323976039886475	aff	aff
+A willow is a tool.	tool	-7.037319183349609	aff	neg
+A willow is not a tool.	tool	-6.436318874359131	neg	neg
+A willow is not a tree.	tree	-5.394347190856934	neg	aff
+A glass is a container.	container	-6.212922096252441	aff	aff
+A glass is a plant.	plant	-6.355942726135254	aff	neg
+A glass is not a plant.	plant	-5.843216896057129	neg	neg
+A glass is not a container.	container	-5.472125053405762	neg	aff
+A bear is a mammal.	mammal	-4.92347526550293	aff	aff
+A bear is a reptile.	reptile	-5.7766642570495605	aff	neg
+A bear is not a reptile.	reptile	-5.043885707855225	neg	neg
+A bear is not a mammal.	mammal	-4.406785488128662	neg	aff
+A glider is an aircraft.	aircraft	-4.862164497375488	aff	aff
+A glider is a building.	building	-6.4889678955078125	aff	neg
+A glider is not a building.	building	-5.451082706451416	neg	neg
+A glider is not an aircraft.	aircraft	-4.171023368835449	neg	aff
+A helicopter is an aircraft.	aircraft	-5.956501007080078	aff	aff
+A helicopter is a mammal.	mammal	-5.964592933654785	aff	neg
+A helicopter is not a mammal.	mammal	-5.163175106048584	neg	neg
+A helicopter is not an aircraft.	aircraft	-4.943840026855469	neg	aff
+A blender is a machine.	machine	-5.864272117614746	aff	aff
+A blender is a toy.	toy	-6.331575870513916	aff	neg
+A blender is not a toy.	toy	-5.782366752624512	neg	neg
+A blender is not a machine.	machine	-5.432690620422363	neg	aff
+A toaster is a machine.	machine	-6.353282928466797	aff	aff
+A toaster is a food.	food	-6.587680339813232	aff	neg
+A toaster is not a food.	food	-5.317384243011475	neg	neg
+A toaster is not a machine.	machine	-5.597375869750977	neg	aff
+A phone is an appliance.	appliance	-5.08728551864624	aff	aff
+A phone is a mammal.	mammal	-5.385020732879639	aff	neg
+A phone is not a mammal.	mammal	-4.590888023376465	neg	neg
+A phone is not an appliance.	appliance	-4.3373026847839355	neg	aff
+A toy is a thing.	thing	-5.73822021484375	aff	aff
+A toy is a bird.	bird	-7.1006903648376465	aff	neg
+A toy is not a bird.	bird	-5.825069427490234	neg	neg
+A toy is not a thing.	thing	-5.129012107849121	neg	aff
+A novel is a book.	book	-7.980517864227295	aff	aff
+A novel is a film.	film	-10.025317192077637	aff	neg
+A novel is not a film.	film	-8.44171142578125	neg	neg
+A novel is not a book.	book	-7.17793083190918	neg	aff
+A drum is an instrument.	instrument	-6.183766841888428	aff	aff
+A drum is a toy.	toy	-7.259082317352295	aff	neg
+A drum is not a toy.	toy	-5.703614234924316	neg	neg
+A drum is not an instrument.	instrument	-4.955811977386475	neg	aff
+A movie is an entertainment.	entertainment	-4.502044677734375	aff	aff
+A movie is a person.	person	-5.394036293029785	aff	neg
+A movie is not a person.	person	-4.299838542938232	neg	neg
+A movie is not an entertainment.	entertainment	-3.9566447734832764	neg	aff
+A house is a dwelling.	dwelling	-4.397620677947998	aff	aff
+A house is a waterway.	waterway	-6.296781063079834	aff	neg
+A house is not a waterway.	waterway	-5.375979423522949	neg	neg
+A house is not a dwelling.	dwelling	-4.385544776916504	neg	aff
+A river is a waterway.	waterway	-5.1360063552856445	aff	aff
+A river is a mountain.	mountain	-5.906968116760254	aff	neg
+A river is not a mountain.	mountain	-5.323346138000488	neg	neg
+A river is not a waterway.	waterway	-4.694146633148193	neg	aff
+A girl is a person.	person	-5.502713203430176	aff	aff
+A girl is a boy.	boy	-5.816188812255859	aff	neg
+A girl is not a boy.	boy	-4.523617744445801	neg	neg
+A girl is not a person.	person	-4.251734256744385	neg	aff
+A steak is a food.	food	-4.553579807281494	aff	aff
+A steak is a flower.	flower	-7.456138610839844	aff	neg
+A steak is not a flower.	flower	-6.394137382507324	neg	neg
+A steak is not a food.	food	-4.2931108474731445	neg	aff
+A shoe is a clothing.	clothing	-6.9331793785095215	aff	aff
+A shoe is a furniture.	furniture	-7.174632549285889	aff	neg
+A shoe is not a furniture.	furniture	-5.778850555419922	neg	neg
+A shoe is not a clothing.	clothing	-5.3047332763671875	neg	aff
+A computer is an equipment.	equipment	-6.196939945220947	aff	aff
+A computer is a drink.	drink	-6.464269161224365	aff	neg
+A computer is not a drink.	drink	-5.4636054039001465	neg	neg
+A computer is not an equipment.	equipment	-5.301191329956055	neg	aff
+A mouse is a rodent.	rodent	-4.191901683807373	aff	aff
+A mouse is a bird.	bird	-5.3137640953063965	aff	neg
+A mouse is not a bird.	bird	-4.626888275146484	neg	neg
+A mouse is not a rodent.	rodent	-3.886023998260498	neg	aff
+A nail is a metal.	metal	-6.445033550262451	aff	aff
+A nail is a paper.	paper	-6.891381740570068	aff	neg
+A nail is not a paper.	paper	-5.499513149261475	neg	neg
+A nail is not a metal.	metal	-5.0372467041015625	neg	aff
+A driver is a person.	person	-5.917050838470459	aff	aff
+A driver is a machine.	machine	-6.22888708114624	aff	neg
+A driver is not a machine.	machine	-5.4192914962768555	neg	neg
+A driver is not a person.	person	-4.685944557189941	neg	aff
+A lake is a pond.	pond	-5.759945392608643	aff	aff
+A lake is a mountain.	mountain	-5.9117584228515625	aff	neg
+A lake is not a mountain.	mountain	-4.899145603179932	neg	neg
+A lake is not a pond.	pond	-5.214319705963135	neg	aff
+A duck is an animal.	animal	-5.6586737632751465	aff	aff
+A duck is a fruit.	fruit	-6.009832859039307	aff	neg
+A duck is not a fruit.	fruit	-5.060619354248047	neg	neg
+A duck is not an animal.	animal	-4.764934062957764	neg	aff
+A mackerel is a fish.	fish	-4.966510772705078	aff	aff
+A mackerel is a bird.	bird	-5.781553268432617	aff	neg
+A mackerel is not a bird.	bird	-5.331427574157715	neg	neg
+A mackerel is not a fish.	fish	-4.864372253417969	neg	aff
+A vase is a decoration.	decoration	-5.049610137939453	aff	aff
+A vase is a tool.	tool	-6.110572338104248	aff	neg
+A vase is not a tool.	tool	-5.462963104248047	neg	neg
+A vase is not a decoration.	decoration	-4.899337291717529	neg	aff
+A cat is a carnivore.	carnivore	-3.7290244102478027	aff	aff
+A cat is a herbivore.	herbivore	-3.992300271987915	aff	neg
+A cat is not a herbivore.	herbivore	-4.251236915588379	neg	neg
+A cat is not a carnivore.	carnivore	-3.9639041423797607	neg	aff
+A school is a place.	place	-5.227913856506348	aff	aff
+A school is a device.	device	-6.411923408508301	aff	neg
+A school is not a device.	device	-5.5045623779296875	neg	neg
+A school is not a place.	place	-4.200340270996094	neg	aff
+A python is a snake.	snake	-7.972479343414307	aff	aff
+A python is a mammal.	mammal	-6.584702968597412	aff	neg
+A python is not a mammal.	mammal	-5.720830917358398	neg	neg
+A python is not a snake.	snake	-6.881211280822754	neg	aff
+A hawk is an animal.	animal	-7.011719703674316	aff	aff
+A hawk is a reptile.	reptile	-6.134139537811279	aff	neg
+A hawk is not a reptile.	reptile	-5.767845630645752	neg	neg
+A hawk is not an animal.	animal	-5.944453716278076	neg	aff
+A beach is a place.	place	-5.046645641326904	aff	aff
+A beach is an ocean.	ocean	-4.65986442565918	aff	neg
+A beach is not an ocean.	ocean	-4.204377174377441	neg	neg
+A beach is not a place.	place	-4.563052177429199	neg	aff
+A carnation is a flower.	flower	-5.138593673706055	aff	aff
+A carnation is a bee.	bee	-6.774076461791992	aff	neg
+A carnation is not a bee.	bee	-6.351919651031494	neg	neg
+A carnation is not a flower.	flower	-4.961822509765625	neg	aff
+A shoe is a footwear.	footwear	-6.516366481781006	aff	aff
+A shoe is a tool.	tool	-6.2384467124938965	aff	neg
+A shoe is not a tool.	tool	-5.754632949829102	neg	neg
+A shoe is not a footwear.	footwear	-5.140802383422852	neg	aff
+A sailboat is a watercraft.	watercraft	-4.881576061248779	aff	aff
+A sailboat is a building.	building	-5.8967742919921875	aff	neg
+A sailboat is not a building.	building	-5.725851058959961	neg	neg
+A sailboat is not a watercraft.	watercraft	-4.735359191894531	neg	aff
+A clown is a performer.	performer	-5.165270805358887	aff	aff
+A clown is a doctor.	doctor	-5.602461338043213	aff	neg
+A clown is not a doctor.	doctor	-4.8483076095581055	neg	neg
+A clown is not a performer.	performer	-4.513239860534668	neg	aff
+A dog is a pet.	pet	-4.501920223236084	aff	aff
+A dog is a fruit.	fruit	-5.83461856842041	aff	neg
+A dog is not a fruit.	fruit	-4.410853862762451	neg	neg
+A dog is not a pet.	pet	-4.24997091293335	neg	aff
+A plate is an utensil.	utensil	-5.672117233276367	aff	aff
+A plate is a toy.	toy	-7.049330234527588	aff	neg
+A plate is not a toy.	toy	-6.354766845703125	neg	neg
+A plate is not an utensil.	utensil	-4.919723033905029	neg	aff
+A rose is a plant.	plant	-4.80439567565918	aff	aff
+A rose is a bird.	bird	-6.498263835906982	aff	neg
+A rose is not a bird.	bird	-5.712527275085449	neg	neg
+A rose is not a plant.	plant	-4.745685577392578	neg	aff
+A vase is a container.	container	-4.874063014984131	aff	aff
+A vase is a bird.	bird	-5.862318992614746	aff	neg
+A vase is not a bird.	bird	-4.833906650543213	neg	neg
+A vase is not a container.	container	-4.655215263366699	neg	aff
+A linnet is a bird.	bird	-5.814574241638184	aff	aff
+A linnet is a flower.	flower	-7.060756683349609	aff	neg
+A linnet is not a flower.	flower	-6.241460800170898	neg	neg
+A linnet is not a bird.	bird	-5.523651599884033	neg	aff
+A wasp is an insect.	insect	-4.9254913330078125	aff	aff
+A wasp is a mammal.	mammal	-4.953263759613037	aff	neg
+A wasp is not a mammal.	mammal	-4.403213977813721	neg	neg
+A wasp is not an insect.	insect	-5.105387210845947	neg	aff
+A jigsaw is a tool.	tool	-5.824197292327881	aff	aff
+A jigsaw is a toy.	toy	-5.527431011199951	aff	neg
+A jigsaw is not a toy.	toy	-5.17648458480835	neg	neg
+A jigsaw is not a tool.	tool	-5.381844520568848	neg	aff
+A fig is a fruit.	fruit	-6.096277713775635	aff	aff
+A fig is a chair.	chair	-7.383554935455322	aff	neg
+A fig is not a chair.	chair	-6.447260856628418	neg	neg
+A fig is not a fruit.	fruit	-5.525084972381592	neg	aff
+A sailboat is a vessel.	vessel	-5.145163536071777	aff	aff
+A sailboat is a box.	box	-6.300811767578125	aff	neg
+A sailboat is not a box.	box	-5.838247776031494	neg	neg
+A sailboat is not a vessel.	vessel	-4.786723613739014	neg	aff
+A sword is a weapon.	weapon	-4.728430271148682	aff	aff
+A sword is a flower.	flower	-6.542090892791748	aff	neg
+A sword is not a flower.	flower	-5.26682186126709	neg	neg
+A sword is not a weapon.	weapon	-4.368148326873779	neg	aff
+A trumpet is an instrument.	instrument	-4.829366207122803	aff	aff
+A trumpet is a rock.	rock	-6.401930332183838	aff	neg
+A trumpet is not a rock.	rock	-5.095636367797852	neg	neg
+A trumpet is not an instrument.	instrument	-4.16812801361084	neg	aff
+A pot is a vessel.	vessel	-5.767931938171387	aff	aff
+A pot is a tool.	tool	-5.26714563369751	aff	neg
+A pot is not a tool.	tool	-4.517399787902832	neg	neg
+A pot is not a vessel.	vessel	-4.842881202697754	neg	aff
+A tomato is a fruit.	fruit	-3.8792595863342285	aff	aff
+A tomato is a candy.	candy	-5.488579750061035	aff	neg
+A tomato is not a candy.	candy	-4.98321533203125	neg	neg
+A tomato is not a fruit.	fruit	-3.6795737743377686	neg	aff
+A clock is a timepiece.	timepiece	-5.001133441925049	aff	aff
+A clock is a fruit.	fruit	-7.929276943206787	aff	neg
+A clock is not a fruit.	fruit	-6.058725357055664	neg	neg
+A clock is not a timepiece.	timepiece	-4.798802375793457	neg	aff
+An alligator is a reptile.	reptile	-2.7759156227111816	aff	aff
+An alligator is a mammal.	mammal	-3.444507598876953	aff	neg
+An alligator is not a mammal.	mammal	-3.01172137260437	neg	neg
+An alligator is not a reptile.	reptile	-2.789412021636963	neg	aff
+A strawberry is a fruit.	fruit	-5.162026882171631	aff	aff
+A strawberry is a vegetable.	vegetable	-5.915799140930176	aff	neg
+A strawberry is not a vegetable.	vegetable	-5.525938987731934	neg	neg
+A strawberry is not a fruit.	fruit	-5.078884601593018	neg	aff
+A eucalyptus is a tree.	tree	-5.881407737731934	aff	aff
+A eucalyptus is a river.	river	-7.082655429840088	aff	neg
+A eucalyptus is not a river.	river	-6.38770055770874	neg	neg
+A eucalyptus is not a tree.	tree	-5.473550319671631	neg	aff
+A pony is an animal.	animal	-6.369460582733154	aff	aff
+A pony is a fruit.	fruit	-6.9248948097229	aff	neg
+A pony is not a fruit.	fruit	-5.849836349487305	neg	neg
+A pony is not an animal.	animal	-5.55264949798584	neg	aff
+A puppy is an animal.	animal	-4.897397994995117	aff	aff
+A puppy is a human.	human	-6.101535320281982	aff	neg
+A puppy is not a human.	human	-4.960242748260498	neg	neg
+A puppy is not an animal.	animal	-4.622758388519287	neg	aff
+A motorcycle is a vehicle.	vehicle	-5.636157512664795	aff	aff
+A motorcycle is an animal.	animal	-6.4080095291137695	aff	neg
+A motorcycle is not an animal.	animal	-4.915505409240723	neg	neg
+A motorcycle is not a vehicle.	vehicle	-4.50762939453125	neg	aff
+A zucchini is a vegetable.	vegetable	-4.818080902099609	aff	aff
+A zucchini is a fruit.	fruit	-5.23903751373291	aff	neg
+A zucchini is not a fruit.	fruit	-4.706644535064697	neg	neg
+A zucchini is not a vegetable.	vegetable	-4.509134292602539	neg	aff
+A lion is an animal.	animal	-4.961480140686035	aff	aff
+A lion is a bird.	bird	-5.885077953338623	aff	neg
+A lion is not a bird.	bird	-5.3561530113220215	neg	neg
+A lion is not an animal.	animal	-4.745802879333496	neg	aff
+A hat is a clothing.	clothing	-6.248076438903809	aff	aff
+A hat is a furniture.	furniture	-6.150028228759766	aff	neg
+A hat is not a furniture.	furniture	-4.9109110832214355	neg	neg
+A hat is not a clothing.	clothing	-4.972482204437256	neg	aff
+A glass is a material.	material	-6.01818323135376	aff	aff
+A glass is a man.	man	-7.269477844238281	aff	neg
+A glass is not a man.	man	-6.246696472167969	neg	neg
+A glass is not a material.	material	-5.486171722412109	neg	aff
+A pizza is a food.	food	-4.981226921081543	aff	aff
+A pizza is a drink.	drink	-6.791473388671875	aff	neg
+A pizza is not a drink.	drink	-6.015329360961914	neg	neg
+A pizza is not a food.	food	-4.757721900939941	neg	aff
+A game is an entertainment.	entertainment	-5.039533615112305	aff	aff
+A game is a person.	person	-6.133528232574463	aff	neg
+A game is not a person.	person	-5.007040977478027	neg	neg
+A game is not an entertainment.	entertainment	-4.58042049407959	neg	aff
+A leopard is an animal.	animal	-5.657097339630127	aff	aff
+A leopard is an amphibian.	amphibian	-6.187360763549805	aff	neg
+A leopard is not an amphibian.	amphibian	-5.828258991241455	neg	neg
+A leopard is not an animal.	animal	-5.678199768066406	neg	aff
+A giraffe is an animal.	animal	-4.251532554626465	aff	aff
+A giraffe is an insect.	insect	-5.506127834320068	aff	neg
+A giraffe is not an insect.	insect	-4.953008651733398	neg	neg
+A giraffe is not an animal.	animal	-4.174578666687012	neg	aff
+A seal is a mammal.	mammal	-5.810190200805664	aff	aff
+A seal is a bird.	bird	-6.648811340332031	aff	neg
+A seal is not a bird.	bird	-6.255455017089844	neg	neg
+A seal is not a mammal.	mammal	-5.686975002288818	neg	aff
+A ruler is a stationary.	stationary	-8.121834754943848	aff	aff
+A ruler is a toy.	toy	-6.607885837554932	aff	neg
+A ruler is not a toy.	toy	-5.385943412780762	neg	neg
+A ruler is not a stationary.	stationary	-6.87408447265625	neg	aff
+A phone is an electronics.	electronics	-6.353827953338623	aff	aff
+A phone is a toy.	toy	-6.205311298370361	aff	neg
+A phone is not a toy.	toy	-5.070829391479492	neg	neg
+A phone is not an electronics.	electronics	-5.41895055770874	neg	aff
+A cat is a predator.	predator	-4.598026275634766	aff	aff
+A cat is a thing.	thing	-5.4769721031188965	aff	neg
+A cat is not a thing.	thing	-4.694620132446289	neg	neg
+A cat is not a predator.	predator	-4.3745646476745605	neg	aff
+A mineral is a thing.	thing	-7.451446533203125	aff	aff
+A mineral is an animal.	animal	-7.303320407867432	aff	neg
+A mineral is not an animal.	animal	-5.88986349105835	neg	neg
+A mineral is not a thing.	thing	-6.204186916351318	neg	aff
+A carrot is a food.	food	-5.48425817489624	aff	aff
+A carrot is a fruit.	fruit	-5.2273054122924805	aff	neg
+A carrot is not a fruit.	fruit	-4.324123382568359	neg	neg
+A carrot is not a food.	food	-4.881150245666504	neg	aff
+An oak is a tree.	tree	-4.376061916351318	aff	aff
+An oak is a flower.	flower	-6.67473840713501	aff	neg
+An oak is not a flower.	flower	-4.7796525955200195	neg	neg
+An oak is not a tree.	tree	-3.970158338546753	neg	aff
+A beneficiary is a person.	person	-5.991414546966553	aff	aff
+A beneficiary is a device.	device	-6.662376403808594	aff	neg
+A beneficiary is not a device.	device	-5.5478315353393555	neg	neg
+A beneficiary is not a person.	person	-5.074279308319092	neg	aff
+A doctor is a human.	human	-5.755040645599365	aff	aff
+A doctor is a machine.	machine	-4.859584808349609	aff	neg
+A doctor is not a machine.	machine	-4.493311882019043	neg	neg
+A doctor is not a human.	human	-4.688304901123047	neg	aff
+A teacher is a human.	human	-6.242893218994141	aff	aff
+A teacher is a desk.	desk	-6.592694282531738	aff	neg
+A teacher is not a desk.	desk	-5.417057991027832	neg	neg
+A teacher is not a human.	human	-5.280335426330566	neg	aff
+A student is a human.	human	-6.936861515045166	aff	aff
+A student is a book.	book	-6.772975921630859	aff	neg
+A student is not a book.	book	-5.7381510734558105	neg	neg
+A student is not a human.	human	-5.719443321228027	neg	aff
+A horse is a herbivore.	herbivore	-5.1786208152771	aff	aff
+A horse is a mineral.	mineral	-5.955727577209473	aff	neg
+A horse is not a mineral.	mineral	-4.568847179412842	neg	neg
+A horse is not a herbivore.	herbivore	-4.474669456481934	neg	aff
+A suit is a clothing.	clothing	-6.424682140350342	aff	aff
+A suit is a house.	house	-6.35304594039917	aff	neg
+A suit is not a house.	house	-5.667494773864746	neg	neg
+A suit is not a clothing.	clothing	-5.537801742553711	neg	aff
+A road is a structure.	structure	-6.100314617156982	aff	aff
+A road is an animal.	animal	-6.332215309143066	aff	neg
+A road is not an animal.	animal	-5.148159980773926	neg	neg
+A road is not a structure.	structure	-5.181269645690918	neg	aff
+A roof is a structure.	structure	-4.789131164550781	aff	aff
+A roof is a toy.	toy	-6.808742046356201	aff	neg
+A roof is not a toy.	toy	-5.531777858734131	neg	neg
+A roof is not a structure.	structure	-3.932590961456299	neg	aff
+A mirror is a glass.	glass	-5.002904415130615	aff	aff
+A mirror is a table.	table	-5.35150146484375	aff	neg
+A mirror is not a table.	table	-4.613163948059082	neg	neg
+A mirror is not a glass.	glass	-4.023574352264404	neg	aff
+A mouse is a pest.	pest	-5.019134521484375	aff	aff
+A mouse is a fish.	fish	-5.974590301513672	aff	neg
+A mouse is not a fish.	fish	-5.180501461029053	neg	neg
+A mouse is not a pest.	pest	-4.5006422996521	neg	aff
+A horse is a beast.	beast	-5.5570526123046875	aff	aff
+A horse is a lion.	lion	-6.0523600578308105	aff	neg
+A horse is not a lion.	lion	-4.505418300628662	neg	neg
+A horse is not a beast.	beast	-4.376792907714844	neg	aff
+A sparrow is an animal.	animal	-6.832144737243652	aff	aff
+A sparrow is a mammal.	mammal	-5.940568923950195	aff	neg
+A sparrow is not a mammal.	mammal	-5.556154251098633	neg	neg
+A sparrow is not an animal.	animal	-6.397603511810303	neg	aff
+A fish is a food.	food	-5.2653985023498535	aff	aff
+A fish is a mineral.	mineral	-6.558210849761963	aff	neg
+A fish is not a mineral.	mineral	-5.981945037841797	neg	neg
+A fish is not a food.	food	-5.064112186431885	neg	aff
+A house is a residence.	residence	-4.961763858795166	aff	aff
+A house is a furniture.	furniture	-6.017484664916992	aff	neg
+A house is not a furniture.	furniture	-5.115180015563965	neg	neg
+A house is not a residence.	residence	-4.655253887176514	neg	aff
+A lamp is an electronics.	electronics	-7.315196514129639	aff	aff
+A lamp is a room.	room	-5.0965495109558105	aff	neg
+A lamp is not a room.	room	-4.6998186111450195	neg	neg
+A lamp is not an electronics.	electronics	-6.164554595947266	neg	aff
+A cloud is a sky.	sky	-5.510096073150635	aff	aff
+A cloud is a ground.	ground	-6.5403733253479	aff	neg
+A cloud is not a ground.	ground	-5.885993480682373	neg	neg
+A cloud is not a sky.	sky	-4.985175609588623	neg	aff
+A school is an education.	education	-6.217085361480713	aff	aff
+A school is a fruit.	fruit	-6.958555698394775	aff	neg
+A school is not a fruit.	fruit	-5.710862159729004	neg	neg
+A school is not an education.	education	-4.997172832489014	neg	aff
+An elephant is a herbivore.	herbivore	-3.166926622390747	aff	aff
+An elephant is a plant.	plant	-5.3268513679504395	aff	neg
+An elephant is not a plant.	plant	-4.3818206787109375	neg	neg
+An elephant is not a herbivore.	herbivore	-3.504380226135254	neg	aff
+A radish is a vegetable.	vegetable	-4.379205226898193	aff	aff
+A radish is a flower.	flower	-5.216012001037598	aff	neg
+A radish is not a flower.	flower	-4.7548065185546875	neg	neg
+A radish is not a vegetable.	vegetable	-4.077121734619141	neg	aff
+A rock is an aggregate.	aggregate	-5.986354351043701	aff	aff
+A rock is a toy.	toy	-6.559241771697998	aff	neg
+A rock is not a toy.	toy	-5.748683929443359	neg	neg
+A rock is not an aggregate.	aggregate	-4.827136039733887	neg	aff
+A tree is an organism.	organism	-4.4175543785095215	aff	aff
+A tree is a mammal.	mammal	-4.664693355560303	aff	neg
+A tree is not a mammal.	mammal	-4.098634243011475	neg	neg
+A tree is not an organism.	organism	-3.778067111968994	neg	aff
+A car is a transport.	transport	-5.944489479064941	aff	aff
+A car is a horse.	horse	-6.25752592086792	aff	neg
+A car is not a horse.	horse	-4.903258800506592	neg	neg
+A car is not a transport.	transport	-4.981351852416992	neg	aff
+An instrument is a tool.	tool	-5.05325174331665	aff	aff
+An instrument is a place.	place	-7.01575231552124	aff	neg
+An instrument is not a place.	place	-5.261347770690918	neg	neg
+An instrument is not a tool.	tool	-4.571979999542236	neg	aff
+A plant is an organism.	organism	-5.194741725921631	aff	aff
+A plant is a toy.	toy	-6.2326860427856445	aff	neg
+A plant is not a toy.	toy	-5.3191094398498535	neg	neg
+A plant is not an organism.	organism	-4.126426696777344	neg	aff
+A wolf is an animal.	animal	-5.871159553527832	aff	aff
+A wolf is a person.	person	-6.517402648925781	aff	neg
+A wolf is not a person.	person	-5.462000846862793	neg	neg
+A wolf is not an animal.	animal	-5.31870174407959	neg	aff
+A table is a surface.	surface	-5.883134365081787	aff	aff
+A table is a house.	house	-6.7263994216918945	aff	neg
+A table is not a house.	house	-5.904062271118164	neg	neg
+A table is not a surface.	surface	-5.094451904296875	neg	aff
+A bear is an animal.	animal	-5.547478675842285	aff	aff
+A bear is a human.	human	-6.180056095123291	aff	neg
+A bear is not a human.	human	-4.651666164398193	neg	neg
+A bear is not an animal.	animal	-4.658505916595459	neg	aff
+A horse is a vertebrate.	vertebrate	-4.913204193115234	aff	aff
+A horse is a fish.	fish	-5.981555461883545	aff	neg
+A horse is not a fish.	fish	-4.799089431762695	neg	neg
+A horse is not a vertebrate.	vertebrate	-4.508143424987793	neg	aff
+A plane is a transport.	transport	-8.158268928527832	aff	aff
+A plane is a flower.	flower	-8.02713680267334	aff	neg
+A plane is not a flower.	flower	-6.348580837249756	neg	neg
+A plane is not a transport.	transport	-6.680210113525391	neg	aff
+A carrot is a root.	root	-6.09196138381958	aff	aff
+A carrot is a building.	building	-6.588801860809326	aff	neg
+A carrot is not a building.	building	-5.726910591125488	neg	neg
+A carrot is not a root.	root	-5.6660590171813965	neg	aff
+A cow is a pet.	pet	-4.862246513366699	aff	aff
+A cow is an insect.	insect	-5.576937198638916	aff	neg
+A cow is not an insect.	insect	-4.875088691711426	neg	neg
+A cow is not a pet.	pet	-3.9223248958587646	neg	aff
+A carrot is a herb.	herb	-5.695396423339844	aff	aff
+A carrot is a pest.	pest	-7.019734859466553	aff	neg
+A carrot is not a pest.	pest	-5.894423484802246	neg	neg
+A carrot is not a herb.	herb	-4.969782829284668	neg	aff
+A vitamin is a nutrient.	nutrient	-6.5250749588012695	aff	aff
+A vitamin is a toxin.	toxin	-7.519758701324463	aff	neg
+A vitamin is not a toxin.	toxin	-6.710666656494141	neg	neg
+A vitamin is not a nutrient.	nutrient	-5.892386436462402	neg	aff
+A bus is a transport.	transport	-6.0874342918396	aff	aff
+A bus is an animal.	animal	-6.078547954559326	aff	neg
+A bus is not an animal.	animal	-4.38465690612793	neg	neg
+A bus is not a transport.	transport	-4.507169246673584	neg	aff
+A store is a building.	building	-5.0249481201171875	aff	aff
+A store is a car.	car	-5.800638675689697	aff	neg
+A store is not a car.	car	-4.82731819152832	neg	neg
+A store is not a building.	building	-4.1799635887146	neg	aff
+A sun is a star.	star	-4.590324401855469	aff	aff
+A sun is a planet.	planet	-4.430648326873779	aff	neg
+A sun is not a planet.	planet	-4.062384605407715	neg	neg
+A sun is not a star.	star	-4.079169750213623	neg	aff
+A maple is a tree.	tree	-5.607997894287109	aff	aff
+A maple is a fruit.	fruit	-6.540786266326904	aff	neg
+A maple is not a fruit.	fruit	-6.025271415710449	neg	neg
+A maple is not a tree.	tree	-5.477644920349121	neg	aff
+A plant is a lifeform.	lifeform	-5.353499412536621	aff	aff
+A plant is a mineral.	mineral	-6.627628326416016	aff	neg
+A plant is not a mineral.	mineral	-5.383625030517578	neg	neg
+A plant is not a lifeform.	lifeform	-4.565603256225586	neg	aff
+A giraffe is a herbivore.	herbivore	-3.2936205863952637	aff	aff
+A giraffe is a rock.	rock	-5.382806777954102	aff	neg
+A giraffe is not a rock.	rock	-4.68609619140625	neg	neg
+A giraffe is not a herbivore.	herbivore	-3.452449083328247	neg	aff
+A diamond is a gemstone.	gemstone	-4.3867011070251465	aff	aff
+A diamond is a tree.	tree	-6.294053554534912	aff	neg
+A diamond is not a tree.	tree	-4.971554279327393	neg	neg
+A diamond is not a gemstone.	gemstone	-3.8386967182159424	neg	aff
+A ruby is a gem.	gem	-6.817697048187256	aff	aff
+A ruby is a metal.	metal	-7.102890968322754	aff	neg
+A ruby is not a metal.	metal	-6.400743007659912	neg	neg
+A ruby is not a gem.	gem	-6.211503505706787	neg	aff
+A glock is a gun.	gun	-6.6593217849731445	aff	aff
+A glock is a toy.	toy	-6.782658576965332	aff	neg
+A glock is not a toy.	toy	-6.187135219573975	neg	neg
+A glock is not a gun.	gun	-5.997616291046143	neg	aff
+A cheetah is a carnivore.	carnivore	-3.615962505340576	aff	aff
+A cheetah is a plant.	plant	-4.172176361083984	aff	neg
+A cheetah is not a plant.	plant	-4.051132678985596	neg	neg
+A cheetah is not a carnivore.	carnivore	-3.6286418437957764	neg	aff
+A hippopotamus is a mammal.	mammal	-5.422120094299316	aff	aff
+A hippopotamus is a reptile.	reptile	-5.78703498840332	aff	neg
+A hippopotamus is not a reptile.	reptile	-5.164796352386475	neg	neg
+A hippopotamus is not a mammal.	mammal	-5.128329277038574	neg	aff
+A cheetah is an animal.	animal	-3.674313545227051	aff	aff
+A cheetah is a bird.	bird	-4.047787189483643	aff	neg
+A cheetah is not a bird.	bird	-3.7913360595703125	neg	neg
+A cheetah is not an animal.	animal	-3.5069875717163086	neg	aff
+A tiger is a mammal.	mammal	-4.858067989349365	aff	aff
+A tiger is a plant.	plant	-5.718041896820068	aff	neg
+A tiger is not a plant.	plant	-4.980172157287598	neg	neg
+A tiger is not a mammal.	mammal	-4.5812225341796875	neg	aff
+A valley is a landform.	landform	-5.483945369720459	aff	aff
+A valley is a house.	house	-8.290496826171875	aff	neg
+A valley is not a house.	house	-7.070432186126709	neg	neg
+A valley is not a landform.	landform	-5.027492523193359	neg	aff
+A sparrow is a bird.	bird	-6.154796600341797	aff	aff
+A sparrow is a reptile.	reptile	-6.966992378234863	aff	neg
+A sparrow is not a reptile.	reptile	-6.271703720092773	neg	neg
+A sparrow is not a bird.	bird	-5.908823490142822	neg	aff
+A computer is an electronic.	electronic	-5.7812933921813965	aff	aff
+A computer is an animal.	animal	-6.102007865905762	aff	neg
+A computer is not an animal.	animal	-4.915365219116211	neg	neg
+A computer is not an electronic.	electronic	-5.119349956512451	neg	aff
+A coffee is a drink.	drink	-4.235481262207031	aff	aff
+A coffee is a fruit.	fruit	-5.564638614654541	aff	neg
+A coffee is not a fruit.	fruit	-4.781466484069824	neg	neg
+A coffee is not a drink.	drink	-4.120168685913086	neg	aff
+A juice is a drink.	drink	-3.6336066722869873	aff	aff
+A juice is a fruit.	fruit	-3.6978633403778076	aff	neg
+A juice is not a fruit.	fruit	-3.558138608932495	neg	neg
+A juice is not a drink.	drink	-3.7894160747528076	neg	aff
+A guitar is an instrument.	instrument	-5.304296016693115	aff	aff
+A guitar is a rock.	rock	-7.42126989364624	aff	neg
+A guitar is not a rock.	rock	-6.158692836761475	neg	neg
+A guitar is not an instrument.	instrument	-4.23817253112793	neg	aff
+A drink is a fluid.	fluid	-5.5752129554748535	aff	aff
+A drink is a gas.	gas	-6.464798927307129	aff	neg
+A drink is not a gas.	gas	-5.619701385498047	neg	neg
+A drink is not a fluid.	fluid	-5.073525428771973	neg	aff
+A fish is a creature.	creature	-5.8568806648254395	aff	aff
+A fish is a building.	building	-7.020787715911865	aff	neg
+A fish is not a building.	building	-6.519808769226074	neg	neg
+A fish is not a creature.	creature	-5.071658611297607	neg	aff
+A bird is a creature.	creature	-7.467465400695801	aff	aff
+A bird is a reptile.	reptile	-6.730599880218506	aff	neg
+A bird is not a reptile.	reptile	-5.77021598815918	neg	neg
+A bird is not a creature.	creature	-5.841317653656006	neg	aff
+An egg is a food.	food	-4.223172664642334	aff	aff
+An egg is a drink.	drink	-5.832011699676514	aff	neg
+An egg is not a drink.	drink	-5.304527282714844	neg	neg
+An egg is not a food.	food	-4.535281658172607	neg	aff
+A credit-card is a plastic.	plastic	-6.714481353759766	aff	aff
+A credit-card is a coin.	coin	-7.2088117599487305	aff	neg
+A credit-card is not a coin.	coin	-6.619095802307129	neg	neg
+A credit-card is not a plastic.	plastic	-6.307623386383057	neg	aff
+A hamburger is a food.	food	-5.706065654754639	aff	aff
+A hamburger is a clothing.	clothing	-7.057706356048584	aff	neg
+A hamburger is not a clothing.	clothing	-6.080840110778809	neg	neg
+A hamburger is not a food.	food	-4.844348430633545	neg	aff
+A bean is a food.	food	-5.916113376617432	aff	aff
+A bean is a mineral.	mineral	-6.314597129821777	aff	neg
+A bean is not a mineral.	mineral	-5.8348212242126465	neg	neg
+A bean is not a food.	food	-5.446784496307373	neg	aff
+A jaguar is an animal.	animal	-6.255098342895508	aff	aff
+A jaguar is a plant.	plant	-6.933164119720459	aff	neg
+A jaguar is not a plant.	plant	-6.4701433181762695	neg	neg
+A jaguar is not an animal.	animal	-5.732667922973633	neg	aff
+A man is a human.	human	-6.076264381408691	aff	aff
+A man is a machine.	machine	-5.962340354919434	aff	neg
+A man is not a machine.	machine	-4.59451961517334	neg	neg
+A man is not a human.	human	-4.91579532623291	neg	aff
+A sickle is a tool.	tool	-6.615435600280762	aff	aff
+A sickle is a flower.	flower	-6.791193008422852	aff	neg
+A sickle is not a flower.	flower	-5.497895240783691	neg	neg
+A sickle is not a tool.	tool	-6.146806240081787	neg	aff
+A map is a document.	document	-5.821966171264648	aff	aff
+A map is a story.	story	-6.945250988006592	aff	neg
+A map is not a story.	story	-5.862325191497803	neg	neg
+A map is not a document.	document	-5.053550720214844	neg	aff
+A book is a story.	story	-5.919681072235107	aff	aff
+A book is a fruit.	fruit	-6.271287441253662	aff	neg
+A book is not a fruit.	fruit	-5.068083763122559	neg	neg
+A book is not a story.	story	-4.686089038848877	neg	aff
+A movie is a story.	story	-4.689663410186768	aff	aff
+A movie is an animal.	animal	-5.261534214019775	aff	neg
+A movie is not an animal.	animal	-3.851665496826172	neg	neg
+A movie is not a story.	story	-3.8217244148254395	neg	aff
+A cat is a pet.	pet	-3.778444290161133	aff	aff
+A cat is an insect.	insect	-5.237086296081543	aff	neg
+A cat is not an insect.	insect	-4.69856071472168	neg	neg
+A cat is not a pet.	pet	-3.9588074684143066	neg	aff
+A lion is a mammal.	mammal	-5.1395792961120605	aff	aff
+A lion is an amphibian.	amphibian	-5.770349502563477	aff	neg
+A lion is not an amphibian.	amphibian	-5.470162391662598	neg	neg
+A lion is not a mammal.	mammal	-4.89328670501709	neg	aff
+A caterpillar is an insect.	insect	-5.508056640625	aff	aff
+A caterpillar is a mammal.	mammal	-5.119290351867676	aff	neg
+A caterpillar is not a mammal.	mammal	-4.816864013671875	neg	neg
+A caterpillar is not an insect.	insect	-5.173262119293213	neg	aff
+A man is a person.	person	-4.961310863494873	aff	aff
+A man is an animal.	animal	-5.5251054763793945	aff	neg
+A man is not an animal.	animal	-4.302420616149902	neg	neg
+A man is not a person.	person	-4.007935523986816	neg	aff
+A woman is a person.	person	-4.86860990524292	aff	aff
+A woman is a thing.	thing	-5.990127086639404	aff	neg
+A woman is not a thing.	thing	-4.887256622314453	neg	neg
+A woman is not a person.	person	-4.119383811950684	neg	aff
+A sock is a garment.	garment	-6.9480485916137695	aff	aff
+A sock is a person.	person	-5.827733993530273	aff	neg
+A sock is not a person.	person	-4.9860124588012695	neg	neg
+A sock is not a garment.	garment	-5.883164882659912	neg	aff
+A student is a person.	person	-6.4097208976745605	aff	aff
+A student is a thing.	thing	-7.695439338684082	aff	neg
+A student is not a thing.	thing	-6.252946376800537	neg	neg
+A student is not a person.	person	-4.953700065612793	neg	aff
+A milk is a drink.	drink	-5.215381145477295	aff	aff
+A milk is a vegetable.	vegetable	-5.187558650970459	aff	neg
+A milk is not a vegetable.	vegetable	-4.533870220184326	neg	neg
+A milk is not a drink.	drink	-4.71621036529541	neg	aff
+A water is a drink.	drink	-6.405602931976318	aff	aff
+A water is a gas.	gas	-5.701939582824707	aff	neg
+A water is not a gas.	gas	-4.827170372009277	neg	neg
+A water is not a drink.	drink	-5.911289215087891	neg	aff
+A pearl is a jewel.	jewel	-6.175937175750732	aff	aff
+A pearl is a tree.	tree	-6.500787258148193	aff	neg
+A pearl is not a tree.	tree	-5.672682762145996	neg	neg
+A pearl is not a jewel.	jewel	-5.26827335357666	neg	aff
+A ficus is a tree.	tree	-6.349344253540039	aff	aff
+A ficus is a flower.	flower	-7.194943428039551	aff	neg
+A ficus is not a flower.	flower	-6.274130821228027	neg	neg
+A ficus is not a tree.	tree	-5.556512355804443	neg	aff
+A crane is a bird.	bird	-6.740890026092529	aff	aff
+A crane is a flower.	flower	-8.127894401550293	aff	neg
+A crane is not a flower.	flower	-7.03700065612793	neg	neg
+A crane is not a bird.	bird	-5.924987316131592	neg	aff
+A jaguar is a cat.	cat	-5.835803985595703	aff	aff
+A jaguar is a reptile.	reptile	-6.040266036987305	aff	neg
+A jaguar is not a reptile.	reptile	-6.036186218261719	neg	neg
+A jaguar is not a cat.	cat	-5.577294826507568	neg	aff
+A sneaker is a shoe.	shoe	-4.754835605621338	aff	aff
+A sneaker is a mineral.	mineral	-7.0268402099609375	aff	neg
+A sneaker is not a mineral.	mineral	-6.098878383636475	neg	neg
+A sneaker is not a shoe.	shoe	-4.475604057312012	neg	aff
+A volleyball is a ball.	ball	-5.384973049163818	aff	aff
+A volleyball is a tool.	tool	-6.4430832862854	aff	neg
+A volleyball is not a tool.	tool	-5.721634864807129	neg	neg
+A volleyball is not a ball.	ball	-4.717350006103516	neg	aff
+A train is a machine.	machine	-6.160711765289307	aff	aff
+A train is a weapon.	weapon	-7.1441850662231445	aff	neg
+A train is not a weapon.	weapon	-5.728497505187988	neg	neg
+A train is not a machine.	machine	-5.193435192108154	neg	aff
+A college is an institution.	institution	-5.9269537925720215	aff	aff
+A college is a creature.	creature	-8.263625144958496	aff	neg
+A college is not a creature.	creature	-6.975566387176514	neg	neg
+A college is not an institution.	institution	-4.921713829040527	neg	aff
+A child is a person.	person	-5.773316860198975	aff	aff
+A child is an adult.	adult	-5.3960771560668945	aff	neg
+A child is not an adult.	adult	-4.888272285461426	neg	neg
+A child is not a person.	person	-4.823102951049805	neg	aff
+A spy is a person.	person	-5.733491897583008	aff	aff
+A spy is a thing.	thing	-6.877530097961426	aff	neg
+A spy is not a thing.	thing	-5.634330749511719	neg	neg
+A spy is not a person.	person	-4.296980857849121	neg	aff
+A hunter is a person.	person	-6.4835381507873535	aff	aff
+A hunter is an animal.	animal	-5.666062355041504	aff	neg
+A hunter is not an animal.	animal	-4.957489967346191	neg	neg
+A hunter is not a person.	person	-5.610841751098633	neg	aff
+A musician is a person.	person	-6.637994289398193	aff	aff
+A musician is an animal.	animal	-7.421458721160889	aff	neg
+A musician is not an animal.	animal	-6.071296691894531	neg	neg
+A musician is not a person.	person	-5.31259298324585	neg	aff
+A machine is a thing.	thing	-5.4695634841918945	aff	aff
+A machine is a person.	person	-5.728582382202148	aff	neg
+A machine is not a person.	person	-4.56819486618042	neg	neg
+A machine is not a thing.	thing	-4.123400688171387	neg	aff
+A scientist is a person.	person	-6.72817325592041	aff	aff
+A scientist is a computer.	computer	-7.464637279510498	aff	neg
+A scientist is not a computer.	computer	-6.456912517547607	neg	neg
+A scientist is not a person.	person	-5.848205089569092	neg	aff
+A professor is a person.	person	-5.289189338684082	aff	aff
+A professor is a building.	building	-5.287063121795654	aff	neg
+A professor is not a building.	building	-4.645881652832031	neg	neg
+A professor is not a person.	person	-4.549309730529785	neg	aff
+A kitten is an animal.	animal	-5.2955827713012695	aff	aff
+A kitten is a plant.	plant	-6.543138027191162	aff	neg
+A kitten is not a plant.	plant	-5.926643371582031	neg	neg
+A kitten is not an animal.	animal	-4.66895055770874	neg	aff
+A piano is an instrument.	instrument	-5.128781795501709	aff	aff
+A piano is a drink.	drink	-7.215187072753906	aff	neg
+A piano is not a drink.	drink	-6.1577467918396	neg	neg
+A piano is not an instrument.	instrument	-4.609857559204102	neg	aff
+A ship is a vessel.	vessel	-5.2992072105407715	aff	aff
+A ship is a mineral.	mineral	-7.315677642822266	aff	neg
+A ship is not a mineral.	mineral	-6.758975982666016	neg	neg
+A ship is not a vessel.	vessel	-4.924242973327637	neg	aff
+A noun is a word.	word	-5.4131927490234375	aff	aff
+A noun is a verb.	verb	-6.046729564666748	aff	neg
+A noun is not a verb.	verb	-5.034475326538086	neg	neg
+A noun is not a word.	word	-4.708652496337891	neg	aff
+An adjective is a word.	word	-5.504662990570068	aff	aff
+An adjective is a verb.	verb	-5.550548076629639	aff	neg
+An adjective is not a verb.	verb	-3.8898777961730957	neg	neg
+An adjective is not a word.	word	-4.54744815826416	neg	aff
+A pronoun is a word.	word	-5.258780479431152	aff	aff
+A pronoun is a verb.	verb	-5.107205390930176	aff	neg
+A pronoun is not a verb.	verb	-4.754378795623779	neg	neg
+A pronoun is not a word.	word	-4.69446325302124	neg	aff
+A verb is a word.	word	-5.239298343658447	aff	aff
+A verb is a noun.	noun	-5.808360576629639	aff	neg
+A verb is not a noun.	noun	-4.489511489868164	neg	neg
+A verb is not a word.	word	-4.212954998016357	neg	aff
+An adverb is a word.	word	-5.070184707641602	aff	aff
+An adverb is a noun.	noun	-5.158624172210693	aff	neg
+An adverb is not a noun.	noun	-3.6335322856903076	neg	neg
+An adverb is not a word.	word	-4.009035110473633	neg	aff
+A screwdriver is a tool.	tool	-3.820141315460205	aff	aff
+A screwdriver is a vegetable.	vegetable	-5.090938568115234	aff	neg
+A screwdriver is not a vegetable.	vegetable	-4.220170497894287	neg	neg
+A screwdriver is not a tool.	tool	-3.3578622341156006	neg	aff
+A shack is a building.	building	-5.251796722412109	aff	aff
+A shack is a bird.	bird	-6.770823955535889	aff	neg
+A shack is not a bird.	bird	-6.107254981994629	neg	neg
+A shack is not a building.	building	-5.291815757751465	neg	aff
+A toaster is an appliance.	appliance	-5.0580058097839355	aff	aff
+A toaster is a toy.	toy	-6.951262950897217	aff	neg
+A toaster is not a toy.	toy	-5.9719038009643555	neg	neg
+A toaster is not an appliance.	appliance	-4.559221267700195	neg	aff
+A microwave is an appliance.	appliance	-5.793169975280762	aff	aff
+A microwave is a plant.	plant	-6.735516548156738	aff	neg
+A microwave is not a plant.	plant	-5.687575340270996	neg	neg
+A microwave is not an appliance.	appliance	-4.763125419616699	neg	aff
+A coffeemaker is an appliance.	appliance	-4.364017486572266	aff	aff
+A coffeemaker is a food.	food	-5.430088996887207	aff	neg
+A coffeemaker is not a food.	food	-4.56912899017334	neg	neg
+A coffeemaker is not an appliance.	appliance	-4.099112033843994	neg	aff
+A sofa is a furniture.	furniture	-5.115321636199951	aff	aff
+A sofa is a toy.	toy	-6.334403038024902	aff	neg
+A sofa is not a toy.	toy	-5.503716468811035	neg	neg
+A sofa is not a furniture.	furniture	-4.318707466125488	neg	aff
+A lantern is a light.	light	-6.070016384124756	aff	aff
+A lantern is a food.	food	-7.462856292724609	aff	neg
+A lantern is not a food.	food	-6.810150146484375	neg	neg
+A lantern is not a light.	light	-5.722197532653809	neg	aff
+A hospital is a building.	building	-5.774230480194092	aff	aff
+A hospital is a river.	river	-7.149745941162109	aff	neg
+A hospital is not a river.	river	-5.878771781921387	neg	neg
+A hospital is not a building.	building	-4.911087989807129	neg	aff
+A lock is a device.	device	-7.273780822753906	aff	aff
+A lock is a garment.	garment	-7.873340129852295	aff	neg
+A lock is not a garment.	garment	-6.926088333129883	neg	neg
+A lock is not a device.	device	-5.825839519500732	neg	aff
+A suit is a garment.	garment	-6.185401916503906	aff	aff
+A suit is a tool.	tool	-6.490217685699463	aff	neg
+A suit is not a tool.	tool	-5.953334331512451	neg	neg
+A suit is not a garment.	garment	-5.326581954956055	neg	aff
+A clamp is a tool.	tool	-5.972342014312744	aff	aff
+A clamp is a mineral.	mineral	-7.767299652099609	aff	neg
+A clamp is not a mineral.	mineral	-6.497797012329102	neg	neg
+A clamp is not a tool.	tool	-5.070892333984375	neg	aff
+A ruby is a mineral.	mineral	-8.013136863708496	aff	aff
+A ruby is a toy.	toy	-7.346001625061035	aff	neg
+A ruby is not a toy.	toy	-6.925886154174805	neg	neg
+A ruby is not a mineral.	mineral	-7.01845645904541	neg	aff
+A doll is a toy.	toy	-5.180942535400391	aff	aff
+A doll is a creature.	creature	-7.050172328948975	aff	neg
+A doll is not a creature.	creature	-6.016290664672852	neg	neg
+A doll is not a toy.	toy	-5.07196044921875	neg	aff
+A dog is a creature.	creature	-5.985513210296631	aff	aff
+A dog is a building.	building	-6.19221830368042	aff	neg
+A dog is not a building.	building	-5.383699417114258	neg	neg
+A dog is not a creature.	creature	-4.8757524490356445	neg	aff
+A sandwich is a food.	food	-4.577186107635498	aff	aff
+A sandwich is a tool.	tool	-6.160343170166016	aff	neg
+A sandwich is not a tool.	tool	-5.547163963317871	neg	neg
+A sandwich is not a food.	food	-4.148342609405518	neg	aff
+A cake is a dessert.	dessert	-4.455344200134277	aff	aff
+A cake is a toy.	toy	-6.078263282775879	aff	neg
+A cake is not a toy.	toy	-5.563755035400391	neg	neg
+A cake is not a dessert.	dessert	-4.735898017883301	neg	aff
+A raccoon is an animal.	animal	-5.549635887145996	aff	aff
+A raccoon is a bird.	bird	-6.946577072143555	aff	neg
+A raccoon is not a bird.	bird	-5.951665878295898	neg	neg
+A raccoon is not an animal.	animal	-5.057098388671875	neg	aff
+A hut is a building.	building	-4.149287700653076	aff	aff
+A hut is an insect.	insect	-5.660140514373779	aff	neg
+A hut is not an insect.	insect	-5.219698905944824	neg	neg
+A hut is not a building.	building	-4.324533462524414	neg	aff
+A penguin is an animal.	animal	-5.224743366241455	aff	aff
+A penguin is a plant.	plant	-5.731611251831055	aff	neg
+A penguin is not a plant.	plant	-5.201190948486328	neg	neg
+A penguin is not an animal.	animal	-4.632627487182617	neg	aff
+A book is a media.	media	-6.236396312713623	aff	aff
+A book is an instrument.	instrument	-7.001830577850342	aff	neg
+A book is not an instrument.	instrument	-5.774636268615723	neg	neg
+A book is not a media.	media	-5.707313537597656	neg	aff
+A bridge is a structure.	structure	-6.971951484680176	aff	aff
+A bridge is a toy.	toy	-7.890041351318359	aff	neg
+A bridge is not a toy.	toy	-6.65434455871582	neg	neg
+A bridge is not a structure.	structure	-6.00225830078125	neg	aff
+A badger is an animal.	animal	-6.621957302093506	aff	aff
+A badger is a plant.	plant	-6.9945783615112305	aff	neg
+A badger is not a plant.	plant	-6.074395656585693	neg	neg
+A badger is not an animal.	animal	-5.546197414398193	neg	aff
+A pulley is a machine.	machine	-5.924609184265137	aff	aff
+A pulley is a person.	person	-6.234004974365234	aff	neg
+A pulley is not a person.	person	-5.340927600860596	neg	neg
+A pulley is not a machine.	machine	-5.187536239624023	neg	aff
+A sapphire is a mineral.	mineral	-5.5363616943359375	aff	aff
+A sapphire is a gas.	gas	-6.808976173400879	aff	neg
+A sapphire is not a gas.	gas	-6.061354637145996	neg	neg
+A sapphire is not a mineral.	mineral	-5.08552885055542	neg	aff
+A possum is an animal.	animal	-4.442727565765381	aff	aff
+A possum is a plant.	plant	-5.447867393493652	aff	neg
+A possum is not a plant.	plant	-4.831883430480957	neg	neg
+A possum is not an animal.	animal	-4.131867408752441	neg	aff
+A panther is an animal.	animal	-5.471675395965576	aff	aff
+A panther is a toy.	toy	-7.021288871765137	aff	neg
+A panther is not a toy.	toy	-6.480020046234131	neg	neg
+A panther is not an animal.	animal	-5.170890808105469	neg	aff
+A hamster is an animal.	animal	-4.9290571212768555	aff	aff
+A hamster is a person.	person	-6.095908164978027	aff	neg
+A hamster is not a person.	person	-5.0305070877075195	neg	neg
+A hamster is not an animal.	animal	-4.37896203994751	neg	aff
+A tractor is a vehicle.	vehicle	-4.638501167297363	aff	aff
+A tractor is a toy.	toy	-5.470498561859131	aff	neg
+A tractor is not a toy.	toy	-4.984068870544434	neg	neg
+A tractor is not a vehicle.	vehicle	-3.833256483078003	neg	aff
+A basil is a plant.	plant	-6.432904243469238	aff	aff
+A basil is a tool.	tool	-8.309443473815918	aff	neg
+A basil is not a tool.	tool	-7.6643171310424805	neg	neg
+A basil is not a plant.	plant	-6.124555587768555	neg	aff
+A play is a drama.	drama	-5.568152904510498	aff	aff
+A play is a person.	person	-6.90332555770874	aff	neg
+A play is not a person.	person	-5.8886237144470215	neg	neg
+A play is not a drama.	drama	-4.991115093231201	neg	aff
+A raspberry is a fruit.	fruit	-5.37942361831665	aff	aff
+A raspberry is a vegetable.	vegetable	-5.750051498413086	aff	neg
+A raspberry is not a vegetable.	vegetable	-5.263032913208008	neg	neg
+A raspberry is not a fruit.	fruit	-5.107888221740723	neg	aff
+A canal is a waterway.	waterway	-4.9842095375061035	aff	aff
+A canal is a road.	road	-7.382019996643066	aff	neg
+A canal is not a road.	road	-6.4309234619140625	neg	neg
+A canal is not a waterway.	waterway	-4.872443199157715	neg	aff
+A flute is an instrument.	instrument	-4.845120906829834	aff	aff
+A flute is a toy.	toy	-6.218336582183838	aff	neg
+A flute is not a toy.	toy	-5.419458389282227	neg	neg
+A flute is not an instrument.	instrument	-4.306855201721191	neg	aff
+A swallow is a bird.	bird	-6.037269592285156	aff	aff
+A swallow is a mammal.	mammal	-5.740584373474121	aff	neg
+A swallow is not a mammal.	mammal	-5.247154235839844	neg	neg
+A swallow is not a bird.	bird	-5.318454265594482	neg	aff
+A platypus is a mammal.	mammal	-3.874274253845215	aff	aff
+A platypus is a reptile.	reptile	-4.405340194702148	aff	neg
+A platypus is not a reptile.	reptile	-4.074326038360596	neg	neg
+A platypus is not a mammal.	mammal	-3.786555528640747	neg	aff
+A squirrel is a mammal.	mammal	-5.536027431488037	aff	aff
+A squirrel is an insect.	insect	-6.087619781494141	aff	neg
+A squirrel is not an insect.	insect	-5.321840286254883	neg	neg
+A squirrel is not a mammal.	mammal	-4.829408645629883	neg	aff
+An antelope is an animal.	animal	-3.7646660804748535	aff	aff
+An antelope is a flower.	flower	-5.482430934906006	aff	neg
+An antelope is not a flower.	flower	-4.179830074310303	neg	neg
+An antelope is not an animal.	animal	-3.61970853805542	neg	aff
+An ant is an animal.	animal	-4.141814708709717	aff	aff
+An ant is a vegetable.	vegetable	-5.336633205413818	aff	neg
+An ant is not a vegetable.	vegetable	-3.8521106243133545	neg	neg
+An ant is not an animal.	animal	-3.6797099113464355	neg	aff
+A stag is an animal.	animal	-7.511222839355469	aff	aff
+A stag is a building.	building	-8.798669815063477	aff	neg
+A stag is not a building.	building	-7.8024396896362305	neg	neg
+A stag is not an animal.	animal	-6.536248207092285	neg	aff
+A bumblebee is an insect.	insect	-5.231984615325928	aff	aff
+A bumblebee is a toy.	toy	-6.253950119018555	aff	neg
+A bumblebee is not a toy.	toy	-5.775980472564697	neg	neg
+A bumblebee is not an insect.	insect	-5.036832809448242	neg	aff
+A van is a vehicle.	vehicle	-4.295007228851318	aff	aff
+A van is a device.	device	-6.116004467010498	aff	neg
+A van is not a device.	device	-5.059120178222656	neg	neg
+A van is not a vehicle.	vehicle	-3.4308600425720215	neg	aff
+A bat is an animal.	animal	-4.877063274383545	aff	aff
+A bat is a furniture.	furniture	-7.248363018035889	aff	neg
+A bat is not a furniture.	furniture	-6.37610387802124	neg	neg
+A bat is not an animal.	animal	-4.291459560394287	neg	aff
+A bed is a furniture.	furniture	-6.069008827209473	aff	aff
+A bed is a toy.	toy	-6.604075908660889	aff	neg
+A bed is not a toy.	toy	-5.6487884521484375	neg	neg
+A bed is not a furniture.	furniture	-4.719898223876953	neg	aff
+A pencil is an instrument.	instrument	-5.559754848480225	aff	aff
+A pencil is an animal.	animal	-5.998359680175781	aff	neg
+A pencil is not an animal.	animal	-4.35385274887085	neg	neg
+A pencil is not an instrument.	instrument	-4.855660915374756	neg	aff
+A computer is a device.	device	-5.592841625213623	aff	aff
+A computer is a fruit.	fruit	-5.9837775230407715	aff	neg
+A computer is not a fruit.	fruit	-5.0170135498046875	neg	neg
+A computer is not a device.	device	-4.413424491882324	neg	aff
+A watch is a gadget.	gadget	-6.580127716064453	aff	aff
+A watch is an animal.	animal	-6.7455973625183105	aff	neg
+A watch is not an animal.	animal	-4.950793743133545	neg	neg
+A watch is not a gadget.	gadget	-6.185391426086426	neg	aff
+A cake is a sweet.	sweet	-5.483645915985107	aff	aff
+A cake is a vegetable.	vegetable	-5.669541835784912	aff	neg
+A cake is not a vegetable.	vegetable	-4.733028411865234	neg	neg
+A cake is not a sweet.	sweet	-5.038043975830078	neg	aff
+A lever is a machine.	machine	-6.485721111297607	aff	aff
+A lever is a toy.	toy	-6.514984130859375	aff	neg
+A lever is not a toy.	toy	-5.5239667892456055	neg	neg
+A lever is not a machine.	machine	-5.276891708374023	neg	aff
+A shark is an animal.	animal	-5.7204203605651855	aff	aff
+A shark is a toy.	toy	-6.951813697814941	aff	neg
+A shark is not a toy.	toy	-5.9225993156433105	neg	neg
+A shark is not an animal.	animal	-4.87341833114624	neg	aff
+A ruby is a gemstone.	gemstone	-6.60086727142334	aff	aff
+A ruby is a plant.	plant	-7.38330078125	aff	neg
+A ruby is not a plant.	plant	-6.739565849304199	neg	neg
+A ruby is not a gemstone.	gemstone	-6.141393661499023	neg	aff
+An armchair is a furniture.	furniture	-5.548430442810059	aff	aff
+An armchair is a tool.	tool	-6.306878566741943	aff	neg
+An armchair is not a tool.	tool	-4.840244293212891	neg	neg
+An armchair is not a furniture.	furniture	-4.492754936218262	neg	aff
+A stencil is a tool.	tool	-6.594651222229004	aff	aff
+A stencil is a furniture.	furniture	-7.649526119232178	aff	neg
+A stencil is not a furniture.	furniture	-7.008062362670898	neg	neg
+A stencil is not a tool.	tool	-5.9544501304626465	neg	aff
+An earphone is an electronics.	electronics	-6.202907085418701	aff	aff
+An earphone is a tool.	tool	-5.347867965698242	aff	neg
+An earphone is not a tool.	tool	-4.363156318664551	neg	neg
+An earphone is not an electronics.	electronics	-5.490108966827393	neg	aff
+A skateboard is a sport.	sport	-5.322890758514404	aff	aff
+A skateboard is a game.	game	-6.450094699859619	aff	neg
+A skateboard is not a game.	game	-5.275590896606445	neg	neg
+A skateboard is not a sport.	sport	-5.075930595397949	neg	aff
+A brick is a material.	material	-5.764019966125488	aff	aff
+A brick is a flower.	flower	-6.416822910308838	aff	neg
+A brick is not a flower.	flower	-5.247893810272217	neg	neg
+A brick is not a material.	material	-5.192583084106445	neg	aff
+A windmill is a machine.	machine	-4.70090389251709	aff	aff
+A windmill is a mammal.	mammal	-4.456813812255859	aff	neg
+A windmill is not a mammal.	mammal	-4.25157356262207	neg	neg
+A windmill is not a machine.	machine	-4.142244338989258	neg	aff
+A tree is a plant.	plant	-4.680613994598389	aff	aff
+A tree is a mineral.	mineral	-6.082578182220459	aff	neg
+A tree is not a mineral.	mineral	-4.831372261047363	neg	neg
+A tree is not a plant.	plant	-4.235661506652832	neg	aff
+A rock is a stone.	stone	-6.311519145965576	aff	aff
+A rock is a tree.	tree	-6.842353820800781	aff	neg
+A rock is not a tree.	tree	-5.6440582275390625	neg	neg
+A rock is not a stone.	stone	-5.032964706420898	neg	aff
+A mole is a mammal.	mammal	-5.22847318649292	aff	aff
+A mole is a fish.	fish	-6.595307350158691	aff	neg
+A mole is not a fish.	fish	-6.064014434814453	neg	neg
+A mole is not a mammal.	mammal	-5.041911602020264	neg	aff
+A movie is a media.	media	-5.354415416717529	aff	aff
+A movie is a food.	food	-5.904784679412842	aff	neg
+A movie is not a food.	food	-4.925400733947754	neg	neg
+A movie is not a media.	media	-4.51081657409668	neg	aff
+A paperback is a book.	book	-6.200177192687988	aff	aff
+A paperback is a movie.	movie	-7.544294834136963	aff	neg
+A paperback is not a movie.	movie	-6.440423488616943	neg	neg
+A paperback is not a book.	book	-5.502755165100098	neg	aff
+A tower is a structure.	structure	-5.547585964202881	aff	aff
+A tower is a cave.	cave	-7.703715801239014	aff	neg
+A tower is not a cave.	cave	-6.1440629959106445	neg	neg
+A tower is not a structure.	structure	-4.7806854248046875	neg	aff
+An asylum is an institution.	institution	-5.222194194793701	aff	aff
+An asylum is a game.	game	-7.17016077041626	aff	neg
+An asylum is not a game.	game	-5.502077102661133	neg	neg
+An asylum is not an institution.	institution	-4.220515727996826	neg	aff
+A rice is a grain.	grain	-4.594308376312256	aff	aff
+A rice is a fish.	fish	-5.404984951019287	aff	neg
+A rice is not a fish.	fish	-4.937736511230469	neg	neg
+A rice is not a grain.	grain	-4.219997882843018	neg	aff
+A soup is a food.	food	-5.435830593109131	aff	aff
+A soup is a plant.	plant	-6.577140808105469	aff	neg
+A soup is not a plant.	plant	-5.944831848144531	neg	neg
+A soup is not a food.	food	-4.842989921569824	neg	aff
+A ship is a vehicle.	vehicle	-6.347564220428467	aff	aff
+A ship is a toy.	toy	-6.5438232421875	aff	neg
+A ship is not a toy.	toy	-6.120093822479248	neg	neg
+A ship is not a vehicle.	vehicle	-5.73907995223999	neg	aff
+A blueberry is a fruit.	fruit	-4.4525322914123535	aff	aff
+A blueberry is a flower.	flower	-5.463568687438965	aff	neg
+A blueberry is not a flower.	flower	-4.645497798919678	neg	neg
+A blueberry is not a fruit.	fruit	-4.263605117797852	neg	aff
+A shirt is a clothing.	clothing	-6.441281318664551	aff	aff
+A shirt is a food.	food	-5.364588260650635	aff	neg
+A shirt is not a food.	food	-4.475151062011719	neg	neg
+A shirt is not a clothing.	clothing	-4.54282283782959	neg	aff
+A dandelion is a flower.	flower	-5.246358871459961	aff	aff
+A dandelion is a tree.	tree	-6.017592430114746	aff	neg
+A dandelion is not a tree.	tree	-5.3890380859375	neg	neg
+A dandelion is not a flower.	flower	-5.161807060241699	neg	aff
+A perfume is a liquid.	liquid	-7.095495700836182	aff	aff
+A perfume is a solid.	solid	-7.9182448387146	aff	neg
+A perfume is not a solid.	solid	-7.2388410568237305	neg	neg
+A perfume is not a liquid.	liquid	-6.319019317626953	neg	aff
+A cabbage is a vegetable.	vegetable	-4.613668918609619	aff	aff
+A cabbage is a furniture.	furniture	-6.621229648590088	aff	neg
+A cabbage is not a furniture.	furniture	-6.178838729858398	neg	neg
+A cabbage is not a vegetable.	vegetable	-4.386038780212402	neg	aff
+A pasta is a dish.	dish	-4.950019359588623	aff	aff
+A pasta is a building.	building	-6.511970043182373	aff	neg
+A pasta is not a building.	building	-6.0700507164001465	neg	neg
+A pasta is not a dish.	dish	-4.506551265716553	neg	aff
+A brownie is a dessert.	dessert	-6.68636417388916	aff	aff
+A brownie is a fruit.	fruit	-6.791296005249023	aff	neg
+A brownie is not a fruit.	fruit	-6.281763076782227	neg	neg
+A brownie is not a dessert.	dessert	-6.294400215148926	neg	aff
+A lounge is a room.	room	-5.163214206695557	aff	aff
+A lounge is a machine.	machine	-6.912319183349609	aff	neg
+A lounge is not a machine.	machine	-5.987582206726074	neg	neg
+A lounge is not a room.	room	-4.765743255615234	neg	aff
+A beach is a coastline.	coastline	-5.0015788078308105	aff	aff
+A beach is a forest.	forest	-5.370663642883301	aff	neg
+A beach is not a forest.	forest	-3.980058193206787	neg	neg
+A beach is not a coastline.	coastline	-5.005352973937988	neg	aff
+A chicken is a food.	food	-4.88020658493042	aff	aff
+A chicken is a fruit.	fruit	-6.019094944000244	aff	neg
+A chicken is not a fruit.	fruit	-4.904321193695068	neg	neg
+A chicken is not a food.	food	-4.6240363121032715	neg	aff
+A koala is an animal.	animal	-6.074428081512451	aff	aff
+A koala is a mineral.	mineral	-7.6760993003845215	aff	neg
+A koala is not a mineral.	mineral	-6.403809070587158	neg	neg
+A koala is not an animal.	animal	-5.293142318725586	neg	aff
+An ostrich is a bird.	bird	-3.251077175140381	aff	aff
+An ostrich is a mammal.	mammal	-3.7099030017852783	aff	neg
+An ostrich is not a mammal.	mammal	-3.1783628463745117	neg	neg
+An ostrich is not a bird.	bird	-3.267113447189331	neg	aff
+A salad is a food.	food	-4.7520575523376465	aff	aff
+A salad is a drink.	drink	-5.156905651092529	aff	neg
+A salad is not a drink.	drink	-5.405709266662598	neg	neg
+A salad is not a food.	food	-4.278560161590576	neg	aff
+A pineapple is a fruit.	fruit	-4.793824672698975	aff	aff
+A pineapple is a vegetable.	vegetable	-5.750012397766113	aff	neg
+A pineapple is not a vegetable.	vegetable	-5.142489433288574	neg	neg
+A pineapple is not a fruit.	fruit	-4.294342041015625	neg	aff
+An eagle is a bird.	bird	-4.007976055145264	aff	aff
+An eagle is a plant.	plant	-6.218576908111572	aff	neg
+An eagle is not a plant.	plant	-4.988891124725342	neg	neg
+An eagle is not a bird.	bird	-3.839646816253662	neg	aff
+A bicycle is a transport.	transport	-6.350175380706787	aff	aff
+A bicycle is a gemstone.	gemstone	-6.65001106262207	aff	neg
+A bicycle is not a gemstone.	gemstone	-5.359514236450195	neg	neg
+A bicycle is not a transport.	transport	-4.8040924072265625	neg	aff
+An iodine is an element.	element	-4.8519487380981445	aff	aff
+An iodine is a mineral.	mineral	-5.476433753967285	aff	neg
+An iodine is not a mineral.	mineral	-4.97860860824585	neg	neg
+An iodine is not an element.	element	-4.650474548339844	neg	aff
+A carbon is an element.	element	-5.9569573402404785	aff	aff
+A carbon is a device.	device	-8.61508560180664	aff	neg
+A carbon is not a device.	device	-7.120542526245117	neg	neg
+A carbon is not an element.	element	-5.145344257354736	neg	aff
+A salt is a mineral.	mineral	-5.94696569442749	aff	aff
+A salt is a toy.	toy	-7.4233527183532715	aff	neg
+A salt is not a toy.	toy	-6.3362274169921875	neg	neg
+A salt is not a mineral.	mineral	-4.793097019195557	neg	aff
+A methane is a gas.	gas	-5.467803478240967	aff	aff
+A methane is a liquid.	liquid	-6.165868282318115	aff	neg
+A methane is not a liquid.	liquid	-5.2241973876953125	neg	neg
+A methane is not a gas.	gas	-5.123651504516602	neg	aff
+A ladder is a tool.	tool	-6.066048622131348	aff	aff
+A ladder is a toy.	toy	-6.951249599456787	aff	neg
+A ladder is not a toy.	toy	-5.682861328125	neg	neg
+A ladder is not a tool.	tool	-5.0744428634643555	neg	aff
+A cup is a container.	container	-6.241698741912842	aff	aff
+A cup is a tool.	tool	-6.35455846786499	aff	neg
+A cup is not a tool.	tool	-5.323766231536865	neg	neg
+A cup is not a container.	container	-5.343771934509277	neg	aff
+A puppy is a dog.	dog	-5.144774913787842	aff	aff
+A puppy is a cat.	cat	-5.84058952331543	aff	neg
+A puppy is not a cat.	cat	-4.671886444091797	neg	neg
+A puppy is not a dog.	dog	-4.648478984832764	neg	aff
+A stone is a rock.	rock	-5.717799663543701	aff	aff
+A stone is a place.	place	-6.204911708831787	aff	neg
+A stone is not a place.	place	-4.938537120819092	neg	neg
+A stone is not a rock.	rock	-5.000155925750732	neg	aff
+A clay is a material.	material	-7.794754981994629	aff	aff
+A clay is a person.	person	-8.274991989135742	aff	neg
+A clay is not a person.	person	-6.770450592041016	neg	neg
+A clay is not a material.	material	-6.660819053649902	neg	aff
+A dragon is a creature.	creature	-7.521414279937744	aff	aff
+A dragon is a plant.	plant	-7.409402370452881	aff	neg
+A dragon is not a plant.	plant	-6.157698631286621	neg	neg
+A dragon is not a creature.	creature	-6.032388210296631	neg	aff
+A beetle is an insect.	insect	-5.047164440155029	aff	aff
+A beetle is a plant.	plant	-6.198781490325928	aff	neg
+A beetle is not a plant.	plant	-5.191793441772461	neg	neg
+A beetle is not an insect.	insect	-4.880064010620117	neg	aff
+A wheel is a tool.	tool	-4.373019695281982	aff	aff
+A wheel is a place.	place	-6.035776615142822	aff	neg
+A wheel is not a place.	place	-4.5020599365234375	neg	neg
+A wheel is not a tool.	tool	-3.959432363510132	neg	aff
+A daisy is a plant.	plant	-5.43213415145874	aff	aff
+A daisy is an animal.	animal	-6.3221964836120605	aff	neg
+A daisy is not an animal.	animal	-5.666829586029053	neg	neg
+A daisy is not a plant.	plant	-5.252161026000977	neg	aff
+A holiday is a break.	break	-5.597891807556152	aff	aff
+A holiday is a work.	work	-6.608548641204834	aff	neg
+A holiday is not a work.	work	-5.252424240112305	neg	neg
+A holiday is not a break.	break	-4.689545154571533	neg	aff
+An insect is an arthropod.	arthropod	-3.4388320446014404	aff	aff
+An insect is a mammal.	mammal	-4.8616743087768555	aff	neg
+An insect is not a mammal.	mammal	-3.365323305130005	neg	neg
+An insect is not an arthropod.	arthropod	-3.819018602371216	neg	aff
+A lily is a flora.	flora	-7.0897674560546875	aff	aff
+A lily is a tool.	tool	-7.460719108581543	aff	neg
+A lily is not a tool.	tool	-6.861999988555908	neg	neg
+A lily is not a flora.	flora	-6.252780437469482	neg	aff
+A cardinal is a bird.	bird	-6.3693976402282715	aff	aff
+A cardinal is a tree.	tree	-6.544369697570801	aff	neg
+A cardinal is not a tree.	tree	-5.648288726806641	neg	neg
+A cardinal is not a bird.	bird	-5.749719142913818	neg	aff
+A swan is a bird.	bird	-4.892187118530273	aff	aff
+A swan is a plant.	plant	-5.61224889755249	aff	neg
+A swan is not a plant.	plant	-5.078017711639404	neg	neg
+A swan is not a bird.	bird	-4.821393966674805	neg	aff
+A calliper is a tool.	tool	-6.6722917556762695	aff	aff
+A calliper is a weapon.	weapon	-7.488785743713379	aff	neg
+A calliper is not a weapon.	weapon	-6.650927543640137	neg	neg
+A calliper is not a tool.	tool	-5.6341447830200195	neg	aff
+A cathedral is a church.	church	-5.808737277984619	aff	aff
+A cathedral is a house.	house	-6.613534450531006	aff	neg
+A cathedral is not a house.	house	-6.710684776306152	neg	neg
+A cathedral is not a church.	church	-5.718209743499756	neg	aff
+A pear is a fruit.	fruit	-3.9547512531280518	aff	aff
+A pear is a vegetable.	vegetable	-5.085916042327881	aff	neg
+A pear is not a vegetable.	vegetable	-4.174249172210693	neg	neg
+A pear is not a fruit.	fruit	-3.4202353954315186	neg	aff
+A watermelon is a fruit.	fruit	-4.713303565979004	aff	aff
+A watermelon is a vegetable.	vegetable	-5.40198278427124	aff	neg
+A watermelon is not a vegetable.	vegetable	-4.6914191246032715	neg	neg
+A watermelon is not a fruit.	fruit	-4.379951000213623	neg	aff
+A tugboat is a vessel.	vessel	-6.901992321014404	aff	aff
+A tugboat is a toy.	toy	-7.664660453796387	aff	neg
+A tugboat is not a toy.	toy	-6.516806125640869	neg	neg
+A tugboat is not a vessel.	vessel	-5.6734724044799805	neg	aff
+A poet is a writer.	writer	-5.886782169342041	aff	aff
+A poet is a tool.	tool	-7.769744396209717	aff	neg
+A poet is not a tool.	tool	-7.16318416595459	neg	neg
+A poet is not a writer.	writer	-5.307254314422607	neg	aff
+An athlete is a sportsman.	sportsman	-5.17409610748291	aff	aff
+An athlete is a poet.	poet	-7.2136664390563965	aff	neg
+An athlete is not a poet.	poet	-5.845035076141357	neg	neg
+An athlete is not a sportsman.	sportsman	-4.43228816986084	neg	aff
+A musician is a professional.	professional	-6.325434684753418	aff	aff
+A musician is an athlete.	athlete	-6.206018924713135	aff	neg
+A musician is not an athlete.	athlete	-5.441761016845703	neg	neg
+A musician is not a professional.	professional	-5.477654457092285	neg	aff
+A cook is a chef.	chef	-5.751595973968506	aff	aff
+A cook is a waiter.	waiter	-6.961703777313232	aff	neg
+A cook is not a waiter.	waiter	-5.785428047180176	neg	neg
+A cook is not a chef.	chef	-4.959842681884766	neg	aff
+A shirt is a garment.	garment	-5.267201900482178	aff	aff
+A shirt is a house.	house	-5.499942779541016	aff	neg
+A shirt is not a house.	house	-4.8618388175964355	neg	neg
+A shirt is not a garment.	garment	-3.883366584777832	neg	aff
+A doorknob is a furnishing.	furnishing	-6.17360258102417	aff	aff
+A doorknob is a computer.	computer	-6.316638469696045	aff	neg
+A doorknob is not a computer.	computer	-5.681596755981445	neg	neg
+A doorknob is not a furnishing.	furnishing	-5.628119468688965	neg	aff
+A spoon is an utensil.	utensil	-5.410225868225098	aff	aff
+A spoon is a toy.	toy	-6.585057735443115	aff	neg
+A spoon is not a toy.	toy	-5.570618629455566	neg	neg
+A spoon is not an utensil.	utensil	-5.020619869232178	neg	aff
+A movie is a film.	film	-4.3545732498168945	aff	aff
+A movie is a place.	place	-5.695909023284912	aff	neg
+A movie is not a place.	place	-4.210055351257324	neg	neg
+A movie is not a film.	film	-3.355492353439331	neg	aff
+A mansion is a building.	building	-6.385577201843262	aff	aff
+A mansion is an apartment.	apartment	-6.42531681060791	aff	neg
+A mansion is not an apartment.	apartment	-5.781095504760742	neg	neg
+A mansion is not a building.	building	-5.841387748718262	neg	aff
+A monument is a structure.	structure	-6.21994161605835	aff	aff
+A monument is a toy.	toy	-7.508249759674072	aff	neg
+A monument is not a toy.	toy	-6.464285850524902	neg	neg
+A monument is not a structure.	structure	-5.355823516845703	neg	aff
+A candle is a light.	light	-5.37750244140625	aff	aff
+A candle is a sound.	sound	-7.031594753265381	aff	neg
+A candle is not a sound.	sound	-5.958697319030762	neg	neg
+A candle is not a light.	light	-5.052792549133301	neg	aff
+A poodle is a dog.	dog	-4.142022609710693	aff	aff
+A poodle is a bird.	bird	-5.677432060241699	aff	neg
+A poodle is not a bird.	bird	-4.2839579582214355	neg	neg
+A poodle is not a dog.	dog	-3.9115185737609863	neg	aff
+A baby is a human.	human	-5.516993999481201	aff	aff
+A baby is a cat.	cat	-5.772454261779785	aff	neg
+A baby is not a cat.	cat	-5.747236251831055	neg	neg
+A baby is not a human.	human	-5.1161298751831055	neg	aff
+A snowflake is a flake.	flake	-4.84801721572876	aff	aff
+A snowflake is a cloud.	cloud	-4.77829122543335	aff	neg
+A snowflake is not a cloud.	cloud	-4.339357852935791	neg	neg
+A snowflake is not a flake.	flake	-4.568975448608398	neg	aff
+A violin is an instrument.	instrument	-4.522713661193848	aff	aff
+A violin is a toy.	toy	-5.551738262176514	aff	neg
+A violin is not a toy.	toy	-4.9692535400390625	neg	neg
+A violin is not an instrument.	instrument	-3.9490065574645996	neg	aff
+A spade is a tool.	tool	-5.580757141113281	aff	aff
+A spade is a food.	food	-6.224332809448242	aff	neg
+A spade is not a food.	food	-5.879106521606445	neg	neg
+A spade is not a tool.	tool	-5.325596809387207	neg	aff
+An onion is a vegetable.	vegetable	-4.570980548858643	aff	aff
+An onion is a fruit.	fruit	-4.674333095550537	aff	neg
+An onion is not a fruit.	fruit	-3.802474021911621	neg	neg
+An onion is not a vegetable.	vegetable	-3.7530651092529297	neg	aff
+A mailman is a worker.	worker	-5.921838283538818	aff	aff
+A mailman is a police.	police	-7.646739482879639	aff	neg
+A mailman is not a police.	police	-6.85399055480957	neg	neg
+A mailman is not a worker.	worker	-5.230391502380371	neg	aff
+A policeman is a worker.	worker	-6.302402973175049	aff	aff
+A policeman is a material.	material	-7.933388710021973	aff	neg
+A policeman is not a material.	material	-7.1930341720581055	neg	neg
+A policeman is not a worker.	worker	-5.514986038208008	neg	aff
+A sand is a material.	material	-5.588560104370117	aff	aff
+A sand is a house.	house	-5.974099159240723	aff	neg
+A sand is not a house.	house	-5.3981547355651855	neg	neg
+A sand is not a material.	material	-4.998518943786621	neg	aff
+A grapefruit is a fruit.	fruit	-4.938745498657227	aff	aff
+A grapefruit is a color.	color	-6.189465522766113	aff	neg
+A grapefruit is not a color.	color	-5.647871017456055	neg	neg
+A grapefruit is not a fruit.	fruit	-4.265965461730957	neg	aff
+A couch is a furniture.	furniture	-6.0099921226501465	aff	aff
+A couch is a building.	building	-5.947659492492676	aff	neg
+A couch is not a building.	building	-5.254310607910156	neg	neg
+A couch is not a furniture.	furniture	-4.680807590484619	neg	aff
+A lawyer is a professional.	professional	-5.130090713500977	aff	aff
+A lawyer is a judge.	judge	-6.296424388885498	aff	neg
+A lawyer is not a judge.	judge	-4.719497203826904	neg	neg
+A lawyer is not a professional.	professional	-4.179402828216553	neg	aff
+A brinjal is a vegetable.	vegetable	-5.878026485443115	aff	aff
+A brinjal is a fruit.	fruit	-5.947414875030518	aff	neg
+A brinjal is not a fruit.	fruit	-5.26660680770874	neg	neg
+A brinjal is not a vegetable.	vegetable	-5.3474016189575195	neg	aff
+A moon is a satellite.	satellite	-5.94720458984375	aff	aff
+A moon is a star.	star	-6.542696475982666	aff	neg
+A moon is not a star.	star	-5.750247478485107	neg	neg
+A moon is not a satellite.	satellite	-5.20156192779541	neg	aff
+A dresser is a furniture.	furniture	-5.544693946838379	aff	aff
+A dresser is a house.	house	-6.847455024719238	aff	neg
+A dresser is not a house.	house	-5.546825408935547	neg	neg
+A dresser is not a furniture.	furniture	-4.999356269836426	neg	aff
+A canoe is a boat.	boat	-5.739570140838623	aff	aff
+A canoe is a yacht.	yacht	-6.974539279937744	aff	neg
+A canoe is not a yacht.	yacht	-5.913291931152344	neg	neg
+A canoe is not a boat.	boat	-4.822108745574951	neg	aff
+A park is a facility.	facility	-6.193230628967285	aff	aff
+A park is a paperwork.	paperwork	-8.115235328674316	aff	neg
+A park is not a paperwork.	paperwork	-7.080460548400879	neg	neg
+A park is not a facility.	facility	-5.034566879272461	neg	aff
+A farm is a land.	land	-5.8111748695373535	aff	aff
+A farm is a color.	color	-6.039122104644775	aff	neg
+A farm is not a color.	color	-5.431459426879883	neg	neg
+A farm is not a land.	land	-5.097254753112793	neg	aff
+A disc is an electronics.	electronics	-8.936332702636719	aff	aff
+A disc is a material.	material	-7.434249401092529	aff	neg
+A disc is not a material.	material	-6.23020076751709	neg	neg
+A disc is not an electronics.	electronics	-7.598331451416016	neg	aff
+A window is a structure.	structure	-5.1259918212890625	aff	aff
+A window is a place.	place	-5.6793599128723145	aff	neg
+A window is not a place.	place	-5.349930763244629	neg	neg
+A window is not a structure.	structure	-4.631339073181152	neg	aff
+A pumpkin is a vegetable.	vegetable	-5.957762241363525	aff	aff
+A pumpkin is a fruit.	fruit	-5.930569648742676	aff	neg
+A pumpkin is not a fruit.	fruit	-5.4376630783081055	neg	neg
+A pumpkin is not a vegetable.	vegetable	-5.6011247634887695	neg	aff
+A bowl is an utensil.	utensil	-5.473809719085693	aff	aff
+A bowl is a toy.	toy	-6.137044429779053	aff	neg
+A bowl is not a toy.	toy	-5.4225568771362305	neg	neg
+A bowl is not an utensil.	utensil	-5.170398235321045	neg	aff
+A fox is a mammal.	mammal	-4.6807756423950195	aff	aff
+A fox is a fish.	fish	-6.367891788482666	aff	neg
+A fox is not a fish.	fish	-5.5314178466796875	neg	neg
+A fox is not a mammal.	mammal	-4.203432083129883	neg	aff
+A spider is an arthropod.	arthropod	-4.07574462890625	aff	aff
+A spider is a plant.	plant	-6.115548610687256	aff	neg
+A spider is not a plant.	plant	-5.134934902191162	neg	neg
+A spider is not an arthropod.	arthropod	-4.293056488037109	neg	aff
+A mountain is a place.	place	-6.1230692863464355	aff	aff
+A mountain is a thing.	thing	-6.121276378631592	aff	neg
+A mountain is not a thing.	thing	-5.051142692565918	neg	neg
+A mountain is not a place.	place	-5.055230617523193	neg	aff
+A magazine is a publication.	publication	-5.864941596984863	aff	aff
+A magazine is a drink.	drink	-7.024549961090088	aff	neg
+A magazine is not a drink.	drink	-5.933773040771484	neg	neg
+A magazine is not a publication.	publication	-4.924540042877197	neg	aff
+A desk is a furnishing.	furnishing	-5.143554210662842	aff	aff
+A desk is a noun.	noun	-6.15627908706665	aff	neg
+A desk is not a noun.	noun	-5.32142972946167	neg	neg
+A desk is not a furnishing.	furnishing	-4.7086615562438965	neg	aff
+A lamp is a decoration.	decoration	-5.8852105140686035	aff	aff
+A lamp is a toy.	toy	-6.113246440887451	aff	neg
+A lamp is not a toy.	toy	-5.238947868347168	neg	neg
+A lamp is not a decoration.	decoration	-5.188709259033203	neg	aff
+A pen is a stationary.	stationary	-6.724592685699463	aff	aff
+A pen is a food.	food	-6.058144569396973	aff	neg
+A pen is not a food.	food	-4.891007423400879	neg	neg
+A pen is not a stationary.	stationary	-6.010045528411865	neg	aff
+An eraser is a stationary.	stationary	-5.05672025680542	aff	aff
+An eraser is a food.	food	-5.090268135070801	aff	neg
+An eraser is not a food.	food	-4.175486087799072	neg	neg
+An eraser is not a stationary.	stationary	-5.161172866821289	neg	aff
+A library is a building.	building	-4.8943400382995605	aff	aff
+A library is a drink.	drink	-6.77386474609375	aff	neg
+A library is not a drink.	drink	-5.937710762023926	neg	neg
+A library is not a building.	building	-4.019826889038086	neg	aff
+A website is a webpage.	webpage	-4.902273654937744	aff	aff
+A website is a computer.	computer	-5.559022426605225	aff	neg
+A website is not a computer.	computer	-4.062964916229248	neg	neg
+A website is not a webpage.	webpage	-3.999821424484253	neg	aff
+A king is a ruler.	ruler	-5.488926887512207	aff	aff
+A king is a servant.	servant	-6.776158332824707	aff	neg
+A king is not a servant.	servant	-6.009394645690918	neg	neg
+A king is not a ruler.	ruler	-5.068309783935547	neg	aff
+A snowman is a sculpture.	sculpture	-5.745787620544434	aff	aff
+A snowman is a building.	building	-5.435015678405762	aff	neg
+A snowman is not a building.	building	-5.702467918395996	neg	neg
+A snowman is not a sculpture.	sculpture	-5.664936542510986	neg	aff
+A vacuum is a machine.	machine	-4.811729431152344	aff	aff
+A vacuum is a pet.	pet	-5.224006652832031	aff	neg
+A vacuum is not a pet.	pet	-3.955343246459961	neg	neg
+A vacuum is not a machine.	machine	-3.9066286087036133	neg	aff
+A robot is a machine.	machine	-3.9963581562042236	aff	aff
+A robot is a pet.	pet	-4.945324897766113	aff	neg
+A robot is not a pet.	pet	-4.473430156707764	neg	neg
+A robot is not a machine.	machine	-3.3497397899627686	neg	aff
+A seagull is a bird.	bird	-5.372002124786377	aff	aff
+A seagull is a mammal.	mammal	-5.114387512207031	aff	neg
+A seagull is not a mammal.	mammal	-4.6137566566467285	neg	neg
+A seagull is not a bird.	bird	-4.9454665184021	neg	aff
+A dress is a garment.	garment	-5.94365930557251	aff	aff
+A dress is a device.	device	-6.925985813140869	aff	neg
+A dress is not a device.	device	-5.671560287475586	neg	neg
+A dress is not a garment.	garment	-4.895739555358887	neg	aff
+A swamp is a habitat.	habitat	-5.093118190765381	aff	aff
+A swamp is a tree.	tree	-6.012281894683838	aff	neg
+A swamp is not a tree.	tree	-5.03187894821167	neg	neg
+A swamp is not a habitat.	habitat	-4.486371040344238	neg	aff
+A continent is a landmass.	landmass	-4.8159637451171875	aff	aff
+A continent is a liquid.	liquid	-7.613059997558594	aff	neg
+A continent is not a liquid.	liquid	-6.244258403778076	neg	neg
+A continent is not a landmass.	landmass	-4.102336883544922	neg	aff
+An icecream is a dessert.	dessert	-4.724042892456055	aff	aff
+An icecream is a plant.	plant	-6.057753562927246	aff	neg
+An ice cream is not a plant.	plant	-4.417863845825195	neg	neg
+An ice cream is not a dessert.	dessert	-3.8051939010620117	neg	aff
+A cake is a dish.	dish	-5.0918145179748535	aff	aff
+A cake is a tree.	tree	-6.8624396324157715	aff	neg
+A cake is not a tree.	tree	-5.999871730804443	neg	neg
+A cake is not a dish.	dish	-5.02347469329834	neg	aff
+A cookie is a dessert.	dessert	-5.413188934326172	aff	aff
+A cookie is a toy.	toy	-6.7562456130981445	aff	neg
+A cookie is not a toy.	toy	-6.036018371582031	neg	neg
+A cookie is not a dessert.	dessert	-4.907760143280029	neg	aff
+A bird is an organism.	organism	-6.566875457763672	aff	aff
+A bird is a toy.	toy	-7.232007026672363	aff	neg
+A bird is not a toy.	toy	-6.211635589599609	neg	neg
+A bird is not an organism.	organism	-5.406597137451172	neg	aff
+A mammal is a vertebrate.	vertebrate	-4.521374702453613	aff	aff
+A mammal is a place.	place	-5.997739315032959	aff	neg
+A mammal is not a place.	place	-5.379556179046631	neg	neg
+A mammal is not a vertebrate.	vertebrate	-4.433886528015137	neg	aff
+A relative is a family.	family	-5.62490177154541	aff	aff
+A relative is a furniture.	furniture	-7.198889255523682	aff	neg
+A relative is not a furniture.	furniture	-6.315337181091309	neg	neg
+A relative is not a family.	family	-4.485067367553711	neg	aff
+A vehicle is a transportation.	transportation	-6.8751373291015625	aff	aff
+A vehicle is a bird.	bird	-6.797116279602051	aff	neg
+A vehicle is not a bird.	bird	-5.565244674682617	neg	neg
+A vehicle is not a transportation.	transportation	-5.1903791427612305	neg	aff
+A vegetable is a snack.	snack	-5.0765204429626465	aff	aff
+A vegetable is an insect.	insect	-5.927064895629883	aff	neg
+A vegetable is not an insect.	insect	-5.26716947555542	neg	neg
+A vegetable is not a snack.	snack	-4.383881568908691	neg	aff
+A shoe is an apparel.	apparel	-6.835960388183594	aff	aff
+A shoe is a bottle.	bottle	-7.794671058654785	aff	neg
+A shoe is not a bottle.	bottle	-6.186395645141602	neg	neg
+A shoe is not an apparel.	apparel	-5.691357612609863	neg	aff
+A sock is an apparel.	apparel	-8.058348655700684	aff	aff
+A sock is a shoe.	shoe	-6.399832248687744	aff	neg
+A sock is not a shoe.	shoe	-5.550453186035156	neg	neg
+A sock is not an apparel.	apparel	-6.192832946777344	neg	aff
+A sheep is a mammal.	mammal	-4.448848724365234	aff	aff
+A sheep is a plant.	plant	-4.7987961769104	aff	neg
+A sheep is not a plant.	plant	-4.506047248840332	neg	neg
+A sheep is not a mammal.	mammal	-4.193970203399658	neg	aff
+A python is a reptile.	reptile	-6.6143388748168945	aff	aff
+A python is a place.	place	-9.118376731872559	aff	neg
+A python is not a place.	place	-7.706085205078125	neg	neg
+A python is not a reptile.	reptile	-5.927150249481201	neg	aff
+A river is an ecosystem.	ecosystem	-5.417649745941162	aff	aff
+A river is a landmass.	landmass	-6.585909843444824	aff	neg
+A river is not a landmass.	landmass	-5.6793532371521	neg	neg
+A river is not an ecosystem.	ecosystem	-5.034196376800537	neg	aff
+An ocean is an ecosystem.	ecosystem	-4.796367168426514	aff	aff
+An ocean is a desert.	desert	-6.3285417556762695	aff	neg
+An ocean is not a desert.	desert	-3.9784250259399414	neg	neg
+An ocean is not an ecosystem.	ecosystem	-4.359739780426025	neg	aff
+A poet is an artist.	artist	-5.532532691955566	aff	aff
+A poet is a food.	food	-7.84768533706665	aff	neg
+A poet is not a food.	food	-6.906580924987793	neg	neg
+A poet is not an artist.	artist	-5.465138912200928	neg	aff
+A painter is an artist.	artist	-5.527781963348389	aff	aff
+A painter is a furniture.	furniture	-6.9780168533325195	aff	neg
+A painter is not a furniture.	furniture	-6.5524115562438965	neg	neg
+A painter is not an artist.	artist	-5.3931169509887695	neg	aff
+A musician is an artist.	artist	-5.786046504974365	aff	aff
+A musician is a toy.	toy	-8.499884605407715	aff	neg
+A musician is not a toy.	toy	-7.2489237785339355	neg	neg
+A musician is not an artist.	artist	-5.388708114624023	neg	aff
+A stapler is a stationary.	stationary	-6.463667869567871	aff	aff
+A stapler is a pet.	pet	-6.235406398773193	aff	neg
+A stapler is not a pet.	pet	-5.359869480133057	neg	neg
+A stapler is not a stationary.	stationary	-5.974420070648193	neg	aff
+A remote is a device.	device	-6.507032871246338	aff	aff
+A remote is a pet.	pet	-6.7892937660217285	aff	neg
+A remote is not a pet.	pet	-5.534488677978516	neg	neg
+A remote is not a device.	device	-5.59559440612793	neg	aff
+A watch is an accessory.	accessory	-5.99689245223999	aff	aff
+A watch is a clothing.	clothing	-7.445998668670654	aff	neg
+A watch is not a clothing.	clothing	-6.1858439445495605	neg	neg
+A watch is not an accessory.	accessory	-5.391939163208008	neg	aff
+A mineral is a substance.	substance	-7.174691677093506	aff	aff
+A mineral is a creature.	creature	-8.280336380004883	aff	neg
+A mineral is not a creature.	creature	-6.816825866699219	neg	neg
+A mineral is not a substance.	substance	-5.434720039367676	neg	aff
+A backpack is a bag.	bag	-5.086780071258545	aff	aff
+A backpack is a shoe.	shoe	-6.2225542068481445	aff	neg
+A backpack is not a shoe.	shoe	-4.969296455383301	neg	neg
+A backpack is not a bag.	bag	-4.25704288482666	neg	aff
+A well is a structure.	structure	-7.756468296051025	aff	aff
+A well is a place.	place	-7.543124675750732	aff	neg
+A well is not a place.	place	-6.4868483543396	neg	neg
+A well is not a structure.	structure	-6.1959357261657715	neg	aff
+A saw is an instrument.	instrument	-5.9934539794921875	aff	aff
+A saw is a place.	place	-7.1527018547058105	aff	neg
+A saw is not a place.	place	-5.0206708908081055	neg	neg
+A saw is not an instrument.	instrument	-5.232267379760742	neg	aff
+A dove is a bird.	bird	-4.926733493804932	aff	aff
+A dove is a reptile.	reptile	-5.7597575187683105	aff	neg
+A dove is not a reptile.	reptile	-5.233890533447266	neg	neg
+A dove is not a bird.	bird	-4.804359436035156	neg	aff
+A snail is a mollusk.	mollusk	-5.753843307495117	aff	aff
+A snail is a reptile.	reptile	-4.776149272918701	aff	neg
+A snail is not a reptile.	reptile	-4.426961898803711	neg	neg
+A snail is not a mollusk.	mollusk	-5.462501525878906	neg	aff
+A jellyfish is an animal.	animal	-4.388978004455566	aff	aff
+A jellyfish is a plant.	plant	-5.290705680847168	aff	neg
+A jellyfish is not a plant.	plant	-4.27924108505249	neg	neg
+A jellyfish is not an animal.	animal	-4.389340877532959	neg	aff
+A pipe is a tool.	tool	-6.1650896072387695	aff	aff
+A pipe is a drink.	drink	-6.0870280265808105	aff	neg
+A pipe is not a drink.	drink	-5.817789077758789	neg	neg
+A pipe is not a tool.	tool	-5.716842174530029	neg	aff
+A hammer is an instrument.	instrument	-6.534040927886963	aff	aff
+A hammer is a dessert.	dessert	-7.418466091156006	aff	neg
+A hammer is not a dessert.	dessert	-5.912227630615234	neg	neg
+A hammer is not an instrument.	instrument	-6.028897762298584	neg	aff
+A cake is a food.	food	-4.7662882804870605	aff	aff
+A cake is a stew.	stew	-7.228424072265625	aff	neg
+A cake is not a stew.	stew	-6.200988292694092	neg	neg
+A cake is not a food.	food	-4.609771728515625	neg	aff
+A pie is a food.	food	-5.826013565063477	aff	aff
+A pie is a drink.	drink	-6.702980995178223	aff	neg
+A pie is not a drink.	drink	-6.1281561851501465	neg	neg
+A pie is not a food.	food	-5.431609153747559	neg	aff
+A sandwich is a snack.	snack	-4.083601474761963	aff	aff
+A sandwich is a drink.	drink	-4.596181392669678	aff	neg
+A sandwich is not a drink.	drink	-4.429178237915039	neg	neg
+A sandwich is not a snack.	snack	-3.9420278072357178	neg	aff
+A burger is a food.	food	-5.6535820960998535	aff	aff
+A burger is a drink.	drink	-6.338247299194336	aff	neg
+A burger is not a drink.	drink	-5.913538932800293	neg	neg
+A burger is not a food.	food	-5.10756778717041	neg	aff
+A jade is a gem.	gem	-7.0089545249938965	aff	aff
+A jade is a place.	place	-8.14230728149414	aff	neg
+A jade is not a place.	place	-7.153674602508545	neg	neg
+A jade is not a gem.	gem	-6.37526798248291	neg	aff
+A cat is an organism.	organism	-4.763763427734375	aff	aff
+A cat is a mammal.	mammal	-3.4689223766326904	aff	neg
+A cat is not a mammal.	mammal	-3.4161698818206787	neg	neg
+A cat is not an organism.	organism	-4.081569671630859	neg	aff
+An airplane is a transport.	transport	-6.522224426269531	aff	aff
+An airplane is a boat.	boat	-5.895602703094482	aff	neg
+An airplane is not a boat.	boat	-4.2895307540893555	neg	neg
+An airplane is not a transport.	transport	-5.343873023986816	neg	aff
+A laptop is a computer.	computer	-4.966565132141113	aff	aff
+A laptop is a phone.	phone	-7.309165954589844	aff	neg
+A laptop is not a phone.	phone	-5.500117301940918	neg	neg
+A laptop is not a computer.	computer	-4.221089839935303	neg	aff
+A hill is a landform.	landform	-5.504445552825928	aff	aff
+A hill is a flower.	flower	-7.365798473358154	aff	neg
+A hill is not a flower.	flower	-6.541243553161621	neg	neg
+A hill is not a landform.	landform	-5.80411958694458	neg	aff
+A castle is a building.	building	-5.737044811248779	aff	aff
+A castle is a fish.	fish	-7.741705417633057	aff	neg
+A castle is not a fish.	fish	-5.93819522857666	neg	neg
+A castle is not a building.	building	-5.692353248596191	neg	aff
+A paper is a material.	material	-6.157880783081055	aff	aff
+A paper is a toy.	toy	-6.44646692276001	aff	neg
+A paper is not a toy.	toy	-5.4012579917907715	neg	neg
+A paper is not a material.	material	-5.170114517211914	neg	aff
+A tombstone is a monument.	monument	-5.316307067871094	aff	aff
+A tombstone is a plaque.	plaque	-6.614013671875	aff	neg
+A tombstone is not a plaque.	plaque	-5.995698928833008	neg	neg
+A tombstone is not a monument.	monument	-5.169225692749023	neg	aff
+A popsicle is a dessert.	dessert	-4.724620819091797	aff	aff
+A popsicle is a salad.	salad	-6.116589546203613	aff	neg
+A popsicle is not a salad.	salad	-5.568902015686035	neg	neg
+A popsicle is not a dessert.	dessert	-4.839834690093994	neg	aff
+A monkey is a primate.	primate	-4.905447006225586	aff	aff
+A monkey is a bird.	bird	-5.091250419616699	aff	neg
+A monkey is not a bird.	bird	-4.493611812591553	neg	neg
+A monkey is not a primate.	primate	-4.6510491371154785	neg	aff
+A bouquet is a gift.	gift	-5.722893714904785	aff	aff
+A bouquet is a plant.	plant	-5.965152263641357	aff	neg
+A bouquet is not a plant.	plant	-6.01643180847168	neg	neg
+A bouquet is not a gift.	gift	-5.591029167175293	neg	aff
+A doorknob is a hardware.	hardware	-6.89576530456543	aff	aff
+A doorknob is a software.	software	-7.021108150482178	aff	neg
+A doorknob is not a software.	software	-6.474708557128906	neg	neg
+A doorknob is not a hardware.	hardware	-6.863162040710449	neg	aff
+A month is a timeframe.	timeframe	-7.0823869705200195	aff	aff
+A month is a weight.	weight	-7.495868682861328	aff	neg
+A month is not a weight.	weight	-6.80552864074707	neg	neg
+A month is not a timeframe.	timeframe	-6.331451416015625	neg	aff
+A day is a timeframe.	timeframe	-7.613040447235107	aff	aff
+A day is a weight.	weight	-8.266107559204102	aff	neg
+A day is not a weight.	weight	-7.1749372482299805	neg	neg
+A day is not a timeframe.	timeframe	-7.094120025634766	neg	aff
+An year is a timeframe.	timeframe	-6.390637397766113	aff	aff
+An year is a weight.	weight	-7.617361545562744	aff	neg
+An year is not a weight.	weight	-6.9504852294921875	neg	neg
+An year is not a timeframe.	timeframe	-5.859292984008789	neg	aff
+A soprano is a singer.	singer	-5.631331443786621	aff	aff
+A soprano is a piano.	piano	-5.960652828216553	aff	neg
+A soprano is not a piano.	piano	-5.613990306854248	neg	neg
+A soprano is not a singer.	singer	-5.375946521759033	neg	aff
+A soldier is a person.	person	-6.789214611053467	aff	aff
+A soldier is a gun.	gun	-7.1993842124938965	aff	neg
+A soldier is not a gun.	gun	-6.058566570281982	neg	neg
+A soldier is not a person.	person	-5.539455413818359	neg	aff
+A necktie is a clothing.	clothing	-7.491717338562012	aff	aff
+A necktie is a tree.	tree	-7.332472801208496	aff	neg
+A necktie is not a tree.	tree	-5.8000054359436035	neg	neg
+A necktie is not a clothing.	clothing	-6.498453617095947	neg	aff
+A puppy is a mammal.	mammal	-4.943051815032959	aff	aff
+A puppy is a plant.	plant	-6.3853759765625	aff	neg
+A puppy is not a plant.	plant	-5.570704460144043	neg	neg
+A puppy is not a mammal.	mammal	-4.524008274078369	neg	aff
+An oven is an appliance.	appliance	-5.31499719619751	aff	aff
+An oven is a toy.	toy	-6.321881294250488	aff	neg
+An oven is not a toy.	toy	-4.311763763427734	neg	neg
+An oven is not an appliance.	appliance	-3.926791191101074	neg	aff
+A sawhorse is a tool.	tool	-5.679193019866943	aff	aff
+A sawhorse is a vehicle.	vehicle	-6.858057022094727	aff	neg
+A sawhorse is not a vehicle.	vehicle	-5.978221416473389	neg	neg
+A sawhorse is not a tool.	tool	-5.455475330352783	neg	aff
+A housekeeper is a person.	person	-6.059178352355957	aff	aff
+A housekeeper is a toy.	toy	-7.529291152954102	aff	neg
+A housekeeper is not a toy.	toy	-6.77400016784668	neg	neg
+A housekeeper is not a person.	person	-5.1461334228515625	neg	aff
+A carpenter is a person.	person	-6.355288982391357	aff	aff
+A carpenter is a bird.	bird	-6.708919525146484	aff	neg
+A carpenter is not a bird.	bird	-6.326145648956299	neg	neg
+A carpenter is not a person.	person	-5.414121627807617	neg	aff
+A coach is a vehicle.	vehicle	-7.538310527801514	aff	aff
+A coach is a building.	building	-7.461241245269775	aff	neg
+A coach is not a building.	building	-6.813355922698975	neg	neg
+A coach is not a vehicle.	vehicle	-6.388160705566406	neg	aff
+A map is a paper.	paper	-6.555372714996338	aff	aff
+A map is a toy.	toy	-6.475715637207031	aff	neg
+A map is not a toy.	toy	-5.880822658538818	neg	neg
+A map is not a paper.	paper	-5.4843878746032715	neg	aff
+A radio is a device.	device	-6.065525531768799	aff	aff
+A radio is a flower.	flower	-7.2401251792907715	aff	neg
+A radio is not a flower.	flower	-5.985213279724121	neg	neg
+A radio is not a device.	device	-5.128679275512695	neg	aff
+A goose is a bird.	bird	-4.559594631195068	aff	aff
+A goose is a mammal.	mammal	-4.57828426361084	aff	neg
+A goose is not a mammal.	mammal	-4.270037651062012	neg	neg
+A goose is not a bird.	bird	-4.451936721801758	neg	aff
+A teacher is a guide.	guide	-6.65533447265625	aff	aff
+A teacher is a child.	child	-5.927699565887451	aff	neg
+A teacher is not a child.	child	-4.861724376678467	neg	neg
+A teacher is not a guide.	guide	-6.19574499130249	neg	aff
+A flashlight is a light.	light	-6.041326999664307	aff	aff
+A flashlight is a toy.	toy	-6.192519664764404	aff	neg
+A flashlight is not a toy.	toy	-5.432783126831055	neg	neg
+A flashlight is not a light.	light	-5.20094108581543	neg	aff
+A martini is a drink.	drink	-4.616722106933594	aff	aff
+A martini is a food.	food	-5.63454008102417	aff	neg
+A martini is not a food.	food	-4.945733547210693	neg	neg
+A martini is not a drink.	drink	-4.511941432952881	neg	aff
+A basketball is a sport.	sport	-5.609365940093994	aff	aff
+A basketball is a building.	building	-6.900289058685303	aff	neg
+A basketball is not a building.	building	-5.841529369354248	neg	neg
+A basketball is not a sport.	sport	-4.624672889709473	neg	aff
+A snowman is an art.	art	-6.432436943054199	aff	aff
+A snowman is a snowflake.	snowflake	-4.986405849456787	aff	neg
+A snowman is not a snowflake.	snowflake	-4.559835910797119	neg	neg
+A snowman is not an art.	art	-5.959909915924072	neg	aff
+A petz is an animal.	animal	-5.982318878173828	aff	aff
+A petz is a toy.	toy	-6.268554210662842	aff	neg
+A petz is not a toy.	toy	-5.669427394866943	neg	neg
+A petz is not an animal.	animal	-5.251589298248291	neg	aff
+A television is a device.	device	-6.640751838684082	aff	aff
+A television is a furniture.	furniture	-6.284102916717529	aff	neg
+A television is not a furniture.	furniture	-5.01011848449707	neg	neg
+A television is not a device.	device	-5.214555263519287	neg	aff
+An oven is a device.	device	-5.225234031677246	aff	aff
+An oven is a food.	food	-6.462394714355469	aff	neg
+An oven is not a food.	food	-4.797226428985596	neg	neg
+An oven is not a device.	device	-4.526976108551025	neg	aff
+A rag is a cloth.	cloth	-6.563050746917725	aff	aff
+A rag is a stone.	stone	-6.950325012207031	aff	neg
+A rag is not a stone.	stone	-6.083787441253662	neg	neg
+A rag is not a cloth.	cloth	-5.761455535888672	neg	aff
+A sheep is an animal.	animal	-4.914765357971191	aff	aff
+A sheep is a toy.	toy	-5.902684211730957	aff	neg
+A sheep is not a toy.	toy	-5.385669231414795	neg	neg
+A sheep is not an animal.	animal	-4.386444568634033	neg	aff
+A geranium is a flower.	flower	-6.209975242614746	aff	aff
+A geranium is a shrub.	shrub	-5.525131702423096	aff	neg
+A geranium is not a shrub.	shrub	-5.610396385192871	neg	neg
+A geranium is not a flower.	flower	-5.59401798248291	neg	aff
+A ray is a fish.	fish	-5.638472080230713	aff	aff
+A ray is a plant.	plant	-5.856306552886963	aff	neg
+A ray is not a plant.	plant	-5.187107086181641	neg	neg
+A ray is not a fish.	fish	-4.8058247566223145	neg	aff
+A lemon is a fruit.	fruit	-4.977395534515381	aff	aff
+A lemon is a drink.	drink	-5.668647289276123	aff	neg
+A lemon is not a drink.	drink	-5.6162638664245605	neg	neg
+A lemon is not a fruit.	fruit	-4.336487770080566	neg	aff
+A discussion is a talk.	talk	-6.560734748840332	aff	aff
+A discussion is a fight.	fight	-7.0840959548950195	aff	neg
+A discussion is not a fight.	fight	-6.138427734375	neg	neg
+A discussion is not a talk.	talk	-5.689661026000977	neg	aff
+A basketball is a ball.	ball	-5.3981614112854	aff	aff
+A basketball is a fruit.	fruit	-6.517399787902832	aff	neg
+A basketball is not a fruit.	fruit	-5.172637939453125	neg	neg
+A basketball is not a ball.	ball	-4.523594856262207	neg	aff
+A pig is an animal.	animal	-4.89696741104126	aff	aff
+A pig is a person.	person	-5.5986504554748535	aff	neg
+A pig is not a person.	person	-4.595160484313965	neg	neg
+A pig is not an animal.	animal	-4.18754768371582	neg	aff
+A squirrel is a mammalian.	mammalian	-7.488393783569336	aff	aff
+A squirrel is a bird.	bird	-5.815721035003662	aff	neg
+A squirrel is not a bird.	bird	-5.251216411590576	neg	neg
+A squirrel is not a mammalian.	mammalian	-6.2797465324401855	neg	aff
+A skunk is a mammalian.	mammalian	-4.576543807983398	aff	aff
+A skunk is an amphibian.	amphibian	-4.415120601654053	aff	neg
+A skunk is not an amphibian.	amphibian	-4.315638542175293	neg	neg
+A skunk is not a mammalian.	mammalian	-4.133746147155762	neg	aff
+A rabbit is a mammalian.	mammalian	-5.7233428955078125	aff	aff
+A rabbit is a reptile.	reptile	-4.585881233215332	aff	neg
+A rabbit is not a reptile.	reptile	-4.366616725921631	neg	neg
+A rabbit is not a mammalian.	mammalian	-5.109960079193115	neg	aff
+A wallet is a container.	container	-5.708686351776123	aff	aff
+A wallet is a building.	building	-7.266824245452881	aff	neg
+A wallet is not a building.	building	-6.566493988037109	neg	neg
+A wallet is not a container.	container	-5.117789268493652	neg	aff
+A harp is an instrument.	instrument	-4.654067039489746	aff	aff
+A harp is a toy.	toy	-5.9320068359375	aff	neg
+A harp is not a toy.	toy	-5.298544883728027	neg	neg
+A harp is not an instrument.	instrument	-4.12581205368042	neg	aff
+A boy is a human.	human	-6.765206336975098	aff	aff
+A boy is an animal.	animal	-6.289104461669922	aff	neg
+A boy is not an animal.	animal	-5.307304859161377	neg	neg
+A boy is not a human.	human	-5.434920310974121	neg	aff
+A mug is a container.	container	-6.463212013244629	aff	aff
+A mug is a bottle.	bottle	-7.315248966217041	aff	neg
+A mug is not a bottle.	bottle	-6.274343490600586	neg	neg
+A mug is not a container.	container	-5.724295616149902	neg	aff
+A knife is a weapon.	weapon	-5.320555686950684	aff	aff
+A knife is an electronic.	electronic	-6.689188480377197	aff	neg
+A knife is not an electronic.	electronic	-5.689187526702881	neg	neg
+A knife is not a weapon.	weapon	-4.150284767150879	neg	aff
+A statue is an art.	art	-7.073729991912842	aff	aff
+A statue is a person.	person	-6.600221157073975	aff	neg
+A statue is not a person.	person	-5.535956382751465	neg	neg
+A statue is not an art.	art	-6.038562774658203	neg	aff
+A tangerine is a fruit.	fruit	-4.828680992126465	aff	aff
+A tangerine is a vegetable.	vegetable	-5.600505352020264	aff	neg
+A tangerine is not a vegetable.	vegetable	-5.135107517242432	neg	neg
+A tangerine is not a fruit.	fruit	-4.602652549743652	neg	aff
+A robber is a criminal.	criminal	-6.9525909423828125	aff	aff
+A robber is a policeman.	policeman	-6.419682502746582	aff	neg
+A robber is not a policeman.	policeman	-5.774301528930664	neg	neg
+A robber is not a criminal.	criminal	-5.521053314208984	neg	aff
+A skirt is a clothing.	clothing	-6.241550922393799	aff	aff
+A skirt is a food.	food	-5.897453784942627	aff	neg
+A skirt is not a food.	food	-5.542836666107178	neg	neg
+A skirt is not a clothing.	clothing	-5.124383926391602	neg	aff
+A bread is a food.	food	-4.311718940734863	aff	aff
+A bread is a drink.	drink	-5.213716983795166	aff	neg
+A bread is not a drink.	drink	-4.562230110168457	neg	neg
+A bread is not a food.	food	-3.577503204345703	neg	aff
+A tea is a drink.	drink	-4.394649982452393	aff	aff
+A tea is a game.	game	-5.1798415184021	aff	neg
+A tea is not a game.	game	-4.712459087371826	neg	neg
+A tea is not a drink.	drink	-4.480161190032959	neg	aff
+A coconut is a fruit.	fruit	-6.101593494415283	aff	aff
+A coconut is a berry.	berry	-7.550044536590576	aff	neg
+A coconut is not a berry.	berry	-6.7364630699157715	neg	neg
+A coconut is not a fruit.	fruit	-5.094993591308594	neg	aff
+A salad is a snack.	snack	-5.2006683349609375	aff	aff
+A salad is a weapon.	weapon	-6.157607078552246	aff	neg
+A salad is not a weapon.	weapon	-5.978473663330078	neg	neg
+A salad is not a snack.	snack	-5.1472392082214355	neg	aff
+A noodles is a food.	food	-5.766789436340332	aff	aff
+A noodles is a drink.	drink	-6.7680253982543945	aff	neg
+A noodles is not a drink.	drink	-6.088829040527344	neg	neg
+A noodles is not a food.	food	-4.928369522094727	neg	aff
+A triangle is a shape.	shape	-4.999524116516113	aff	aff
+A triangle is a square.	square	-6.137071132659912	aff	neg
+A triangle is not a square.	square	-5.418360710144043	neg	neg
+A triangle is not a shape.	shape	-4.695563793182373	neg	aff
+A telephone is a device.	device	-6.616607666015625	aff	aff
+A telephone is a tool.	tool	-6.473729610443115	aff	neg
+A telephone is not a tool.	tool	-5.6925272941589355	neg	neg
+A telephone is not a device.	device	-5.509706497192383	neg	aff
+A piano is a device.	device	-7.124645233154297	aff	aff
+A piano is a toy.	toy	-6.420297145843506	aff	neg
+A piano is not a toy.	toy	-5.731898307800293	neg	neg
+A piano is not a device.	device	-5.8484721183776855	neg	aff
+A hurricane is a storm.	storm	-5.1017165184021	aff	aff
+A hurricane is a breeze.	breeze	-5.64248514175415	aff	neg
+A hurricane is not a breeze.	breeze	-5.376065731048584	neg	neg
+A hurricane is not a storm.	storm	-4.30098819732666	neg	aff
+A party is a celebration.	celebration	-4.590296268463135	aff	aff
+A party is a mourning.	mourning	-6.960261821746826	aff	neg
+A party is not a mourning.	mourning	-6.010239601135254	neg	neg
+A party is not a celebration.	celebration	-3.9571475982666016	neg	aff
+A door is a structure.	structure	-5.87235689163208	aff	aff
+A door is a wall.	wall	-4.848077297210693	aff	neg
+A door is not a wall.	wall	-3.933903455734253	neg	neg
+A door is not a structure.	structure	-4.578582286834717	neg	aff
+An envelope is a letter.	letter	-6.073156833648682	aff	aff
+An envelope is a device.	device	-6.624216556549072	aff	neg
+An envelope is not a device.	device	-5.382762908935547	neg	neg
+An envelope is not a letter.	letter	-4.790372371673584	neg	aff
+A gun is a weapon.	weapon	-5.690192222595215	aff	aff
+A gun is a toy.	toy	-6.836923122406006	aff	neg
+A gun is not a toy.	toy	-5.035264492034912	neg	neg
+A gun is not a weapon.	weapon	-4.306061744689941	neg	aff
+A watch is a device.	device	-6.05861759185791	aff	aff
+A watch is a food.	food	-7.609114170074463	aff	neg
+A watch is not a food.	food	-6.161674499511719	neg	neg
+A watch is not a device.	device	-5.171716213226318	neg	aff
+A TV is a device.	device	-5.728832244873047	aff	aff
+A TV is a furniture.	furniture	-5.645437717437744	aff	neg
+A TV is not a furniture.	furniture	-5.089676856994629	neg	neg
+A TV is not a device.	device	-4.9341654777526855	neg	aff
+A smartphone is a device.	device	-6.052321910858154	aff	aff
+A smartphone is a watch.	watch	-6.792635440826416	aff	neg
+A smartphone is not a watch.	watch	-5.8570451736450195	neg	neg
+A smartphone is not a device.	device	-5.361632823944092	neg	aff
+A seal is an animal.	animal	-6.132871150970459	aff	aff
+A seal is a plant.	plant	-6.784829616546631	aff	neg
+A seal is not a plant.	plant	-6.385566711425781	neg	neg
+A seal is not an animal.	animal	-5.936541557312012	neg	aff
+A platypus is an animal.	animal	-4.670079708099365	aff	aff
+A platypus is a fish.	fish	-5.154476165771484	aff	neg
+A platypus is not a fish.	fish	-4.664813041687012	neg	neg
+A platypus is not an animal.	animal	-4.323324680328369	neg	aff
+A spruce is a tree.	tree	-4.957494735717773	aff	aff
+A spruce is a bush.	bush	-5.812588691711426	aff	neg
+A spruce is not a bush.	bush	-5.373833179473877	neg	neg
+A spruce is not a tree.	tree	-4.6142120361328125	neg	aff
+A wrench is a tool.	tool	-4.5822882652282715	aff	aff
+A wrench is a machine.	machine	-5.391582489013672	aff	neg
+A wrench is not a machine.	machine	-4.511214256286621	neg	neg
+A wrench is not a tool.	tool	-4.052477836608887	neg	aff
+A pan is an utensil.	utensil	-5.4412736892700195	aff	aff
+A pan is a pot.	pot	-5.579301357269287	aff	neg
+A pan is not a pot.	pot	-5.056719779968262	neg	neg
+A pan is not an utensil.	utensil	-4.7853312492370605	neg	aff
+A pot is an utensil.	utensil	-5.467404365539551	aff	aff
+A pot is a flower.	flower	-5.859067440032959	aff	neg
+A pot is not a flower.	flower	-4.825896263122559	neg	neg
+A pot is not an utensil.	utensil	-4.912118434906006	neg	aff
+A baby is an infant.	infant	-5.518983364105225	aff	aff
+A baby is a grown-up.	grown-up	-4.558600425720215	aff	neg
+A baby is not a grown-up.	grown-up	-4.364350318908691	neg	neg
+A baby is not an infant.	infant	-5.620517253875732	neg	aff
+A loom is a tool.	tool	-6.494985103607178	aff	aff
+A loom is a place.	place	-7.610744476318359	aff	neg
+A loom is not a place.	place	-6.049354076385498	neg	neg
+A loom is not a tool.	tool	-5.8395819664001465	neg	aff
+A treatment is a therapy.	therapy	-5.358404636383057	aff	aff
+A treatment is an iPod.	iPod	-7.815483093261719	aff	neg
+A treatment is not an iPod.	iPod	-6.553540229797363	neg	neg
+A treatment is not a therapy.	therapy	-4.294566631317139	neg	aff
+An ox is an animal.	animal	-4.072959899902344	aff	aff
+An ox is a plant.	plant	-5.540762901306152	aff	neg
+An ox is not a plant.	plant	-4.809016227722168	neg	neg
+An ox is not an animal.	animal	-4.131094932556152	neg	aff
+A railroad is a transportation.	transportation	-6.277430057525635	aff	aff
+A railroad is a bus.	bus	-6.470330238342285	aff	neg
+A railroad is not a bus.	bus	-6.064391136169434	neg	neg
+A railroad is not a transportation.	transportation	-5.599166393280029	neg	aff
+A mower is a machine.	machine	-5.682755947113037	aff	aff
+A mower is a phone.	phone	-7.148338317871094	aff	neg
+A mower is not a phone.	phone	-6.018793106079102	neg	neg
+A mower is not a machine.	machine	-4.802289009094238	neg	aff
+A factory is a building.	building	-4.94559907913208	aff	aff
+A factory is a store.	store	-5.979722023010254	aff	neg
+A factory is not a store.	store	-5.094951629638672	neg	neg
+A factory is not a building.	building	-4.994668960571289	neg	aff
+A broccoli is a vegetable.	vegetable	-4.288358211517334	aff	aff
+A broccoli is a fruit.	fruit	-4.941326141357422	aff	neg
+A broccoli is not a fruit.	fruit	-4.310320854187012	neg	neg
+A broccoli is not a vegetable.	vegetable	-3.957411527633667	neg	aff
+A beat is a rhythm.	rhythm	-5.155281066894531	aff	aff
+A beat is a melody.	melody	-5.384951591491699	aff	neg
+A beat is not a melody.	melody	-5.055478572845459	neg	neg
+A beat is not a rhythm.	rhythm	-4.834074974060059	neg	aff
+A country is a land.	land	-5.723266124725342	aff	aff
+A country is a sea.	sea	-6.019397258758545	aff	neg
+A country is not a sea.	sea	-5.269753932952881	neg	neg
+A country is not a land.	land	-4.862369060516357	neg	aff
+A console is a furniture.	furniture	-6.6094207763671875	aff	aff
+A console is a building.	building	-6.5513014793396	aff	neg
+A console is not a building.	building	-5.9331464767456055	neg	neg
+A console is not a furniture.	furniture	-5.925936698913574	neg	aff
+A factory is a workplace.	workplace	-5.6361846923828125	aff	aff
+A factory is a mammal.	mammal	-5.625990867614746	aff	neg
+A factory is not a mammal.	mammal	-5.172660827636719	neg	neg
+A factory is not a workplace.	workplace	-5.061760902404785	neg	aff
+A farm is a place.	place	-5.41143274307251	aff	aff
+A farm is a mineral.	mineral	-6.091203689575195	aff	neg
+A farm is not a mineral.	mineral	-5.292763710021973	neg	neg
+A farm is not a place.	place	-4.707311630249023	neg	aff
+A transistor is a device.	device	-5.265220642089844	aff	aff
+A transistor is a toy.	toy	-6.418447017669678	aff	neg
+A transistor is not a toy.	toy	-5.222031593322754	neg	neg
+A transistor is not a device.	device	-4.5108819007873535	neg	aff
+A viola is an instrument.	instrument	-3.9175586700439453	aff	aff
+A viola is a place.	place	-5.505659103393555	aff	neg
+A viola is not a place.	place	-4.632620334625244	neg	neg
+A viola is not an instrument.	instrument	-3.461669445037842	neg	aff
+A monarchy is a government.	government	-5.168586254119873	aff	aff
+A monarchy is a religion.	religion	-6.1054887771606445	aff	neg
+A monarchy is not a religion.	religion	-5.416255950927734	neg	neg
+A monarchy is not a government.	government	-4.354251861572266	neg	aff
+A telescope is a device.	device	-6.717756748199463	aff	aff
+A telescope is a toy.	toy	-6.449458599090576	aff	neg
+A telescope is not a toy.	toy	-5.587377071380615	neg	neg
+A telescope is not a device.	device	-5.44564962387085	neg	aff
+A mango is a fruit.	fruit	-4.761569976806641	aff	aff
+A mango is a vegetable.	vegetable	-6.194220066070557	aff	neg
+A mango is not a vegetable.	vegetable	-5.05549430847168	neg	neg
+A mango is not a fruit.	fruit	-4.2801313400268555	neg	aff
+A pilot is a professional.	professional	-6.913217067718506	aff	aff
+A pilot is an amateur.	amateur	-7.136325359344482	aff	neg
+A pilot is not an amateur.	amateur	-5.756345272064209	neg	neg
+A pilot is not a professional.	professional	-5.205108642578125	neg	aff
+A manager is a professional.	professional	-6.405414581298828	aff	aff
+A manager is an amateur.	amateur	-7.029494762420654	aff	neg
+A manager is not an amateur.	amateur	-6.079305171966553	neg	neg
+A manager is not a professional.	professional	-5.562566757202148	neg	aff
+A doctrine is a principle.	principle	-6.28124475479126	aff	aff
+A doctrine is a person.	person	-7.221343517303467	aff	neg
+A doctrine is not a person.	person	-6.186572551727295	neg	neg
+A doctrine is not a principle.	principle	-5.674415111541748	neg	aff
+A tennis is a sport.	sport	-5.8603010177612305	aff	aff
+A tennis is a vegetable.	vegetable	-7.277252197265625	aff	neg
+A tennis is not a vegetable.	vegetable	-6.173810005187988	neg	neg
+A tennis is not a sport.	sport	-4.863980293273926	neg	aff
+A cap is a clothing.	clothing	-7.606635570526123	aff	aff
+A cap is a person.	person	-7.0287909507751465	aff	neg
+A cap is not a person.	person	-4.863214015960693	neg	neg
+A cap is not a clothing.	clothing	-5.7235822677612305	neg	aff
+A chairman is a human.	human	-6.908339023590088	aff	aff
+A chairman is a machine.	machine	-6.605003356933594	aff	neg
+A chairman is not a machine.	machine	-5.748088359832764	neg	neg
+A chairman is not a human.	human	-5.818265438079834	neg	aff
+A court is a room.	room	-7.9961981773376465	aff	aff
+A court is a tree.	tree	-8.36674976348877	aff	neg
+A court is not a tree.	tree	-7.021737098693848	neg	neg
+A court is not a room.	room	-6.7075653076171875	neg	aff
+A court is a building.	building	-7.9641008377075195	aff	aff
+A court is a plant.	plant	-8.918937683105469	aff	neg
+A cout is not a plant.	plant	-6.90524435043335	neg	neg
+A cout is not a building.	building	-7.357446193695068	neg	aff
+A painting is a drawing.	drawing	-5.849112033843994	aff	aff
+A painting is a sculpture.	sculpture	-5.67680549621582	aff	neg
+A painting is not a sculpture.	sculpture	-4.601250648498535	neg	neg
+A painting is not a drawing.	drawing	-5.335500240325928	neg	aff
+A guppy is a fish.	fish	-6.5193400382995605	aff	aff
+A guppy is a reptile.	reptile	-5.849234580993652	aff	neg
+A guppy is not a reptile.	reptile	-5.154902458190918	neg	neg
+A guppy is not a fish.	fish	-5.80847692489624	neg	aff
+A ginger is a plant.	plant	-6.4647955894470215	aff	aff
+A ginger is a flavor.	flavor	-7.593898296356201	aff	neg
+A ginger is not a flavor.	flavor	-7.021528244018555	neg	neg
+A ginger is not a plant.	plant	-6.249415874481201	neg	aff
+A goat is an animal.	animal	-4.324520111083984	aff	aff
+A goat is a person.	person	-5.6008806228637695	aff	neg
+A goat is not a person.	person	-4.516929626464844	neg	neg
+A goat is not an animal.	animal	-3.848958969116211	neg	aff
+A submarine is a vehicle.	vehicle	-5.736148834228516	aff	aff
+A submarine is a fish.	fish	-5.670652866363525	aff	neg
+A submarine is not a fish.	fish	-4.579700469970703	neg	neg
+A submarine is not a vehicle.	vehicle	-4.317333221435547	neg	aff
+A gift is a present.	present	-5.47786283493042	aff	aff
+A gift is a feeling.	feeling	-6.6034088134765625	aff	neg
+A gift is not a feeling.	feeling	-5.631722927093506	neg	neg
+A gift is not a present.	present	-4.901431083679199	neg	aff
+A degree is a document.	document	-6.264862060546875	aff	aff
+A degree is a person.	person	-6.600050449371338	aff	neg
+A degree is not a person.	person	-5.076480388641357	neg	neg
+A degree is not a document.	document	-5.433419704437256	neg	aff
+A swimming is a sport.	sport	-6.742464542388916	aff	aff
+A swimming is a vegetable.	vegetable	-7.839701175689697	aff	neg
+A swimming is not a vegetable.	vegetable	-6.729727745056152	neg	neg
+A swimming is not a sport.	sport	-5.7263922691345215	neg	aff
+A basket is a container.	container	-4.877087593078613	aff	aff
+A basket is a material.	material	-6.228074073791504	aff	neg
+A basket is not a material.	material	-5.6611151695251465	neg	neg
+A basket is not a container.	container	-4.519933223724365	neg	aff
+A television is an electronics.	electronics	-7.003899574279785	aff	aff
+A television is a plant.	plant	-6.785513401031494	aff	neg
+A television is not a plant.	plant	-5.289417266845703	neg	neg
+A television is not an electronics.	electronics	-5.937690258026123	neg	aff
+A butterfly is an insect.	insect	-4.910699367523193	aff	aff
+A butterfly is a mammal.	mammal	-5.031620025634766	aff	neg
+A butterfly is not a mammal.	mammal	-4.582818031311035	neg	neg
+A butterfly is not an insect.	insect	-4.712553024291992	neg	aff
+A pill is a drug.	drug	-5.615535259246826	aff	aff
+A pill is a food.	food	-6.26970911026001	aff	neg
+A pill is not a food.	food	-5.68105411529541	neg	neg
+A pill is not a drug.	drug	-5.365016937255859	neg	aff
+A limousine is a vehicle.	vehicle	-6.108427047729492	aff	aff
+A limousine is a flower.	flower	-6.753035545349121	aff	neg
+A limousine is not a flower.	flower	-5.774864196777344	neg	neg
+A limousine is not a vehicle.	vehicle	-5.17108678817749	neg	aff
+A turkey is an animal.	animal	-6.1623711585998535	aff	aff
+A turkey is a plant.	plant	-7.096121311187744	aff	neg
+A turkey is not a plant.	plant	-5.915929317474365	neg	neg
+A turkey is not an animal.	animal	-5.1364054679870605	neg	aff
+A kangaroo is an animal.	animal	-3.847766876220703	aff	aff
+A kangaroo is a person.	person	-4.55453634262085	aff	neg
+A kangaroo is not a person.	person	-3.973423480987549	neg	neg
+A kangaroo is not an animal.	animal	-3.468168258666992	neg	aff
+A violine is an instrument.	instrument	-6.153761863708496	aff	aff
+A violine is a person.	person	-6.963897705078125	aff	neg
+A violin is not a person.	person	-4.697083473205566	neg	neg
+A violin is not an instrument.	instrument	-3.9490065574645996	neg	aff
+A rug is a covering.	covering	-5.3259406089782715	aff	aff
+A rug is a vegetable.	vegetable	-6.221591949462891	aff	neg
+A rug is not a vegetable.	vegetable	-5.135259628295898	neg	neg
+A rug is not a covering.	covering	-4.8995466232299805	neg	aff
+A parent is a guardian.	guardian	-5.88458251953125	aff	aff
+A parent is a child.	child	-4.392764568328857	aff	neg
+A parent is not a child.	child	-4.282753944396973	neg	neg
+A parent is not a guardian.	guardian	-5.372470855712891	neg	aff
+A student is a pupil.	pupil	-6.469046115875244	aff	aff
+A student is a child.	child	-6.820910930633545	aff	neg
+A student is not a child.	child	-6.091088771820068	neg	neg
+A student is not a pupil.	pupil	-5.772136688232422	neg	aff
+A bathroom is a room.	room	-5.099795818328857	aff	aff
+A bathroom is a house.	house	-5.560826301574707	aff	neg
+A bathroom is not a house.	house	-4.450098037719727	neg	neg
+A bathroom is not a room.	room	-4.308574676513672	neg	aff
+A cloud is an atmospheric.	atmospheric	-6.8708086013793945	aff	aff
+A cloud is a star.	star	-6.721855163574219	aff	neg
+A cloud is not a star.	star	-6.300424575805664	neg	neg
+A cloud is not an atmospheric.	atmospheric	-6.125222682952881	neg	aff
+A song is a music.	music	-6.772379398345947	aff	aff
+A song is a noise.	noise	-7.182950019836426	aff	neg
+A song is not a noise.	noise	-5.962216377258301	neg	neg
+A song is not a music.	music	-5.4576735496521	neg	aff
+A fly is an insect.	insect	-5.119049072265625	aff	aff
+A fly is a tool.	tool	-6.545066833496094	aff	neg
+A fly is not a tool.	tool	-6.093360424041748	neg	neg
+A fly is not an insect.	insect	-4.885510444641113	neg	aff
+A worm is an invertebrate.	invertebrate	-4.927840232849121	aff	aff
+A worm is a vertebrate.	vertebrate	-5.741610527038574	aff	neg
+A worm is not a vertebrate.	vertebrate	-5.471400260925293	neg	neg
+A worm is not an invertebrate.	invertebrate	-4.750672817230225	neg	aff
+A mother is a person.	person	-5.182101249694824	aff	aff
+A mother is a computer.	computer	-5.858408451080322	aff	neg
+A mother is not a computer.	computer	-5.328312873840332	neg	neg
+A mother is not a person.	person	-4.692136764526367	neg	aff
+A sibling is a family.	family	-4.625228404998779	aff	aff
+A sibling is a machine.	machine	-5.748330116271973	aff	neg
+A sibling is not a machine.	machine	-5.095074653625488	neg	neg
+A sibling is not a family.	family	-3.8909356594085693	neg	aff
+A vacation is a trip.	trip	-4.626827239990234	aff	aff
+A vacation is a time.	time	-4.795999050140381	aff	neg
+A vacation is not a time.	time	-4.463344097137451	neg	neg
+A vacation is not a trip.	trip	-4.235258102416992	neg	aff
+A fireplace is a structure.	structure	-6.026365280151367	aff	aff
+A fireplace is a creature.	creature	-6.870803356170654	aff	neg
+A fireplace is not a creature.	creature	-5.467535972595215	neg	neg
+A fireplace is not a structure.	structure	-4.884559154510498	neg	aff
+A basenji is a dog.	dog	-5.9024176597595215	aff	aff
+A basenji is a cat.	cat	-6.896238327026367	aff	neg
+A basenji is not a cat.	cat	-6.052525043487549	neg	neg
+A basenji is not a dog.	dog	-5.758581161499023	neg	aff
+A chihuahua is a dog.	dog	-4.518409252166748	aff	aff
+A chihuahua is a reptile.	reptile	-5.031452655792236	aff	neg
+A chihuahua is not a reptile.	reptile	-4.53347635269165	neg	neg
+A chihuahua is not a dog.	dog	-4.320532321929932	neg	aff
+A dalmatian is a dog.	dog	-4.741652011871338	aff	aff
+A dalmatian is a horse.	horse	-5.130646228790283	aff	neg
+A dalmatian is not a horse.	horse	-4.632346153259277	neg	neg
+A dalmatian is not a dog.	dog	-4.612950325012207	neg	aff
+A labrador is a dog.	dog	-5.866078853607178	aff	aff
+A labrador is a bird.	bird	-7.554869651794434	aff	neg
+A labrador is not a bird.	bird	-5.924740791320801	neg	neg
+A labrador is not a dog.	dog	-5.23800802230835	neg	aff
+A crocus is a flower.	flower	-5.6491618156433105	aff	aff
+A crocus is a bird.	bird	-6.718619346618652	aff	neg
+A crocus is not a bird.	bird	-6.036513328552246	neg	neg
+A crocus is not a flower.	flower	-5.281975746154785	neg	aff
+A raddish is a vegetable.	vegetable	-6.1822123527526855	aff	aff
+A raddish is a flower.	flower	-6.964046478271484	aff	neg
+A raddish is not a flower.	flower	-6.533533573150635	neg	neg
+A raddish is not a vegetable.	vegetable	-5.780555725097656	neg	aff
+A delphinium is a flower.	flower	-6.188612461090088	aff	aff
+A delphinium is an insect.	insect	-6.8941240310668945	aff	neg
+A delphinium is not an insect.	insect	-6.318397045135498	neg	neg
+A delphinium is not a flower.	flower	-5.649313926696777	neg	aff
+A chisel is a tool.	tool	-5.960973262786865	aff	aff
+A chisel is an insect.	insect	-7.414819240570068	aff	neg
+A chisel is not an insect.	insect	-6.757846355438232	neg	neg
+A chisel is not a tool.	tool	-5.5069899559021	neg	aff
+A money is a currency.	currency	-5.963069915771484	aff	aff
+A money is a tool.	tool	-6.482757568359375	aff	neg
+A money is not a tool.	tool	-5.6642913818359375	neg	neg
+A money is not a currency.	currency	-4.98859167098999	neg	aff
+A boulder is a rock.	rock	-5.57335090637207	aff	aff
+A boulder is a mammal.	mammal	-5.849864482879639	aff	neg
+A boulder is not a mammal.	mammal	-5.287716388702393	neg	neg
+A boulder is not a rock.	rock	-4.957381248474121	neg	aff
+A classroom is a room.	room	-6.423027038574219	aff	aff
+A classroom is a tree.	tree	-7.852652072906494	aff	neg
+A classroom is not a tree.	tree	-6.752674102783203	neg	neg
+A classroom is not a room.	room	-5.6810431480407715	neg	aff
+A park is a place.	place	-5.3851847648620605	aff	aff
+A park is an insect.	insect	-6.789105415344238	aff	neg
+A park is not an insect.	insect	-5.451841354370117	neg	neg
+A park is not a place.	place	-4.244491100311279	neg	aff
+A drink is a beverage.	beverage	-4.374749183654785	aff	aff
+A drink is a pie.	pie	-6.30872106552124	aff	neg
+A drink is not a pie.	pie	-5.796739101409912	neg	neg
+A drink is not a beverage.	beverage	-4.346745014190674	neg	aff
+A dinosaur is a reptile.	reptile	-5.6488037109375	aff	aff
+A dinosaur is a mammal.	mammal	-5.3628339767456055	aff	neg
+A dinosaur is not a mammal.	mammal	-4.935280799865723	neg	neg
+A dinosaur is not a reptile.	reptile	-4.870943546295166	neg	aff
+A gull is a bird.	bird	-6.351912975311279	aff	aff
+A gull is a mammal.	mammal	-5.905526638031006	aff	neg
+A gull is not a mammal.	mammal	-5.426233291625977	neg	neg
+A gull is not a bird.	bird	-5.842741012573242	neg	aff
+A liver is an organ.	organ	-5.167266845703125	aff	aff
+A liver is a glass.	glass	-6.6511759757995605	aff	neg
+A liver is not a glass.	glass	-5.55872106552124	neg	neg
+A liver is not an organ.	organ	-4.366469383239746	neg	aff
+A coat is a garment.	garment	-5.522660255432129	aff	aff
+A coat is a house.	house	-6.0428056716918945	aff	neg
+A coat is not a house.	house	-5.4948554039001465	neg	neg
+A coat is not a garment.	garment	-5.049811363220215	neg	aff
+A bedroom is a room.	room	-5.016213893890381	aff	aff
+A bedroom is a house.	house	-5.805037975311279	aff	neg
+A bedroom is not a house.	house	-4.867667198181152	neg	neg
+A bedroom is not a room.	room	-4.658721446990967	neg	aff
+A garlic is a vegetable.	vegetable	-5.959841251373291	aff	aff
+A garlic is a fruit.	fruit	-6.762899875640869	aff	neg
+A garlic is not a fruit.	fruit	-5.666313171386719	neg	neg
+A garlic is not a vegetable.	vegetable	-5.239820957183838	neg	aff
+A wallet is an accessory.	accessory	-5.830589294433594	aff	aff
+A wallet is a food.	food	-7.178128719329834	aff	neg
+A wallet is not a food.	food	-6.307864189147949	neg	neg
+A wallet is not an accessory.	accessory	-5.530505657196045	neg	aff
+A race is a competition.	competition	-6.19930362701416	aff	aff
+A race is a party.	party	-6.683223724365234	aff	neg
+A race is not a party.	party	-5.749574661254883	neg	neg
+A race is not a competition.	competition	-5.083500862121582	neg	aff
+A university is an institution.	institution	-5.824763298034668	aff	aff
+A university is a tree.	tree	-7.129313945770264	aff	neg
+A university is not a tree.	tree	-5.835880279541016	neg	neg
+A university is not an institution.	institution	-4.637998104095459	neg	aff
+A belt is an accessory.	accessory	-4.059482574462891	aff	aff
+A belt is a food.	food	-5.798362731933594	aff	neg
+A belt is not a food.	food	-4.798113822937012	neg	neg
+A belt is not an accessory.	accessory	-4.04018497467041	neg	aff
+A carp is a fish.	fish	-5.560650825500488	aff	aff
+A carp is a reptile.	reptile	-5.879786491394043	aff	neg
+A carp is not a reptile.	reptile	-5.263017654418945	neg	neg
+A carp is not a fish.	fish	-4.868415355682373	neg	aff
+A washer is a machine.	machine	-6.343757152557373	aff	aff
+A washer is a person.	person	-6.376769542694092	aff	neg
+A washer is not a person.	person	-5.356287002563477	neg	neg
+A washer is not a machine.	machine	-5.264132976531982	neg	aff
+A dryer is a machine.	machine	-5.727063179016113	aff	aff
+A dryer is a place.	place	-6.512551784515381	aff	neg
+A dryer is not a place.	place	-5.2125678062438965	neg	neg
+A dryer is not a machine.	machine	-5.09266996383667	neg	aff
+A stove is a device.	device	-6.738030910491943	aff	aff
+A stove is a room.	room	-5.535842418670654	aff	neg
+A stove is not a room.	room	-4.8769683837890625	neg	neg
+A stove is not a device.	device	-5.420022964477539	neg	aff
+A souffle is a recipe.	recipe	-5.783888816833496	aff	aff
+A souffle is a tool.	tool	-6.703305244445801	aff	neg
+A souffle is not a tool.	tool	-5.931086540222168	neg	neg
+A souffle is not a recipe.	recipe	-5.172054767608643	neg	aff
+A plum is a fruit.	fruit	-4.980942249298096	aff	aff
+A plum is a tool.	tool	-7.608867168426514	aff	neg
+A plum is not a tool.	tool	-6.397886276245117	neg	neg
+A plum is not a fruit.	fruit	-4.385436058044434	neg	aff
+A meeting is an event.	event	-4.2747344970703125	aff	aff
+A meeting is a person.	person	-6.087339878082275	aff	neg
+A meeting is not a person.	person	-4.512752532958984	neg	neg
+A meeting is not an event.	event	-3.421872854232788	neg	aff
+An anvil is a tool.	tool	-3.8054919242858887	aff	aff
+An anvil is a rock.	rock	-4.3524298667907715	aff	neg
+An anvil is not a rock.	rock	-3.560332775115967	neg	neg
+An anvil is not a tool.	tool	-3.227109670639038	neg	aff
+A scissor is a tool.	tool	-5.525702476501465	aff	aff
+A scissor is a plant.	plant	-7.277184963226318	aff	neg
+An scissor is not a plant.	plant	-5.900218486785889	neg	neg
+An scissor is not a tool.	tool	-4.863009929656982	neg	aff
+A screw is a tool.	tool	-5.306915283203125	aff	aff
+A screw is a drink.	drink	-6.993936061859131	aff	neg
+A screw is not a drink.	drink	-6.014093399047852	neg	neg
+A screw is not a tool.	tool	-4.742810249328613	neg	aff
+A manager is a supervisor.	supervisor	-6.565898418426514	aff	aff
+A manager is a place.	place	-6.956265449523926	aff	neg
+A manager is not a place.	place	-5.953320503234863	neg	neg
+A manager is not a supervisor.	supervisor	-5.271388053894043	neg	aff
+A motel is a building.	building	-6.097507476806641	aff	aff
+A motel is an animal.	animal	-7.320651531219482	aff	neg
+A model is not an animal.	animal	-4.807313442230225	neg	neg
+A model is not a building.	building	-4.709766387939453	neg	aff
+An autobiography is a book.	book	-5.4999518394470215	aff	aff
+An autobiography is a chair.	chair	-7.213809490203857	aff	neg
+An autobiography is not a chair.	chair	-6.219146728515625	neg	neg
+An autobiography is not a book.	book	-4.564676761627197	neg	aff
+A wren is a bird.	bird	-5.30000114440918	aff	aff
+A wren is a mammal.	mammal	-5.234506130218506	aff	neg
+A wren is not a mammal.	mammal	-4.949023723602295	neg	neg
+A wren is not a bird.	bird	-5.1530914306640625	neg	aff
+A spider is an arachnid.	arachnid	-4.552640914916992	aff	aff
+A spider is a plant.	plant	-6.115548610687256	aff	neg
+A spider is not a plant.	plant	-5.134934902191162	neg	neg
+A spider is not an arachnid.	arachnid	-4.483534812927246	neg	aff
+A blouse is a clothing.	clothing	-7.166743755340576	aff	aff
+A blouse is a jewelry.	jewelry	-6.994619846343994	aff	neg
+A blouse is not a jewelry.	jewelry	-6.768263816833496	neg	neg
+A blouse is not a clothing.	clothing	-6.352269649505615	neg	aff
+A cape is a clothing.	clothing	-6.865291595458984	aff	aff
+A cape is a drink.	drink	-6.73861837387085	aff	neg
+A cape is not a drink.	drink	-6.427218437194824	neg	neg
+A cape is not a clothing.	clothing	-5.545271873474121	neg	aff
+A metro is a train.	train	-5.934750080108643	aff	aff
+A metro is a bus.	bus	-5.709924221038818	aff	neg
+A metro is not a bus.	bus	-4.933342933654785	neg	neg
+A metro is not a train.	train	-4.931117534637451	neg	aff
+A macaw is a bird.	bird	-5.334346771240234	aff	aff
+A macaw is a grain.	grain	-7.37650203704834	aff	neg
+A macaw is not a grain.	grain	-6.59076452255249	neg	neg
+A macaw is not a bird.	bird	-5.061671257019043	neg	aff
+An eel is a fish.	fish	-4.488288879394531	aff	aff
+An eel is a vegetable.	vegetable	-6.036303520202637	aff	neg
+An eel is not a vegetable.	vegetable	-5.152758598327637	neg	neg
+An eel is not a fish.	fish	-4.076414108276367	neg	aff
+A pelican is a bird.	bird	-5.4354047775268555	aff	aff
+A pelican is a bacterium.	bacterium	-6.42445182800293	aff	neg
+A pelican is not a bacterium.	bacterium	-5.722873687744141	neg	neg
+A pelican is not a bird.	bird	-4.823531150817871	neg	aff
+A bunny is an animal.	animal	-5.328804016113281	aff	aff
+A bunny is a fungus.	fungus	-6.716179847717285	aff	neg
+A bunny is not a fungus.	fungus	-5.910253047943115	neg	neg
+A bunny is not an animal.	animal	-4.791090965270996	neg	aff
+A spaceship is a vehicle.	vehicle	-5.840677738189697	aff	aff
+A spaceship is a toy.	toy	-6.434889316558838	aff	neg
+A spaceship is not a toy.	toy	-5.746241569519043	neg	neg
+A spaceship is not a vehicle.	vehicle	-4.913016319274902	neg	aff
+A toucan is a bird.	bird	-4.901296615600586	aff	aff
+A toucan is a fruit.	fruit	-5.386242866516113	aff	neg
+A toucan is not a fruit.	fruit	-4.851418495178223	neg	neg
+A toucan is not a bird.	bird	-4.720273971557617	neg	aff
+A koi is a fish.	fish	-5.589839935302734	aff	aff
+A koi is a plant.	plant	-6.198922634124756	aff	neg
+A koi is not a plant.	plant	-5.303234100341797	neg	neg
+A koi is not a fish.	fish	-5.2583513259887695	neg	aff
+A brush is a tool.	tool	-4.804572582244873	aff	aff
+A brush is a toy.	toy	-5.760924816131592	aff	neg
+A brush is not a toy.	toy	-4.978257656097412	neg	neg
+A brush is not a tool.	tool	-4.383795738220215	neg	aff
+A wheelbarrow is a vehicle.	vehicle	-3.301213026046753	aff	aff
+A wheelbarrow is a flower.	flower	-4.350986003875732	aff	neg
+A wheelbarrow is not a flower.	flower	-3.685901165008545	neg	neg
+A wheelbarrow is not a vehicle.	vehicle	-3.091219902038574	neg	aff
+A unicycle is a vehicle.	vehicle	-4.623339653015137	aff	aff
+A unicycle is a flower.	flower	-5.820971488952637	aff	neg
+A unicycle is not a flower.	flower	-4.7822265625	neg	neg
+A unicycle is not a vehicle.	vehicle	-3.9668760299682617	neg	aff
+A bike is a machine.	machine	-5.881523132324219	aff	aff
+A bike is a flower.	flower	-7.5600810050964355	aff	neg
+A bike is not a flower.	flower	-5.858323574066162	neg	neg
+A bike is not a machine.	machine	-5.148447513580322	neg	aff
+A skateboard is a vehicle.	vehicle	-5.866865634918213	aff	aff
+A skateboard is a flower.	flower	-7.9440155029296875	aff	neg
+A skateboard is not a flower.	flower	-6.61442756652832	neg	neg
+A skateboard is not a vehicle.	vehicle	-4.981238842010498	neg	aff
+A stroller is a vehicle.	vehicle	-4.872454643249512	aff	aff
+A stroller is a flower.	flower	-6.324611663818359	aff	neg
+A stroller is not a flower.	flower	-5.664994239807129	neg	neg
+A stroller is not a vehicle.	vehicle	-4.271379470825195	neg	aff
+A wagon is a vehicle.	vehicle	-4.263294219970703	aff	aff
+A wagon is a flower.	flower	-6.126718997955322	aff	neg
+A wagon is not a flower.	flower	-5.179717063903809	neg	neg
+A wagon is not a vehicle.	vehicle	-3.648669719696045	neg	aff
+A corporation is a business.	business	-5.65305757522583	aff	aff
+A corporation is a toy.	toy	-7.500590801239014	aff	neg
+A corporation is not a toy.	toy	-6.197711944580078	neg	neg
+A corporation is not a business.	business	-4.603603839874268	neg	aff
+A camera is a device.	device	-5.401244640350342	aff	aff
+A camera is a plant.	plant	-6.28627347946167	aff	neg
+A camera is not a plant.	plant	-5.822551250457764	neg	neg
+A camera is not a device.	device	-4.493112564086914	neg	aff
+A chainsaw is a tool.	tool	-6.236433029174805	aff	aff
+A chainsaw is a toy.	toy	-7.144973278045654	aff	neg
+A chainsaw is not a toy.	toy	-6.267926216125488	neg	neg
+A chainsaw is not a tool.	tool	-6.0143842697143555	neg	aff
+A bobcat is a carnivore.	carnivore	-4.680441379547119	aff	aff
+A bobcat is a plant.	plant	-5.854000091552734	aff	neg
+A bobcat is not a plant.	plant	-5.260508060455322	neg	neg
+A bobcat is not a carnivore.	carnivore	-4.680874824523926	neg	aff
+A tractor is a machine.	machine	-4.751742839813232	aff	aff
+A tractor is an animal.	animal	-5.014079570770264	aff	neg
+A tractor is not an animal.	animal	-4.14045524597168	neg	neg
+A tractor is not a machine.	machine	-4.059934616088867	neg	aff
+A camel is a mammals.	mammals	-5.680578708648682	aff	aff
+A camel is a reptile.	reptile	-4.26332950592041	aff	neg
+A camel is not a reptile.	reptile	-3.8880202770233154	neg	neg
+A camel is not a mammals.	mammals	-5.6007819175720215	neg	aff
+An apartment is a house.	house	-5.726150035858154	aff	aff
+An apartment is a plant.	plant	-7.365289211273193	aff	neg
+An apartment is not a plant.	plant	-5.876230239868164	neg	neg
+An apartment is not a house.	house	-4.106231212615967	neg	aff
