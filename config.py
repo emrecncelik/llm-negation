@@ -99,7 +99,7 @@ MODELS = [
     ModelConfig("meta-llama/Llama-3.2-3B", "Llama-3.2_3B", "CLM", next_word_distribution, sequence_score), # Multilingual
     ModelConfig("meta-llama/Llama-3.1-8B", "Llama-3.1_8B", "CLM", next_word_distribution, sequence_score), # Multilingual
     ModelConfig("Qwen/Qwen1.5-0.5B", "Qwen-1.5_0.5B", "CLM", next_word_distribution, sequence_score),
-    ModelConfig("Qwen/Qwen1.5-1.5B", "Qwen-1.5_1.5B", "CLM", next_word_distribution, sequence_score),
+    ModelConfig("Qwen/Qwen1.5-1.8B", "Qwen-1.5_1.8B", "CLM", next_word_distribution, sequence_score),
     ModelConfig("Qwen/Qwen1.5-4B", "Qwen-1.5_4B", "CLM", next_word_distribution, sequence_score),
     ModelConfig("Qwen/Qwen1.5-7B", "Qwen-1.5_7B", "CLM", next_word_distribution, sequence_score),
     ModelConfig("Qwen/Qwen2.5-0.5B", "Qwen-2.5_0.5B", "CLM", next_word_distribution, sequence_score),
