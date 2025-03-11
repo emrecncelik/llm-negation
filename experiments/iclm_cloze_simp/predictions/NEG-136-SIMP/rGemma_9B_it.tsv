@@ -1,0 +1,73 @@
+context	target	target_logprob	best_target_variation	tokens	ctx_polarity	tgt_polarity
+A trout is a	fish	-2.3608627	▁fish	['freshwater', 'type', 'species', 'fish', 'member']	aff	aff
+A trout is a	tool	-11.83522	▁tool	['freshwater', 'type', 'species', 'fish', 'member']	aff	neg
+A trout is not a	tool	-9.92935	▁tool	['fish', 'salmon', 'bass', 'type', 'native']	neg	neg
+A trout is not a	fish	-1.3027172	▁fish	['fish', 'salmon', 'bass', 'type', 'native']	neg	aff
+A salmon is a	fish	-0.72760963	▁fish	['fish', 'type', 'species', 'freshwater', 'member']	aff	aff
+A salmon is a	flower	-15.64671	▁flower	['fish', 'type', 'species', 'freshwater', 'member']	aff	neg
+A salmon is not a	flower	-9.49069	▁flower	['fish', 'tuna', 'native', 'type', 'trout']	neg	neg
+A salmon is not a	fish	-0.70412636	▁fish	['fish', 'tuna', 'native', 'type', 'trout']	neg	aff
+An ant is an	insect	-0.93450165	▁insect	['insect', 'example', 'organism', 'ar', 'invertebrate']	aff	aff
+An ant is a	vegetable	-17.074856	▁vegetable	['small', 'tiny', 'type', 'very', 'creature']	aff	neg
+An ant is not a	vegetable	-8.491528	▁vegetable	['very', 'single', 'mammal', 'small', 'micro']	neg	neg
+An ant is not an	insect	-0.9532299	▁insect	['insect', 'organism', 'animal', 'appropriate', 'invertebrate']	neg	aff
+A bee is an	insect	-0.72062874	▁insect	['insect', 'example', 'organism', 'important', 'essential']	aff	aff
+A bee is a	building	-11.588306	▁building	['flying', 'member', 'small', 'type', 'beneficial']	aff	neg
+A bee is not a	building	-8.556963	▁building	['bird', 'fly', 'type', 'flying', 'single']	neg	neg
+A bee is not an	insect	-0.6364765	▁insect	['insect', 'animal', 'organism', 'alien', 'ant']	neg	aff
+A robin is a	bird	-1.9314308	▁bird	['small', 'bird', 'type', 'common', 'song']	aff	aff
+A robin is a	tree	-13.320051	▁tree	['small', 'bird', 'type', 'common', 'song']	aff	neg
+A robin is not a	tree	-7.9007473	▁tree	['parrot', 'native', 'type', 'bird', 'duck']	neg	neg
+A robin is not a	bird	-2.8835201	▁bird	['parrot', 'native', 'type', 'bird', 'duck']	neg	aff
+A sparrow is a	bird	-2.8202248	▁bird	['small', 'bird', 'type', 'common', 'symbol']	aff	aff
+A sparrow is a	vehicle	-15.033883	▁vehicle	['small', 'bird', 'type', 'common', 'symbol']	aff	neg
+A sparrow is not a	vehicle	-11.080568	▁vehicle	['bird', 'pigeon', 'parrot', 'large', 'phoenix']	neg	neg
+A sparrow is not a	bird	-1.4623222	▁bird	['bird', 'pigeon', 'parrot', 'large', 'phoenix']	neg	aff
+An oak is a	tree	-1.7491035	▁tree	['type', 'large', 'tree', 'species', 'hardwood']	aff	aff
+An oak is a	vehicle	-17.891401	▁vehicle	['type', 'large', 'tree', 'species', 'hardwood']	aff	neg
+An oak is not a	vehicle	-12.096115	▁vehicle	['tree', 'maple', 'single', 'oak', 'pine']	neg	neg
+An oak is not a	tree	-1.0641556	▁tree	['tree', 'maple', 'single', 'oak', 'pine']	neg	aff
+A pine is a	tree	-1.5717373	▁tree	['type', 'tree', 'kind', 'species', 'member']	aff	aff
+A pine is a	tool	-12.001529	▁tool	['type', 'tree', 'kind', 'species', 'member']	aff	neg
+A pine is not a	tool	-9.711228	▁tool	['maple', 'pine', 'palm', 'tree', 'species']	neg	neg
+A pine is not a	tree	-3.0287056	▁tree	['maple', 'pine', 'palm', 'tree', 'species']	neg	aff
+A rose is a	flower	-1.4493103	▁flower	['rose', 'flower', 'flowering', 'beautiful', 'type']	aff	aff
+A rose is an	insect	-8.47088	▁insect	['example', 'elegant', 'attractive', 'annual', 'exquisite']	aff	neg
+A rose is not an	insect	-6.700392	▁insect	['apple', 'orchid', 'ordinary', 'orange', 'oak']	neg	neg
+A rose is not a	flower	-2.1715698	▁flower	['rose', 'flower', 'thorn', 'weed', 'daisy']	neg	aff
+A daisy is a	flower	-0.45401573	▁flower	['flower', 'flowering', 'symbol', 'cheerful', 'simple']	aff	aff
+A daisy is a	bird	-18.48861	▁bird	['flower', 'flowering', 'symbol', 'cheerful', 'simple']	aff	neg
+A daisy is not a	bird	-9.3853245	▁bird	['flower', 'daisy', 'single', 'sunflower', 'weed']	neg	neg
+A daisy is not a	flower	-0.49048042	▁flower	['flower', 'daisy', 'single', 'sunflower', 'weed']	neg	aff
+A carrot is a	vegetable	-4.444953	▁vegetable	['root', 'vegetable', 'tap', 'long', 'type']	aff	aff
+A carrot is a	fish	-24.39692	▁fish	['root', 'vegetable', 'tap', 'long', 'type']	aff	neg
+A carrot is not a	fish	-9.858477	▁fish	['vegetable', 'fruit', 'root', 'natural', 'good']	neg	neg
+A carrot is not a	vegetable	-0.4940033	▁vegetable	['vegetable', 'fruit', 'root', 'natural', 'good']	neg	aff
+A pea is a	vegetable	-6.542927	▁vegetable	['type', 'fruit', 'seed', 'small', 'botanical']	aff	aff
+A pea is a	building	-13.29302	▁building	['type', 'fruit', 'seed', 'small', 'botanical']	aff	neg
+A pea is not a	building	-12.244223	▁building	['bean', 'fruit', 'seed', 'vegetable', 'berry']	neg	neg
+A pea is not a	vegetable	-2.714487	▁vegetable	['bean', 'fruit', 'seed', 'vegetable', 'berry']	neg	aff
+A hammer is a	tool	-0.34657097	▁tool	['tool', 'percussion', 'simple', 'versatile', 'useful']	aff	aff
+A hammer is an	insect	-11.412694	▁insect	['object', 'essential', 'indispensable', 'implement', 'example']	aff	neg
+A hammer is not an	insect	-8.442022	▁insect	['instrument', 'effective', 'appropriate', 'ideal', 'efficient']	neg	neg
+A hammer is not a	tool	-0.8661709	▁tool	['tool', 'weapon', 'very', 'hammer', 'toy']	neg	aff
+A saw is a	tool	-0.46449852	▁tool	['tool', 'cutting', 'device', 'useful', 'mechanical']	aff	aff
+A saw is a	vegetable	-18.074955	▁vegetable	['tool', 'cutting', 'device', 'useful', 'mechanical']	aff	neg
+A saw is not a	vegetable	-9.812637	▁vegetable	['tool', 'saw', 'hammer', 'very', 'single']	neg	neg
+A saw is not a	tool	-1.2437134	▁tool	['tool', 'saw', 'hammer', 'very', 'single']	neg	aff
+A car is a	vehicle	-4.9906006	▁vehicle	['major', 'significant', 'big', 'large', 'complex']	aff	aff
+A car is a	tree	-16.340107	▁tree	['major', 'significant', 'big', 'large', 'complex']	aff	neg
+A car is not a	tree	-8.379763	▁tree	['necessity', 'luxury', 'mere', 'simple', 'toy']	neg	neg
+A car is not a	vehicle	-6.675173	▁vehicle	['necessity', 'luxury', 'mere', 'simple', 'toy']	neg	aff
+A truck is a	vehicle	-1.8125095	▁vehicle	['vehicle', 'type', 'large', 'powerful', 'crucial']	aff	aff
+A truck is a	flower	-13.777556	▁flower	['vehicle', 'type', 'large', 'powerful', 'crucial']	aff	neg
+A truck is not a	flower	-11.9396305	▁flower	['car', 'toy', 'luxury', 'vehicle', 'mere']	neg	neg
+A truck is not a	vehicle	-3.8627758	▁vehicle	['car', 'toy', 'luxury', 'vehicle', 'mere']	neg	aff
+A hotel is a	building	-1.9704132	▁building	['place', 'commercial', 'building', 'business', 'complex']	aff	aff
+A hotel is a	fish	-15.077491	▁fish	['place', 'commercial', 'building', 'business', 'complex']	aff	neg
+A hotel is not a	fish	-12.108637	▁fish	['place', 'home', 'building', 'hotel', 'house']	neg	neg
+A hotel is not a	building	-2.6548557	▁building	['place', 'home', 'building', 'hotel', 'house']	neg	aff
+A house is a	building	-2.1030807	▁building	['place', 'building', 'home', 'shelter', 'structure']	aff	aff
+A house is a	bird	-11.623373	▁bird	['place', 'building', 'home', 'shelter', 'structure']	aff	neg
+A house is not a	bird	-15.258287	▁bird	['home', 'house', 'mere', 'place', 'building']	neg	neg
+A house is not a	building	-6.663576	▁building	['home', 'house', 'mere', 'place', 'building']	neg	aff
