@@ -69,7 +69,7 @@ def sequence_score(
             )
         else:
             outputs = scorer.sequence_score(
-                list(contexts), list(targets), reduction=reduction
+                list(contexts), reduction=reduction
             )
         predictions["context"].extend(contexts)
         predictions["target"].extend(targets)
