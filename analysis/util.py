@@ -4,6 +4,11 @@ import requests
 import pandas as pd
 from bs4 import BeautifulSoup
 
+def custom_float_format(x):
+    if x.is_integer():
+        return f'{int(x)}'
+    else:
+        return f'{x:.1f}'
 
 def get_metric_for_datasets(
     df: pd.DataFrame,
@@ -98,8 +103,9 @@ def add_color_to_table(latex_table_path: str):
 
     colored_body = re.sub(pattern, replace_with_color, body)
     colored_table = before_table + header + colored_body + after_table
+    colored_table = colored_table.replace("\\textbackslash{}", "\\").replace("\{", "{").replace("\}", "}")
 
-    with open("colored_" + latex_table_path, "w") as file:
+    with open(latex_table_path, "w") as file:
         file.write(colored_table)
 
     return colored_table
