@@ -54,6 +54,16 @@ MODELS = [
     # ModelConfig("Qwen/Qwen2.5-Coder-3B", "Qwen2.5_Coder_3B", "CLM", next_word_distribution, sequence_score),
     # ModelConfig("Qwen/Qwen2.5-Coder-7B", "Qwen2.5_Coder_7B", "CLM", next_word_distribution, sequence_score),
 
+   # MAMBA models
+    ModelConfig("state-spaces/mamba-130m", "Mamba_130M", "MAMBA", next_word_distribution, sequence_score, scorer_args={"tokenizer": "EleutherAI/gpt-neox-20b"}),
+    ModelConfig("state-spaces/mamba-790m", "Mamba_790M", "MAMBA", next_word_distribution, sequence_score, scorer_args={"tokenizer": "EleutherAI/gpt-neox-20b"}),
+    ModelConfig("state-spaces/mamba-1.4b", "Mamba_1.4B", "MAMBA", next_word_distribution, sequence_score, scorer_args={"tokenizer": "EleutherAI/gpt-neox-20b"}),
+    ModelConfig("state-spaces/mamba-2.8b", "Mamba_2.8B", "MAMBA", next_word_distribution, sequence_score, scorer_args={"tokenizer": "EleutherAI/gpt-neox-20b"}),
+    ModelConfig("state-spaces/mamba2-130m", "Mamba2_130M", "MAMBA", next_word_distribution, sequence_score, scorer_args={"tokenizer": "EleutherAI/gpt-neox-20b"}),
+    ModelConfig("state-spaces/mamba2-780m", "Mamba2_780M", "MAMBA", next_word_distribution, sequence_score, scorer_args={"tokenizer": "EleutherAI/gpt-neox-20b"}),
+    ModelConfig("state-spaces/mamba2-1.3b", "Mamba2_1.3B", "MAMBA", next_word_distribution, sequence_score, scorer_args={"tokenizer": "EleutherAI/gpt-neox-20b"}),
+    ModelConfig("state-spaces/mamba2-2.7b", "Mamba2_2.7B", "MAMBA", next_word_distribution, sequence_score, scorer_args={"tokenizer": "EleutherAI/gpt-neox-20b"}),
+
     ## General purpose 
     ModelConfig("openai-community/gpt2", "GPT2", "CLM", next_word_distribution, sequence_score),
     ModelConfig("openai-community/gpt2-medium", "GPT2_medium", "CLM", next_word_distribution, sequence_score),
@@ -87,15 +97,6 @@ MODELS = [
     ModelConfig("EleutherAI/pythia-6.9b-deduped", "Pythia_6.9B_deduped", "CLM", next_word_distribution, sequence_score),
     ModelConfig("allenai/OLMo-2-1124-7B", "OLMo-2_1124_7B", "CLM", next_word_distribution, sequence_score),
     
-    # MAMBA models
-    ModelConfig("state-spaces/mamba-130m", "Mamba_130M", "MAMBA", next_word_distribution, sequence_score, scorer_args={"tokenizer": "EleutherAI/gpt-neox-20b"}),
-    ModelConfig("state-spaces/mamba-790m", "Mamba_790M", "MAMBA", next_word_distribution, sequence_score, scorer_args={"tokenizer": "EleutherAI/gpt-neox-20b"}),
-    ModelConfig("state-spaces/mamba-1.4b", "Mamba_1.4B", "MAMBA", next_word_distribution, sequence_score, scorer_args={"tokenizer": "EleutherAI/gpt-neox-20b"}),
-    ModelConfig("state-spaces/mamba-2.8b", "Mamba_2.8B", "MAMBA", next_word_distribution, sequence_score, scorer_args={"tokenizer": "EleutherAI/gpt-neox-20b"}),
-    ModelConfig("state-spaces/mamba2-130m", "Mamba2_130M", "MAMBA", next_word_distribution, sequence_score, scorer_args={"tokenizer": "EleutherAI/gpt-neox-20b"}),
-    ModelConfig("state-spaces/mamba2-780m", "Mamba2_780M", "MAMBA", next_word_distribution, sequence_score, scorer_args={"tokenizer": "EleutherAI/gpt-neox-20b"}),
-    ModelConfig("state-spaces/mamba2-1.3b", "Mamba2_1.3B", "MAMBA", next_word_distribution, sequence_score, scorer_args={"tokenizer": "EleutherAI/gpt-neox-20b"}),
-    ModelConfig("state-spaces/mamba2-2.7b", "Mamba2_2.7B", "MAMBA", next_word_distribution, sequence_score, scorer_args={"tokenizer": "EleutherAI/gpt-neox-20b"}),
 
     # ICLM models
     ## Coding
