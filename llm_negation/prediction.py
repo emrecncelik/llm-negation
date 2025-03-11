@@ -63,7 +63,14 @@ def sequence_score(
 
     for batch in tqdm(dataloader):
         contexts, targets, ctx_polarity, tgt_polarity = batch_preprocess(batch)
-        outputs = scorer.sequence_score(list(contexts), reduction=reduction)
+        if model_type == "MLM":
+            outputs = scorer.sequence_score(
+                list(contexts), reduction=reduction, PLL_metric="within_word_l2r"
+            )
+        else:
+            outputs = scorer.sequence_score(
+                list(contexts), list(targets), reduction=reduction
+            )
         predictions["context"].extend(contexts)
         predictions["target"].extend(targets)
         predictions["target_logprob"].extend(outputs)
