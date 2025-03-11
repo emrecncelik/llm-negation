@@ -1,0 +1,15 @@
+assistant_message_template: null
+batch_size: 2
+config: configs/mlm_sequence_nat.yaml
+data_path:
+- data/NEG-136-NAT-NT.tsv
+- data/NEG-136-NAT-LN.tsv
+device: cuda
+experiment_dir: experiments/mlm_sequence_nat
+model_type:
+- MLM
+prediction_dir: experiments/mlm_sequence_nat/predictions
+prompt_template: '{context} {target}.'
+scoring_method: sequence_score
+skip_if_exists: true
+topk: 30
