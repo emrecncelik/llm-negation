@@ -97,6 +97,8 @@ MODELS = [
     ModelConfig("EleutherAI/pythia-6.9b-deduped", "Pythia_6.9B_deduped", "CLM", next_word_distribution, sequence_score),
     ModelConfig("allenai/OLMo-2-1124-7B", "OLMo-2_1124_7B", "CLM", next_word_distribution, sequence_score),
     
+    # Random CLM
+    ModelConfig("yujiepan/gemma-tiny-random", "Gemma_Tiny_Random", "RANDOM", next_word_distribution, sequence_score),
 
     # ICLM models
     ## Coding

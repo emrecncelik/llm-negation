@@ -1,0 +1,16 @@
+assistant_message_template: null
+batch_size: 1
+config: configs/clm_sequence_random.yaml
+data_path:
+- data/NEG-136-SIMP.tsv
+- data/NEG-1500-SIMP-TEMP.tsv
+- data/NEG-1500-SIMP-GEN.tsv
+device: cpu
+experiment_dir: experiments/random
+model_type:
+- RANDOM
+prediction_dir: experiments/random/predictions
+prompt_template: '{context} {determiner} {target}.'
+scoring_method: sequence_score
+skip_if_exists: true
+topk: 30

@@ -1,0 +1,12 @@
+config: configs/clm_sequence_random.yaml
+data_path:
+- data/NEG-136-SIMP.tsv
+- data/NEG-1500-SIMP-TEMP.tsv
+- data/NEG-1500-SIMP-GEN.tsv
+model_type:
+- RANDOM
+prompt_template: '{context} {determiner} {target}.'
+scoring_method: "sequence_score"
+experiment_dir: "experiments/random"
+batch_size: 1
+skip_if_exists: true

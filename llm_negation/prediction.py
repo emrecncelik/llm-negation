@@ -42,7 +42,7 @@ def sequence_score(
     model_type: str,
     reduction: callable = lambda x: x.mean(0).item(),  # default from minicons
 ):
-    if model_type not in ["ICLM", "CLM", "MAMBA", "MLM"]:
+    if model_type not in ["ICLM", "CLM", "MAMBA", "MLM", "RANDOM"]:
         raise ValueError(f"Model type {model_type} not supported for sequence_score.")
 
     def batch_preprocess(batch):
@@ -86,7 +86,7 @@ def next_word_distribution(
     model_type: str,
     topk: int = 300,
 ) -> pd.DataFrame:
-    if model_type not in ["ICLM", "CLM", "MAMBA"]:
+    if model_type not in ["ICLM", "CLM", "MAMBA", "RANDOM"]:
         raise ValueError(
             f"Model type {model_type} not supported for next_word_distribution."
         )

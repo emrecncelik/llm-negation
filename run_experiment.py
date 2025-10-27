@@ -143,7 +143,7 @@ def run_experiment(config: ExperimentConfig):
                 ######################################
                 ########## MAKE PREDICTIONS ##########
                 ######################################
-                if model_type in ["ICLM", "CLM"]:
+                if model_type in ["ICLM", "CLM", "RANDOM"]:
                     scorer_class = scorer.IncrementalLMScorer
                 elif model_type == "MAMBA":
                     scorer_class = scorer.MambaScorer
